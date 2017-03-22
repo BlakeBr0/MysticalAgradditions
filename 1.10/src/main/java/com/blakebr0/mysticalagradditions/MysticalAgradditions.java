@@ -1,14 +1,18 @@
 package com.blakebr0.mysticalagradditions;
 
+import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(modid = MysticalAgradditions.MOD_ID, name = MysticalAgradditions.NAME, version = MysticalAgradditions.VERSION)
 public class MysticalAgradditions {
@@ -23,19 +27,27 @@ public class MysticalAgradditions {
 	@SidedProxy(clientSide = "com.blakebr0.mysticalagradditions.proxy.ClientProxy",
 				serverSide = "com.blakebr0.mysticalagradditions.proxy.ServerProxy")
 	public static CommonProxy proxy;
-	
-	@SubscribeEvent
+		
+	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		proxy.preInit(event);
 	}
 	
-	@SubscribeEvent
+	@EventHandler
 	public void init(FMLInitializationEvent event){
 		proxy.init(event);
 	}
 	
-	@SubscribeEvent
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
 		proxy.postInit(event);
 	}
+	
+	public static CreativeTabs tabMysticalAgradditions = new CreativeTabs("tab.mystical_agradditions.name"){
+		
+		@Override
+		public Item getTabIconItem() {
+			return new ItemStack(ModItems.itemInsanium, 1, 0).getItem();
+		}
+	};
 }
