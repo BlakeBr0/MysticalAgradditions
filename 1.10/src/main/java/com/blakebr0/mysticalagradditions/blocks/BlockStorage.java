@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.blocks;
 import java.util.List;
 
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
+import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -41,14 +42,18 @@ public class BlockStorage extends BlockBase {
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List<ItemStack> stacks){
         for(Type type : Type.values()){
-            stacks.add(new ItemStack(item, 1, type.getMetadata()));
+        	if(type.isEnabled()){
+                stacks.add(new ItemStack(item, 1, type.getMetadata()));
+        	}
         }
     }
     
     @SideOnly(Side.CLIENT)
     public void initModels(){
     	for(Type type : Type.values()){
-        	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), type.getMetadata(), new ModelResourceLocation(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));
+    		if(type.isEnabled()){
+            	ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), type.getMetadata(), new ModelResourceLocation(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));	
+    		}
     	}
     }
 
@@ -79,15 +84,23 @@ public class BlockStorage extends BlockBase {
 		
 		ESSENCE(0, "essence"),
 		INGOT(1, "ingot"),
-		COAL(2, "coal");
+		COAL(2, "coal", MAHelper.config.confEssenceCoal);
 
         private static final Type[] META_LOOKUP = new Type[values().length];		
 		private final int meta;
 		private final String name;
+		private final boolean enabled;
 		
 		private Type(int meta, String name){
 			this.meta = meta;
 			this.name = name;
+			this.enabled = true;
+		}
+		
+		private Type(int meta, String name, boolean enabled){
+			this.meta = meta;
+			this.name = name;
+			this.enabled = enabled;
 		}
 		
 		public int getMetadata(){
@@ -97,6 +110,10 @@ public class BlockStorage extends BlockBase {
 		@Override
 		public String getName(){
 			return this.name;
+		}
+		
+		public boolean isEnabled(){
+			return this.enabled;
 		}
 		
         public static Type byMetadata(int meta){

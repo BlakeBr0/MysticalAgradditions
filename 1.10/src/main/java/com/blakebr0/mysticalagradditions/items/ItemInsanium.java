@@ -2,6 +2,8 @@ package com.blakebr0.mysticalagradditions.items;
 
 import java.util.List;
 
+import com.blakebr0.mysticalagradditions.lib.MAHelper;
+
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,7 +27,9 @@ public class ItemInsanium extends ItemBase {
 	@Override
 	public void getSubItems(Item item, CreativeTabs tab, List<ItemStack> stacks){
 		for(Type type : Type.values()){
-			stacks.add(new ItemStack(item, 1, type.getMetadata()));
+			if(type.isEnabled()){
+				stacks.add(new ItemStack(item, 1, type.getMetadata()));
+			}
 		}
 	}
 	
@@ -37,7 +41,9 @@ public class ItemInsanium extends ItemBase {
     @SideOnly(Side.CLIENT)
     public void initModels(){
     	for(Type type : Type.values()){
-        	ModelLoader.setCustomModelResourceLocation(this, type.getMetadata(), new ModelResourceLocation(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));
+    		if(type.isEnabled()){
+            	ModelLoader.setCustomModelResourceLocation(this, type.getMetadata(), new ModelResourceLocation(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));		
+    		}
     	}
     }
     
@@ -54,17 +60,25 @@ public class ItemInsanium extends ItemBase {
 		CRAFTING_SEED(1, "crafting_seed"),
 		INGOT(2, "ingot"),
 		MOB_CHUNK(3, "mob_chunk"),
-		COAL(4, "coal");
+		COAL(4, "coal", MAHelper.config.confEssenceCoal);
 
         private static final Type[] META_LOOKUP = new Type[values().length];		
 		private final int meta;
 		private final String name;
+		private final boolean enabled;
 		
 		private Type(int meta, String name){
 			this.meta = meta;
 			this.name = name;
+			this.enabled = true;
 		}
 		
+		private Type(int meta, String name, boolean enabled){
+			this.meta = meta;
+			this.name = name;
+			this.enabled = enabled;
+		}
+				
 		public int getMetadata(){
 			return this.meta;
 		}
@@ -72,6 +86,10 @@ public class ItemInsanium extends ItemBase {
 		@Override
 		public String getName(){
 			return this.name;
+		}
+		
+		public boolean isEnabled(){
+			return this.enabled;
 		}
 		
         public static Type byMetadata(int meta){
