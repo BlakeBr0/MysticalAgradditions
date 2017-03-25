@@ -37,11 +37,18 @@ repositories {
   maven {
     url = "http://dvs1.progwml6.com/files/maven"
   }
+  
+  	    // Botania
+     maven {
+         name "RX14"
+         url "http://mvn.rx14.co.uk/repo/"
+     }
 }
 
 dependencies {
 	deobfCompile "mezz.jei:jei_1.10.2:3.14.2.401:api"
 	runtime "mezz.jei:jei_1.10.2:3.14.2.401"
+	deobfCompile "vazkii.botania:Botania:r1.9-341.866"
 }
 
 processResources

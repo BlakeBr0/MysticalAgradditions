@@ -4,9 +4,11 @@ import java.io.File;
 
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.crafting.ModRecipes;
+import com.blakebr0.mysticalagradditions.event.NoFertilizerForYou;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -21,6 +23,7 @@ public class CommonProxy {
 	
 	public void init(FMLInitializationEvent event){
 		ModRecipes.init();
+		MinecraftForge.EVENT_BUS.register(new NoFertilizerForYou());
 	}
 
 	public void postInit(FMLPostInitializationEvent event){
