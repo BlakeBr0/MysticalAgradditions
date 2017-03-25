@@ -59,8 +59,9 @@ public class ItemInsanium extends ItemBase {
 		ESSENCE(0, "essence"),
 		CRAFTING_SEED(1, "crafting_seed"),
 		INGOT(2, "ingot"),
-		MOB_CHUNK(3, "mob_chunk"),
-		COAL(4, "coal", MAHelper.config.confEssenceCoal);
+		NUGGET(3, "nugget"),
+		MOB_CHUNK(4, "mob_chunk"),
+		COAL(5, "coal", MAHelper.config.confEssenceCoal);
 
         private static final Type[] META_LOOKUP = new Type[values().length];		
 		private final int meta;

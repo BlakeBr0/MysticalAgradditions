@@ -13,7 +13,7 @@ public class ModRecipes {
 		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 0), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 0));
 		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 1), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 2));
 		if(MAHelper.config.confEssenceCoal){
-			MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 2), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 4));
+			MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 2), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 5));
 		}
 		
 		MAHelper.addShapelessRecipe(new ItemStack(MAHelper.items.itemSupremiumEssence, 4, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
@@ -29,13 +29,16 @@ public class ModRecipes {
     	} else {
     		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), new ItemStack(MAHelper.items.itemSupremiumIngot, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
 		}
+		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), "NNN", "NNN", "NNN", 'N', new ItemStack(ModItems.itemInsanium, 1, 3));
 		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 2), new ItemStack(ModBlocks.blockStorage, 1, 1));
 		
-		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 3), new ItemStack(MAHelper.items.itemTier5MobChunk, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
+		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 3), new ItemStack(ModItems.itemInsanium, 1, 2));
+		
+		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 4), new ItemStack(MAHelper.items.itemTier5MobChunk, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
 
 		if(MAHelper.config.confEssenceCoal){
-			MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 4), new ItemStack(MAHelper.items.itemEssenceCoal, 1, 4), new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
-			MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 4), new ItemStack(ModBlocks.blockStorage, 1, 2));
+			MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 5), new ItemStack(MAHelper.items.itemEssenceCoal, 1, 4), new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
+			MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 5), new ItemStack(ModBlocks.blockStorage, 1, 2));
 		}
 	}
 }
