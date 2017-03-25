@@ -15,9 +15,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModBlocks {
 	
 	public static BlockStorage blockStorage = new BlockStorage();
+	public static BlockSpecial blockSpecial = new BlockSpecial();
 	
 	public static void init(){
 		registerBlock(blockStorage, new ItemBlockStorage(blockStorage));
+		registerBlock(blockSpecial, new ItemBlockSpecial(blockSpecial));
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
@@ -29,6 +31,7 @@ public class ModBlocks {
 	@SideOnly(Side.CLIENT)
 	public static void initModels(){
 		blockStorage.initModels();
+		blockSpecial.initModels();
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){

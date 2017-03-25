@@ -2,12 +2,28 @@ package com.blakebr0.mysticalagradditions.crafting;
 
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.items.ModItems;
+import com.blakebr0.mysticalagradditions.lib.CropType;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class ModRecipes {
+	
+	public static void addSeedRecipe(CropType.Type type, Object input){
+		if(type.isEnabled()){
+			MAHelper.addShapedRecipe(new ItemStack(type.getSeed(), 1, 0), 
+					"MEM", 
+					"ESE", 
+					"MEM", 
+					'E', new ItemStack(ModItems.itemInsanium, 1, 0), 
+					'S', new ItemStack(ModItems.itemInsanium, 1, 1), 
+					'M', input);
+		}
+	}
+	
+	public static CropType.Type type;
 	
 	public static void init(){
 		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 0), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 0));
@@ -40,5 +56,7 @@ public class ModRecipes {
 			MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 5), new ItemStack(MAHelper.items.itemEssenceCoal, 1, 4), new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
 			MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 5), new ItemStack(ModBlocks.blockStorage, 1, 2));
 		}
+		
+		addSeedRecipe(type.NETHER_STAR, new ItemStack(Items.NETHER_STAR, 1, 0));
 	}
 }

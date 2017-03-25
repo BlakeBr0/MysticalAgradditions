@@ -23,9 +23,17 @@ public class NoFertilizerForYou {
 		IBlockState state = event.getWorld().getBlockState(event.getPos());
 		EntityPlayer player = event.getEntityPlayer();
 		ItemStack held = player.getHeldItemMainhand();
-		if(state.getBlock() instanceof BlockTier6Crop){
-			if(held.getItem() == MAHelper.items.itemFertilizedEssence || held.getItem() == MAHelper.items.itemMysticalFertilizer){
-				event.setCanceled(true);
+		ItemStack held2 = player.getHeldItemOffhand();
+		if(state.getBlock() != null && state.getBlock() instanceof BlockTier6Crop){
+			if(held != null){
+				if(held.getItem() == MAHelper.items.itemFertilizedEssence || held.getItem() == MAHelper.items.itemMysticalFertilizer){
+					event.setCanceled(true);
+				}
+			}
+			if(held2 != null){
+				if(held2.getItem() == MAHelper.items.itemFertilizedEssence || held2.getItem() == MAHelper.items.itemMysticalFertilizer){
+					event.setCanceled(true);
+				}	
 			}
 		}
 	}

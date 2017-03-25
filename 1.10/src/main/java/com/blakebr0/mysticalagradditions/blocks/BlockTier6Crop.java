@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.blocks.crop.BlockMysticalCrop;
-import com.blakebr0.mysticalagriculture.config.ModConfig;
-import com.blakebr0.mysticalagriculture.items.ModItems;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
@@ -20,16 +20,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
-import net.minecraftforge.fml.common.Optional;
 
 public class BlockTier6Crop extends BlockMysticalCrop {
 	
     private static final AxisAlignedBB CROPS_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.25D, 1.0D);
+    private Block root;
     private Item seed;
     private Item crop;
     
     public BlockTier6Crop(String name){
     	super(name);
+    	
     }
     
     @Override
@@ -37,12 +38,14 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     	this.checkAndDropBlock(world, pos, state);
     	int i = this.getAge(state);
         if(world.getLightFromNeighbors(pos.up()) >= 9){
-	    	if(i < this.getMaxAge()){
-	    		float f = getGrowthChance(this, world, pos);
-	    		if(rand.nextInt((int)(35.0F / f) + 1) == 0) {
-	    			world.setBlockState(pos, this.withAge(i + 1), 2);
-	    		}
-	    	}
+        	if(world.getBlockState(pos.down(2)).getBlock() == this.getRoot()){
+        		if(i < this.getMaxAge()){
+        			float f = getGrowthChance(this, world, pos);
+        			if(rand.nextInt((int)(35.0F / f) + 1) == 0) {
+        				world.setBlockState(pos, this.withAge(i + 1), 2);
+        			}
+        		}
+        	}
         }
     }
     
@@ -61,6 +64,15 @@ public class BlockTier6Crop extends BlockMysticalCrop {
      
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
         return CROPS_AABB;
+    }
+    
+    public Block setRoot(Block root){
+    	this.root = root;
+    	return this.root;
+    }
+    
+    public Block getRoot(){
+    	return this.root;
     }
         
     public Item setSeed(Item seed){
@@ -94,8 +106,8 @@ public class BlockTier6Crop extends BlockMysticalCrop {
         int fertilizer = 0;
         
         if(age == 7){
-        	if(ModConfig.confFertilizedEssenceChance > 0){
-        		if(rand.nextInt(100 / ModConfig.confFertilizedEssenceChance) > 0){
+        	if(MAHelper.config.confFertilizedEssenceChance > 0){
+        		if(rand.nextInt(100 / MAHelper.config.confFertilizedEssenceChance) > 0){
         			fertilizer = 0;
         		} else {
         			fertilizer = 1;
@@ -105,8 +117,8 @@ public class BlockTier6Crop extends BlockMysticalCrop {
         }
         
         if(age == 7){
-        	if(ModConfig.confEssenceChance > 0){
-                if(rand.nextInt(100 / ModConfig.confEssenceChance) > 0){
+        	if(MAHelper.config.confEssenceChance > 0){
+                if(rand.nextInt(100 / MAHelper.config.confEssenceChance) > 0){
                 	essence = 1;
                 } else {
                 	essence = 2;
@@ -117,7 +129,7 @@ public class BlockTier6Crop extends BlockMysticalCrop {
 
         drops.add(new ItemStack(this.getSeed(), 1, 0));
         if(essence > 0){ drops.add(new ItemStack(this.getCrop(), essence, 0)); }
-        if(fertilizer > 0){ drops.add(new ItemStack(ModItems.itemFertilizedEssence, fertilizer, 0)); }
+        if(fertilizer > 0){ drops.add(new ItemStack(MAHelper.items.itemFertilizedEssence, fertilizer, 0)); }
         return drops;
     }
 }

@@ -6,6 +6,8 @@ tile.ma.storage_essence.name=§5Insanium Block
 tile.ma.storage_ingot.name=§5Insanium Ingot Block
 tile.ma.storage_coal.name=§5Insanium Coal Block
 
+tile.ma.nether_star_crop.name=Nether Star Crop
+
 # ITEMS
 item.ma.insanium_essence.name=§5Insanium Essence
 item.ma.insanium_crafting_seed.name=Tier 6 Crafting Seed
@@ -13,3 +15,7 @@ item.ma.insanium_ingot.name=§5Insanium Ingot
 item.ma.insanium_nugget.name=§5Insanium Nugget
 item.ma.insanium_mob_chunk.name=Tier 6 Mob Chunk
 item.ma.insanium_coal.name=§5Insanium Coal
+
+item.ma.nether_star_essence.name=Nether Star Essence
+
+item.ma.nether_star_seeds.name=Nether Star Seeds
