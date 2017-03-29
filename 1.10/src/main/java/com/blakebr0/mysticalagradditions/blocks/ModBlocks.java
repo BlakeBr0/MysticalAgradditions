@@ -17,9 +17,13 @@ public class ModBlocks {
 	public static BlockStorage blockStorage = new BlockStorage();
 	public static BlockSpecial blockSpecial = new BlockSpecial();
 	
+	public static BlockTier6TinkeringTable blockInsaniumTinkeringTable = new BlockTier6TinkeringTable();
+	
 	public static void init(){
 		registerBlock(blockStorage, new ItemBlockStorage(blockStorage));
 		registerBlock(blockSpecial, new ItemBlockSpecial(blockSpecial));
+		
+		registerBlock(blockInsaniumTinkeringTable);
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
@@ -32,6 +36,7 @@ public class ModBlocks {
 	public static void initModels(){
 		blockStorage.initModels();
 		blockSpecial.initModels();
+		registerModel(blockInsaniumTinkeringTable);
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){

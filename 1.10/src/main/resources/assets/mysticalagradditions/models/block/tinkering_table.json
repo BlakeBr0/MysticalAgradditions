@@ -1,0 +1,10 @@
+{
+  "parent": "mysticalagriculture:block/tinkering_table",
+    "textures": {
+        "particle": "mysticalagradditions:blocks/storage_ingot",
+        "top": "mysticalagriculture:blocks/tinkering_table_top",
+        "side": "mysticalagriculture:blocks/tinkering_table_side",
+        "bottom": "mysticalagriculture:blocks/tinkering_table_side",
+        "leg": "mysticalagradditions:blocks/storage_ingot"
+	}
+}

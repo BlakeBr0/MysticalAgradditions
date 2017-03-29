@@ -32,6 +32,11 @@ public class ModRecipes {
 			MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 2), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 5));
 		}
 		
+		//blockSpecial
+		
+		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockInsaniumTinkeringTable, 1, 0), "SSS", "ICI", "IXI", 'S', new ItemStack(MAHelper.blocks.blockSoulstone, 1, 0), 'I', new ItemStack(ModItems.itemInsanium, 1, 2), 'C', "workbench");
+
+		
 		MAHelper.addShapelessRecipe(new ItemStack(MAHelper.items.itemSupremiumEssence, 4, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
 		
 		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), "XEX", "ECE", "XEX", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'C', new ItemStack(MAHelper.items.itemInfusionCrystal, 1, OreDictionary.WILDCARD_VALUE));
