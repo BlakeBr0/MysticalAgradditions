@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions.event;
 
 import com.blakebr0.mysticalagradditions.blocks.BlockTier6Crop;
+import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
 import net.minecraft.block.state.IBlockState;
@@ -11,10 +12,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class NoFertilizerForYou {
 	
-	// TODO: finish this up
 	@SubscribeEvent
 	public void onRightClickBlock(RightClickBlock event){
-		// config
+		if(!ModConfig.confFertilizableCrops){
+			return;
+		}
 		
 		if(event.getEntity() == null){
 			return;

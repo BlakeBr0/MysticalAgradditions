@@ -65,6 +65,14 @@ public class BlockTier6Crop extends BlockMysticalCrop {
         return CROPS_AABB;
     }
     
+    @Override
+    public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient){
+    	if(!(Item.getItemFromBlock(world.getBlockState(pos.down(2)).getBlock()) == this.getRoot())){
+    		return false;
+    	}
+    	return super.canGrow(world, pos, state, isClient);
+    }
+    
     public Item setRoot(Item root){
     	this.root = root;
     	return this.root;
