@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "variant=nether_star": { "model": "mysticalagradditions:special_nether_star" }
+    }
+}

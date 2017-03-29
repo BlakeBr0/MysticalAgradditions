@@ -6,23 +6,24 @@ import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.items.ItemBase;
 import com.blakebr0.mysticalagradditions.items.ItemTier6Seed;
 
-import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 
 public class CropType {
 
 	public static enum Type implements IStringSerializable {
 						
-		NETHER_STAR("nether_star", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.NETHER_STAR).getBlock(), true);
+		NETHER_STAR("nether_star", new ItemStack(ModBlocks.blockSpecial, 1, 0).getItem(), true);
 		
 		private final String name;
 		private final boolean enabled;
 		private final BlockTier6Crop plant;
-		private final Block root;
+		private final Item root;
 		private final ItemBase crop;
 		private final ItemTier6Seed seed;
 		
-		Type(String name, Block root, boolean enabled){
+		Type(String name, Item root, boolean enabled){
 			this.name = name;
 			this.enabled = enabled;
 			this.plant = new BlockTier6Crop(getName() + "_crop");
@@ -51,7 +52,7 @@ public class CropType {
 			return this.plant;
 		}
 		
-		public Block getRoot(){
+		public Item getRoot(){
 			return this.root;
 		}
 		

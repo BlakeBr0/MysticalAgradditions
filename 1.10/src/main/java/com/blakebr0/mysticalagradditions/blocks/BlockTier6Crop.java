@@ -24,13 +24,12 @@ import net.minecraftforge.common.EnumPlantType;
 public class BlockTier6Crop extends BlockMysticalCrop {
 	
     private static final AxisAlignedBB CROPS_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.25D, 1.0D);
-    private Block root;
+    private Item root;
     private Item seed;
     private Item crop;
     
     public BlockTier6Crop(String name){
     	super(name);
-    	
     }
     
     @Override
@@ -38,7 +37,7 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     	this.checkAndDropBlock(world, pos, state);
     	int i = this.getAge(state);
         if(world.getLightFromNeighbors(pos.up()) >= 9){
-        	if(world.getBlockState(pos.down(2)).getBlock() == this.getRoot()){
+        	if(Item.getItemFromBlock(world.getBlockState(pos.down(2)).getBlock()) == this.getRoot()){
         		if(i < this.getMaxAge()){
         			float f = getGrowthChance(this, world, pos);
         			if(rand.nextInt((int)(35.0F / f) + 1) == 0) {
@@ -66,12 +65,12 @@ public class BlockTier6Crop extends BlockMysticalCrop {
         return CROPS_AABB;
     }
     
-    public Block setRoot(Block root){
+    public Item setRoot(Item root){
     	this.root = root;
     	return this.root;
     }
     
-    public Block getRoot(){
+    public Item getRoot(){
     	return this.root;
     }
         

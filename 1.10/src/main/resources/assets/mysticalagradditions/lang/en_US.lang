@@ -6,6 +6,8 @@ tile.ma.storage_essence.name=§5Insanium Block
 tile.ma.storage_ingot.name=§5Insanium Ingot Block
 tile.ma.storage_coal.name=§5Insanium Coal Block
 
+tile.ma.special_nether_star.name=Nether Star Crux
+
 tile.ma.nether_star_crop.name=Nether Star Crop
 
 # ITEMS
