@@ -14,6 +14,8 @@ public class ModConfig {
 	public static ModConfig instance;
 	
 	public static boolean confFertilizableCrops;
+	
+	public static boolean confNetherStarSeeds;
 		
 	@SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
@@ -34,6 +36,9 @@ public class ModConfig {
 		category = "Settings";
 		config.addCustomCategoryComment(category, "Settings for all things Mystical Agriculture.");
 		confFertilizableCrops = config.getBoolean("fertilizable_crops", category, false, "Can Tier 6 crops be fertilized using Fertilized Essence and Mystical Fertilizer?");
+		
+		category = "Seeds";
+		confNetherStarSeeds = config.get("nether_star_seeds", category, true).getBoolean();
 		
 		if(config.hasChanged()){
 			config.save();

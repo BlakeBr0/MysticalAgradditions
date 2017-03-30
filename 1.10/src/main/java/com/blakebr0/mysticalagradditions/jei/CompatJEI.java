@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
+import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagriculture.jei.TinkeringTableCategory;
 
 import mezz.jei.api.BlankModPlugin;
@@ -39,6 +40,11 @@ public class CompatJEI extends BlankModPlugin {
         
         IJeiHelpers jeiHelpers = registry.getJeiHelpers();
         IGuiHelper guiHelper = jeiHelpers.getGuiHelper();
+        
+        registry.addRecipeCategories(new Tier6CropCategory(guiHelper));
+        registry.addRecipeHandlers(new Tier6CropHandler());
+        registry.addRecipes(Tier6CropRecipeMaker.getRecipes());
+        registry.addRecipeCategoryCraftingItem(new ItemStack(ModItems.itemInsanium, 1, 1), Tier6CropCategory.UID);
         
         registry.addRecipeCategoryCraftingItem(new ItemStack(ModBlocks.blockInsaniumTinkeringTable, 1, 0), TinkeringTableCategory.UID);
     }

@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.lib;
 import com.blakebr0.mysticalagradditions.blocks.BlockSpecial;
 import com.blakebr0.mysticalagradditions.blocks.BlockTier6Crop;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
+import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ItemBase;
 import com.blakebr0.mysticalagradditions.items.ItemTier6Seed;
 
@@ -14,7 +15,7 @@ public class CropType {
 
 	public static enum Type implements IStringSerializable {
 						
-		NETHER_STAR("nether_star", new ItemStack(ModBlocks.blockSpecial, 1, 0).getItem(), true);
+		NETHER_STAR("nether_star", new ItemStack(ModBlocks.blockSpecial, 1, 0).getItem(), ModConfig.confNetherStarSeeds);
 		
 		private final String name;
 		private final boolean enabled;

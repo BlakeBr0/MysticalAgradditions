@@ -21,3 +21,6 @@ item.ma.insanium_coal.name=§5Insanium Coal
 item.ma.nether_star_essence.name=Nether Star Essence
 
 item.ma.nether_star_seeds.name=Nether Star Seeds
+
+# JEI
+jei.ma.tier_6_crop=Tier 6 Crop
