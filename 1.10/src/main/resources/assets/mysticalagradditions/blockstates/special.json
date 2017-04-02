@@ -1,5 +1,9 @@
 {
     "variants": {
-        "variant=nether_star": { "model": "mysticalagradditions:special_nether_star" }
+        "variant=nether_star": { "model": "mysticalagradditions:special_nether_star" },
+        "variant=ph1": { "model": "mysticalagradditions:special_nether_star" },
+        "variant=ph2": { "model": "mysticalagradditions:special_nether_star" },
+        "variant=ph3": { "model": "mysticalagradditions:special_nether_star" },
+		"variant=awakened_draconium": { "model": "mysticalagradditions:special_awakened_draconium" }
     }
 }

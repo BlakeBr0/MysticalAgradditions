@@ -13,9 +13,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ModItems {
 	
 	public static ItemInsanium itemInsanium = new ItemInsanium();
+	public static ItemStuff itemStuff = new ItemStuff();
 
 	public static void init(){
 		registerItem(itemInsanium);
+		registerItem(itemStuff);
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
@@ -33,6 +35,7 @@ public class ModItems {
 	@SideOnly(Side.CLIENT)
 	public static void initModels(){
 		itemInsanium.initModels();
+		itemStuff.initModels();
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){

@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.jei;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.blakebr0.mysticalagradditions.blocks.BlockSpecial;
 import com.blakebr0.mysticalagradditions.lib.CropType;
 import com.blakebr0.mysticalagriculture.crafting.ReprocessorManager;
 import com.blakebr0.mysticalagriculture.crafting.ReprocessorRecipe;
@@ -18,7 +19,7 @@ public class Tier6CropRecipeMaker {
         	if(type.isEnabled()){
                 ItemStack input = new ItemStack(type.getSeed());
                 ItemStack crop = new ItemStack(type.getPlant());
-                ItemStack root = new ItemStack(type.getRoot());
+                ItemStack root = new ItemStack(type.getRoot().getBlock(), 1, type.getRootMeta());
                 ItemStack output = new ItemStack(type.getCrop());
 
                 recipes.add(new Tier6CropWrapper(input, crop, root, output));

@@ -24,7 +24,7 @@ import net.minecraftforge.common.EnumPlantType;
 public class BlockTier6Crop extends BlockMysticalCrop {
 	
     private static final AxisAlignedBB CROPS_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.25D, 1.0D);
-    private Item root;
+    private IBlockState root;
     private Item seed;
     private Item crop;
     
@@ -37,7 +37,7 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     	this.checkAndDropBlock(world, pos, state);
     	int i = this.getAge(state);
         if(world.getLightFromNeighbors(pos.up()) >= 9){
-        	if(Item.getItemFromBlock(world.getBlockState(pos.down(2)).getBlock()) == this.getRoot()){
+        	if(world.getBlockState(pos.down(2)) == this.getRoot()){
         		if(i < this.getMaxAge()){
         			float f = getGrowthChance(this, world, pos);
         			if(rand.nextInt((int)(35.0F / f) + 1) == 0) {
@@ -67,18 +67,18 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     
     @Override
     public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient){
-    	if(!(Item.getItemFromBlock(world.getBlockState(pos.down(2)).getBlock()) == this.getRoot())){
+    	if(!(world.getBlockState(pos.down(2)) == this.getRoot())){
     		return false;
     	}
     	return super.canGrow(world, pos, state, isClient);
     }
     
-    public Item setRoot(Item root){
+    public IBlockState setRoot(IBlockState root){
     	this.root = root;
     	return this.root;
     }
     
-    public Item getRoot(){
+    public IBlockState getRoot(){
     	return this.root;
     }
         

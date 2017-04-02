@@ -16,6 +16,7 @@ public class ModConfig {
 	public static boolean confFertilizableCrops;
 	
 	public static boolean confNetherStarSeeds;
+	public static boolean confAwakenedDraconiumSeeds;
 		
 	@SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
@@ -38,7 +39,8 @@ public class ModConfig {
 		confFertilizableCrops = config.getBoolean("fertilizable_crops", category, false, "Can Tier 6 crops be fertilized using Fertilized Essence and Mystical Fertilizer?");
 		
 		category = "Seeds";
-		confNetherStarSeeds = config.get("nether_star_seeds", category, true).getBoolean();
+		confNetherStarSeeds = config.get(category, "nether_star_seeds", true).getBoolean();
+		confAwakenedDraconiumSeeds = config.get(category, "awakened_draconium_seeds", true).getBoolean();
 		
 		if(config.hasChanged()){
 			config.save();

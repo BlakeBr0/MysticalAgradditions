@@ -38,6 +38,8 @@ public class CompatJEI extends BlankModPlugin {
         	registry.addDescription(new ItemStack(item), "desc." + item.getUnlocalizedName());
         }
         
+        registry.addDescription(new ItemStack(ModItems.itemStuff, 1, 1), "desc.withering_soul");
+        
         IJeiHelpers jeiHelpers = registry.getJeiHelpers();
         IGuiHelper guiHelper = jeiHelpers.getGuiHelper();
         

@@ -2,8 +2,10 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import java.util.List;
 
+import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -73,7 +75,11 @@ public class BlockSpecial extends BlockBase {
     
 	public static enum Type implements IStringSerializable {
 		
-		NETHER_STAR(0, "nether_star", true);
+		NETHER_STAR(0, "nether_star", ModConfig.confNetherStarSeeds),
+		PH1(1, "ph1", false),
+		PH2(2, "ph2", false),
+		PH3(3, "ph3", false),
+		AWAKENED_DRACONIUM(4, "awakened_draconium", ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC);
 
         private static final Type[] META_LOOKUP = new Type[values().length];		
 		private final int meta;

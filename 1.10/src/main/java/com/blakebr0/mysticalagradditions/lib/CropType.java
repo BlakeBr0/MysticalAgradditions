@@ -6,8 +6,9 @@ import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ItemBase;
 import com.blakebr0.mysticalagradditions.items.ItemTier6Seed;
+import com.blakebr0.mysticalagriculture.util.ModChecker;
 
-import net.minecraft.item.Item;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 
@@ -15,20 +16,23 @@ public class CropType {
 
 	public static enum Type implements IStringSerializable {
 						
-		NETHER_STAR("nether_star", new ItemStack(ModBlocks.blockSpecial, 1, 0).getItem(), ModConfig.confNetherStarSeeds);
+		NETHER_STAR("nether_star", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.NETHER_STAR), 0, ModConfig.confNetherStarSeeds),
+		AWAKENED_DRACONIUM("awakened_draconium", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.AWAKENED_DRACONIUM), 4, ModConfig.confNetherStarSeeds && ModChecker.DRACONIC);
 		
 		private final String name;
 		private final boolean enabled;
 		private final BlockTier6Crop plant;
-		private final Item root;
+		private final IBlockState root;
+		private final int rootMeta;
 		private final ItemBase crop;
 		private final ItemTier6Seed seed;
 		
-		Type(String name, Item root, boolean enabled){
+		Type(String name, IBlockState root, int rootMeta, boolean enabled){
 			this.name = name;
 			this.enabled = enabled;
 			this.plant = new BlockTier6Crop(getName() + "_crop");
 			this.root = root;
+			this.rootMeta = rootMeta;
 			this.crop = new ItemBase(getName() + "_essence");
 			this.seed = new ItemTier6Seed(getName() + "_seeds", getPlant());
 			getPlant().setRoot(getRoot());
@@ -53,8 +57,12 @@ public class CropType {
 			return this.plant;
 		}
 		
-		public Item getRoot(){
+		public IBlockState getRoot(){
 			return this.root;
+		}
+		
+		public int getRootMeta(){
+			return this.rootMeta;
 		}
 		
 		public ItemBase getCrop(){
