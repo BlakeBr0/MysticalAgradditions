@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mysticalagradditions",
+  "name": "Mystical Agradditions",
+  "description": "An addon for Mystical Agriculture.",
+  "version": "1.0.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BlakeBr0"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

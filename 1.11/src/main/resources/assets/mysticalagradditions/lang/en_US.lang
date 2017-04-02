@@ -1,0 +1,35 @@
+# CREATIVE TAB
+itemGroup.tab.mystical_agradditions.name=Mystical Agradditions
+
+# BLOCKS
+tile.ma.storage_essence.name=§5Insanium Block
+tile.ma.storage_ingot.name=§5Insanium Ingot Block
+tile.ma.storage_coal.name=§5Insanium Coal Block
+
+tile.ma.special_nether_star.name=Nether Star Crux
+tile.ma.special_awakened_draconium.name=Awakened Draconium Crux
+
+tile.ma.nether_star_crop.name=Nether Star Crop
+tile.ma.awakened_draconium_crop.name=Awakened Draconium Crop
+
+# ITEMS
+item.ma.insanium_essence.name=§5Insanium Essence
+item.ma.insanium_crafting_seed.name=Tier 6 Crafting Seed
+item.ma.insanium_ingot.name=§5Insanium Ingot
+item.ma.insanium_nugget.name=§5Insanium Nugget
+item.ma.insanium_mob_chunk.name=Tier 6 Mob Chunk
+item.ma.insanium_coal.name=§5Insanium Coal
+
+item.ma.stuff_nether_star_shard.name=Nether Star Shard
+item.ma.stuff_withering_soul.name=Withering Soul
+
+item.ma.nether_star_essence.name=Nether Star Essence
+item.ma.awakened_draconium_essence.name=Awakened Draconium Essence
+
+item.ma.nether_star_seeds.name=Nether Star Seeds
+item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds
+
+# JEI
+jei.ma.tier_6_crop=Tier 6 Crop
+
+desc.withering_soul=It drops from Withers.
