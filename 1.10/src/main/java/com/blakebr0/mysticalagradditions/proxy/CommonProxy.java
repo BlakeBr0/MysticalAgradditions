@@ -9,6 +9,7 @@ import com.blakebr0.mysticalagradditions.event.MobDrops;
 import com.blakebr0.mysticalagradditions.event.NoFertilizerForYou;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagradditions.tinkers.CompatTConstruct;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -22,6 +23,7 @@ public class CommonProxy {
 		ModConfig.init(new File(event.getModConfigurationDirectory(), "mysticalagradditions.cfg"));
 		ModBlocks.init();
 		ModItems.init();
+		CompatTConstruct.init();
 	}
 	
 	public void init(FMLInitializationEvent event){

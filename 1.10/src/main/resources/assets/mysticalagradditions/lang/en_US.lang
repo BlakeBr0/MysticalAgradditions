@@ -33,3 +33,9 @@ item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds
 jei.ma.tier_6_crop=Tier 6 Crop
 
 desc.withering_soul=It drops from Withers.
+
+# TINKERS
+material.ma.prosperity.name=Prosperity Shard
+
+trait.ma.prosperous=Prosperous
+trait.ma.prosperous.desc=Makes your tool or weapon randomly drop Prosperity Shards.
