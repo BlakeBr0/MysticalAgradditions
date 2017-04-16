@@ -62,7 +62,7 @@ public class CompatTConstruct {
 		baseEssence.setRepresentativeItem(new ItemStack(MAHelper.items.itemBaseEssenceIngot, 1, 0));
 		baseEssence.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(baseEssence, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, DIAMOND),
+				new HeadMaterialStats(680, 13.32f, 12.65f, IRON),
 				new HandleMaterialStats(0.45f, 10), 
 				new ExtraMaterialStats(40),
 				new BowMaterialStats(2.87f, 4.53f, 14f));
@@ -73,7 +73,7 @@ public class CompatTConstruct {
 		inferium.setRepresentativeItem(new ItemStack(MAHelper.items.itemInferiumIngot, 1, 0));
 		inferium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(inferium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, DIAMOND),
+				new HeadMaterialStats(680, 13.32f, 12.65f, IRON),
 				new HandleMaterialStats(0.45f, 10), 
 				new ExtraMaterialStats(40),
 				new BowMaterialStats(2.87f, 4.53f, 14f));
@@ -95,7 +95,7 @@ public class CompatTConstruct {
 		intermedium.setRepresentativeItem(new ItemStack(MAHelper.items.itemIntermediumIngot, 1, 0));
 		intermedium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(intermedium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, DIAMOND),
+				new HeadMaterialStats(680, 13.32f, 12.65f, OBSIDIAN),
 				new HandleMaterialStats(0.45f, 10), 
 				new ExtraMaterialStats(40),
 				new BowMaterialStats(2.87f, 4.53f, 14f));
@@ -106,7 +106,7 @@ public class CompatTConstruct {
 		superium.setRepresentativeItem(new ItemStack(MAHelper.items.itemSuperiumIngot, 1, 0));
 		superium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(superium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, DIAMOND),
+				new HeadMaterialStats(680, 13.32f, 12.65f, COBALT),
 				new HandleMaterialStats(0.45f, 10), 
 				new ExtraMaterialStats(40),
 				new BowMaterialStats(2.87f, 4.53f, 14f));
@@ -117,7 +117,7 @@ public class CompatTConstruct {
 		supremium.setRepresentativeItem(new ItemStack(MAHelper.items.itemSupremiumIngot, 1, 0));
 		supremium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(supremium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, DIAMOND),
+				new HeadMaterialStats(680, 13.32f, 12.65f, COBALT),
 				new HandleMaterialStats(0.45f, 10), 
 				new ExtraMaterialStats(40),
 				new BowMaterialStats(2.87f, 4.53f, 14f));

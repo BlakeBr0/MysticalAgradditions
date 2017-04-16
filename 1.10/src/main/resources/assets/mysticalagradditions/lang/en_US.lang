@@ -6,6 +6,8 @@ tile.ma.storage_essence.name=§5Insanium Block
 tile.ma.storage_ingot.name=§5Insanium Ingot Block
 tile.ma.storage_coal.name=§5Insanium Coal Block
 
+tile.ma.tier6_inferium_crop.name=Tier 6 Inferium Crop
+
 tile.ma.special_nether_star.name=Nether Star Crux
 tile.ma.special_awakened_draconium.name=Awakened Draconium Crux
 
@@ -25,6 +27,8 @@ item.ma.stuff_withering_soul.name=Withering Soul
 
 item.ma.nether_star_essence.name=Nether Star Essence
 item.ma.awakened_draconium_essence.name=Awakened Draconium Essence
+
+item.ma.tier6_inferium_seeds.name=Inferium Seeds
 
 item.ma.nether_star_seeds.name=Nether Star Seeds
 item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds

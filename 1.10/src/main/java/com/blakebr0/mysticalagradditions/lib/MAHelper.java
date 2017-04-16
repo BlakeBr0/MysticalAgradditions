@@ -11,6 +11,7 @@ import com.blakebr0.mysticalagriculture.items.ModItems;
 import com.blakebr0.mysticalagriculture.lib.OreDictResources;
 import com.blakebr0.mysticalagriculture.lib.Parts;
 import com.blakebr0.mysticalagriculture.lib.Parts.ItemNotFoundException;
+import com.blakebr0.mysticalagriculture.lib.Tooltips;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraft.block.Block;
@@ -25,6 +26,7 @@ public class MAHelper {
 	public static ModItems items;
 	public static ModConfig config;
 	public static MobDrops mobDrops;
+	public static Tooltips tooltips;
 	
 	public static Item draconicHeart;
 	

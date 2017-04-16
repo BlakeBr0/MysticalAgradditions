@@ -5,8 +5,8 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.MysticalAgriculture;
-import com.blakebr0.mysticalagriculture.lib.Tooltips;
 import com.blakebr0.mysticalagriculture.tileentity.TileEntityTinkeringTable;
 
 import net.minecraft.block.ITileEntityProvider;
@@ -84,6 +84,6 @@ public class BlockTier6TinkeringTable extends BlockBase implements ITileEntityPr
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
-		tooltip.add(Tooltips.MATERIAL + "\u00A75Insanium");
+		tooltip.add(MAHelper.tooltips.MATERIAL + "\u00A75Insanium");
     }
 }
