@@ -84,7 +84,7 @@ public class CompatTConstruct {
                 new HeadMaterialStats(310, 6.35f, 4.6F, IRON),
                 new HandleMaterialStats(0.80F, 55),
                 new ExtraMaterialStats(48),
-                new BowMaterialStats(0.5F, 1.5F, 7.5F));
+                new BowMaterialStats(0.5F, 1.5F, 3.1F));
 		moltenSoulium = new FluidMolten("soulium", 0x564237);
 		FluidRegistry.registerFluid(moltenSoulium);
 		ModBlocks.registerBlock(new BlockMolten(moltenSoulium).setRegistryName("molten_" + moltenSoulium.getName()));
@@ -103,8 +103,8 @@ public class CompatTConstruct {
 		TinkerRegistry.addMaterialStats(baseEssence, 
                 new HeadMaterialStats(244, 6.65f, 4.33f, DIAMOND),
                 new HandleMaterialStats(0.7F, 65),
-                new ExtraMaterialStats(52),
-				new BowMaterialStats(0.5F, 1.5F, 7.1F));
+                new ExtraMaterialStats(50),
+				new BowMaterialStats(0.5F, 1.5F, 1.02F));
 		moltenBaseEssence = new FluidMolten("base_essence", 0xD1FFFF);
 		FluidRegistry.registerFluid(moltenBaseEssence);
 		ModBlocks.registerBlock(new BlockMolten(moltenBaseEssence).setRegistryName("molten_" + moltenBaseEssence.getName()));
@@ -121,10 +121,10 @@ public class CompatTConstruct {
 		inferium.setRepresentativeItem(new ItemStack(MAHelper.items.itemInferiumIngot, 1, 0));
 		inferium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(inferium, 
-				new HeadMaterialStats(345, 7.58F, 4.5F, DIAMOND),
-				new HandleMaterialStats(0.74f, 73), 
-				new ExtraMaterialStats(65),
-				new BowMaterialStats(0.6F, 1.8F, 7.4F));
+				new HeadMaterialStats(345, 7.02F, 4.5F, DIAMOND),
+				new HandleMaterialStats(0.63F, 50), 
+				new ExtraMaterialStats(75),
+				new BowMaterialStats(0.58F, 0.99F, 1.91F));
 		moltenInferium = new FluidMolten("inferium", 0x748E00);
 		FluidRegistry.registerFluid(moltenInferium);
 		ModBlocks.registerBlock(new BlockMolten(moltenInferium).setRegistryName("molten_" + moltenInferium.getName()));
@@ -141,10 +141,10 @@ public class CompatTConstruct {
 		prudentium.setRepresentativeItem(new ItemStack(MAHelper.items.itemPrudentiumIngot, 1, 0));
 		prudentium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(prudentium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, DIAMOND),
-				new HandleMaterialStats(0.45f, 10), 
-				new ExtraMaterialStats(40),
-				new BowMaterialStats(0.5F, 1.5F, 7.3F));
+				new HeadMaterialStats(690, 8.01F, 6.62F, DIAMOND),
+				new HandleMaterialStats(0.78F, 75), 
+				new ExtraMaterialStats(100),
+				new BowMaterialStats(0.73F, 1.34F, 2.32F));
 		moltenPrudentium = new FluidMolten("prudentium", 0x008C23);
 		FluidRegistry.registerFluid(moltenPrudentium);
 		ModBlocks.registerBlock(new BlockMolten(moltenPrudentium).setRegistryName("molten_" + moltenPrudentium.getName()));
@@ -161,10 +161,10 @@ public class CompatTConstruct {
 		intermedium.setRepresentativeItem(new ItemStack(MAHelper.items.itemIntermediumIngot, 1, 0));
 		intermedium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(intermedium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, OBSIDIAN),
-				new HandleMaterialStats(0.45f, 10), 
-				new ExtraMaterialStats(40),
-				new BowMaterialStats(2.87f, 4.53f, 14f));
+				new HeadMaterialStats(1380, 11.08F, 9.23F, OBSIDIAN),
+				new HandleMaterialStats(0.97F, 100), 
+				new ExtraMaterialStats(150),
+				new BowMaterialStats(1.07F, 1.63F, 4.02F));
 		moltenIntermedium = new FluidMolten("intermedium", 0xB74900);
 		FluidRegistry.registerFluid(moltenIntermedium);
 		ModBlocks.registerBlock(new BlockMolten(moltenIntermedium).setRegistryName("molten_" + moltenIntermedium.getName()));
@@ -181,10 +181,10 @@ public class CompatTConstruct {
 		superium.setRepresentativeItem(new ItemStack(MAHelper.items.itemSuperiumIngot, 1, 0));
 		superium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(superium, 
-				new HeadMaterialStats(680, 13.32f, 12.65f, COBALT),
-				new HandleMaterialStats(0.45f, 10), 
-				new ExtraMaterialStats(40),
-				new BowMaterialStats(2.87f, 4.53f, 14f));
+				new HeadMaterialStats(2760, 16.53F, 11.62F, COBALT),
+				new HandleMaterialStats(1.12F, 165), 
+				new ExtraMaterialStats(225),
+				new BowMaterialStats(1.21F, 1.91F, 5.94F));
 		moltenSuperium = new FluidMolten("superium", 0x007FDB);
 		FluidRegistry.registerFluid(moltenSuperium);
 		ModBlocks.registerBlock(new BlockMolten(moltenSuperium).setRegistryName("molten_" + moltenSuperium.getName()));
@@ -202,10 +202,10 @@ public class CompatTConstruct {
 		supremium.addTrait(TraitProsperous.getTrait());
 		supremium.addTrait(duritos, HEAD);
 		TinkerRegistry.addMaterialStats(supremium, 
-				new HeadMaterialStats(5500, 22.25F, 14.87F, COBALT),
+				new HeadMaterialStats(5520, 22.25F, 15.03F, COBALT),
 				new HandleMaterialStats(1.35F, 200),
 				new ExtraMaterialStats(300),
-				new BowMaterialStats(1.32F, 2.35F, 7.32F));
+				new BowMaterialStats(1.33F, 2.35F, 7.32F));
 		moltenSupremium = new FluidMolten("supremium", 0xC40000);
 		FluidRegistry.registerFluid(moltenSupremium);
 		ModBlocks.registerBlock(new BlockMolten(moltenSupremium).setRegistryName("molten_" + moltenSupremium.getName()));
