@@ -21,6 +21,7 @@ public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event){
 		ModConfig.init(new File(event.getModConfigurationDirectory(), "mysticalagradditions.cfg"));
+		MinecraftForge.EVENT_BUS.register(new ModConfig());
 		ModBlocks.init();
 		ModItems.init();
 		CropType.init();

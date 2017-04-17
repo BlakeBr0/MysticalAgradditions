@@ -14,6 +14,7 @@ public class ModConfig {
 	public static ModConfig instance;
 	
 	public static boolean confFertilizableCrops;
+	public static boolean confTConstructSupport;
 	
 	public static boolean confNetherStarSeeds;
 	public static boolean confAwakenedDraconiumSeeds;
@@ -37,8 +38,10 @@ public class ModConfig {
 		category = "Settings";
 		config.addCustomCategoryComment(category, "Settings for all things Mystical Agriculture.");
 		confFertilizableCrops = config.getBoolean("fertilizable_crops", category, false, "Can Tier 6 crops be fertilized using Fertilized Essence and Mystical Fertilizer?");
+		confTConstructSupport = config.getBoolean("tconstruct_support", category, true, "Should the Tinkers' Construct integration be enabled?");
 		
 		category = "Seeds";
+		config.addCustomCategoryComment(category, "Enable/Disable each seed individually.");
 		confNetherStarSeeds = config.get(category, "nether_star_seeds", true).getBoolean();
 		confAwakenedDraconiumSeeds = config.get(category, "awakened_draconium_seeds", true).getBoolean();
 		

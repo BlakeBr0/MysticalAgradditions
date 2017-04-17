@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.tinkers;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
+import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.lib.FluidRender;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
@@ -50,6 +51,8 @@ public class CompatTConstruct {
 	public static FluidMolten moltenSupremium;
 	
 	public static void init(){
+		
+		if(!ModConfig.confTConstructSupport){ return; }
 		
 //		TinkerTools.registerToolForgeBlock("blockBaseEssenceIngot");
 		TinkerTools.registerToolForgeBlock("blockSouliumIngot");
@@ -217,6 +220,9 @@ public class CompatTConstruct {
 	
 	@SideOnly(Side.CLIENT)
 	public static void initFluidModels(){
+		
+		if(!ModConfig.confTConstructSupport){ return; }
+		
 		FluidRender.mapFluidState(moltenSoulium);
 		FluidRender.mapFluidState(moltenBaseEssence);
 		FluidRender.mapFluidState(moltenInferium);
