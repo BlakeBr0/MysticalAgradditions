@@ -13,7 +13,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 
 public class CropType {
-
+	
+	public static void init(){
+		for(CropType.Type type : CropType.Type.values()){
+			if(type.isEnabled()){
+				type.set();
+			}
+		}
+	}
+	
 	public static enum Type implements IStringSerializable {
 						
 		NETHER_STAR("nether_star", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.NETHER_STAR), 0, ModConfig.confNetherStarSeeds),
@@ -35,9 +43,6 @@ public class CropType {
 			this.rootMeta = rootMeta;
 			this.crop = new ItemBase(getName() + "_essence");
 			this.seed = new ItemTier6Seed(getName() + "_seeds", getPlant());
-			getPlant().setRoot(getRoot());
-			getPlant().setCrop(getCrop());
-			getPlant().setSeed(getSeed());
 		}
 
 		@Override
@@ -71,6 +76,13 @@ public class CropType {
 		
 		public ItemTier6Seed getSeed(){
 			return this.seed;
+		}
+		
+		public Type set(){
+			this.getPlant().setRoot(this.getRoot());
+			this.getPlant().setCrop(this.getCrop());
+			this.getPlant().setSeed(this.getSeed());
+			return this;
 		}
 	}
 }

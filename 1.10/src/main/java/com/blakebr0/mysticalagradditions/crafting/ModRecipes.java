@@ -41,6 +41,9 @@ public class ModRecipes {
 		
 		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), "XEX", "ECE", "XEX", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'C', new ItemStack(MAHelper.items.itemInfusionCrystal, 1, OreDictionary.WILDCARD_VALUE));
 		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), "XEX", "ECE", "XEX", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'C', new ItemStack(MAHelper.items.itemInfusionCrystalMaster, 1, 0));	
+		
+		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 0), "XEX", "ECE", "XEX", 'E', new ItemStack(MAHelper.blocks.blockSupremium, 1, 0), 'C', new ItemStack(MAHelper.items.itemInfusionCrystalMaster, 1, 0));
+		
 		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 0), new ItemStack(ModBlocks.blockStorage, 1, 0));
 		
 		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 1), "XEX", "ECE", "XEX", 'E', new ItemStack(ModItems.itemInsanium, 1, 0), 'C', new ItemStack(MAHelper.items.itemTier5CraftingSeed, 1, 0));

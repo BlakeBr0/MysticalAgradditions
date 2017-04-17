@@ -8,6 +8,7 @@ import com.blakebr0.mysticalagradditions.crafting.ModRecipes;
 import com.blakebr0.mysticalagradditions.event.MobDrops;
 import com.blakebr0.mysticalagradditions.event.NoFertilizerForYou;
 import com.blakebr0.mysticalagradditions.items.ModItems;
+import com.blakebr0.mysticalagradditions.lib.CropType;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagradditions.tinkers.CompatTConstruct;
 
@@ -19,10 +20,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 	
 	public void preInit(FMLPreInitializationEvent event){
-//		MAHelper.initConfig(new File(event.getModConfigurationDirectory(), "mysticalagriculture.cfg"));
 		ModConfig.init(new File(event.getModConfigurationDirectory(), "mysticalagradditions.cfg"));
 		ModBlocks.init();
 		ModItems.init();
+		CropType.init();
 		CompatTConstruct.init();
 	}
 	
