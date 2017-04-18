@@ -1,7 +1,5 @@
 package com.blakebr0.mysticalagradditions.blocks;
 
-import java.util.List;
-
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;

@@ -11,5 +11,4 @@ public class BlockBase extends com.blakebr0.mysticalagriculture.blocks.BlockBase
 		super(name, material, sound, hardness, resistance);
 		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 	}
-
 }

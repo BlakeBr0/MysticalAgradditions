@@ -6,6 +6,8 @@ tile.ma.storage_essence.name=§5Insanium Block
 tile.ma.storage_ingot.name=§5Insanium Ingot Block
 tile.ma.storage_coal.name=§5Insanium Coal Block
 
+tile.ma.tier6_inferium_crop.name=Tier 6 Inferium Crop
+
 tile.ma.special_nether_star.name=Nether Star Crux
 tile.ma.special_awakened_draconium.name=Awakened Draconium Crux
 
@@ -26,6 +28,8 @@ item.ma.stuff_withering_soul.name=Withering Soul
 item.ma.nether_star_essence.name=Nether Star Essence
 item.ma.awakened_draconium_essence.name=Awakened Draconium Essence
 
+item.ma.tier6_inferium_seeds.name=Inferium Seeds
+
 item.ma.nether_star_seeds.name=Nether Star Seeds
 item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds
 
@@ -33,3 +37,27 @@ item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds
 jei.ma.tier_6_crop=Tier 6 Crop
 
 desc.withering_soul=It drops from Withers.
+
+# TINKERS
+fluid.base_essence.name=Molten Base Essence
+fluid.soulium.name=Molten Soulium
+fluid.inferium.name=Molten Inferium
+fluid.prudentium.name=Molten Prudentium
+fluid.intermedium.name=Molten Intermedium
+fluid.superium.name=Molten Superium
+fluid.supremium.name=Molten Supremium
+
+material.ma.prosperity.name=Prosperity Shard
+material.ma.soulium.name=Soulium
+material.ma.base_essence.name=Base Essence
+material.ma.inferium.name=Inferium
+material.ma.prudentium.name=Prudentium
+material.ma.intermedium.name=Intermedium
+material.ma.superium.name=Superium
+material.ma.supremium.name=Supremium
+
+trait.ma.prosperous=Prosperous
+trait.ma.prosperous.desc=Makes your tool or weapon randomly drop Prosperity Shards.
+
+trait.ma.chunky=Chunky
+trait.ma.chunky.desc=Makes your tool or weapon drop Mob Chunks.

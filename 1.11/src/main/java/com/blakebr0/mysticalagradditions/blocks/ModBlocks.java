@@ -19,11 +19,15 @@ public class ModBlocks {
 	
 	public static BlockTier6TinkeringTable blockInsaniumTinkeringTable = new BlockTier6TinkeringTable();
 	
+	public static BlockTier6InferiumCrop blockTier6InferiumCrop = new BlockTier6InferiumCrop("tier6_inferium_crop");
+	
 	public static void init(){
 		registerBlock(blockStorage, new ItemBlockStorage(blockStorage));
 		registerBlock(blockSpecial, new ItemBlockSpecial(blockSpecial));
 		
 		registerBlock(blockInsaniumTinkeringTable);
+		
+		registerBlock(blockTier6InferiumCrop);
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
@@ -36,7 +40,10 @@ public class ModBlocks {
 	public static void initModels(){
 		blockStorage.initModels();
 		blockSpecial.initModels();
+		
 		registerModel(blockInsaniumTinkeringTable);
+		
+		registerModel(blockTier6InferiumCrop);
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){

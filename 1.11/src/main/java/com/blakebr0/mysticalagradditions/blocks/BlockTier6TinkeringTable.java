@@ -83,6 +83,6 @@ public class BlockTier6TinkeringTable extends BlockBase implements ITileEntityPr
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, EntityPlayer player, List<String> tooltip, boolean advanced) {
-		tooltip.add("Material: \u00A75Insanium");
+		tooltip.add("\u00A75Insanium");
     }
 }

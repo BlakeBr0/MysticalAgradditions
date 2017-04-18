@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions.items;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
+import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.lib.CropType;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -14,6 +15,8 @@ public class ModItems {
 	
 	public static ItemInsanium itemInsanium = new ItemInsanium();
 	public static ItemStuff itemStuff = new ItemStuff();
+	
+	public static ItemTier6Seed itemTier6InferiumSeeds = new ItemTier6Seed("tier6_inferium_seeds", ModBlocks.blockTier6InferiumCrop);
 
 	public static void init(){
 		registerItem(itemInsanium);
@@ -24,6 +27,8 @@ public class ModItems {
 				registerItem(type.getCrop());
 			}
 		}
+		
+		registerItem(itemTier6InferiumSeeds);
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
@@ -43,6 +48,8 @@ public class ModItems {
 			}
 		}
 		
+		registerModel(itemTier6InferiumSeeds);
+	
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
 				registerModel(type.getSeed());
