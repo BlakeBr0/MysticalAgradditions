@@ -8,11 +8,11 @@ import com.blakebr0.mysticalagriculture.crafting.EssenceRecipes;
 import com.blakebr0.mysticalagriculture.crafting.ModRecipes;
 import com.blakebr0.mysticalagriculture.handler.MobDrops;
 import com.blakebr0.mysticalagriculture.items.ModItems;
-import com.blakebr0.mysticalagriculture.lib.OreDictResources;
 import com.blakebr0.mysticalagriculture.lib.Parts;
 import com.blakebr0.mysticalagriculture.lib.Parts.ItemNotFoundException;
 import com.blakebr0.mysticalagriculture.lib.Tooltips;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
+import com.blakebr0.mysticalagriculture.util.Utils;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -65,6 +65,6 @@ public class MAHelper {
 	}
 	
 	public static ItemStack getOre(String name, int stackSize){
-		return OreDictResources.getItem(name, stackSize);
+		return Utils.getItem(name, stackSize);
 	}
 }
