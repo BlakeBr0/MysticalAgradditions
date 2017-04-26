@@ -2,11 +2,11 @@ package com.blakebr0.mysticalagradditions.lib;
 
 import java.io.File;
 
-import com.blakebr0.mysticalagriculture.MobDrops;
 import com.blakebr0.mysticalagriculture.blocks.ModBlocks;
 import com.blakebr0.mysticalagriculture.config.ModConfig;
 import com.blakebr0.mysticalagriculture.crafting.EssenceRecipes;
 import com.blakebr0.mysticalagriculture.crafting.ModRecipes;
+import com.blakebr0.mysticalagriculture.handler.MobDrops;
 import com.blakebr0.mysticalagriculture.items.ModItems;
 import com.blakebr0.mysticalagriculture.lib.OreDictResources;
 import com.blakebr0.mysticalagriculture.lib.Parts;

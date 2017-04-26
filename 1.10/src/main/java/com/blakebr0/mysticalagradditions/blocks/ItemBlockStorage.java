@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockStorage extends ItemBlock {
 
-	public ItemBlockStorage(Block block) {
+	public ItemBlockStorage(Block block){
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);

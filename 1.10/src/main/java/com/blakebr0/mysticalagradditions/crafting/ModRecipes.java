@@ -32,8 +32,8 @@ public class ModRecipes {
 			MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 2), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 5));
 		}
 		
-		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 0), "ESE", "WDW", "ESE", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'S', new ItemStack(Items.NETHER_STAR, 1, 0), 'D', "blockDiamond", 'W', new ItemStack(ModItems.itemStuff, 1, 1));
-		if(type.AWAKENED_DRACONIUM.isEnabled()){ MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 4), "EWE", "SDS", "ESE", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'S', MAHelper.getOre("blockDraconiumAwakened", 1), 'D', "blockDiamond", 'W', new ItemStack(MAHelper.draconicHeart, 1, 0)); }
+		if(type.NETHER_STAR.isEnabled()){ MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 0), "ESE", "WDW", "ESE", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'S', new ItemStack(Items.NETHER_STAR, 1, 0), 'D', "blockDiamond", 'W', new ItemStack(ModItems.itemStuff, 1, 1)); }
+		if(type.AWAKENED_DRACONIUM.isEnabled()){ MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 4), "EWE", "IDI", "ESE", 'E', new ItemStack(MAHelper.items.itemSupremiumEssence, 1, 0), 'S', MAHelper.getOre("blockDraconiumAwakened", 1), 'D', "blockDiamond", 'W', new ItemStack(MAHelper.draconicHeart, 1, 0), 'I', "ingotDraconiumAwakened"); }
 		
 		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockInsaniumTinkeringTable, 1, 0), "SSS", "ICI", "IXI", 'S', new ItemStack(MAHelper.blocks.blockSoulstone, 1, 0), 'I', new ItemStack(ModItems.itemInsanium, 1, 2), 'C', "workbench");
 		

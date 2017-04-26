@@ -6,7 +6,7 @@ import java.util.Random;
 
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
-import com.blakebr0.mysticalagriculture.blocks.crop.BlockTier5InferiumCrop;
+import com.blakebr0.mysticalagriculture.blocks.crop.BlockMysticalCrop;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockTier6InferiumCrop extends BlockTier5InferiumCrop {
+public class BlockTier6InferiumCrop extends BlockMysticalCrop {
 	
     public BlockTier6InferiumCrop(String name){
     	super(name);
