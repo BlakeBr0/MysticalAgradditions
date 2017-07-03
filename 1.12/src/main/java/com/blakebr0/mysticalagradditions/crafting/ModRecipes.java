@@ -8,7 +8,7 @@ import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-// TODO: cleanup all this stuff pls xD?
+
 public class ModRecipes {
 	
 	public static void addSeedRecipe(CropType.Type type, Object input){
@@ -35,21 +35,21 @@ public class ModRecipes {
 		if(type.NETHER_STAR.isEnabled()){ MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 0), "ESE", "WDW", "ESE", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'S', new ItemStack(Items.NETHER_STAR, 1, 0), 'D', "blockDiamond", 'W', new ItemStack(ModItems.itemStuff, 1, 1)); }
 		if(type.AWAKENED_DRACONIUM.isEnabled()){ MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 4), "EWE", "IDI", "ESE", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'S', MAHelper.getOre("blockDraconiumAwakened", 1), 'D', "blockDiamond", 'W', new ItemStack(MAHelper.draconicHeart, 1, 0), 'I', "ingotDraconiumAwakened"); }
 		
-		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockInsaniumTinkeringTable, 1, 0), "SSS", "ICI", "IXI", 'S', new ItemStack(MAHelper.blocks.blockSoulstone, 1, 0), 'I', new ItemStack(ModItems.itemInsanium, 1, 2), 'C', "workbench");
+		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockInsaniumTinkeringTable, 1, 0), "SSS", "ICI", "I I", 'S', new ItemStack(MAHelper.blocks.blockSoulstone, 1, 0), 'I', new ItemStack(ModItems.itemInsanium, 1, 2), 'C', "workbench");
 		
 		MAHelper.addShapelessRecipe(new ItemStack(MAHelper.items.itemCrafting, 4, 4), new ItemStack(ModItems.itemInsanium, 1, 0));
 		
-		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), "XEX", "ECE", "XEX", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'C', new ItemStack(MAHelper.items.itemInfusionCrystal, 1, OreDictionary.WILDCARD_VALUE));
-		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), "XEX", "ECE", "XEX", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'C', new ItemStack(MAHelper.items.itemInfusionCrystalMaster, 1, 0));	
+		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), " E ", "ECE", " E ", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'C', new ItemStack(MAHelper.items.itemInfusionCrystal, 1, OreDictionary.WILDCARD_VALUE));
+		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 0), " E ", "ECE", " E ", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'C', new ItemStack(MAHelper.items.itemInfusionCrystalMaster, 1, 0));	
 		
-		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 0), "XEX", "ECE", "XEX", 'E', new ItemStack(MAHelper.blocks.blockStorage, 1, 5), 'C', new ItemStack(MAHelper.items.itemInfusionCrystalMaster, 1, 0));
+		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 0), " E ", "ECE", " E ", 'E', new ItemStack(MAHelper.blocks.blockStorage, 1, 4), 'C', new ItemStack(MAHelper.items.itemInfusionCrystalMaster, 1, 0));
 		
 		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 9, 0), new ItemStack(ModBlocks.blockStorage, 1, 0));
 		
-		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 1), "XEX", "ECE", "XEX", 'E', new ItemStack(ModItems.itemInsanium, 1, 0), 'C', MAHelper.items.itemCrafting.itemTier5CraftingSeed);
+		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 1), " E ", "ECE", " E ", 'E', new ItemStack(ModItems.itemInsanium, 1, 0), 'C', MAHelper.items.itemCrafting.itemTier5CraftingSeed);
 
 		if(MAHelper.config.confHarderIngots){
-		    MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), "XEX", "EIE", "XEX", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'I', MAHelper.items.itemCrafting.itemSuperiumIngot);
+		    MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), " E ", "EIE", " E ", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'I', MAHelper.items.itemCrafting.itemSuperiumIngot);
     	} else {
     		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), MAHelper.items.itemCrafting.itemSupremiumIngot, new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
 		}
@@ -66,7 +66,7 @@ public class ModRecipes {
 		}
 		
 		MAHelper.addShapelessRecipe(new ItemStack(Items.NETHER_STAR, 1, 0), new ItemStack(ModItems.itemStuff, 1, 0), new ItemStack(ModItems.itemStuff, 1, 0), new ItemStack(ModItems.itemStuff, 1, 0));
-		MAHelper.addShapedRecipe(new ItemStack(Items.SKULL, 3, 1), "SSS", "XXX", "XXX", 'S', new ItemStack(ModItems.itemStuff, 1, 1));
+		MAHelper.addShapedRecipe(new ItemStack(Items.SKULL, 3, 1), "SSS", "   ", "   ", 'S', new ItemStack(ModItems.itemStuff, 1, 1));
 		
 		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemTier6InferiumSeeds, 1, 0), "EEE", "ESE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 0), 'S', new ItemStack(MAHelper.items.itemTier5InferiumSeeds, 1, 0));
 		

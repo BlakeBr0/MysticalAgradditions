@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.CropType;
+import com.blakebr0.mysticalagradditions.registry.MysticalRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -23,44 +24,36 @@ public class ModBlocks {
 	public static BlockTier6InferiumCrop blockTier6InferiumCrop = new BlockTier6InferiumCrop("tier6_inferium_crop");
 	
 	public static void init(){
-		registerBlock(blockStorage, new ItemBlockStorage(blockStorage));
-		registerBlock(blockSpecial, new ItemBlockSpecial(blockSpecial));
+		register(blockStorage, "storage", new ItemBlockStorage(blockStorage));
+		register(blockSpecial, "special", new ItemBlockSpecial(blockSpecial));
 		
-		registerBlock(blockInsaniumTinkeringTable);
+		register(blockInsaniumTinkeringTable, "tinkering_table");
 		
-		registerBlock(blockTier6InferiumCrop);
+		register(blockTier6InferiumCrop, "tier6_inferium_crop");
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
-				registerBlock(type.getPlant());
+				register(type.getPlant(), type.getName() + "_crop");
 			}
 		}
 	}
 	
-	@SideOnly(Side.CLIENT)
-	public static void initModels(){
-		blockStorage.initModels();
-		blockSpecial.initModels();
-		
-		registerModel(blockInsaniumTinkeringTable);
-		
-		registerModel(blockTier6InferiumCrop);
-		
-		for(CropType.Type type : CropType.Type.values()){
-			if(type.isEnabled()){
-				registerModel(type.getPlant());
-			}
+	public static <T extends Block> T register(T block, String name){
+		return register(block, name, true);
+	}
+	
+	public static <T extends Block> T register(T block, String name, boolean itemBlock){
+		MysticalRegistry.register(block, name);
+		if(itemBlock){
+			MysticalRegistry.register(new ItemBlock(block), name);
 		}
+		return block;
 	}
 	
-	public static void registerBlock(Block block){
-		ForgeRegistries.BLOCKS.register(block);
-		ForgeRegistries.ITEMS.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
-	}
-	
-	public static void registerBlock(Block block, ItemBlock itemBlock){
-		ForgeRegistries.BLOCKS.register(block);
-		ForgeRegistries.ITEMS.register(itemBlock.setRegistryName(block.getRegistryName()));
+	public static <T extends Block> T register(T block, String name, ItemBlock itemBlock){
+		MysticalRegistry.register(block, name);
+		MysticalRegistry.register(itemBlock, name);
+		return block;
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.blocks;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagriculture.lib.IModelHelper;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraft.block.SoundType;
@@ -24,7 +25,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockSpecial extends BlockBase {
+public class BlockSpecial extends BlockBase implements IModelHelper {
 
     public static final PropertyEnum<Type> VARIANT = PropertyEnum.<Type>create("variant", Type.class);
 
@@ -39,7 +40,6 @@ public class BlockSpecial extends BlockBase {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> stacks){
         for(Type type : Type.values()){
         	if(type.isEnabled()){
@@ -48,7 +48,6 @@ public class BlockSpecial extends BlockBase {
         }
     }
     
-    @SideOnly(Side.CLIENT)
     public void initModels(){
     	for(Type type : Type.values()){
     		if(type.isEnabled()){

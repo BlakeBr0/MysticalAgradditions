@@ -19,6 +19,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class MAHelper {
 	
@@ -40,12 +43,13 @@ public class MAHelper {
 		}
 	}
 	
+	//TODO: a better job with recipes
 	public static void addShapedRecipe(ItemStack output, Object... input){
-		ModRecipes.addShapedRecipe(output, input);
+		ForgeRegistries.RECIPES.register(new ShapedOreRecipe(ModRecipes.EMPTY_GROUP, output, input).setRegistryName(ModRecipes.getRecipeLocation(output)));
 	}
 	
 	public static void addShapelessRecipe(ItemStack output, Object... input){
-		ModRecipes.addShapelessRecipe(output, input);
+		ForgeRegistries.RECIPES.register(new ShapelessOreRecipe(ModRecipes.EMPTY_GROUP, output, input).setRegistryName(ModRecipes.getRecipeLocation(output)));
 	}
 	
 	public static void addEssenceRecipe(ItemStack output, Object... input){

@@ -10,6 +10,7 @@ import com.blakebr0.mysticalagradditions.event.NoFertilizerForYou;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.CropType;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagradditions.registry.MysticalRegistry;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,7 @@ public class CommonProxy {
 		if(ModChecker.TINKERS){
 	//		CompatTConstruct.init();
 		}
+		MinecraftForge.EVENT_BUS.register(new MysticalRegistry());
 	}
 	
 	public void init(FMLInitializationEvent event){

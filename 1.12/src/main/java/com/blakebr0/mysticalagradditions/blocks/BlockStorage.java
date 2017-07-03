@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagriculture.lib.IModelHelper;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -26,7 +27,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockStorage extends BlockBase {
+public class BlockStorage extends BlockBase implements IModelHelper {
 
     public static final PropertyEnum<Type> VARIANT = PropertyEnum.<Type>create("variant", Type.class);
 
@@ -42,7 +43,6 @@ public class BlockStorage extends BlockBase {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> stacks){
         for(Type type : Type.values()){
         	if(type.isEnabled()){
@@ -51,7 +51,6 @@ public class BlockStorage extends BlockBase {
         }
     }
     
-    @SideOnly(Side.CLIENT)
     public void initModels(){
     	for(Type type : Type.values()){
     		if(type.isEnabled()){

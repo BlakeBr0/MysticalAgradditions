@@ -13,8 +13,6 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void preInit(FMLPreInitializationEvent event){
 		super.preInit(event);
-		ModBlocks.initModels();
-		ModItems.initModels();
 		if(ModChecker.TINKERS){
 	//		CompatTConstruct.initFluidModels();
 		}

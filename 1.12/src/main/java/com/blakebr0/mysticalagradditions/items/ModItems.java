@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.items;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.lib.CropType;
+import com.blakebr0.mysticalagradditions.registry.MysticalRegistry;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -20,50 +21,26 @@ public class ModItems {
 	public static ItemTier6Seed itemTier6InferiumSeeds = new ItemTier6Seed("tier6_inferium_seeds", ModBlocks.blockTier6InferiumCrop);
 
 	public static void init(){
-		registerItem(itemInsanium);
-		registerItem(itemStuff);
+		register(itemInsanium, "insanium");
+		register(itemStuff, "stuff");
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
-				registerItem(type.getCrop());
+				register(type.getCrop(), type.getName() + "_essence");
 			}
 		}
 		
-		registerItem(itemTier6InferiumSeeds);
+		register(itemTier6InferiumSeeds, "tier6_inferium_seeds");
 		
 		for(CropType.Type type : CropType.Type.values()){
 			if(type.isEnabled()){
-				registerItem(type.getSeed());
-			}
-		}
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public static void initModels(){
-		itemInsanium.initModels();
-		itemStuff.initModels();
-		
-		for(CropType.Type type : CropType.Type.values()){
-			if(type.isEnabled()){
-				registerModel(type.getCrop());
-			}
-		}
-		
-		registerModel(itemTier6InferiumSeeds);
-	
-		for(CropType.Type type : CropType.Type.values()){
-			if(type.isEnabled()){
-				registerModel(type.getSeed());
+				register(type.getSeed(), type.getName() + "_seeds");
 			}
 		}
 	}
-	//TODO: registry events
-	public static void registerItem(Item item){
-		ForgeRegistries.ITEMS.register(item);
-	}
-	
-	@SideOnly(Side.CLIENT)
-	public static void registerModel(Item item){
-		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(MysticalAgradditions.MOD_ID + ":" + item.getUnlocalizedName().substring(8), "inventory")); 
+
+	public static <T extends Item> T register(T item, String name){
+		MysticalRegistry.register(item, name);
+		return item;
 	}
 }

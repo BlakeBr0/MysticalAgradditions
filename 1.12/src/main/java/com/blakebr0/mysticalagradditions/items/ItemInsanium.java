@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.items;
 import java.util.List;
 
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagriculture.lib.IModelHelper;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -19,7 +20,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemInsanium extends ItemBase {
+public class ItemInsanium extends ItemBase implements IModelHelper {
 
 	public ItemInsanium() {
 		super("insanium");
@@ -41,7 +42,6 @@ public class ItemInsanium extends ItemBase {
         return super.getUnlocalizedName() + "_" + Type.byMetadata(stack.getMetadata()).getName();
     }
     
-    @SideOnly(Side.CLIENT)
     public void initModels(){
     	for(Type type : Type.values()){
     		if(type.isEnabled()){
