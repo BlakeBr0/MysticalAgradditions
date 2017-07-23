@@ -14,7 +14,7 @@ public class NoFertilizerForYou {
 	
 	@SubscribeEvent
 	public void onRightClickBlock(RightClickBlock event){
-		if(!ModConfig.confFertilizableCrops){
+		if(ModConfig.confFertilizableCrops){
 			return;
 		}
 		
@@ -27,12 +27,12 @@ public class NoFertilizerForYou {
 		ItemStack held = player.getHeldItemMainhand();
 		ItemStack held2 = player.getHeldItemOffhand();
 		if(state.getBlock() != null && state.getBlock() instanceof BlockTier6Crop){
-			if(held != null){
+			if(!held.isEmpty()){
 				if(held.getItem() == MAHelper.items.itemFertilizedEssence || held.getItem() == MAHelper.items.itemMysticalFertilizer){
 					event.setCanceled(true);
 				}
 			}
-			if(held2 != null){
+			if(!held2.isEmpty()){
 				if(held2.getItem() == MAHelper.items.itemFertilizedEssence || held2.getItem() == MAHelper.items.itemMysticalFertilizer){
 					event.setCanceled(true);
 				}	

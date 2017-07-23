@@ -49,7 +49,7 @@ public class ModRecipes {
 		MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 1), " E ", "ECE", " E ", 'E', new ItemStack(ModItems.itemInsanium, 1, 0), 'C', MAHelper.items.itemCrafting.itemTier5CraftingSeed);
 
 		if(MAHelper.config.confHarderIngots){
-		    MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), " E ", "EIE", " E ", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'I', MAHelper.items.itemCrafting.itemSuperiumIngot);
+		    MAHelper.addShapedRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), " E ", "EIE", " E ", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'I', MAHelper.items.itemCrafting.itemSupremiumIngot);
     	} else {
     		MAHelper.addShapelessRecipe(new ItemStack(ModItems.itemInsanium, 1, 2), MAHelper.items.itemCrafting.itemSupremiumIngot, new ItemStack(ModItems.itemInsanium, 1, 0), new ItemStack(ModItems.itemInsanium, 1, 0));
 		}
