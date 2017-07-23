@@ -11,8 +11,10 @@ import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.CropType;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagradditions.tinkers.CompatTConstruct;
+import com.blakebr0.mysticalagriculture.crafting.ReprocessorManager;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -35,6 +37,8 @@ public class CommonProxy {
 		ModRecipes.init();
 		MinecraftForge.EVENT_BUS.register(new MobDrops());
 		MinecraftForge.EVENT_BUS.register(new NoFertilizerForYou());
+		
+		ReprocessorManager.addRecipe(new ItemStack(MAHelper.items.itemInferiumEssence, 6, 0), new ItemStack(ModItems.itemTier6InferiumSeeds));
 	}
 
 	public void postInit(FMLPostInitializationEvent event){

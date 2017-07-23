@@ -3,7 +3,7 @@
   "modid": "mysticalagradditions",
   "name": "Mystical Agradditions",
   "description": "An addon for Mystical Agriculture.",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "mcversion": "${mcversion}",
   "url": "https://minecraft.curseforge.com/projects/mystical-agradditions",
   "updateUrl": "",

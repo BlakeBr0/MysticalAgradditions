@@ -30,9 +30,11 @@ public class ItemInsanium extends ItemBase implements IModelHelper {
 	
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> stacks){
-		for(Type type : Type.values()){
-			if(type.isEnabled()){
-				stacks.add(new ItemStack(this, 1, type.getMetadata()));
+		if(isInCreativeTab(tab)){
+			for(Type type : Type.values()){
+				if(type.isEnabled()){
+					stacks.add(new ItemStack(this, 1, type.getMetadata()));
+				}
 			}
 		}
 	}

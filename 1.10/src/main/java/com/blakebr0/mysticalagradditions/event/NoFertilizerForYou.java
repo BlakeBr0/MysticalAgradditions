@@ -14,7 +14,7 @@ public class NoFertilizerForYou {
 	
 	@SubscribeEvent
 	public void onRightClickBlock(RightClickBlock event){
-		if(!ModConfig.confFertilizableCrops){
+		if(ModConfig.confFertilizableCrops){
 			return;
 		}
 		

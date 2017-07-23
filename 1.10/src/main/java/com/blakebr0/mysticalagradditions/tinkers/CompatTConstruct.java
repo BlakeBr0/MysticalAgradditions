@@ -26,6 +26,7 @@ import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.materials.MaterialTypes;
 import slimeknights.tconstruct.library.utils.HarvestLevels;
 import slimeknights.tconstruct.shared.TinkerFluids;
+import slimeknights.tconstruct.smeltery.TinkerSmeltery;
 import slimeknights.tconstruct.smeltery.block.BlockMolten;
 import slimeknights.tconstruct.tools.TinkerTools;
 import slimeknights.tconstruct.tools.TinkerTraits;
@@ -215,6 +216,30 @@ public class CompatTConstruct {
 		supremium.setFluid(moltenSupremium);
 		supremium.setCastable(true);
 		TinkerIntegration.integrate(supremium, moltenSupremium).integrate();
+		
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.baseEssence, TinkerSmeltery.castNugget, moltenBaseEssence, 16);
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.inferium, TinkerSmeltery.castNugget, moltenInferium, 16);
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.prudentium, TinkerSmeltery.castNugget, moltenPrudentium, 16);
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.intermedium, TinkerSmeltery.castNugget, moltenIntermedium, 16);
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.superium, TinkerSmeltery.castNugget, moltenSuperium, 16);
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.supremium, TinkerSmeltery.castNugget, moltenSupremium, 16);
+		TinkerRegistry.registerTableCasting(MAHelper.items.itemNugget.soulium, TinkerSmeltery.castNugget, moltenSoulium, 16);
+		
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemBaseEssenceIngot), TinkerSmeltery.castIngot, moltenBaseEssence, 144);
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemInferiumIngot), TinkerSmeltery.castIngot, moltenInferium, 144);
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemPrudentiumIngot), TinkerSmeltery.castIngot, moltenPrudentium, 144);
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemIntermediumIngot), TinkerSmeltery.castIngot, moltenIntermedium, 144);
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemSuperiumIngot), TinkerSmeltery.castIngot, moltenSuperium, 144);
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemSupremiumIngot), TinkerSmeltery.castIngot, moltenSupremium, 144);
+		TinkerRegistry.registerTableCasting(new ItemStack(MAHelper.items.itemSouliumIngot), TinkerSmeltery.castIngot, moltenSoulium, 144);
+		
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockBaseEssenceIngot), null, moltenBaseEssence, 1296);
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockInferiumIngot), null, moltenInferium, 1296);
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockPrudentiumIngot), null, moltenPrudentium, 1296);
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockIntermediumIngot), null, moltenIntermedium, 1296);
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockSuperiumIngot), null, moltenSuperium, 1296);
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockSupremiumIngot), null, moltenSupremium, 1296);
+		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockSouliumIngot), null, moltenSoulium, 1296);
 	}
 	
 	@SideOnly(Side.CLIENT)
