@@ -1,9 +1,9 @@
 package com.blakebr0.mysticalagradditions.blocks;
 
+import com.blakebr0.cucumber.iface.IModelHelper;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
-import com.blakebr0.mysticalagriculture.lib.IModelHelper;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraft.block.SoundType;
@@ -77,7 +77,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 		PH1(1, "ph1", false),
 		PH2(2, "ph2", false),
 		PH3(3, "ph3", false),
-		AWAKENED_DRACONIUM(4, "awakened_draconium", ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC);
+		AWAKENED_DRACONIUM(4, "awakened_draconium", ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC_EVOLUTION);
 
         private static final Type[] META_LOOKUP = new Type[values().length];		
 		private final int meta;

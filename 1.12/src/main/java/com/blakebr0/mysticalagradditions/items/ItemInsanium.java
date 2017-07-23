@@ -2,8 +2,10 @@ package com.blakebr0.mysticalagradditions.items;
 
 import java.util.List;
 
+import com.blakebr0.cucumber.iface.IModelHelper;
+import com.blakebr0.cucumber.item.ItemBase;
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
-import com.blakebr0.mysticalagriculture.lib.IModelHelper;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -23,8 +25,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemInsanium extends ItemBase implements IModelHelper {
 
 	public ItemInsanium() {
-		super("insanium");
+		super("ma.insanium");
 		this.setHasSubtypes(true);
+		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 	

@@ -2,7 +2,6 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.CropType;
-import com.blakebr0.mysticalagradditions.registry.MysticalRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -39,25 +38,17 @@ public class ModBlocks {
 	}
 	
 	public static <T extends Block> T register(T block, String name){
-		return register(block, name, true);
+		MysticalAgradditions.REGISTRY.register(block, name);
+		return block;
 	}
 	
 	public static <T extends Block> T register(T block, String name, boolean itemBlock){
-		MysticalRegistry.register(block, name);
-		if(itemBlock){
-			MysticalRegistry.register(new ItemBlock(block), name);
-		}
+		MysticalAgradditions.REGISTRY.register(block, name, itemBlock);
 		return block;
 	}
 	
 	public static <T extends Block> T register(T block, String name, ItemBlock itemBlock){
-		MysticalRegistry.register(block, name);
-		MysticalRegistry.register(itemBlock, name);
+		MysticalAgradditions.REGISTRY.register(block, name, itemBlock);
 		return block;
-	}
-
-	@SideOnly(Side.CLIENT)
-	public static void registerModel(Block block){
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(MysticalAgradditions.MOD_ID + ":" + block.getUnlocalizedName().substring(8), "inventory"));
 	}
 }

@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.lib;
 
 import java.io.File;
 
+import com.blakebr0.cucumber.helper.RecipeHelper;
 import com.blakebr0.mysticalagriculture.blocks.ModBlocks;
 import com.blakebr0.mysticalagriculture.config.ModConfig;
 import com.blakebr0.mysticalagriculture.crafting.EssenceRecipes;
@@ -34,7 +35,7 @@ public class MAHelper {
 	public static Item draconicHeart;
 	
 	static {
-		if(ModChecker.DRACONIC){
+		if(ModChecker.DRACONIC_EVOLUTION){
 			try {
 				draconicHeart = getItem("draconicevolution:dragon_heart");
 			} catch(Throwable e){
@@ -45,11 +46,11 @@ public class MAHelper {
 	
 	//TODO: a better job with recipes
 	public static void addShapedRecipe(ItemStack output, Object... input){
-		ForgeRegistries.RECIPES.register(new ShapedOreRecipe(ModRecipes.EMPTY_GROUP, output, input).setRegistryName(ModRecipes.getRecipeLocation(output)));
+		RecipeHelper.addShapedRecipe(output, input);
 	}
 	
 	public static void addShapelessRecipe(ItemStack output, Object... input){
-		ForgeRegistries.RECIPES.register(new ShapelessOreRecipe(ModRecipes.EMPTY_GROUP, output, input).setRegistryName(ModRecipes.getRecipeLocation(output)));
+		RecipeHelper.addShapelessRecipe(output, input);
 	}
 	
 	public static void addEssenceRecipe(ItemStack output, Object... input){

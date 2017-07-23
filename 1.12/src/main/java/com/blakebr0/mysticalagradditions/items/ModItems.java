@@ -3,7 +3,6 @@ package com.blakebr0.mysticalagradditions.items;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.lib.CropType;
-import com.blakebr0.mysticalagradditions.registry.MysticalRegistry;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -40,7 +39,7 @@ public class ModItems {
 	}
 
 	public static <T extends Item> T register(T item, String name){
-		MysticalRegistry.register(item, name);
+		MysticalAgradditions.REGISTRY.register(item, name);
 		return item;
 	}
 }

@@ -2,9 +2,9 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import java.util.List;
 
+import com.blakebr0.cucumber.iface.IModelHelper;
 import com.blakebr0.mysticalagradditions.items.ItemInsanium.Type;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
-import com.blakebr0.mysticalagriculture.lib.IModelHelper;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

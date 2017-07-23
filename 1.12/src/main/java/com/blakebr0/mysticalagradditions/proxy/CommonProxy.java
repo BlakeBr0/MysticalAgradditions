@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.proxy;
 
 import java.io.File;
 
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.crafting.ModRecipes;
@@ -10,7 +11,7 @@ import com.blakebr0.mysticalagradditions.event.NoFertilizerForYou;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.CropType;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
-import com.blakebr0.mysticalagradditions.registry.MysticalRegistry;
+import com.blakebr0.mysticalagradditions.tinkers.CompatTConstruct;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -26,10 +27,12 @@ public class CommonProxy {
 		ModBlocks.init(); 
 		ModItems.init();
 		CropType.init();
-		if(ModChecker.TINKERS){
-	//		CompatTConstruct.init();
+
+		MinecraftForge.EVENT_BUS.register(MysticalAgradditions.REGISTRY);
+		
+		if(ModChecker.TINKERS_CONSTRUCT){
+			CompatTConstruct.init();
 		}
-		MinecraftForge.EVENT_BUS.register(new MysticalRegistry());
 	}
 	
 	public void init(FMLInitializationEvent event){
