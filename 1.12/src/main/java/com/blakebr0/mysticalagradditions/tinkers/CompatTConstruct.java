@@ -91,7 +91,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenSoulium);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumNugget, moltenSoulium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumIngot, moltenSoulium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 6), moltenSoulium, 1296);
+//		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 6), moltenSoulium, 1296);
 		soulium.setFluid(moltenSoulium);
 		soulium.setCastable(true);
 		TinkerRegistry.integrate(soulium, moltenSoulium).preInit();
@@ -111,7 +111,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenBaseEssence);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemBaseEssenceNugget, moltenBaseEssence, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemBaseEssenceIngot, moltenBaseEssence, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 0), moltenBaseEssence, 1296);
+//		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 0), moltenBaseEssence, 1296);
 		baseEssence.setFluid(moltenBaseEssence);
 		baseEssence.setCastable(true);
 		TinkerRegistry.integrate(baseEssence, moltenBaseEssence).preInit();
@@ -131,7 +131,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenInferium);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemInferiumNugget, moltenInferium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemInferiumIngot, moltenInferium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 1), moltenInferium, 1296);
+//		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 1), moltenInferium, 1296);
 		inferium.setFluid(moltenInferium);
 		inferium.setCastable(true);
 		TinkerRegistry.integrate(inferium, moltenInferium).preInit();
@@ -151,7 +151,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenPrudentium);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemPrudentiumNugget, moltenPrudentium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemPrudentiumIngot, moltenPrudentium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 2), moltenPrudentium, 1296);
+//		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 2), moltenPrudentium, 1296);
 		prudentium.setFluid(moltenPrudentium);
 		prudentium.setCastable(true);
 		TinkerRegistry.integrate(prudentium, moltenPrudentium).preInit();
@@ -171,7 +171,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenIntermedium);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemIntermediumNugget, moltenIntermedium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemIntermediumIngot, moltenIntermedium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 3), moltenIntermedium, 1296);
+	//	TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 3), moltenIntermedium, 1296);
 		intermedium.setFluid(moltenIntermedium);
 		intermedium.setCastable(true);
 		TinkerRegistry.integrate(intermedium, moltenIntermedium).preInit();
@@ -191,7 +191,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenSuperium);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSuperiumNugget, moltenSuperium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSuperiumIngot, moltenSuperium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 4), moltenSuperium, 1296);
+	//	TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 4), moltenSuperium, 1296);
 		superium.setFluid(moltenSuperium);
 		superium.setCastable(true);
 		TinkerRegistry.integrate(superium, moltenSuperium).preInit();
@@ -212,7 +212,7 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenSupremium);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSupremiumNugget, moltenSupremium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSupremiumIngot, moltenSupremium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 5), moltenSupremium, 1296);
+	//	TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 5), moltenSupremium, 1296);
 		supremium.setFluid(moltenSupremium);
 		supremium.setCastable(true);
 		TinkerRegistry.integrate(supremium, moltenSupremium).preInit();
