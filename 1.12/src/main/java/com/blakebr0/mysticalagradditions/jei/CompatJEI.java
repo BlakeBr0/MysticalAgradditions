@@ -7,7 +7,6 @@ import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagriculture.jei.TinkeringTableCategory;
 
-import mezz.jei.api.BlankModPlugin;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.IJeiRuntime;

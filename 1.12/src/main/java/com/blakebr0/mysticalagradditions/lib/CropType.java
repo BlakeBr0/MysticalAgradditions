@@ -9,7 +9,6 @@ import com.blakebr0.mysticalagradditions.items.ItemTier6Seed;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 
 public class CropType {

@@ -1,7 +1,5 @@
 package com.blakebr0.mysticalagradditions.proxy;
 
-import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
-import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.tinkers.CompatTConstruct;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
