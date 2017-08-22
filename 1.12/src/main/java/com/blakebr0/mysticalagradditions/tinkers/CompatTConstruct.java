@@ -23,7 +23,6 @@ import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.materials.MaterialTypes;
 import slimeknights.tconstruct.library.utils.HarvestLevels;
 import slimeknights.tconstruct.smeltery.TinkerSmeltery;
-import slimeknights.tconstruct.smeltery.block.BlockMolten;
 import slimeknights.tconstruct.tools.TinkerTraits;
 
 public class CompatTConstruct {
@@ -68,7 +67,6 @@ public class CompatTConstruct {
                 new HandleMaterialStats(0.23F, 8),
                 new ExtraMaterialStats(20),
 				new BowMaterialStats(1.4f, 0.63f, -1.2f));
-		TinkerRegistry.integrate(prosperity).preInit();
 		
 		soulium = new Material("ma.soulium", 0x564237);
 		soulium.addItem(MAHelper.items.itemCrafting.itemSouliumIngot, 1, Material.VALUE_Ingot);
@@ -82,14 +80,12 @@ public class CompatTConstruct {
                 new BowMaterialStats(0.5F, 1.5F, 3.1F));
 		moltenSoulium = new FluidMolten("soulium", 0x564237);
 		FluidRegistry.registerFluid(moltenSoulium);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenSoulium), "molten_" + moltenSoulium.getName());
+		BlockMolten blockSoulium = new BlockMolten(moltenSoulium);
+		blockSoulium.setRegistryName(MysticalAgradditions.MOD_ID + ":molten_" + moltenSoulium.getName());
+		MysticalAgradditions.REGISTRY.register(blockSoulium, "molten_" + moltenSoulium.getName());
 		FluidRegistry.addBucketForFluid(moltenSoulium);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumNugget, moltenSoulium, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumIngot, moltenSoulium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 6), moltenSoulium, 1296);
 		soulium.setFluid(moltenSoulium);
 		soulium.setCastable(true);
-		TinkerRegistry.integrate(soulium, moltenSoulium).preInit();
 
 		baseEssence = new Material("ma.base_essence", 0xD1FFFF);
 		baseEssence.addItem(MAHelper.items.itemCrafting.itemBaseEssenceIngot, 1, Material.VALUE_Ingot);
@@ -104,12 +100,8 @@ public class CompatTConstruct {
 		FluidRegistry.registerFluid(moltenBaseEssence);
 		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenBaseEssence), "molten_" + moltenBaseEssence.getName());
 		FluidRegistry.addBucketForFluid(moltenBaseEssence);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemBaseEssenceNugget, moltenBaseEssence, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemBaseEssenceIngot, moltenBaseEssence, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 0), moltenBaseEssence, 1296);
 		baseEssence.setFluid(moltenBaseEssence);
 		baseEssence.setCastable(true);
-		TinkerRegistry.integrate(baseEssence, moltenBaseEssence).preInit();
 		
 		inferium = new Material("ma.inferium", 0x748E00);
 		inferium.addItem(MAHelper.items.itemCrafting.itemInferiumIngot, 1, Material.VALUE_Ingot);
@@ -124,12 +116,8 @@ public class CompatTConstruct {
 		FluidRegistry.registerFluid(moltenInferium);
 		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenInferium), "molten_" + moltenInferium.getName());
 		FluidRegistry.addBucketForFluid(moltenInferium);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemInferiumNugget, moltenInferium, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemInferiumIngot, moltenInferium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 1), moltenInferium, 1296);
 		inferium.setFluid(moltenInferium);
 		inferium.setCastable(true);
-		TinkerRegistry.integrate(inferium, moltenInferium).preInit();
 		
 		prudentium = new Material("ma.prudentium", 0x008C23);
 		prudentium.addItem(MAHelper.items.itemCrafting.itemPrudentiumIngot, 1, Material.VALUE_Ingot);
@@ -144,12 +132,8 @@ public class CompatTConstruct {
 		FluidRegistry.registerFluid(moltenPrudentium);
 		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenPrudentium), "molten_" + moltenPrudentium.getName());
 		FluidRegistry.addBucketForFluid(moltenPrudentium);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemPrudentiumNugget, moltenPrudentium, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemPrudentiumIngot, moltenPrudentium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 2), moltenPrudentium, 1296);
 		prudentium.setFluid(moltenPrudentium);
 		prudentium.setCastable(true);
-		TinkerRegistry.integrate(prudentium, moltenPrudentium).preInit();
 		
 		intermedium = new Material("ma.intermedium", 0xB74900);
 		intermedium.addItem(MAHelper.items.itemCrafting.itemIntermediumIngot, 1, Material.VALUE_Ingot);
@@ -164,12 +148,8 @@ public class CompatTConstruct {
 		FluidRegistry.registerFluid(moltenIntermedium);
 		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenIntermedium), "molten_" + moltenIntermedium.getName());
 		FluidRegistry.addBucketForFluid(moltenIntermedium);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemIntermediumNugget, moltenIntermedium, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemIntermediumIngot, moltenIntermedium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 3), moltenIntermedium, 1296);
 		intermedium.setFluid(moltenIntermedium);
 		intermedium.setCastable(true);
-		TinkerRegistry.integrate(intermedium, moltenIntermedium).preInit();
 		
 		superium = new Material("ma.superium", 0x007FDB);
 		superium.addItem(MAHelper.items.itemCrafting.itemSuperiumIngot, 1, Material.VALUE_Ingot);
@@ -184,12 +164,8 @@ public class CompatTConstruct {
 		FluidRegistry.registerFluid(moltenSuperium);
 		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenSuperium), "molten_" + moltenSuperium.getName());
 		FluidRegistry.addBucketForFluid(moltenSuperium);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSuperiumNugget, moltenSuperium, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSuperiumIngot, moltenSuperium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 4), moltenSuperium, 1296);
 		superium.setFluid(moltenSuperium);
 		superium.setCastable(true);
-		TinkerRegistry.integrate(superium, moltenSuperium).preInit();
 		
 		supremium = new Material("ma.supremium", 0xC40000);
 		supremium.addItem(MAHelper.items.itemCrafting.itemSupremiumIngot, 1, Material.VALUE_Ingot);
@@ -205,16 +181,49 @@ public class CompatTConstruct {
 		FluidRegistry.registerFluid(moltenSupremium);
 		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenSupremium), "molten_" + moltenSupremium.getName());
 		FluidRegistry.addBucketForFluid(moltenSupremium);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSupremiumNugget, moltenSupremium, 16);
-		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSupremiumIngot, moltenSupremium, 144);
-		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 5), moltenSupremium, 1296);
 		supremium.setFluid(moltenSupremium);
 		supremium.setCastable(true);
-		TinkerRegistry.integrate(supremium, moltenSupremium).preInit();	
 	}
 	
 	@SubscribeEvent
 	public void registerRecipes(RegistryEvent.Register<IRecipe> event){
+		
+		TinkerRegistry.integrate(prosperity).preInit();
+		TinkerRegistry.integrate(soulium, moltenSoulium).preInit();
+		TinkerRegistry.integrate(baseEssence, moltenBaseEssence).preInit();
+		TinkerRegistry.integrate(inferium, moltenInferium).preInit();
+		TinkerRegistry.integrate(prudentium, moltenPrudentium).preInit();
+		TinkerRegistry.integrate(intermedium, moltenIntermedium).preInit();
+		TinkerRegistry.integrate(superium, moltenSuperium).preInit();
+		TinkerRegistry.integrate(supremium, moltenSupremium).preInit();	
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumNugget, moltenSoulium, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumIngot, moltenSoulium, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 6), moltenSoulium, 1296);
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemBaseEssenceNugget, moltenBaseEssence, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemBaseEssenceIngot, moltenBaseEssence, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 0), moltenBaseEssence, 1296);
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemInferiumNugget, moltenInferium, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemInferiumIngot, moltenInferium, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 1), moltenInferium, 1296);
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemPrudentiumNugget, moltenPrudentium, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemPrudentiumIngot, moltenPrudentium, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 2), moltenPrudentium, 1296);
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemIntermediumNugget, moltenIntermedium, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemIntermediumIngot, moltenIntermedium, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 3), moltenIntermedium, 1296);
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSuperiumNugget, moltenSuperium, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSuperiumIngot, moltenSuperium, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 4), moltenSuperium, 1296);
+		
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSupremiumNugget, moltenSupremium, 16);
+		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSupremiumIngot, moltenSupremium, 144);
+		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 5), moltenSupremium, 1296);
 		
 		TinkerRegistry.registerTableCasting(MAHelper.items.itemCrafting.itemBaseEssenceNugget, TinkerSmeltery.castNugget, moltenBaseEssence, 16);
 		TinkerRegistry.registerTableCasting(MAHelper.items.itemCrafting.itemInferiumNugget, TinkerSmeltery.castNugget, moltenInferium, 16);
