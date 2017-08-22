@@ -33,6 +33,7 @@ public class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(MysticalAgradditions.REGISTRY);
 		
 		if(ModChecker.TINKERS_CONSTRUCT){
+			MinecraftForge.EVENT_BUS.register(new CompatTConstruct());
 			CompatTConstruct.init();
 		}
 	}
