@@ -88,7 +88,7 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     }
 
     @Override
-    protected Item getSeed(){
+	public Item getSeed(){
     	return this.seed;
     }
     
@@ -98,7 +98,7 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     }
     
     @Override
-    protected Item getCrop() {
+	public Item getCrop() {
     	return this.crop;
     }
     

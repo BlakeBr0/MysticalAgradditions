@@ -23,12 +23,12 @@ public class BlockTier6InferiumCrop extends BlockMysticalCrop {
     }
     
     @Override
-    protected Item getSeed(){
+	public Item getSeed(){
     	return ModItems.itemTier6InferiumSeeds;
     }
     
     @Override
-    protected Item getCrop(){
+	public Item getCrop(){
     	return MAHelper.items.itemCrafting;
     }
     

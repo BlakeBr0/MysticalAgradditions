@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.lib;
 
 import java.io.File;
 
+import com.blakebr0.cucumber.Cucumber;
 import com.blakebr0.cucumber.helper.RecipeHelper;
 import com.blakebr0.mysticalagriculture.blocks.ModBlocks;
 import com.blakebr0.mysticalagriculture.config.ModConfig;
@@ -13,7 +14,7 @@ import com.blakebr0.mysticalagriculture.lib.Parts;
 import com.blakebr0.mysticalagriculture.lib.Parts.ItemNotFoundException;
 import com.blakebr0.mysticalagriculture.lib.Tooltips;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
-import com.blakebr0.mysticalagriculture.util.Utils;
+import com.blakebr0.mysticalagriculture.util.MystUtils;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -70,6 +71,6 @@ public class MAHelper {
 	}
 	
 	public static ItemStack getOre(String name, int stackSize){
-		return Utils.getItem(name, stackSize);
+		return MystUtils.getItem(name, stackSize); // TODO: cucumber
 	}
 }
