@@ -24,7 +24,7 @@ public class ModRecipes {
 	}
 	
 	public static CropType.Type type;
-	
+	// TODO: jason KappaPride
 	public static void init(){
 		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 0), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 0));
 		MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockStorage, 1, 1), "EEE", "EEE", "EEE", 'E', new ItemStack(ModItems.itemInsanium, 1, 2));
@@ -72,7 +72,7 @@ public class ModRecipes {
 		
 		addSeedRecipe(type.NETHER_STAR, new ItemStack(Items.NETHER_STAR, 1, 0));
 		addSeedRecipe(type.AWAKENED_DRACONIUM, "ingotDraconiumAwakened");
-		
+		//TODO: paxel recipes
 		initEssenceRecipes();
 	}
 	

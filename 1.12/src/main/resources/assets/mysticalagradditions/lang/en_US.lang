@@ -33,6 +33,12 @@ item.ma.tier6_inferium_seeds.name=Inferium Seeds
 item.ma.nether_star_seeds.name=Nether Star Seeds
 item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds
 
+item.ma.inferium_paxel.name=§eInferium Paxel
+item.ma.prudentium_paxel.name=§aPrudentium Paxel
+item.ma.intermedium_paxel.name=§6Intermedium Paxel
+item.ma.superium_paxel.name=§bSuperium Paxel
+item.ma.supremium_paxel.name=§cSupremium Paxel
+
 # JEI
 jei.ma.tier_6_crop=Tier 6 Crop
 
