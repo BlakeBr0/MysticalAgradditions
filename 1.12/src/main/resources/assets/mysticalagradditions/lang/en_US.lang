@@ -2,9 +2,9 @@
 itemGroup.tab.mystical_agradditions.name=Mystical Agradditions
 
 # BLOCKS
-tile.ma.storage_essence.name=§5Insanium Block
-tile.ma.storage_ingot.name=§5Insanium Ingot Block
-tile.ma.storage_coal.name=§5Insanium Coal Block
+tile.ma.storage_essence.name=§5Block of Insanium Essence
+tile.ma.storage_ingot.name=§5Block of Insanium
+tile.ma.storage_coal.name=§5Block of Insanium Coal
 
 tile.ma.tier6_inferium_crop.name=Tier 6 Inferium Crop
 
