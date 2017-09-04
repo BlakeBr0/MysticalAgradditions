@@ -4,6 +4,9 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import com.blakebr0.cucumber.block.BlockBase;
+import com.blakebr0.cucumber.lib.Colors;
+import com.blakebr0.cucumber.util.Utils;
 import com.blakebr0.mysticalagriculture.MysticalAgriculture;
 import com.blakebr0.mysticalagriculture.tileentity.TileEntityTinkeringTable;
 
@@ -83,6 +86,6 @@ public class BlockTier6TinkeringTable extends BlockBase implements ITileEntityPr
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
-		tooltip.add("\u00A75Insanium");
+		tooltip.add(Colors.DARK_PURPLE + Utils.localize("tooltip.ma.insanium"));
     }
 }

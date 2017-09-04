@@ -17,18 +17,17 @@ import net.minecraft.world.World;
 
 public class BlockTier6InferiumCrop extends BlockMysticalCrop {
 	
-    public BlockTier6InferiumCrop(String name){
+    public BlockTier6InferiumCrop(String name) {
     	super(name);
-    	this.setRegistryName(name); //TODO: RATTATAT
     }
     
     @Override
-	public Item getSeed(){
+	public Item getSeed() {
     	return ModItems.itemTier6InferiumSeeds;
     }
     
     @Override
-	public Item getCrop(){
+	public Item getCrop() {
     	return MAHelper.items.itemCrafting;
     }
     
@@ -37,14 +36,14 @@ public class BlockTier6InferiumCrop extends BlockMysticalCrop {
         List<ItemStack> drops = new ArrayList<ItemStack>();
 
         int age = state.getValue(AGE);
-        Random rand = ((World)world).rand;
+        Random rand = ((World) world).rand;
 
         int essence = 0;
         int seeds = 1;
 
-        if(age == 7){
-        	if(MAHelper.config.confSeedChance > 0){
-        		if(rand.nextInt(100 / MAHelper.config.confSeedChance) > 0){
+        if (age == 7) {
+        	if (MAHelper.config.confSeedChance > 0) {
+        		if (rand.nextInt(100 / MAHelper.config.confSeedChance) > 0) {
         			seeds = 1;
         		} else {
         			seeds = 2;
@@ -54,11 +53,11 @@ public class BlockTier6InferiumCrop extends BlockMysticalCrop {
         	}
         }
         
-        if(age == 7){
-        	if(MAHelper.config.confEssenceChance > 0){
-                if(rand.nextInt(100 / MAHelper.config.confEssenceChance) > 0){
+        if (age == 7) {
+        	if (MAHelper.config.confEssenceChance > 0) {
+                if(rand.nextInt(100 / MAHelper.config.confEssenceChance) > 0) {
                 	essence = 6;
-                } else{
+                } else {
                 	essence = 7; 
                 }             		
         	} else {
@@ -67,7 +66,7 @@ public class BlockTier6InferiumCrop extends BlockMysticalCrop {
         }
 
         drops.add(new ItemStack(this.getSeed(), seeds, 0));
-        if(essence > 0){ drops.add(new ItemStack(this.getCrop(), essence, 0)); }
+        if(essence > 0) { drops.add(new ItemStack(this.getCrop(), essence, 0)); }
         return drops;
     }
 }

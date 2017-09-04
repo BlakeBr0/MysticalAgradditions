@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import java.util.List;
 
+import com.blakebr0.cucumber.block.BlockBase;
 import com.blakebr0.cucumber.iface.IModelHelper;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
@@ -49,6 +50,7 @@ public class BlockStorage extends BlockBase implements IModelHelper {
         }
     }
     
+    @Override
     public void initModels(){
     	for(Type type : Type.values()){
     		if(type.isEnabled()){

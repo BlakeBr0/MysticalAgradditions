@@ -1,5 +1,6 @@
 package com.blakebr0.mysticalagradditions.blocks;
 
+import com.blakebr0.cucumber.block.BlockBase;
 import com.blakebr0.cucumber.iface.IModelHelper;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
@@ -41,6 +42,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
         }
     }
     
+    @Override
     public void initModels(){
     	for(Type type : Type.values()){
     		if(type.isEnabled()){

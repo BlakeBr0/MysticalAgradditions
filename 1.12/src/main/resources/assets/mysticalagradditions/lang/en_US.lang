@@ -44,6 +44,8 @@ jei.ma.tier_6_crop=Tier 6 Crop
 
 desc.withering_soul=It drops from Withers.
 
+tooltip.ma.insanium=Insanium
+
 # TINKERS
 fluid.base_essence.name=Molten Base Essence
 fluid.soulium.name=Molten Soulium
