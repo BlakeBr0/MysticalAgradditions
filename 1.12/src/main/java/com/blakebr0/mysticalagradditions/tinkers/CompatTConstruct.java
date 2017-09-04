@@ -183,10 +183,6 @@ public class CompatTConstruct {
 		FluidRegistry.addBucketForFluid(moltenSupremium);
 		supremium.setFluid(moltenSupremium);
 		supremium.setCastable(true);
-	}
-	
-	@SubscribeEvent
-	public void registerRecipes(RegistryEvent.Register<IRecipe> event){
 		
 		TinkerRegistry.integrate(prosperity).preInit();
 		TinkerRegistry.integrate(soulium, moltenSoulium).preInit();
@@ -196,6 +192,10 @@ public class CompatTConstruct {
 		TinkerRegistry.integrate(intermedium, moltenIntermedium).preInit();
 		TinkerRegistry.integrate(superium, moltenSuperium).preInit();
 		TinkerRegistry.integrate(supremium, moltenSupremium).preInit();	
+	}
+	
+	@SubscribeEvent
+	public void registerRecipes(RegistryEvent.Register<IRecipe> event){
 		
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumNugget, moltenSoulium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumIngot, moltenSoulium, 144);

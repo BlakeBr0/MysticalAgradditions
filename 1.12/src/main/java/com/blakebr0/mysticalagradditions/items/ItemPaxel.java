@@ -15,6 +15,8 @@ import com.blakebr0.mysticalagriculture.lib.Tooltips;
 import com.blakebr0.mysticalagriculture.util.NBTHelper;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
@@ -54,6 +56,14 @@ public class ItemPaxel extends ItemTool implements IRepairMaterial {
 				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + Tooltips.EMPTY);
 			}
 		}
+	}
+	
+	@Override
+	public float getStrVsBlock(ItemStack stack, IBlockState state) {
+        Material material = state.getMaterial();
+        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK
+        	   && material != Material.WOOD && material != Material.PLANTS && material != Material.VINE 
+        	   ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
 	}
 	
 	@Override
