@@ -18,6 +18,7 @@ import com.blakebr0.mysticalagriculture.util.ModChecker;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -39,6 +40,8 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent event){
+		FMLInterModComms.sendMessage("waila", "register", "com.blakebr0.mysticalagradditions.compat.WailaDataProvider.callbackRegister");
+		
 		ModRecipes.init();
 		MinecraftForge.EVENT_BUS.register(new MobDrops());
 		MinecraftForge.EVENT_BUS.register(new NoFertilizerForYou());

@@ -24,6 +24,9 @@ repositories {
 	maven {
 		url = "http://dvs1.progwml6.com/files/maven"
 	}
+	maven {
+ 		url = "http://tehnut.info/maven"
+ 	}
 }
 
 minecraft {
@@ -31,11 +34,6 @@ minecraft {
     runDir = "run"
     replace '${version}', project.version
 	
-    // the mappings can be changed at any time, and must be in the following format.
-    // snapshot_YYYYMMDD   snapshot are built nightly.
-    // stable_#            stables are built at the discretion of the MCP team.
-    // Use non-default mappings at your own risk. they may not always work.
-    // simply re-run your setup task after changing the mappings to update your workspace.
     mappings = "snapshot_20170624"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
@@ -43,6 +41,7 @@ minecraft {
 dependencies {
 	deobfCompile "mezz.jei:jei_1.12:4.7.0.67:api"
 	runtime "mezz.jei:jei_1.12:4.7.0.67"
+	deobfCompile "mcp.mobius.waila:Hwyla:1.8.19-B33_1.12"
 }
 
 processResources {
