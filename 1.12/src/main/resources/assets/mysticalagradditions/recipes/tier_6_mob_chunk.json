@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalagriculture:chunk",
+      "data": 4
+    },
+    {
+      "item": "mysticalagradditions:insanium",
+      "data": 0
+    },
+    {
+      "item": "mysticalagradditions:insanium",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "mysticalagradditions:insanium",
+	"count": 1,
+    "data": 4
+  }
+}

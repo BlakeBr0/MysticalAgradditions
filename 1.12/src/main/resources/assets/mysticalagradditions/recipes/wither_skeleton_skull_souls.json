@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:stuff",
+      "data": 1
+    }
+  },
+  "result": {
+    "item": "minecraft:skull",
+    "data": 1
+  }
+}

@@ -24,7 +24,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
     public static final PropertyEnum<Type> VARIANT = PropertyEnum.<Type>create("variant", Type.class);
 
     public BlockSpecial(){
-        super("ec.special", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
+        super("ma.special", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, Type.NETHER_STAR));
     }
 

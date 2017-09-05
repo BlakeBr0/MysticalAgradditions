@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:storage",
+    "data": 0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "conditions": [
+     {
+        "type": "minecraft:item_exists",
+        "item": "mysticalagriculture:coal_block"
+     }
+  ],
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium",
+	  "data": 5
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:storage",
+	"data": 2
+  }
+}

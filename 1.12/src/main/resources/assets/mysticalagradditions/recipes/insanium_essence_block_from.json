@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:storage",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "mysticalagradditions:insanium",
+	"count": 9,
+    "data": 0
+  }
+}

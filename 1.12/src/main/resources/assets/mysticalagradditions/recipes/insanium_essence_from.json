@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:insanium",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "mysticalagriculture:crafting",
+	"count": 4,
+    "data": 4
+  }
+}

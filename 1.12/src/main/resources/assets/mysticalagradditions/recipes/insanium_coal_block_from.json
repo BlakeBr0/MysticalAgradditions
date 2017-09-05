@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shapeless",
+  "conditions": [
+     {
+        "type": "minecraft:item_exists",
+        "item": "mysticalagriculture:coal_block"
+     }
+  ],
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:storage",
+      "data": 2
+    }
+  ],
+  "result": {
+    "item": "mysticalagradditions:insanium",
+	"count": 9,
+    "data": 5
+  }
+}
