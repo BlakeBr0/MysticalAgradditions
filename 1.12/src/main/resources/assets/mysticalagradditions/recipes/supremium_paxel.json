@@ -1,0 +1,40 @@
+{
+  "conditions": [
+     {
+	    "type": "minecraft:item_exists",
+		"item": "mysticalagradditions:supremium_paxel"
+	 },
+	 {
+        "type": "minecraft:item_exists",
+        "item": "mysticalagriculture:supremium_pickaxe"
+     }
+  ],
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "mysticalagriculture:supremium_axe",
+      "data": 0
+    },
+    "B": {
+      "item": "mysticalagriculture:supremium_pickaxe",
+      "data": 0
+    },
+    "C": {
+      "item": "mysticalagriculture:supremium_shovel",
+      "data": 0
+    },
+	"S": {
+      "item": "mysticalagriculture:crafting",
+      "data": 22
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:supremium_paxel",
+	"data": 0
+  }
+}
