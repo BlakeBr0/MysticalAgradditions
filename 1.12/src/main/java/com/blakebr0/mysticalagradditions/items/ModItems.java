@@ -27,7 +27,7 @@ public class ModItems {
 	public static void init() {
 		final ModRegistry registry = MysticalAgradditions.REGISTRY;
 		
-		registry.register(itemInsanium, "insanium", Ore.of(0, "essenceInsanium"), Ore.of(1, "ingotInsanium"), Ore.of(2, "nuggetInsanium"));
+		registry.register(itemInsanium, "insanium", Ore.of(0, "essenceInsanium"), Ore.of(2, "ingotInsanium"), Ore.of(3, "nuggetInsanium"));
 		registry.register(itemStuff, "stuff");
 		
 		for (CropType.Type type : CropType.Type.values()) {

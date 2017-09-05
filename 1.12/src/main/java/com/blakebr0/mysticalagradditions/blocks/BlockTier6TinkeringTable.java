@@ -30,7 +30,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockTier6TinkeringTable extends BlockBase implements ITileEntityProvider {
 	
 	public BlockTier6TinkeringTable(){
-		super("tinkering_table", Material.IRON, SoundType.METAL, 8.0F, 12.0F);
+		super("ma.tinkering_table", Material.IRON, SoundType.METAL, 8.0F, 12.0F);
 	}
 
     @Override

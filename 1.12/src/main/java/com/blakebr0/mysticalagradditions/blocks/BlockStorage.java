@@ -31,7 +31,7 @@ public class BlockStorage extends BlockBase implements IModelHelper {
     public static final PropertyEnum<Type> VARIANT = PropertyEnum.<Type>create("variant", Type.class);
 
     public BlockStorage(){
-        super("storage", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
+        super("ma.storage", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, Type.ESSENCE));
         GameRegistry.registerFuelHandler(new FuelHander());
     }
