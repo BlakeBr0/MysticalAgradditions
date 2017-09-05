@@ -48,14 +48,14 @@ public class ItemPaxel extends ItemTool implements IRepairMaterial {
 	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
 		int damage = stack.getMaxDamage() - stack.getItemDamage();
 		tooltip.add(Tooltips.DURABILITY + color + (damage > -1 ? damage : Tooltips.UNLIMITED));
-		if(OreDictionary.itemMatches(getRepairMaterial(), MAHelper.items.itemCrafting.itemSupremiumIngot, false)){
+	/*	if(OreDictionary.itemMatches(getRepairMaterial(), MAHelper.items.itemCrafting.itemSupremiumIngot, false)){
 			NBTTagCompound tag = NBTHelper.getDataMap(stack);
 			if(tag.hasKey(ToolType.TOOL_TYPE)){
 				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + ToolType.byIndex(tag.getInteger(ToolType.TOOL_TYPE)).getLocalizedName());
 			} else {
 				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + Tooltips.EMPTY);
 			}
-		}
+		} */
 	}
 	
 	@Override
