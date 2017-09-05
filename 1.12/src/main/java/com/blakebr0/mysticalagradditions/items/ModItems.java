@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions.items;
 
 import com.blakebr0.cucumber.registry.ModRegistry;
+import com.blakebr0.cucumber.registry.Ore;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.lib.CropType;
@@ -23,23 +24,26 @@ public class ModItems {
 	public static ItemPaxel itemSuperiumPaxel = new ItemPaxel("superium_paxel", ModToolMaterials.SUPERIUM, TextFormatting.AQUA);
 	public static ItemPaxel itemSupremiumPaxel = new ItemPaxel("supremium_paxel", ModToolMaterials.SUPREMIUM, TextFormatting.RED);
 
-	public static void init(){
+	public static void init() {
 		final ModRegistry registry = MysticalAgradditions.REGISTRY;
 		
-		register(itemInsanium, "insanium");
-		register(itemStuff, "stuff");
+		registry.register(itemInsanium, "insanium", Ore.of(0, "essenceInsanium"), Ore.of(1, "ingotInsanium"), Ore.of(2, "nuggetInsanium"));
+		registry.register(itemStuff, "stuff");
 		
-		for(CropType.Type type : CropType.Type.values()){
-			if(type.isEnabled()){
-				register(type.getCrop(), type.getName() + "_essence");
+		for (CropType.Type type : CropType.Type.values()) {
+			if (type.isEnabled()) {
+				registry.register(type.getCrop(), type.getName() + "_essence");
+				if (MAHelper.config.confGenericOreDictEssence) {
+					registry.addOre(type.getCrop(), "essenceTier6");
+				}
 			}
 		}
 		
-		register(itemTier6InferiumSeeds, "tier6_inferium_seeds");
+		registry.register(itemTier6InferiumSeeds, "tier6_inferium_seeds");
 		
-		for(CropType.Type type : CropType.Type.values()){
-			if(type.isEnabled()){
-				register(type.getSeed(), type.getName() + "_seeds");
+		for (CropType.Type type : CropType.Type.values()) {
+			if (type.isEnabled()) {
+				registry.register(type.getSeed(), type.getName() + "_seeds");
 			}
 		}
 		
@@ -50,10 +54,5 @@ public class ModItems {
 			registry.register(itemSuperiumPaxel, "superium_paxel", MAHelper.items.itemCrafting.itemSuperiumIngot);
 			registry.register(itemSupremiumPaxel, "supremium_paxel", MAHelper.items.itemCrafting.itemSupremiumIngot);
 		}
-	}
-
-	public static <T extends Item> T register(T item, String name){
-		MysticalAgradditions.REGISTRY.register(item, name);
-		return item;
 	}
 }

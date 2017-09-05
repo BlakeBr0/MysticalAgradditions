@@ -1,5 +1,7 @@
 package com.blakebr0.mysticalagradditions.blocks;
 
+import com.blakebr0.cucumber.registry.ModRegistry;
+import com.blakebr0.cucumber.registry.Ore;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.CropType;
 
@@ -15,33 +17,20 @@ public class ModBlocks {
 	
 	public static BlockTier6InferiumCrop blockTier6InferiumCrop = new BlockTier6InferiumCrop("tier6_inferium_crop");
 	
-	public static void init(){
-		register(blockStorage, "storage", new ItemBlockStorage(blockStorage));
-		register(blockSpecial, "special", new ItemBlockSpecial(blockSpecial));
+	public static void init() {
+		final ModRegistry registry = MysticalAgradditions.REGISTRY;
 		
-		register(blockInsaniumTinkeringTable, "tinkering_table");
+		registry.register(blockStorage, "storage", new ItemBlockStorage(blockStorage), Ore.of(0, "blockInsaniumEssence"), Ore.of(1, "blockInsanium"), Ore.of(2, "blockInsaniumCoal"));
+		registry.register(blockSpecial, "special", new ItemBlockSpecial(blockSpecial));
 		
-		register(blockTier6InferiumCrop, "tier6_inferium_crop");
+		registry.register(blockInsaniumTinkeringTable, "tinkering_table");
 		
-		for(CropType.Type type : CropType.Type.values()){
-			if(type.isEnabled()){
-				register(type.getPlant(), type.getName() + "_crop");
+		registry.register(blockTier6InferiumCrop, "tier6_inferium_crop");
+		
+		for (CropType.Type type : CropType.Type.values()) {
+			if (type.isEnabled()) {
+				registry.register(type.getPlant(), type.getName() + "_crop");
 			}
 		}
-	}
-	
-	public static <T extends Block> T register(T block, String name){
-		MysticalAgradditions.REGISTRY.register(block, name);
-		return block;
-	}
-	
-	public static <T extends Block> T register(T block, String name, boolean itemBlock){
-		MysticalAgradditions.REGISTRY.register(block, name, itemBlock);
-		return block;
-	}
-	
-	public static <T extends Block> T register(T block, String name, ItemBlock itemBlock){
-		MysticalAgradditions.REGISTRY.register(block, name, itemBlock);
-		return block;
 	}
 }
