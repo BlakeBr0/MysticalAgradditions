@@ -1,6 +1,5 @@
 package com.blakebr0.mysticalagradditions.tinkers;
 
-import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.lib.FluidRender;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
@@ -11,6 +10,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import slimeknights.tconstruct.library.TinkerRegistry;
@@ -80,9 +80,7 @@ public class CompatTConstruct {
                 new BowMaterialStats(0.5F, 1.5F, 3.1F));
 		moltenSoulium = new FluidMolten("soulium", 0x564237);
 		FluidRegistry.registerFluid(moltenSoulium);
-		BlockMolten blockSoulium = new BlockMolten(moltenSoulium);
-		blockSoulium.setRegistryName(MysticalAgradditions.MOD_ID + ":molten_" + moltenSoulium.getName());
-		MysticalAgradditions.REGISTRY.register(blockSoulium, "molten_" + moltenSoulium.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenSoulium).setRegistryName("molten_" + moltenSoulium.getName()));
 		FluidRegistry.addBucketForFluid(moltenSoulium);
 		soulium.setFluid(moltenSoulium);
 		soulium.setCastable(true);
@@ -98,7 +96,7 @@ public class CompatTConstruct {
 				new BowMaterialStats(0.5F, 1.5F, 1.02F));
 		moltenBaseEssence = new FluidMolten("base_essence", 0xD1FFFF);
 		FluidRegistry.registerFluid(moltenBaseEssence);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenBaseEssence), "molten_" + moltenBaseEssence.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenBaseEssence).setRegistryName("molten_" + moltenBaseEssence.getName()));
 		FluidRegistry.addBucketForFluid(moltenBaseEssence);
 		baseEssence.setFluid(moltenBaseEssence);
 		baseEssence.setCastable(true);
@@ -114,7 +112,7 @@ public class CompatTConstruct {
 				new BowMaterialStats(0.58F, 0.99F, 1.91F));
 		moltenInferium = new FluidMolten("inferium", 0x748E00);
 		FluidRegistry.registerFluid(moltenInferium);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenInferium), "molten_" + moltenInferium.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenInferium).setRegistryName("molten_" + moltenInferium.getName()));
 		FluidRegistry.addBucketForFluid(moltenInferium);
 		inferium.setFluid(moltenInferium);
 		inferium.setCastable(true);
@@ -130,7 +128,7 @@ public class CompatTConstruct {
 				new BowMaterialStats(0.73F, 1.34F, 2.32F));
 		moltenPrudentium = new FluidMolten("prudentium", 0x008C23);
 		FluidRegistry.registerFluid(moltenPrudentium);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenPrudentium), "molten_" + moltenPrudentium.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenPrudentium).setRegistryName("molten_" + moltenPrudentium.getName()));
 		FluidRegistry.addBucketForFluid(moltenPrudentium);
 		prudentium.setFluid(moltenPrudentium);
 		prudentium.setCastable(true);
@@ -146,7 +144,7 @@ public class CompatTConstruct {
 				new BowMaterialStats(1.07F, 1.63F, 4.02F));
 		moltenIntermedium = new FluidMolten("intermedium", 0xB74900);
 		FluidRegistry.registerFluid(moltenIntermedium);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenIntermedium), "molten_" + moltenIntermedium.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenIntermedium).setRegistryName("molten_" + moltenIntermedium.getName()));
 		FluidRegistry.addBucketForFluid(moltenIntermedium);
 		intermedium.setFluid(moltenIntermedium);
 		intermedium.setCastable(true);
@@ -162,7 +160,7 @@ public class CompatTConstruct {
 				new BowMaterialStats(1.21F, 1.91F, 5.94F));
 		moltenSuperium = new FluidMolten("superium", 0x007FDB);
 		FluidRegistry.registerFluid(moltenSuperium);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenSuperium), "molten_" + moltenSuperium.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenSuperium).setRegistryName("molten_" + moltenSuperium.getName()));
 		FluidRegistry.addBucketForFluid(moltenSuperium);
 		superium.setFluid(moltenSuperium);
 		superium.setCastable(true);
@@ -179,7 +177,7 @@ public class CompatTConstruct {
 				new BowMaterialStats(1.33F, 2.35F, 7.32F));
 		moltenSupremium = new FluidMolten("supremium", 0xC40000);
 		FluidRegistry.registerFluid(moltenSupremium);
-		MysticalAgradditions.REGISTRY.register(new BlockMolten(moltenSupremium), "molten_" + moltenSupremium.getName());
+		ForgeRegistries.BLOCKS.register(new BlockMolten(moltenSupremium).setRegistryName("molten_" + moltenSupremium.getName()));
 		FluidRegistry.addBucketForFluid(moltenSupremium);
 		supremium.setFluid(moltenSupremium);
 		supremium.setCastable(true);

@@ -28,6 +28,7 @@ public class FluidRender {
 	}
 
 	static class FluidStateMapper extends StateMapperBase implements ItemMeshDefinition {
+		
 		public final ModelResourceLocation location;
 
 		public FluidStateMapper(Fluid fluid) {
