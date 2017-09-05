@@ -16,7 +16,7 @@ import mezz.jei.api.JEIPlugin;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
+// TODO: Cleanup/Modernize
 @JEIPlugin
 public class CompatJEI implements IModPlugin {
 

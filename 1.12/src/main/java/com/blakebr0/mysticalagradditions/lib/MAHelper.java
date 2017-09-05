@@ -39,7 +39,6 @@ public class MAHelper {
 		}
 	}
 	
-	//TODO: a better job with recipes
 	public static void addShapedRecipe(ItemStack output, Object... input){
 		RecipeHelper.addShapedRecipe(output, input);
 	}
