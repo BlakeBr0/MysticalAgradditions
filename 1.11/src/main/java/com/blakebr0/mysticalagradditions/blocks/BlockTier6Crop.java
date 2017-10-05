@@ -1,17 +1,13 @@
 package com.blakebr0.mysticalagradditions.blocks;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.blocks.crop.BlockMysticalCrop;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockCrops;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -35,6 +31,9 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     @Override
     public void updateTick(World world, BlockPos pos, IBlockState state, Random rand){
     	this.checkAndDropBlock(world, pos, state);
+    	if(!(world.getBlockState(pos.down(2)) == this.getRoot())){
+    		return;
+    	}
     	int i = this.getAge(state);
         if(world.getLightFromNeighbors(pos.up()) >= 9){
         	if(world.getBlockState(pos.down(2)) == this.getRoot()){
@@ -63,14 +62,6 @@ public class BlockTier6Crop extends BlockMysticalCrop {
      
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
         return CROPS_AABB;
-    }
-    
-    @Override
-    public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient){
-    	if(!(world.getBlockState(pos.down(2)) == this.getRoot())){
-    		return false;
-    	}
-    	return super.canGrow(world, pos, state, isClient);
     }
     
     public IBlockState setRoot(IBlockState root){

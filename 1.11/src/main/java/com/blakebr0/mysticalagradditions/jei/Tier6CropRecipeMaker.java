@@ -3,10 +3,7 @@ package com.blakebr0.mysticalagradditions.jei;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.blakebr0.mysticalagradditions.blocks.BlockSpecial;
 import com.blakebr0.mysticalagradditions.lib.CropType;
-import com.blakebr0.mysticalagriculture.crafting.ReprocessorManager;
-import com.blakebr0.mysticalagriculture.crafting.ReprocessorRecipe;
 
 import net.minecraft.item.ItemStack;
 
