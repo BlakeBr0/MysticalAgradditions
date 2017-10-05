@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.blakebr0.cucumber.block.BlockBase;
 import com.blakebr0.cucumber.iface.IModelHelper;
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
 import net.minecraft.block.SoundType;
@@ -32,6 +33,7 @@ public class BlockStorage extends BlockBase implements IModelHelper {
 
     public BlockStorage(){
         super("ma.storage", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
+        this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, Type.ESSENCE));
         GameRegistry.registerFuelHandler(new FuelHander());
     }

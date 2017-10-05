@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import com.blakebr0.cucumber.block.BlockBase;
 import com.blakebr0.cucumber.iface.IModelHelper;
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagriculture.util.ModChecker;
 
@@ -25,6 +26,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 
     public BlockSpecial(){
         super("ma.special", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
+        this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, Type.NETHER_STAR));
     }
 
