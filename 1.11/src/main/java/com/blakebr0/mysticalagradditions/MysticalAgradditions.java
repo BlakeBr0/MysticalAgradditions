@@ -18,7 +18,7 @@ public class MysticalAgradditions {
 
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
-	public static final String VERSION = "1.1.2";
+	public static final String VERSION = "1.1.3";
 	public static final String DEPENDENCIES = "required-after:mysticalagriculture@[1.5.8,);after:mantle;after:tconstruct";
 	public static final String GUI_FACTORY = "com.blakebr0.mysticalagradditions.config.GuiFactory";
 	
