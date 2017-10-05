@@ -1,6 +1,5 @@
 package com.blakebr0.mysticalagradditions.tinkers;
 
-import com.blakebr0.mysticalagradditions.event.MobDrops;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.lib.CropType;
 
@@ -25,7 +24,6 @@ import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextComponentTranslation;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
