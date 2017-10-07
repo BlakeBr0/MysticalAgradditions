@@ -135,7 +135,7 @@ public class TraitChunky extends AbstractTrait {
 	}
 	
 	public EntityItem drop(Entity entity, Item item, int meta, int amount, int chance){
-    	ItemStack stack = new ItemStack(item, chance, 0);
+    	ItemStack stack = new ItemStack(item, chance, meta);
     	if(stack.getCount() > amount){
     		stack.setCount(amount);
     	}
