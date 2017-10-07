@@ -31,6 +31,9 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     @Override
     public void updateTick(World world, BlockPos pos, IBlockState state, Random rand){
     	this.checkAndDropBlock(world, pos, state);
+    	if(!(world.getBlockState(pos.down(2)) == this.getRoot())){
+    		return;
+    	}
     	int i = this.getAge(state);
         if(world.getLightFromNeighbors(pos.up()) >= 9){
         	if(world.getBlockState(pos.down(2)) == this.getRoot()){
@@ -59,14 +62,6 @@ public class BlockTier6Crop extends BlockMysticalCrop {
      
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos){
         return CROPS_AABB;
-    }
-    
-    @Override
-    public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient){
-    	if(!(world.getBlockState(pos.down(2)) == this.getRoot())){
-    		return false;
-    	}
-    	return super.canGrow(world, pos, state, isClient);
     }
     
     public IBlockState setRoot(IBlockState root){
