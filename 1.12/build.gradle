@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.2.4"
+version = "1.2.5"
 group = "com.blakebr0.mysticalagradditions"
-archivesBaseName = "mysticalagradditions[1.12]"
+archivesBaseName = "mysticalagradditions-1.12"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
