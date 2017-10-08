@@ -46,6 +46,10 @@ public class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new MobDrops());
 		MinecraftForge.EVENT_BUS.register(new NoFertilizerForYou());
 		
+		if (ModChecker.TINKERS_CONSTRUCT) {
+			CompatTConstruct.initTraits();
+		}
+		
 		ReprocessorManager.addRecipe(new ItemStack(MAHelper.items.itemCrafting, 6, 0), new ItemStack(ModItems.itemTier6InferiumSeeds));
 	}
 

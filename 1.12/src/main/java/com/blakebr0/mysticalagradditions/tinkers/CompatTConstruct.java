@@ -60,8 +60,6 @@ public class CompatTConstruct {
 		prosperity.addItem(MAHelper.items.itemCrafting.itemProsperityShard, 1, Material.VALUE_Fragment);
 		prosperity.setCraftable(true);
 		prosperity.setRepresentativeItem(MAHelper.items.itemCrafting.itemProsperityShard);
-		prosperity.addTrait(TinkerTraits.writable2, MaterialTypes.HEAD);
-		prosperity.addTrait(TinkerTraits.writable);
 		TinkerRegistry.addMaterialStats(prosperity, 
                 new HeadMaterialStats(36, 0.83F, 0.1F, HarvestLevels.STONE),
                 new HandleMaterialStats(0.23F, 8),
@@ -72,7 +70,6 @@ public class CompatTConstruct {
 		soulium.addItem(MAHelper.items.itemCrafting.itemSouliumIngot, 1, Material.VALUE_Ingot);
 		soulium.setCraftable(true);
 		soulium.setRepresentativeItem(MAHelper.items.itemCrafting.itemSouliumIngot);
-		soulium.addTrait(TraitChunky.getTrait(), MaterialTypes.HEAD);
 		TinkerRegistry.addMaterialStats(soulium, 
                 new HeadMaterialStats(310, 6.35f, 4.6F, HarvestLevels.IRON),
                 new HandleMaterialStats(0.80F, 55),
@@ -88,7 +85,6 @@ public class CompatTConstruct {
 		baseEssence = new Material("ma.base_essence", 0xD1FFFF);
 		baseEssence.addItem(MAHelper.items.itemCrafting.itemBaseEssenceIngot, 1, Material.VALUE_Ingot);
 		baseEssence.setRepresentativeItem(MAHelper.items.itemCrafting.itemBaseEssenceIngot);
-		baseEssence.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(baseEssence, 
                 new HeadMaterialStats(244, 6.65f, 4.33f, HarvestLevels.DIAMOND),
                 new HandleMaterialStats(0.7F, 65),
@@ -104,7 +100,6 @@ public class CompatTConstruct {
 		inferium = new Material("ma.inferium", 0x748E00);
 		inferium.addItem(MAHelper.items.itemCrafting.itemInferiumIngot, 1, Material.VALUE_Ingot);
 		inferium.setRepresentativeItem(MAHelper.items.itemCrafting.itemInferiumIngot);
-		inferium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(inferium, 
 				new HeadMaterialStats(345, 7.02F, 4.5F, HarvestLevels.DIAMOND),
 				new HandleMaterialStats(0.63F, 50), 
@@ -120,7 +115,6 @@ public class CompatTConstruct {
 		prudentium = new Material("ma.prudentium", 0x008C23);
 		prudentium.addItem(MAHelper.items.itemCrafting.itemPrudentiumIngot, 1, Material.VALUE_Ingot);
 		prudentium.setRepresentativeItem(MAHelper.items.itemCrafting.itemPrudentiumIngot);
-		prudentium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(prudentium, 
 				new HeadMaterialStats(690, 8.01F, 6.62F, HarvestLevels.DIAMOND),
 				new HandleMaterialStats(0.78F, 75), 
@@ -136,7 +130,6 @@ public class CompatTConstruct {
 		intermedium = new Material("ma.intermedium", 0xB74900);
 		intermedium.addItem(MAHelper.items.itemCrafting.itemIntermediumIngot, 1, Material.VALUE_Ingot);
 		intermedium.setRepresentativeItem(MAHelper.items.itemCrafting.itemIntermediumIngot);
-		intermedium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(intermedium, 
 				new HeadMaterialStats(1380, 11.08F, 9.23F, HarvestLevels.OBSIDIAN),
 				new HandleMaterialStats(0.97F, 100), 
@@ -152,7 +145,6 @@ public class CompatTConstruct {
 		superium = new Material("ma.superium", 0x007FDB);
 		superium.addItem(MAHelper.items.itemCrafting.itemSuperiumIngot, 1, Material.VALUE_Ingot);
 		superium.setRepresentativeItem(MAHelper.items.itemCrafting.itemSuperiumIngot);
-		superium.addTrait(TraitProsperous.getTrait());
 		TinkerRegistry.addMaterialStats(superium, 
 				new HeadMaterialStats(2760, 16.53F, 11.62F, HarvestLevels.COBALT),
 				new HandleMaterialStats(1.12F, 165), 
@@ -168,8 +160,6 @@ public class CompatTConstruct {
 		supremium = new Material("ma.supremium", 0xC40000);
 		supremium.addItem(MAHelper.items.itemCrafting.itemSupremiumIngot, 1, Material.VALUE_Ingot);
 		supremium.setRepresentativeItem(MAHelper.items.itemCrafting.itemSupremiumIngot);
-		supremium.addTrait(TraitProsperous.getTrait());
-		supremium.addTrait(TinkerTraits.duritos, MaterialTypes.HEAD);
 		TinkerRegistry.addMaterialStats(supremium, 
 				new HeadMaterialStats(5520, 22.25F, 15.03F, HarvestLevels.COBALT),
 				new HandleMaterialStats(1.35F, 200),
@@ -246,6 +236,19 @@ public class CompatTConstruct {
 		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 4), ItemStack.EMPTY, moltenSuperium, 1296);
 		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 5), ItemStack.EMPTY, moltenSupremium, 1296);
 		TinkerRegistry.registerBasinCasting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 6), ItemStack.EMPTY, moltenSoulium, 1296);	
+	}
+	
+	public static void initTraits() {
+		prosperity.addTrait(TinkerTraits.writable2, MaterialTypes.HEAD);
+		prosperity.addTrait(TinkerTraits.writable);
+		soulium.addTrait(TraitChunky.getTrait(), MaterialTypes.HEAD);
+		baseEssence.addTrait(TraitProsperous.getTrait());
+		inferium.addTrait(TraitProsperous.getTrait());
+		prudentium.addTrait(TraitProsperous.getTrait());
+		intermedium.addTrait(TraitProsperous.getTrait());
+		superium.addTrait(TraitProsperous.getTrait());
+		supremium.addTrait(TraitProsperous.getTrait());
+		supremium.addTrait(TinkerTraits.duritos, MaterialTypes.HEAD);
 	}
 	
 	@SideOnly(Side.CLIENT)

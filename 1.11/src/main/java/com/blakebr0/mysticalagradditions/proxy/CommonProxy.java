@@ -30,14 +30,13 @@ public class CommonProxy {
 		CropType.init();
 		if(ModChecker.TINKERS){
 			CompatTConstruct.init();
-		}
+		}	
 	}
 	
 	public void init(FMLInitializationEvent event){
 		ModRecipes.init();
 		MinecraftForge.EVENT_BUS.register(new MobDrops());
 		MinecraftForge.EVENT_BUS.register(new NoFertilizerForYou());
-		
 		ReprocessorManager.addRecipe(new ItemStack(MAHelper.items.itemInferiumEssence, 6, 0), new ItemStack(ModItems.itemTier6InferiumSeeds));
 	}
 
