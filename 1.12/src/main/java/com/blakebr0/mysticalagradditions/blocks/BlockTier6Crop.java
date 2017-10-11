@@ -47,6 +47,14 @@ public class BlockTier6Crop extends BlockMysticalCrop {
         }
     }
     
+    @Override
+    public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
+    	if(!(world.getBlockState(pos.down(2)) == this.getRoot())){
+    		return;
+    	}
+    	super.grow(world, rand, pos, state);
+    }
+    
 	protected boolean canSustainBush(IBlockState state){
 		return state.getBlock() == Blocks.FARMLAND;
 	}
