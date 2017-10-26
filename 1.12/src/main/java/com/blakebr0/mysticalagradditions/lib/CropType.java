@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions.lib;
 
 import com.blakebr0.cucumber.item.ItemBase;
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.blocks.BlockSpecial;
 import com.blakebr0.mysticalagradditions.blocks.BlockTier6Crop;
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
@@ -24,6 +25,7 @@ public class CropType {
 	public static enum Type implements IStringSerializable {
 						
 		NETHER_STAR("nether_star", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.NETHER_STAR), 0, ModConfig.confNetherStarSeeds),
+		DRAGON_EGG("dragon_egg", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.DRAGON_EGG), 1, ModConfig.confDragonEggSeeds),
 		AWAKENED_DRACONIUM("awakened_draconium", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.AWAKENED_DRACONIUM), 4, ModConfig.confNetherStarSeeds && ModChecker.DRACONIC_EVOLUTION);
 		
 		private final String name;
@@ -41,6 +43,7 @@ public class CropType {
 			this.root = root;
 			this.rootMeta = rootMeta;
 			this.crop = new ItemBase("ma." + getName() + "_essence");
+			crop.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 			this.seed = new ItemTier6Seed(getName() + "_seeds", getPlant());
 		}
 

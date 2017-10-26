@@ -71,7 +71,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 	public static enum Type implements IStringSerializable {
 		
 		NETHER_STAR(0, "nether_star", ModConfig.confNetherStarSeeds),
-		PH1(1, "ph1", false),
+		DRAGON_EGG(1, "dragon_egg", false),
 		PH2(2, "ph2", false),
 		PH3(3, "ph3", false),
 		AWAKENED_DRACONIUM(4, "awakened_draconium", ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC_EVOLUTION);

@@ -41,5 +41,9 @@ public class ModRecipes {
 
 		if (type.NETHER_STAR.isEnabled()) { MAHelper.addEssenceRecipe(new ItemStack(ModItems.itemStuff, 1, 0), "EEE", "EEE", "EEE", 'E', new ItemStack(type.NETHER_STAR.getCrop(), 1, 0)); }
 		if (type.AWAKENED_DRACONIUM.isEnabled()) { MAHelper.addEssenceRecipe(MAHelper.getOre("nuggetDraconiumAwakened", 3), "EEE", "EEE", "EEE", 'E', new ItemStack(type.AWAKENED_DRACONIUM.getCrop(), 1, 0)); }		
+	
+		if (MAHelper.config.confGearModuleOverride) {
+			com.blakebr0.mysticalagriculture.crafting.ModRecipes.addUpgradeRecipe(new ItemStack(ModItems.itemSupremiumPaxel), new ItemStack(ModItems.itemCharm, 1, 0), 1000);
+		}
 	}
 }

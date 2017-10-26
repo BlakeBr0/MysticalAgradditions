@@ -17,6 +17,7 @@ public class ModConfig {
 	public static boolean confTConstructSupport;
 	
 	public static boolean confNetherStarSeeds;
+	public static boolean confDragonEggSeeds;
 	public static boolean confAwakenedDraconiumSeeds;
 		
 	@SubscribeEvent
@@ -43,6 +44,7 @@ public class ModConfig {
 		category = "Seeds";
 		config.addCustomCategoryComment(category, "Enable/Disable each seed individually.");
 		confNetherStarSeeds = config.get(category, "nether_star_seeds", true).getBoolean();
+		confDragonEggSeeds = config.get(category, "dragon_egg_seeds", true).getBoolean();
 		confAwakenedDraconiumSeeds = config.get(category, "awakened_draconium_seeds", true).getBoolean();
 		
 		if(config.hasChanged()){
