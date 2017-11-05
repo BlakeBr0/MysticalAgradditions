@@ -11,6 +11,7 @@ import com.blakebr0.mysticalagriculture.blocks.crop.BlockMysticalCrop;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -32,9 +33,7 @@ public class BlockTier6InferiumCrop extends BlockMysticalCrop {
     }
     
     @Override
-    public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-        List<ItemStack> drops = new ArrayList<ItemStack>();
-
+    public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
         int age = state.getValue(AGE);
         Random rand = ((World) world).rand;
 
@@ -67,6 +66,5 @@ public class BlockTier6InferiumCrop extends BlockMysticalCrop {
 
         drops.add(new ItemStack(this.getSeed(), seeds, 0));
         if(essence > 0) { drops.add(new ItemStack(this.getCrop(), essence, 0)); }
-        return drops;
     }
 }
