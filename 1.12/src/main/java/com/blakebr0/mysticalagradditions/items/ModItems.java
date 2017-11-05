@@ -46,6 +46,9 @@ public class ModItems {
 		for (CropType.Type type : CropType.Type.values()) {
 			if (type.isEnabled()) {
 				registry.register(type.getSeed(), type.getName() + "_seeds");
+				if (MAHelper.config.confGenericOreDictEssence) {
+					registry.addOre(type.getSeed(), "seedsTier6");
+				}
 			}
 		}
 		
