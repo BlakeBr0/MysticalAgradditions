@@ -7,6 +7,7 @@ import javax.annotation.Nonnull;
 import com.blakebr0.cucumber.block.BlockBase;
 import com.blakebr0.cucumber.lib.Colors;
 import com.blakebr0.cucumber.util.Utils;
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagriculture.MysticalAgriculture;
 import com.blakebr0.mysticalagriculture.tileentity.TileEntityTinkeringTable;
 
@@ -31,6 +32,7 @@ public class BlockTier6TinkeringTable extends BlockBase implements ITileEntityPr
 	
 	public BlockTier6TinkeringTable(){
 		super("ma.tinkering_table", Material.IRON, SoundType.METAL, 8.0F, 12.0F);
+		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 	}
 
     @Override
