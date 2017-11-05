@@ -33,6 +33,8 @@ item.ma.tier6_inferium_seeds.name=Inferium Seeds
 item.ma.nether_star_seeds.name=Nether Star Seeds
 item.ma.awakened_draconium_seeds.name=Awakened Draconium Seeds
 
+item.ma.charm_mining_aoe.name=Charm: Mining AOE
+
 item.ma.inferium_paxel.name=§eInferium Paxel
 item.ma.prudentium_paxel.name=§aPrudentium Paxel
 item.ma.intermedium_paxel.name=§6Intermedium Paxel
@@ -45,6 +47,7 @@ jei.ma.tier_6_crop=Tier 6 Crop
 desc.withering_soul=It drops from Withers.
 
 tooltip.ma.insanium=Insanium
+tooltip.ma.paxel=Paxel
 
 # TINKERS
 fluid.base_essence.name=Molten Base Essence

@@ -44,6 +44,7 @@ public class ModRecipes {
 	
 		if (MAHelper.config.confGearModuleOverride) {
 			com.blakebr0.mysticalagriculture.crafting.ModRecipes.addUpgradeRecipe(new ItemStack(ModItems.itemSupremiumPaxel), new ItemStack(ModItems.itemCharm, 1, 0), 1000);
+			MAHelper.addShapedRecipe(new ItemStack(ModItems.itemCharm, 1, 0), "MED", "EBE", "DEM", 'E', MAHelper.items.itemCrafting.itemSuperiumEssence, 'B', MAHelper.items.itemCharm.itemCharmBlank, 'M', new ItemStack(ModItems.itemSupremiumPaxel, 1, 0), 'D', MAHelper.items.itemCrafting.itemSupremiumIngot);
 		}
 	}
 }

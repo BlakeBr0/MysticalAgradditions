@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import com.blakebr0.cucumber.iface.IRepairMaterial;
 import com.blakebr0.cucumber.lib.Colors;
 import com.blakebr0.cucumber.util.ToolTools;
+import com.blakebr0.cucumber.util.Utils;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.items.tools.ToolType;
@@ -54,20 +55,20 @@ public class ItemPaxel extends ItemTool implements IRepairMaterial {
 	public void addInformation(ItemStack stack, @Nullable World player, List<String> tooltip, ITooltipFlag advanced){
 		int damage = stack.getMaxDamage() - stack.getItemDamage();
 		tooltip.add(Tooltips.DURABILITY + color + (damage > -1 ? damage : Tooltips.UNLIMITED));
-	/*	if(OreDictionary.itemMatches(getRepairMaterial(), MAHelper.items.itemCrafting.itemSupremiumIngot, false)){
+		if(OreDictionary.itemMatches(getRepairMaterial(), MAHelper.items.itemCrafting.itemSupremiumIngot, false)){
 			NBTTagCompound tag = NBTHelper.getDataMap(stack);
-			if(tag.hasKey(ToolType.TOOL_TYPE)){
-				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + ToolType.byIndex(tag.getInteger(ToolType.TOOL_TYPE)).getLocalizedName());
+			if(tag.hasKey(ToolType.TOOL_TYPE) && tag.getInteger(ToolType.TOOL_TYPE) == 1000){
+				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + Utils.localize("tooltip.ma.mining_aoe"));
 			} else {
 				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + Tooltips.EMPTY);
 			}
-		} */
+		}
 	}
 	
 	@Override
 	public float getStrVsBlock(ItemStack stack, IBlockState state) {
         Material material = state.getMaterial();
-        float aoeNerf = NBTHelper.getDataMap(stack).hasKey(ToolType.TOOL_TYPE) ? (NBTHelper.getDataMap(stack).getInteger(ToolType.TOOL_TYPE) == 1000 ? -12.0F : 0.0F) : 0.0F;
+        float aoeNerf = NBTHelper.getDataMap(stack).hasKey(ToolType.TOOL_TYPE) ? (NBTHelper.getDataMap(stack).getInteger(ToolType.TOOL_TYPE) == 1000 ? -15.0F : 0.0F) : 0.0F;
         return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK
         	   && material != Material.WOOD && material != Material.PLANTS && material != Material.VINE 
         	   ? super.getStrVsBlock(stack, state) + aoeNerf : this.efficiencyOnProperMaterial + aoeNerf;
