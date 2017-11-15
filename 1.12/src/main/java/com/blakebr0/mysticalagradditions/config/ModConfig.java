@@ -15,6 +15,7 @@ public class ModConfig {
 	
 	public static boolean confFertilizableCrops;
 	public static boolean confTConstructSupport;
+	public static boolean confCreativeEssence;
 	
 	public static boolean confNetherStarSeeds;
 	public static boolean confDragonEggSeeds;
@@ -40,6 +41,7 @@ public class ModConfig {
 		config.addCustomCategoryComment(category, "Settings for all things Mystical Agriculture.");
 		confFertilizableCrops = config.getBoolean("fertilizable_crops", category, false, "Can Tier 6 crops be fertilized using Fertilized Essence and Mystical Fertilizer?");
 		confTConstructSupport = config.getBoolean("tconstruct_support", category, true, "Should the Tinkers' Construct integration be enabled?");
+		confCreativeEssence = config.getBoolean("creative_essence", category, true, "Should the Creative Essence item (with no default use or recipe) be enabled?");
 		
 		category = "Seeds";
 		config.addCustomCategoryComment(category, "Enable/Disable each seed individually.");
