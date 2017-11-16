@@ -27,14 +27,16 @@ public class ItemStuff extends ItemMeta {
 	public void init() {
 		addItem(0, "nether_star_shard");
 		addItem(1, "withering_soul");
+		addItem(2, "dragon_egg_chunk");
+		addItem(3, "dragon_scale");
 		
 		addItem(69, "creative_essence", ModConfig.confCreativeEssence);
 	}
     
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
-    	if(stack.getMetadata() == 1){
-        	tooltip.add(Utils.localize(Tooltips.DROP_CHANCE + "35%"));	
+    	if (stack.getMetadata() == 1) {
+        	tooltip.add(Tooltips.DROP_CHANCE + "35%");	
     	} else if (stack.getMetadata() == 69) {
     		tooltip.add(Colors.ITALICS + Utils.localize("tooltip.ma.creative_essence"));
     	}

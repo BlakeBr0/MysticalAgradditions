@@ -6,6 +6,7 @@ import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.Item;
@@ -22,7 +23,11 @@ public class MobDrops {
         	
     	if(event.getEntity() instanceof EntityWither){            	
     		drops.add(drop(event.getEntity(), ModItems.itemStuff, 1, 1, MAHelper.mobDrops.getChance(35)));
-    	} 
+    	}
+    	
+    	if (event.getEntity() instanceof EntityDragon) {
+    		drops.add(drop(event.getEntity(), ModItems.itemStuff, 8, 3, 8));
+    	}
     }
     
 	public EntityItem drop(Entity entity, Item item, int amount, int meta, int chance){
