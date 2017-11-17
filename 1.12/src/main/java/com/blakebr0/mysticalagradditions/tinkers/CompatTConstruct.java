@@ -248,6 +248,7 @@ public class CompatTConstruct {
 		intermedium.addTrait(TraitProsperous.getTrait());
 		superium.addTrait(TraitProsperous.getTrait());
 		supremium.addTrait(TraitProsperous.getTrait());
+		supremium.addTrait(TraitProsperous.getTrait(), MaterialTypes.HEAD);
 		supremium.addTrait(TinkerTraits.duritos, MaterialTypes.HEAD);
 	}
 	
