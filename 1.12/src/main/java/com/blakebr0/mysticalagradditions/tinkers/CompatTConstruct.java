@@ -185,6 +185,8 @@ public class CompatTConstruct {
 	@SubscribeEvent
 	public void registerRecipes(RegistryEvent.Register<IRecipe> event){
 		
+		if(!ModConfig.confTConstructSupport || !ModChecker.TINKERS_CONSTRUCT){ return; }
+		
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumNugget, moltenSoulium, 16);
 		TinkerRegistry.registerMelting(MAHelper.items.itemCrafting.itemSouliumIngot, moltenSoulium, 144);
 		TinkerRegistry.registerMelting(new ItemStack(MAHelper.blocks.blockIngotStorage, 1, 6), moltenSoulium, 1296);
@@ -239,6 +241,9 @@ public class CompatTConstruct {
 	}
 	
 	public static void initTraits() {
+		
+		if(!ModConfig.confTConstructSupport || !ModChecker.TINKERS_CONSTRUCT){ return; }
+		
 		prosperity.addTrait(TinkerTraits.writable2, MaterialTypes.HEAD);
 		prosperity.addTrait(TinkerTraits.writable);
 		soulium.addTrait(TraitChunky.getTrait(), MaterialTypes.HEAD);
