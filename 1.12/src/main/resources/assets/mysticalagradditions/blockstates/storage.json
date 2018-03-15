@@ -1,7 +1,0 @@
-{
-    "variants": {
-        "variant=essence": { "model": "mysticalagradditions:storage_essence" },
-		"variant=ingot": { "model": "mysticalagradditions:storage_ingot" },
-		"variant=coal": { "model": "mysticalagradditions:storage_coal" }
-    }
-}
