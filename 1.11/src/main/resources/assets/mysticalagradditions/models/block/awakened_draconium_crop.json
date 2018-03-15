@@ -1,6 +1,0 @@
-{
-    "parent": "block/cross",
-    "textures": {
-        "cross": "mysticalagradditions:blocks/awakened_draconium_crop"
-    }
-}
