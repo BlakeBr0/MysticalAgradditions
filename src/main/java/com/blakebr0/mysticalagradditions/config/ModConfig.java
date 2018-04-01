@@ -16,6 +16,8 @@ public class ModConfig {
 	public static boolean confFertilizableCrops;
 	public static boolean confTConstructSupport;
 	public static boolean confCreativeEssence;
+	public static int confWitherSouls;
+	public static int confDragonScales;
 	
 	public static boolean confNetherStarSeeds;
 	public static boolean confDragonEggSeeds;
@@ -42,6 +44,8 @@ public class ModConfig {
 		confFertilizableCrops = config.getBoolean("fertilizable_crops", category, false, "Can Tier 6 crops be fertilized using Fertilized Essence and Mystical Fertilizer?");
 		confTConstructSupport = config.getBoolean("tconstruct_support", category, true, "Should the Tinkers' Construct integration be enabled?");
 		confCreativeEssence = config.getBoolean("creative_essence", category, true, "Should the Creative Essence item (with no default use or recipe) be enabled?");
+		confWitherSouls = config.getInt("wither_souls_chance", category, 35, 0, 100, "The percentage chance that a wither will drop a Withering Soul.");
+		confDragonScales = config.getInt("dragon_scales_amount", category, 8, 0, 64, "The amount of Dragon Scales an Ender Dragon should drop upon death.");
 		
 		category = "Seeds";
 		config.addCustomCategoryComment(category, "Enable/Disable each seed individually.");

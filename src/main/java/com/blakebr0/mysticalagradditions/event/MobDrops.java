@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.event;
 
 import java.util.List;
 
+import com.blakebr0.mysticalagradditions.config.ModConfig;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
@@ -22,11 +23,11 @@ public class MobDrops {
         List<EntityItem> drops = event.getDrops();
         	
     	if(event.getEntity() instanceof EntityWither){            	
-    		drops.add(drop(event.getEntity(), ModItems.itemStuff, 1, 1, MAHelper.mobDrops.getChance(35)));
+    		drops.add(drop(event.getEntity(), ModItems.itemStuff, 1, 1, MAHelper.mobDrops.getChance(ModConfig.confWitherSouls)));
     	}
     	
     	if (event.getEntity() instanceof EntityDragon) {
-    		drops.add(drop(event.getEntity(), ModItems.itemStuff, 8, 3, 8));
+    		drops.add(drop(event.getEntity(), ModItems.itemStuff, ModConfig.confDragonScales, 3, 8));
     	}
     }
     
