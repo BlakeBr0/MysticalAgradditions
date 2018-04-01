@@ -36,7 +36,7 @@ public class ItemStuff extends ItemMeta {
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
     	if (stack.getMetadata() == 1) {
-        	tooltip.add(Tooltips.DROP_CHANCE + "35%");	
+        	tooltip.add(Tooltips.DROP_CHANCE + ModConfig.confWitherSouls + "%");
     	} else if (stack.getMetadata() == 69) {
     		tooltip.add(Colors.ITALICS + Utils.localize("tooltip.ma.creative_essence"));
     	}
