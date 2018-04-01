@@ -39,6 +39,7 @@ public class CompatJEI implements IModPlugin {
         }
         
         registry.addDescription(new ItemStack(ModItems.itemStuff, 1, 1), "desc.withering_soul");
+        registry.addDescription(new ItemStack(ModItems.itemStuff, 1, 3), "desc.dragon_scale");
         
         IJeiHelpers jeiHelpers = registry.getJeiHelpers();
         IGuiHelper guiHelper = jeiHelpers.getGuiHelper();
