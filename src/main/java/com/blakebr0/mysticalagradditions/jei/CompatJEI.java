@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
 import com.blakebr0.mysticalagradditions.items.ModItems;
-import com.blakebr0.mysticalagriculture.jei.TinkeringTableCategory;
 
+import com.blakebr0.mysticalagriculture.compat.jei.tinkeringtable.TinkeringTableCategory;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.IJeiRuntime;
