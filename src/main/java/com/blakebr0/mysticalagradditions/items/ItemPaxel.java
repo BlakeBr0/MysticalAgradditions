@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
+import com.blakebr0.cucumber.helper.NBTHelper;
 import com.blakebr0.cucumber.iface.IRepairMaterial;
 import com.blakebr0.cucumber.lib.Colors;
 import com.blakebr0.cucumber.util.ToolTools;
@@ -14,7 +15,6 @@ import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.items.tools.ToolType;
 import com.blakebr0.mysticalagriculture.lib.Tooltips;
-import com.blakebr0.mysticalagriculture.util.NBTHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -56,7 +56,7 @@ public class ItemPaxel extends ItemTool implements IRepairMaterial {
 		int damage = stack.getMaxDamage() - stack.getItemDamage();
 		tooltip.add(Tooltips.DURABILITY + color + (damage > -1 ? damage : Tooltips.UNLIMITED));
 		if(OreDictionary.itemMatches(getRepairMaterial(), MAHelper.items.itemCrafting.itemSupremiumIngot, false)){
-			NBTTagCompound tag = NBTHelper.getDataMap(stack);
+			NBTTagCompound tag = NBTHelper.getTagCompound(stack);
 			if(tag.hasKey(ToolType.TOOL_TYPE) && tag.getInteger(ToolType.TOOL_TYPE) == 1000){
 				tooltip.add(Tooltips.CHARM_SLOT + Colors.RED + Utils.localize("tooltip.ma.mining_aoe"));
 			} else {
@@ -68,7 +68,7 @@ public class ItemPaxel extends ItemTool implements IRepairMaterial {
 	@Override
 	public float getStrVsBlock(ItemStack stack, IBlockState state) {
         Material material = state.getMaterial();
-        float aoeNerf = NBTHelper.getDataMap(stack).hasKey(ToolType.TOOL_TYPE) ? (NBTHelper.getDataMap(stack).getInteger(ToolType.TOOL_TYPE) == 1000 ? -15.0F : 0.0F) : 0.0F;
+        float aoeNerf = NBTHelper.getTagCompound(stack).hasKey(ToolType.TOOL_TYPE) ? (NBTHelper.getTagCompound(stack).getInteger(ToolType.TOOL_TYPE) == 1000 ? -15.0F : 0.0F) : 0.0F;
         return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK
         	   && material != Material.WOOD && material != Material.PLANTS && material != Material.VINE 
         	   ? super.getStrVsBlock(stack, state) + aoeNerf : this.efficiencyOnProperMaterial + aoeNerf;
@@ -119,7 +119,7 @@ public class ItemPaxel extends ItemTool implements IRepairMaterial {
 	@Override
     public boolean onBlockStartBreak(ItemStack stack, BlockPos pos, EntityPlayer player){
 		if(stack.getItem() == ModItems.itemSupremiumPaxel){
-			NBTTagCompound tag = NBTHelper.getDataMap(stack);
+			NBTTagCompound tag = NBTHelper.getTagCompound(stack);
 			if(tag.hasKey(ToolType.TOOL_TYPE)){
 				if(tag.getInteger(ToolType.TOOL_TYPE) == 1000){
 			        boolean blocks = false;
