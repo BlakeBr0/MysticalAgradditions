@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.blakebr0.cucumber.util.Utils;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.blocks.crop.BlockMysticalCrop;
 
@@ -106,7 +107,7 @@ public class BlockTier6Crop extends BlockMysticalCrop {
     public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
 
         int age = state.getValue(AGE);
-        Random rand = ((World)world).rand;
+        Random rand = Utils.rand;
 
         int essence = 0;
         int fertilizer = 0;
