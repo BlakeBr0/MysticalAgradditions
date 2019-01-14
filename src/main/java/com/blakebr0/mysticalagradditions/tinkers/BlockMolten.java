@@ -1,7 +1,5 @@
 package com.blakebr0.mysticalagradditions.tinkers;
 
-import javax.annotation.Nonnull;
-
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 
 import net.minecraft.block.material.Material;
@@ -10,19 +8,19 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 public class BlockMolten extends BlockFluidClassic {
-	
-	public BlockMolten(Fluid fluid){
+
+	public BlockMolten(Fluid fluid) {
 		super(fluid, Material.LAVA);
 		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 	}
 
-	@Nonnull
 	@Override
 	public String getUnlocalizedName() {
 		Fluid fluid = FluidRegistry.getFluid(fluidName);
-		if(fluid != null) {
+		if (fluid != null) {
 			return fluid.getUnlocalizedName();
 		}
+		
 		return super.getUnlocalizedName();
 	}
 }

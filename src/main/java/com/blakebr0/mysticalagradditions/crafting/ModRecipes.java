@@ -7,7 +7,6 @@ import com.blakebr0.mysticalagradditions.lib.MAHelper;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class ModRecipes {
 	
@@ -24,7 +23,7 @@ public class ModRecipes {
 	}
 	
 	public static CropType.Type type;
-	// TODO: Jason KappaPride
+
 	public static void init() {
 		
 		if (type.NETHER_STAR.isEnabled()) { MAHelper.addShapedRecipe(new ItemStack(ModBlocks.blockSpecial, 1, 0), "ESE", "WDW", "ESE", 'E', MAHelper.items.itemCrafting.itemSupremiumEssence, 'S', new ItemStack(Items.NETHER_STAR, 1, 0), 'D', "blockDiamond", 'W', new ItemStack(ModItems.itemStuff, 1, 1)); }

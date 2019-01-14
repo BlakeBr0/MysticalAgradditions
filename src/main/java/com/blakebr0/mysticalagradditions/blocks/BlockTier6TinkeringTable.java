@@ -2,8 +2,6 @@ package com.blakebr0.mysticalagradditions.blocks;
 
 import java.util.List;
 
-import javax.annotation.Nonnull;
-
 import com.blakebr0.cucumber.block.BlockBase;
 import com.blakebr0.cucumber.lib.Colors;
 import com.blakebr0.cucumber.util.Utils;
@@ -29,65 +27,66 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockTier6TinkeringTable extends BlockBase implements ITileEntityProvider {
-	
-	public BlockTier6TinkeringTable(){
+
+	public BlockTier6TinkeringTable() {
 		super("ma.tinkering_table", Material.IRON, SoundType.METAL, 8.0F, 12.0F);
 		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 	}
 
-    @Override
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ){
-        if(world.isRemote){
-            return true;
-        } else {
-            TileEntity tileentity = world.getTileEntity(pos);
-
-            if(tileentity instanceof TileEntityTinkeringTable){
-                player.openGui(MysticalAgriculture.INSTANCE, 1, world, pos.getX(), pos.getY(), pos.getZ());
-            }
-            return true;
-        }
-    }
-	
 	@Override
-	public TileEntity createNewTileEntity(World world, int meta){
+	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (world.isRemote) {
+			return true;
+		} else {
+			TileEntity tileentity = world.getTileEntity(pos);
+
+			if (tileentity instanceof TileEntityTinkeringTable) {
+				player.openGui(MysticalAgriculture.INSTANCE, 1, world, pos.getX(), pos.getY(), pos.getZ());
+			}
+
+			return true;
+		}
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileEntityTinkeringTable();
 	}
 
 	@Override
-    public void breakBlock(World world, BlockPos pos, IBlockState state) {
-		TileEntityTinkeringTable tile = (TileEntityTinkeringTable)world.getTileEntity(pos);
-        if(tile instanceof TileEntityTinkeringTable) {
-            for(int i = 0; i < 9; i++){
-                ItemStack stack = tile.matrix.getStackInSlot(i);
-                if(!stack.isEmpty()){
-                    world.spawnEntity(new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack));
-                }
-            }
-        }
-        super.breakBlock(world, pos, state);
-    }
-	
-	@Nonnull
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		TileEntityTinkeringTable tile = (TileEntityTinkeringTable) world.getTileEntity(pos);
+		if (tile instanceof TileEntityTinkeringTable) {
+			for (int i = 0; i < 9; i++) {
+				ItemStack stack = tile.matrix.getStackInSlot(i);
+				if (!stack.isEmpty()) {
+					world.spawnEntity(new EntityItem(world, pos.getX(), pos.getY(), pos.getZ(), stack));
+				}
+			}
+		}
+
+		super.breakBlock(world, pos, state);
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer(){
+	public BlockRenderLayer getBlockLayer() {
 		return BlockRenderLayer.CUTOUT;
 	}
 
 	@Override
-	public boolean isFullCube(IBlockState state){
+	public boolean isFullCube(IBlockState state) {
 		return false;
 	}
 
 	@Override
-	public boolean isOpaqueCube(IBlockState state){
+	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
-	
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
 		tooltip.add(Colors.DARK_PURPLE + Utils.localize("tooltip.ma.insanium"));
-    }
+	}
 }

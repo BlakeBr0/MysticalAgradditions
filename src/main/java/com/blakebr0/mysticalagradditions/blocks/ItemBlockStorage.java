@@ -11,14 +11,14 @@ public class ItemBlockStorage extends ItemBlock {
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
 		return super.getUnlocalizedName() + "_" + BlockStorage.Type.byMetadata(stack.getMetadata()).getName();
 	}
-	
+
 	@Override
-	public int getMetadata(int damage){
+	public int getMetadata(int damage) {
 		return damage;
 	}
 }

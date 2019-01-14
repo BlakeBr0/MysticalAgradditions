@@ -23,37 +23,35 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class CommonProxy {
-	
-	public void preInit(FMLPreInitializationEvent event){
+
+	public void preInit(FMLPreInitializationEvent event) {
 		ModConfig.init(new File(event.getModConfigurationDirectory(), "mysticalagradditions.cfg"));
 		MinecraftForge.EVENT_BUS.register(new ModConfig());
-		ModBlocks.init(); 
+		ModBlocks.init();
 		ModItems.init();
 		CropType.init();
 
-		MinecraftForge.EVENT_BUS.register(MysticalAgradditions.REGISTRY);
-		
-		if(ModChecker.TINKERS_CONSTRUCT){
+		if (ModChecker.TINKERS_CONSTRUCT) {
 			MinecraftForge.EVENT_BUS.register(new CompatTConstruct());
 			CompatTConstruct.init();
 		}
 	}
-	
-	public void init(FMLInitializationEvent event){
+
+	public void init(FMLInitializationEvent event) {
 		FMLInterModComms.sendMessage("waila", "register", "com.blakebr0.mysticalagradditions.compat.WailaDataProvider.callbackRegister");
-		
+
 		ModRecipes.init();
 		MinecraftForge.EVENT_BUS.register(new MobDrops());
 		MinecraftForge.EVENT_BUS.register(new NoFertilizerForYou());
-		
+
 		if (ModChecker.TINKERS_CONSTRUCT) {
 			CompatTConstruct.initTraits();
 		}
-		
+
 		ReprocessorManager.addRecipe(new ItemStack(MAHelper.items.itemCrafting, 6, 0), new ItemStack(ModItems.itemTier6InferiumSeeds));
 	}
 
-	public void postInit(FMLPostInitializationEvent event){
-		
+	public void postInit(FMLPostInitializationEvent event) {
+
 	}
 }

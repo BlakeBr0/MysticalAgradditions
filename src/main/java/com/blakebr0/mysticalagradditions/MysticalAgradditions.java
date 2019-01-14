@@ -22,35 +22,34 @@ public class MysticalAgradditions {
 	public static final String VERSION = "${version}";
 	public static final String DEPENDENCIES = "required-after:mysticalagriculture@[1.7.0,);required-after:cucumber@[1.1.2,);after:mantle;after:tconstruct";
 	public static final String GUI_FACTORY = "com.blakebr0.mysticalagradditions.config.GuiFactory";
-	
-	public static final ModRegistry REGISTRY = new ModRegistry(MOD_ID);
-	
+
+	public static final ModRegistry REGISTRY = ModRegistry.create(MOD_ID);
+
 	@Instance(MOD_ID)
 	public static MysticalAgradditions instance;
-	
-	@SidedProxy(clientSide = "com.blakebr0.mysticalagradditions.proxy.ClientProxy",
-				serverSide = "com.blakebr0.mysticalagradditions.proxy.ServerProxy")
+
+	@SidedProxy(clientSide = "com.blakebr0.mysticalagradditions.proxy.ClientProxy", serverSide = "com.blakebr0.mysticalagradditions.proxy.ServerProxy")
 	public static CommonProxy proxy;
-		
+
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event){
+	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
 	}
-	
+
 	@EventHandler
-	public void init(FMLInitializationEvent event){
+	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
 	}
-	
+
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event){
+	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 	}
-	
-	public static CreativeTabs tabMysticalAgradditions = new CreativeTabs("tab.mystical_agradditions.name"){
-		
+
+	public static CreativeTabs tabMysticalAgradditions = new CreativeTabs("tab.mystical_agradditions.name") {
+
 		@Override
-		public ItemStack getTabIconItem(){
+		public ItemStack getTabIconItem() {
 			return new ItemStack(ModItems.itemInsanium, 1, 0);
 		}
 	};

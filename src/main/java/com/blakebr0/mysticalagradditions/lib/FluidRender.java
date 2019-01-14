@@ -1,7 +1,6 @@
 package com.blakebr0.mysticalagradditions.lib;
 
-import javax.annotation.Nonnull;
-
+import com.blakebr0.cucumber.helper.ResourceHelper;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 
 import net.minecraft.block.Block;
@@ -20,10 +19,12 @@ public class FluidRender {
 		Block block = fluid.getBlock();
 		Item item = Item.getItemFromBlock(block);
 		FluidStateMapper mapper = new FluidStateMapper(fluid);
+		
 		if (item != null) {
 			ModelLoader.registerItemVariants(item);
 			ModelLoader.setCustomMeshDefinition(item, mapper);
 		}
+		
 		ModelLoader.setCustomStateMapper(block, mapper);
 	}
 
@@ -32,19 +33,17 @@ public class FluidRender {
 		public final ModelResourceLocation location;
 
 		public FluidStateMapper(Fluid fluid) {
-			this.location = new ModelResourceLocation(MysticalAgradditions.MOD_ID + ":fluid_block", fluid.getName());
+			this.location = ResourceHelper.getModelResource(MysticalAgradditions.MOD_ID, "fluid_block", fluid.getName());
 		}
 
-		@Nonnull
 		@Override
-		protected ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
-			return location;
+		protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+			return this.location;
 		}
 
-		@Nonnull
 		@Override
-		public ModelResourceLocation getModelLocation(@Nonnull ItemStack stack) {
-			return location;
+		public ModelResourceLocation getModelLocation(ItemStack stack) {
+			return this.location;
 		}
 	}
 }

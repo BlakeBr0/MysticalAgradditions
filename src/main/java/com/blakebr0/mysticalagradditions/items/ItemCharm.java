@@ -24,10 +24,10 @@ public class ItemCharm extends ItemMeta {
 	public void init() {
 		addItem(0, "mining_aoe");
 	}
-	
+
 	@Override // TODO: set this up better?
 	public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
-		if(Utils.isShiftKeyDown()){
+		if (Utils.isShiftKeyDown()) {
 			tooltip.add(Tooltips.DESCRIPTION);
 			tooltip.add(Utils.localize("desc.ma.charm_mining_aoe"));
 			tooltip.add("");
