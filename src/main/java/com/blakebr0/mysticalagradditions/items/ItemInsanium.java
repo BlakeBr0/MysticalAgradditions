@@ -46,7 +46,7 @@ public class ItemInsanium extends ItemBase implements IModelHelper {
 	public void initModels() {
 		for (Type type : Type.values()) {
 			if (type.isEnabled()) {
-				ModelLoader.setCustomModelResourceLocation(this, type.getMetadata(), ResourceHelper.getModelResource(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));
+				ModelLoader.setCustomModelResourceLocation(this, type.getMetadata(), ResourceHelper.getModelResource(MysticalAgradditions.MOD_ID, "insanium_" + type.byMetadata(type.getMetadata()).getName(), "inventory"));
 			}
 		}
 	}

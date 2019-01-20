@@ -56,7 +56,7 @@ public class BlockStorage extends BlockBase implements IModelHelper {
 	public void initModels() {
 		for (Type type : Type.values()) {
 			if (type.isEnabled()) {
-				ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), type.getMetadata(), ResourceHelper.getModelResource(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));
+				ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), type.getMetadata(), ResourceHelper.getModelResource(MysticalAgradditions.MOD_ID, "storage_" + type.byMetadata(type.getMetadata()).getName(), "inventory"));
 			}
 		}
 	}

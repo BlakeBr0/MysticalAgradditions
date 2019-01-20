@@ -35,6 +35,8 @@ public class CropType {
 		private final int rootMeta;
 		private final ItemBase crop;
 		private final ItemTier6Seed seed;
+		
+		private boolean debug = false;
 
 		Type(String name, IBlockState root, int rootMeta, boolean enabled) {
 			this.name = name;
@@ -57,7 +59,7 @@ public class CropType {
 		}
 
 		public boolean isEnabled() {
-			return this.enabled;
+			return this.enabled || this.debug;
 		}
 
 		public BlockTier6Crop getPlant() {

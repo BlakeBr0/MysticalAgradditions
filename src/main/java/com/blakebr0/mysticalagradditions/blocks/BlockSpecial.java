@@ -48,7 +48,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 	public void initModels() {
 		for (Type type : Type.values()) {
 			if (type.isEnabled()) {
-				ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), type.getMetadata(), ResourceHelper.getModelResource(getRegistryName().toString() + "_" + type.byMetadata(type.getMetadata()).getName()));
+				ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), type.getMetadata(), ResourceHelper.getModelResource(MysticalAgradditions.MOD_ID, "special_" + type.byMetadata(type.getMetadata()).getName(), "inventory"));
 			}
 		}
 	}
@@ -80,6 +80,8 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 		private final int meta;
 		private final String name;
 		private final boolean enabled;
+		
+		private boolean debug = false;
 
 		private Type(int meta, String name, boolean enabled) {
 			this.meta = meta;
@@ -97,7 +99,7 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 		}
 
 		public boolean isEnabled() {
-			return this.enabled;
+			return this.enabled || this.debug;
 		}
 
 		public static Type byMetadata(int meta) {
