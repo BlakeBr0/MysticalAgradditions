@@ -26,7 +26,7 @@ public class CropType {
 
 		NETHER_STAR("nether_star", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.NETHER_STAR), 0, ModConfig.confNetherStarSeeds),
 		DRAGON_EGG("dragon_egg", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.DRAGON_EGG), 1, ModConfig.confDragonEggSeeds),
-		AWAKENED_DRACONIUM("awakened_draconium", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.AWAKENED_DRACONIUM), 4, ModConfig.confNetherStarSeeds && ModChecker.DRACONIC_EVOLUTION);
+		AWAKENED_DRACONIUM("awakened_draconium", ModBlocks.blockSpecial.getDefaultState().withProperty(BlockSpecial.VARIANT, BlockSpecial.Type.AWAKENED_DRACONIUM), 4, ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC_EVOLUTION);
 
 		private final String name;
 		private final boolean enabled;
