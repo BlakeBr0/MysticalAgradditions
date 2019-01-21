@@ -7,6 +7,7 @@ import com.blakebr0.cucumber.iface.IModelHelper;
 import com.blakebr0.cucumber.item.ItemBase;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
+import com.blakebr0.mysticalagriculture.lib.Tooltips;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -55,6 +56,8 @@ public class ItemInsanium extends ItemBase implements IModelHelper {
 	public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag advanced) {
 		if (stack.getMetadata() == Type.COAL.getMetadata()) {
 			tooltip.add("Burn Time: \u00A7548.0x");
+		} else if (stack.getMetadata() == Type.CRAFTING_SEED.getMetadata()) {
+			tooltip.add(Tooltips.CRAFTING_SEED);
 		}
 	}
 
