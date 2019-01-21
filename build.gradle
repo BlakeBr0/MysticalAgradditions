@@ -39,8 +39,8 @@ minecraft {
 }
 
 dependencies {
-	deobfCompile "mezz.jei:jei_1.12:4.7.0.67:api"
-	runtime "mezz.jei:jei_1.12:4.7.0.67"
+	deobfCompile "mezz.jei:jei_1.12.2:4.10.0.198:api"
+	runtime "mezz.jei:jei_1.12.2:4.10.0.198"
 	deobfCompile "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2"
 }
 

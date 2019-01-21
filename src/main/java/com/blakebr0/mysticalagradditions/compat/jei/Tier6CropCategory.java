@@ -1,4 +1,6 @@
-package com.blakebr0.mysticalagradditions.jei;
+package com.blakebr0.mysticalagradditions.compat.jei;
+
+import java.util.List;
 
 import com.blakebr0.cucumber.helper.ResourceHelper;
 import com.blakebr0.cucumber.util.Utils;
@@ -10,7 +12,6 @@ import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeCategory;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class Tier6CropCategory implements IRecipeCategory<Tier6CropWrapper> {
@@ -20,7 +21,7 @@ public class Tier6CropCategory implements IRecipeCategory<Tier6CropWrapper> {
     private IDrawable background;
 
     public Tier6CropCategory(IGuiHelper helper) {
-        background = helper.createDrawable(ResourceHelper.getResource("mysticalagradditions", "textures/gui/tier_6_crop_jei.png"), 10, 14, 156, 92);
+        this.background = helper.createDrawable(ResourceHelper.getResource(MysticalAgradditions.MOD_ID, "textures/gui/tier_6_crop_jei.png"), 0, 0, 136, 65);
     }
 
     @Override
@@ -35,28 +36,31 @@ public class Tier6CropCategory implements IRecipeCategory<Tier6CropWrapper> {
 
     @Override
     public IDrawable getBackground() {
-        return background;
+        return this.background;
     }
     
     @Override
-    public void setRecipe(IRecipeLayout recipeLayout, Tier6CropWrapper recipeWrapper, IIngredients ingredients) {
-        IGuiItemStackGroup group = recipeLayout.getItemStacks();
-
-        group.init(0, true, 10, 32);
-        group.init(1, true, 65, 8);
-        group.init(2, false, 124, 32);
-        group.init(3, true, 65, 55);
-        group.init(4, true, 65, 31);
+    public void setRecipe(IRecipeLayout layout, Tier6CropWrapper wrapper, IIngredients ingredients) {
+        IGuiItemStackGroup group = layout.getItemStacks();
         
-        group.set(0, recipeWrapper.getInputs());
-        group.set(1, recipeWrapper.getCrop());
-        group.set(2, recipeWrapper.getOutputs());
-        group.set(3, recipeWrapper.getRoot());
-        group.set(4, new ItemStack(Blocks.FARMLAND));
+        List<List<ItemStack>> inputs = ingredients.getInputs(ItemStack.class);
+        List<ItemStack> outputs = ingredients.getOutputs(ItemStack.class).get(0);
+
+        group.init(0, true, 0, 24);
+        group.init(1, true, 55, 0);
+        group.init(2, true, 55, 47);
+        group.init(3, true, 55, 23);
+        group.init(4, false, 114, 24);
+        
+        group.set(0, inputs.get(0));
+        group.set(1, inputs.get(1));
+        group.set(2, inputs.get(2));
+        group.set(3, inputs.get(3));
+        group.set(4, outputs);
     }
 
 	@Override
-	public String getModName(){
+	public String getModName() {
 		return MysticalAgradditions.NAME;
 	}
 }

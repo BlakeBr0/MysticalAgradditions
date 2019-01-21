@@ -1,4 +1,4 @@
-package com.blakebr0.mysticalagradditions.jei;
+package com.blakebr0.mysticalagradditions.compat.jei;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class Tier6CropRecipeMaker {
 				recipes.add(new Tier6CropWrapper(input, crop, root, output));
 			}
 		}
-		
+
 		return recipes;
 	}
 }
