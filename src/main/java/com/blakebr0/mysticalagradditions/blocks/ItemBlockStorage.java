@@ -21,4 +21,9 @@ public class ItemBlockStorage extends ItemBlock {
 	public int getMetadata(int damage) {
 		return damage;
 	}
+	
+	@Override
+	public int getItemBurnTime(ItemStack stack) {
+		return stack.getMetadata() == BlockStorage.Type.COAL.getMetadata() ? 691200 : -1;
+	}
 }

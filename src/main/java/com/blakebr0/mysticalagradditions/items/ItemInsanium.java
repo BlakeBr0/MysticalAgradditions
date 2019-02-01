@@ -16,8 +16,6 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.IFuelHandler;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemInsanium extends ItemBase implements IModelHelper {
 
@@ -25,7 +23,6 @@ public class ItemInsanium extends ItemBase implements IModelHelper {
 		super("ma.insanium");
 		this.setHasSubtypes(true);
 		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
-		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 
 	@Override
@@ -43,7 +40,13 @@ public class ItemInsanium extends ItemBase implements IModelHelper {
 	public String getUnlocalizedName(ItemStack stack) {
 		return super.getUnlocalizedName() + "_" + Type.byMetadata(stack.getMetadata()).getName();
 	}
+	
+	@Override
+	public int getItemBurnTime(ItemStack stack) {
+		return stack.getMetadata() == Type.COAL.getMetadata() ? 76800 : -1;
+	}
 
+	@Override
 	public void initModels() {
 		for (Type type : Type.values()) {
 			if (type.isEnabled()) {
@@ -111,17 +114,6 @@ public class ItemInsanium extends ItemBase implements IModelHelper {
 			for (Type type : values()) {
 				META_LOOKUP[type.getMetadata()] = type;
 			}
-		}
-	}
-
-	public static class FuelHandler implements IFuelHandler {
-
-		@Override
-		public int getBurnTime(ItemStack fuel) {
-			if (fuel.getItem() instanceof ItemInsanium && fuel.getMetadata() == Type.COAL.getMetadata()) {
-				return 76800;
-			}
-			return 0;
 		}
 	}
 }

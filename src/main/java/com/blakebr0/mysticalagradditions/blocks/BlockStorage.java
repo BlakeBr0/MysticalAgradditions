@@ -22,8 +22,6 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.IFuelHandler;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -35,7 +33,6 @@ public class BlockStorage extends BlockBase implements IModelHelper {
 		super("ma.storage", Material.ROCK, SoundType.STONE, 5.0F, 10.0F);
 		this.setCreativeTab(MysticalAgradditions.tabMysticalAgradditions);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, Type.ESSENCE));
-		GameRegistry.registerFuelHandler(new FuelHander());
 	}
 
 	@Override
@@ -131,17 +128,6 @@ public class BlockStorage extends BlockBase implements IModelHelper {
 			for (Type type : values()) {
 				META_LOOKUP[type.getMetadata()] = type;
 			}
-		}
-	}
-
-	public class FuelHander implements IFuelHandler {
-
-		@Override
-		public int getBurnTime(ItemStack fuel) {
-			if (fuel.getItem() instanceof ItemBlockStorage && fuel.getMetadata() == Type.COAL.getMetadata()) {
-				return 691200;
-			}
-			return 0;
 		}
 	}
 }
