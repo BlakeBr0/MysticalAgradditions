@@ -22,6 +22,7 @@ public class ModConfig {
 	public static boolean confNetherStarSeeds;
 	public static boolean confDragonEggSeeds;
 	public static boolean confAwakenedDraconiumSeeds;
+	public static boolean confNeutroniumSeeds;
 
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
@@ -52,6 +53,7 @@ public class ModConfig {
 		confNetherStarSeeds = config.get(category, "nether_star_seeds", true).getBoolean();
 		confDragonEggSeeds = config.get(category, "dragon_egg_seeds", true).getBoolean();
 		confAwakenedDraconiumSeeds = config.get(category, "awakened_draconium_seeds", true).getBoolean();
+		confNeutroniumSeeds = config.get(category, "neutronium_seeds", true).getBoolean();
 
 		if (config.hasChanged()) {
 			config.save();

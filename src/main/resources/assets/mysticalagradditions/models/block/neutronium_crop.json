@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "mysticalagradditions:blocks/neutronium_crop"
+    }
+}

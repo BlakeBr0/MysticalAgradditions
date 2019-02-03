@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.Loader;
 
 public class BlockSpecial extends BlockBase implements IModelHelper {
 
@@ -74,7 +75,8 @@ public class BlockSpecial extends BlockBase implements IModelHelper {
 		DRAGON_EGG(1, "dragon_egg", ModConfig.confDragonEggSeeds), 
 		PH2(2, "ph2", false), 
 		PH3(3, "ph3", false),
-		AWAKENED_DRACONIUM(4, "awakened_draconium", ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC_EVOLUTION);
+		AWAKENED_DRACONIUM(4, "awakened_draconium", ModConfig.confAwakenedDraconiumSeeds && ModChecker.DRACONIC_EVOLUTION),
+		NEUTRONIUM(5, "neutronium", ModConfig.confNeutroniumSeeds && Loader.isModLoaded("avaritia"));
 
 		private static final Type[] META_LOOKUP = new Type[values().length];
 		private final int meta;
