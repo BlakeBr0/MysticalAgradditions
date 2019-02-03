@@ -11,6 +11,7 @@ import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.monster.EntityGuardian;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.monster.EntitySpider;
@@ -127,6 +128,10 @@ public class TraitChunky extends AbstractTrait {
 			if (target.getClass().getName() == BASALZ_CLASS && type.BASALZ.isEnabled()) {
 				item = drop(target, MAHelper.items.itemChunk, 23, 1, MAHelper.mobDrops.getChanceFromTier(type.BASALZ.getTier()));
 			}
+			
+        	if (target instanceof EntityMob) {  	
+        		item = drop(target, MAHelper.items.itemChunk, 5, 1, MAHelper.mobDrops.getChance(10));
+        	}
 
 			if (item != null) {
 				world.spawnEntity(item);
