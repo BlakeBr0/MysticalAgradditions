@@ -1,5 +1,8 @@
 package com.blakebr0.mysticalagradditions.tinkers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
 import com.blakebr0.mysticalagriculture.lib.CropType;
 
@@ -56,85 +59,85 @@ public class TraitChunky extends AbstractTrait {
 	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) {
 		World world = target.getEntityWorld();
 		if (!target.isEntityAlive() && !world.isRemote) {
-			EntityItem item = null;
+			List<EntityItem> items = new ArrayList<>();
 			if (target instanceof EntityZombie && type.ZOMBIE.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 6, 1, MAHelper.mobDrops.getChanceFromTier(type.ZOMBIE.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 6, 1, MAHelper.mobDrops.getChanceFromTier(type.ZOMBIE.getTier())));
 			}
 
 			if (target instanceof EntityPig && type.PIG.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 7, 1, MAHelper.mobDrops.getChanceFromTier(type.PIG.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 7, 1, MAHelper.mobDrops.getChanceFromTier(type.PIG.getTier())));
 			}
 
 			if (target instanceof EntityChicken && type.CHICKEN.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 8, 1, MAHelper.mobDrops.getChanceFromTier(type.CHICKEN.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 8, 1, MAHelper.mobDrops.getChanceFromTier(type.CHICKEN.getTier())));
 			}
 
 			if (target instanceof EntityCow && type.COW.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 9, 1, MAHelper.mobDrops.getChanceFromTier(type.COW.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 9, 1, MAHelper.mobDrops.getChanceFromTier(type.COW.getTier())));
 			}
 
 			if (target instanceof EntitySheep && type.SHEEP.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 10, 1, MAHelper.mobDrops.getChanceFromTier(type.SHEEP.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 10, 1, MAHelper.mobDrops.getChanceFromTier(type.SHEEP.getTier())));
 			}
 
 			if (target instanceof EntitySlime && type.SLIME.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 11, 1, MAHelper.mobDrops.getChanceFromTier(type.SLIME.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 11, 1, MAHelper.mobDrops.getChanceFromTier(type.SLIME.getTier())));
 			}
 
 			if (target instanceof EntitySkeleton && type.SKELETON.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 12, 1, MAHelper.mobDrops.getChanceFromTier(type.SKELETON.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 12, 1, MAHelper.mobDrops.getChanceFromTier(type.SKELETON.getTier())));
 			}
 
 			if (target instanceof EntityCreeper && type.CREEPER.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 13, 1, MAHelper.mobDrops.getChanceFromTier(type.CREEPER.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 13, 1, MAHelper.mobDrops.getChanceFromTier(type.CREEPER.getTier())));
 			}
 
 			if (target instanceof EntitySpider && type.SPIDER.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 14, 1, MAHelper.mobDrops.getChanceFromTier(type.SPIDER.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 14, 1, MAHelper.mobDrops.getChanceFromTier(type.SPIDER.getTier())));
 			}
 
 			if (target instanceof EntityRabbit && type.RABBIT.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 15, 1, MAHelper.mobDrops.getChanceFromTier(type.RABBIT.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 15, 1, MAHelper.mobDrops.getChanceFromTier(type.RABBIT.getTier())));
 			}
 
 			if (target instanceof EntityGuardian && type.GUARDIAN.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 16, 1, MAHelper.mobDrops.getChanceFromTier(type.GUARDIAN.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 16, 1, MAHelper.mobDrops.getChanceFromTier(type.GUARDIAN.getTier())));
 			}
 
 			if (target instanceof EntityBlaze && type.BLAZE.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 17, 1, MAHelper.mobDrops.getChanceFromTier(type.BLAZE.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 17, 1, MAHelper.mobDrops.getChanceFromTier(type.BLAZE.getTier())));
 			}
 
 			if (target instanceof EntityGhast && type.GHAST.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 18, 1, MAHelper.mobDrops.getChanceFromTier(type.GHAST.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 18, 1, MAHelper.mobDrops.getChanceFromTier(type.GHAST.getTier())));
 			}
 
 			if (target instanceof EntityEnderman && type.ENDERMAN.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 19, 1, MAHelper.mobDrops.getChanceFromTier(type.ENDERMAN.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 19, 1, MAHelper.mobDrops.getChanceFromTier(type.ENDERMAN.getTier())));
 			}
 
 			if (target instanceof EntityWitherSkeleton && type.WITHER_SKELETON.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 20, 1, MAHelper.mobDrops.getChanceFromTier(type.WITHER_SKELETON.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 20, 1, MAHelper.mobDrops.getChanceFromTier(type.WITHER_SKELETON.getTier())));
 			}
 
 			if (target.getClass().getName() == BLIZZ_CLASS && type.BLIZZ.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 21, 1, MAHelper.mobDrops.getChanceFromTier(type.BLIZZ.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 21, 1, MAHelper.mobDrops.getChanceFromTier(type.BLIZZ.getTier())));
 			}
 
 			if (target.getClass().getName() == BLITZ_CLASS && type.BLITZ.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 22, 1, MAHelper.mobDrops.getChanceFromTier(type.BLITZ.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 22, 1, MAHelper.mobDrops.getChanceFromTier(type.BLITZ.getTier())));
 			}
 
 			if (target.getClass().getName() == BASALZ_CLASS && type.BASALZ.isEnabled()) {
-				item = drop(target, MAHelper.items.itemChunk, 23, 1, MAHelper.mobDrops.getChanceFromTier(type.BASALZ.getTier()));
+				items.add(drop(target, MAHelper.items.itemChunk, 23, 1, MAHelper.mobDrops.getChanceFromTier(type.BASALZ.getTier())));
 			}
 			
         	if (target instanceof EntityMob) {  	
-        		item = drop(target, MAHelper.items.itemChunk, 5, 1, MAHelper.mobDrops.getChance(10));
+        		items.add(drop(target, MAHelper.items.itemChunk, 5, 1, MAHelper.mobDrops.getChance(10)));
         	}
 
-			if (item != null) {
-				world.spawnEntity(item);
+			if (!items.isEmpty()) {
+				items.forEach(item -> world.spawnEntity(item));
 			}
 		}
 	}
