@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.tinkers;
 
+import com.blakebr0.cucumber.util.Utils;
 import com.blakebr0.mysticalagradditions.lib.MAHelper;
-import com.blakebr0.mysticalagriculture.util.Utils;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
