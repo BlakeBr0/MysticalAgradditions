@@ -1,56 +1,33 @@
 package com.blakebr0.mysticalagradditions;
 
-import com.blakebr0.cucumber.registry.ModRegistry;
+import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
+import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.items.ModItems;
-import com.blakebr0.mysticalagradditions.proxy.CommonProxy;
-
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(modid = MysticalAgradditions.MOD_ID, name = MysticalAgradditions.NAME, version = MysticalAgradditions.VERSION, dependencies = MysticalAgradditions.DEPENDENCIES, guiFactory = MysticalAgradditions.GUI_FACTORY)
+@Mod(MysticalAgradditions.MOD_ID)
 public class MysticalAgradditions {
-
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
-	public static final String VERSION = "${version}";
-	public static final String DEPENDENCIES = "required-after:mysticalagriculture@[1.7.5,);required-after:cucumber@[1.1.2,);after:mantle;after:tconstruct";
-	public static final String GUI_FACTORY = "com.blakebr0.mysticalagradditions.config.GuiFactory";
 
-	public static final ModRegistry REGISTRY = ModRegistry.create(MOD_ID);
+	public static final ItemGroup ITEM_GROUP = new MAItemGroup();
 
-	@Instance(MOD_ID)
-	public static MysticalAgradditions instance;
+	public MysticalAgradditions() {
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-	@SidedProxy(clientSide = "com.blakebr0.mysticalagradditions.proxy.ClientProxy", serverSide = "com.blakebr0.mysticalagradditions.proxy.ServerProxy")
-	public static CommonProxy proxy;
-
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		proxy.preInit(event);
+		bus.register(this);
+		bus.register(new ModBlocks());
+		bus.register(new ModItems());
 	}
 
-	@EventHandler
-	public void init(FMLInitializationEvent event) {
-		proxy.init(event);
+	@SubscribeEvent
+	public void onCommonSetup(FMLCommonSetupEvent event) {
+		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
 	}
-
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		proxy.postInit(event);
-	}
-
-	public static CreativeTabs tabMysticalAgradditions = new CreativeTabs("tab.mystical_agradditions.name") {
-
-		@Override
-		public ItemStack getTabIconItem() {
-			return new ItemStack(ModItems.itemInsanium, 1, 0);
-		}
-	};
 }

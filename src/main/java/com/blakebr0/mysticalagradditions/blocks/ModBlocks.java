@@ -1,36 +1,50 @@
 package com.blakebr0.mysticalagradditions.blocks;
 
-import com.blakebr0.cucumber.registry.ModRegistry;
-import com.blakebr0.cucumber.registry.Ore;
+import com.blakebr0.cucumber.block.BaseBlock;
+import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
-import com.blakebr0.mysticalagradditions.lib.CropType;
-
+import com.blakebr0.mysticalagradditions.items.ModItems;
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItem;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
 public class ModBlocks {
+	public static final List<Supplier<? extends Block>> ENTRIES = new ArrayList<>();
 
-	public static BlockStorage blockStorage = new BlockStorage();
-	public static BlockSpecial blockSpecial = new BlockSpecial();
+	public static final RegistryObject<BaseBlock> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 4.0F, 6.0F));
+	public static final RegistryObject<BaseBlock> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
+	public static final RegistryObject<BaseBlock> INSANIUM_GEMSTONE_BLOCK = register("insanium_gemstone_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
 
-	public static BlockTier6TinkeringTable blockInsaniumTinkeringTable = new BlockTier6TinkeringTable();
+	@SubscribeEvent
+	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {
+		IForgeRegistry<Block> registry = event.getRegistry();
 
-	public static BlockTier6InferiumCrop blockTier6InferiumCrop = new BlockTier6InferiumCrop("tier6_inferium_crop");
+		ENTRIES.stream().map(Supplier::get).forEach(registry::register);
+	}
 
-	public static void init() {
-		final ModRegistry registry = MysticalAgradditions.REGISTRY;
+	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
+		return register(name, block, b -> () -> new BaseBlockItem(b.get(), p -> p.group(ITEM_GROUP)));
+	}
 
-		registry.register(blockStorage, "storage", new ItemBlockStorage(blockStorage), Ore.of(0, "blockInsaniumEssence"), Ore.of(1, "blockInsanium"), Ore.of(2, "blockInsaniumCoal"));
-		registry.register(blockSpecial, "special", new ItemBlockSpecial(blockSpecial));
-
-		registry.register(blockInsaniumTinkeringTable, "tinkering_table");
-
-		registry.register(blockTier6InferiumCrop, "tier6_inferium_crop");
-
-		for (CropType.Type type : CropType.Type.values()) {
-			if (type.isEnabled()) {
-				registry.register(type.getPlant(), type.getName() + "_crop");
-			}
-		}
+	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Function<RegistryObject<T>, Supplier<? extends BlockItem>> item) {
+		ResourceLocation loc = new ResourceLocation(MysticalAgradditions.MOD_ID, name);
+		ENTRIES.add(() -> block.get().setRegistryName(loc));
+		RegistryObject<T> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
+		ModItems.ENTRIES.add(() -> item.apply(reg).get().setRegistryName(loc));
+		return reg;
 	}
 }
