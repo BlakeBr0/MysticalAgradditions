@@ -1,17 +1,15 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "crafting_shaped",
   "pattern": [
     "EEE"
   ],
   "key": {
     "E": {
-      "item": "mysticalagradditions:stuff",
-      "data": 1
+      "item": "mysticalagradditions:withering_soul"
     }
   },
   "result": {
-    "item": "minecraft:skull",
-    "count": 3,
-    "data": 1
+    "item": "minecraft:wither_skeleton_skull",
+    "count": 3
   }
 }

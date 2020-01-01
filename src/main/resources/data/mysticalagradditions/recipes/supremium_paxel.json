@@ -29,12 +29,10 @@
       "data": 0
     },
 	"S": {
-      "item": "mysticalagriculture:crafting",
-      "data": 22
+      "item": "mysticalagriculture:crafting"
     }
   },
   "result": {
-    "item": "mysticalagradditions:supremium_paxel",
-	"data": 0
+    "item": "mysticalagradditions:supremium_paxel"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_ingot"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:insanium_ingot_block"
+  }
+}

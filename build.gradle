@@ -61,8 +61,8 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.14.4-28.1.87'
 
     compile files('../Cucumber/build/libs/Cucumber-1.14.4-2.0.6-deobf.jar')
-    compileOnly files('../MysticalAgriculture/build/libs/MysticalAgriculture-1.14.4-2.0.4-api.jar')
-    runtimeOnly files('../MysticalAgriculture/build/libs/MysticalAgriculture-1.14.4-2.0.4-deobf.jar')
+    compileOnly files('../MysticalAgriculture/build/libs/MysticalAgriculture-1.14.4-2.0.5-api.jar')
+    runtimeOnly files('../MysticalAgriculture/build/libs/MysticalAgriculture-1.14.4-2.0.5-deobf.jar')
     compile fg.deobf('mcp.mobius.waila:Hwyla:1.10.5-B66_1.14.4')
     compileOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.10:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.10")

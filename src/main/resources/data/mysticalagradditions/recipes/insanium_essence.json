@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " E ",
+    "ECE",
+    " E "
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagriculture:supremium_essence"
+    },
+    "C": {
+      "tag": "mysticalagriculture:infusion_crystals"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:insanium_essence"
+  }
+}

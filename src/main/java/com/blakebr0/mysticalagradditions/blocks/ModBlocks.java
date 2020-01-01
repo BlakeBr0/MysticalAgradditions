@@ -4,6 +4,7 @@ import com.blakebr0.cucumber.block.BaseBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.items.ModItems;
+import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -28,6 +29,7 @@ public class ModBlocks {
 	public static final RegistryObject<BaseBlock> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 4.0F, 6.0F));
 	public static final RegistryObject<BaseBlock> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
 	public static final RegistryObject<BaseBlock> INSANIUM_GEMSTONE_BLOCK = register("insanium_gemstone_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
+	public static final RegistryObject<InfusedFarmlandBlock> INSANIUM_FARMLAND = register("insanium_farmland", () -> new InfusedFarmlandBlock(ModCorePlugin.CROP_TIER_6));
 
 	@SubscribeEvent
 	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {

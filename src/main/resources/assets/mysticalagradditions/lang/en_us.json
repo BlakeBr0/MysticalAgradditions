@@ -1,5 +1,23 @@
 {
   "itemGroup.mysticalagradditions": "Mystical Agradditions",
 
-  "block.mysticalagradditions.insanium_block": "Insanium Block"
+  "block.mysticalagradditions.insanium_block": "Insanium Block",
+  "block.mysticalagradditions.insanium_ingot_block": "Insanium Ingot Block",
+  "block.mysticalagradditions.insanium_gemstone_block": "Insanium Gemstone Block",
+  "block.mysticalagradditions.insanium_farmland": "Insanium Farmland",
+
+  "item.mysticalagradditions.insanium_essence": "Insanium Essence",
+  "item.mysticalagradditions.insanium_ingot": "Insanium Ingot",
+  "item.mysticalagradditions.insanium_nugget": "Insanium Nugget",
+  "item.mysticalagradditions.insanium_gemstone": "Insanium Gemstone",
+  "item.mysticalagradditions.nether_star_shard": "Nether Star Shard",
+  "item.mysticalagradditions.withering_soul": "Withering Soul",
+  "item.mysticalagradditions.dragon_egg_chunk": "Dragon Egg Chunk",
+  "item.mysticalagradditions.dragon_scale": "Dragon Scale",
+  "item.mysticalagradditions.creative_essence": "Creative Essence",
+
+  "cropTier.mysticalagradditions.6": "6",
+
+  "crop.mysticalagradditions.nether_star": "Nether Star",
+  "crop.mysticalagradditions.dragon_egg": "Dragon Egg"
 }

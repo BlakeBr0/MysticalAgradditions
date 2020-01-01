@@ -1,5 +1,6 @@
 package com.blakebr0.mysticalagradditions;
 
+import com.blakebr0.mysticalagradditions.items.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -10,6 +11,6 @@ public class MAItemGroup extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return ItemStack.EMPTY;
+        return new ItemStack(ModItems.INSANIUM_ESSENCE.get());
     }
 }

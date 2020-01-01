@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "group": "mysticalagriculture:farmland",
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:insanium_essence"
+    },
+    {
+      "item": "minecraft:farmland"
+    }
+  ],
+  "result": {
+    "item": "mysticalagradditions:insanium_farmland"
+  }
+}

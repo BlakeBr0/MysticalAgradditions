@@ -1,15 +1,15 @@
 {
+  "type": "crafting_shaped",
   "conditions": [
-     {
-	    "type": "minecraft:item_exists",
-		"item": "mysticalagradditions:inferium_paxel"
-	 },
-	 {
-        "type": "minecraft:item_exists",
-        "item": "mysticalagriculture:inferium_pickaxe"
-     }
+    {
+      "type": "minecraft:item_exists",
+      "item": "mysticalagradditions:inferium_paxel"
+    },
+    {
+      "type": "minecraft:item_exists",
+      "item": "mysticalagriculture:inferium_pickaxe"
+    }
   ],
-  "type": "forge:ore_shaped",
   "pattern": [
     "ABC",
     " S ",
@@ -17,24 +17,19 @@
   ],
   "key": {
     "A": {
-      "item": "mysticalagriculture:inferium_axe",
-      "data": 0
+      "item": "mysticalagriculture:inferium_axe"
     },
     "B": {
-      "item": "mysticalagriculture:inferium_pickaxe",
-      "data": 0
+      "item": "mysticalagriculture:inferium_pickaxe"
     },
     "C": {
-      "item": "mysticalagriculture:inferium_shovel",
-      "data": 0
+      "item": "mysticalagriculture:inferium_shovel"
     },
-	"S": {
-      "item": "mysticalagriculture:crafting",
-      "data": 22
+    "S": {
+      "item": "mysticalagriculture:crafting"
     }
   },
   "result": {
-    "item": "mysticalagradditions:inferium_paxel",
-	"data": 0
+    "item": "mysticalagradditions:inferium_paxel"
   }
 }
