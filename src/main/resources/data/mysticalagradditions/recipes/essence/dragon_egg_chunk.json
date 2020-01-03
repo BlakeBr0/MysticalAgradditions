@@ -1,0 +1,23 @@
+{
+  "type": "cucumber:shaped_no_mirror",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:dragon_egg"
+    }
+  ],
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagriculture:dragon_egg_essence"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:dragon_egg_chunk",
+    "count": 3
+  }
+}

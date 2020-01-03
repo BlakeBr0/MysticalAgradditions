@@ -19,7 +19,7 @@ public class ModCorePlugin implements IMysticalAgriculturePlugin {
     public static final CropTier CROP_TIER_6 = new CropTier(new ResourceLocation(MOD_ID, "6"), 6, 0x40005E, TextFormatting.DARK_PURPLE);
 
     public static final Crop NETHER_STAR = new Crop(new ResourceLocation(MOD_ID, "nether_star"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("minecraft:nether_star"));
-    public static final Crop DRAGON_EGG = new Crop(new ResourceLocation(MOD_ID, "dragon_egg"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("dragon_scale"));
+    public static final Crop DRAGON_EGG = new Crop(new ResourceLocation(MOD_ID, "dragon_egg"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("mysticalagradditions:dragon_scale"));
 
     @Override
     public void onRegisterCrops(ICropRegistry registry) {

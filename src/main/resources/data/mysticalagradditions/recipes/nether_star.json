@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:nether_star_shard"
+    },
+    {
+      "item": "mysticalagradditions:nether_star_shard"
+    },
+    {
+      "item": "mysticalagradditions:nether_star_shard"
+    }
+  ],
+  "result": {
+    "item": "minecraft:nether_star"
+  }
+}

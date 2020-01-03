@@ -17,6 +17,7 @@ import java.util.function.Supplier;
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
 public class ModItems {
+	public static final List<Supplier<? extends Item>> BLOCK_ENTRIES = new ArrayList<>();
 	public static final List<Supplier<? extends Item>> ENTRIES = new ArrayList<>();
 
 	public static final RegistryObject<BaseItem> INSANIUM_ESSENCE = register("insanium_essence");
@@ -39,6 +40,7 @@ public class ModItems {
 	public void onRegisterItems(RegistryEvent.Register<Item> event) {
 		IForgeRegistry<Item> registry = event.getRegistry();
 
+		BLOCK_ENTRIES.stream().map(Supplier::get).forEach(registry::register);
 		ENTRIES.stream().map(Supplier::get).forEach(registry::register);
 	}
 

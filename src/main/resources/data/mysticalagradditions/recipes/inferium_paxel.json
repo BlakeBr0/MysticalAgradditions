@@ -2,11 +2,11 @@
   "type": "crafting_shaped",
   "conditions": [
     {
-      "type": "minecraft:item_exists",
+      "type": "forge:item_exists",
       "item": "mysticalagradditions:inferium_paxel"
     },
     {
-      "type": "minecraft:item_exists",
+      "type": "forge:item_exists",
       "item": "mysticalagriculture:inferium_pickaxe"
     }
   ],

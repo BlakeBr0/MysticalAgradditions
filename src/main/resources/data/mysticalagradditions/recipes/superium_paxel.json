@@ -1,13 +1,13 @@
 {
   "conditions": [
-     {
-	    "type": "minecraft:item_exists",
-		"item": "mysticalagradditions:superium_paxel"
-	 },
-	 {
-        "type": "minecraft:item_exists",
-        "item": "mysticalagriculture:superium_pickaxe"
-     }
+    {
+      "type": "forge:item_exists",
+      "item": "mysticalagradditions:superium_paxel"
+    },
+    {
+      "type": "forge:item_exists",
+      "item": "mysticalagriculture:superium_pickaxe"
+    }
   ],
   "type": "forge:ore_shaped",
   "pattern": [
@@ -28,13 +28,13 @@
       "item": "mysticalagriculture:superium_shovel",
       "data": 0
     },
-	"S": {
+    "S": {
       "item": "mysticalagriculture:crafting",
       "data": 22
     }
   },
   "result": {
     "item": "mysticalagradditions:superium_paxel",
-	"data": 0
+    "data": 0
   }
 }
