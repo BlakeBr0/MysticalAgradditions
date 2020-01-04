@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.items;
 import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemTier;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,11 +31,11 @@ public class ModItems {
 	public static final RegistryObject<BaseItem> DRAGON_SCALE = register("dragon_scale");
 	public static final RegistryObject<CreativeEssenceItem> CREATIVE_ESSENCE = register("creative_essence", () -> new CreativeEssenceItem(p -> p.group(ITEM_GROUP)));
 
-//	public static ItemPaxel itemInferiumPaxel = new ItemPaxel("inferium_paxel", ModToolMaterials.INFERIUM, TextFormatting.YELLOW);
-//	public static ItemPaxel itemPrudentiumPaxel = new ItemPaxel("prudentium_paxel", ModToolMaterials.PRUDENTIUM, TextFormatting.GREEN);
-//	public static ItemPaxel itemIntermediumPaxel = new ItemPaxel("intermedium_paxel", ModToolMaterials.INTERMEDIUM, TextFormatting.GOLD);
-//	public static ItemPaxel itemSuperiumPaxel = new ItemPaxel("superium_paxel", ModToolMaterials.SUPERIUM, TextFormatting.AQUA);
-//	public static ItemPaxel itemSupremiumPaxel = new ItemPaxel("supremium_paxel", ModToolMaterials.SUPREMIUM, TextFormatting.RED);
+	public static final RegistryObject<EssencePaxelItem> INFERIUM_PAXEL = register("inferium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 1, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<EssencePaxelItem> PRUDENTIUM_PAXEL = register("prudentium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 2, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<EssencePaxelItem> TERTIUM_PAXEL = register("tertium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 3, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<EssencePaxelItem> IMPERIUM_PAXEL = register("imperium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 4, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<EssencePaxelItem> SUPREMIUM_PAXEL = register("supremium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 5, 1, p -> p.group(ITEM_GROUP)));
 
 	@SubscribeEvent
 	public void onRegisterItems(RegistryEvent.Register<Item> event) {

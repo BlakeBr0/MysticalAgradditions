@@ -3,11 +3,11 @@
   "conditions": [
     {
       "type": "forge:item_exists",
-      "item": "mysticalagradditions:inferium_paxel"
+      "item": "mysticalagradditions:tertium_paxel"
     },
     {
       "type": "forge:item_exists",
-      "item": "mysticalagriculture:inferium_pickaxe"
+      "item": "mysticalagriculture:tertium_pickaxe"
     }
   ],
   "pattern": [
@@ -17,19 +17,19 @@
   ],
   "key": {
     "A": {
-      "item": "mysticalagriculture:inferium_axe"
+      "item": "mysticalagriculture:tertium_axe"
     },
     "B": {
-      "item": "mysticalagriculture:inferium_pickaxe"
+      "item": "mysticalagriculture:tertium_pickaxe"
     },
     "C": {
-      "item": "mysticalagriculture:inferium_shovel"
+      "item": "mysticalagriculture:tertium_shovel"
     },
     "S": {
       "tag": "forge:rods/wooden"
     }
   },
   "result": {
-    "item": "mysticalagradditions:inferium_paxel"
+    "item": "mysticalagradditions:tertium_paxel"
   }
 }

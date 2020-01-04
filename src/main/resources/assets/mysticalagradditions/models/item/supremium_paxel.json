@@ -1,6 +1,6 @@
 {
   "parent":"item/handheld",
   "textures": {
-    "layer0":"mysticalagradditions:items/supremium_paxel"
+    "layer0":"mysticalagradditions:item/supremium_paxel"
   }
 }

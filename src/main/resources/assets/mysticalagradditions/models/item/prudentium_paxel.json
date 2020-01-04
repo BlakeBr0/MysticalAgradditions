@@ -1,6 +1,6 @@
 {
   "parent":"item/handheld",
   "textures": {
-    "layer0":"mysticalagradditions:items/prudentium_paxel"
+    "layer0":"mysticalagradditions:item/prudentium_paxel"
   }
 }

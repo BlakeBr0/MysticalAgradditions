@@ -1,4 +1,5 @@
 {
+  "type": "crafting_shaped",
   "conditions": [
     {
       "type": "forge:item_exists",
@@ -9,7 +10,6 @@
       "item": "mysticalagriculture:supremium_pickaxe"
     }
   ],
-  "type": "forge:ore_shaped",
   "pattern": [
     "ABC",
     " S ",
@@ -17,19 +17,16 @@
   ],
   "key": {
     "A": {
-      "item": "mysticalagriculture:supremium_axe",
-      "data": 0
+      "item": "mysticalagriculture:supremium_axe"
     },
     "B": {
-      "item": "mysticalagriculture:supremium_pickaxe",
-      "data": 0
+      "item": "mysticalagriculture:supremium_pickaxe"
     },
     "C": {
-      "item": "mysticalagriculture:supremium_shovel",
-      "data": 0
+      "item": "mysticalagriculture:supremium_shovel"
     },
     "S": {
-      "item": "mysticalagriculture:crafting"
+      "tag": "forge:rods/wooden"
     }
   },
   "result": {

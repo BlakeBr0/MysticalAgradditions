@@ -59,6 +59,6 @@ Grow all your resources!
 [[dependencies.mysticalagradditions]]
     modId="mysticalagriculture"
     mandatory=true
-    versionRange="[2.0.4,)"
+    versionRange="[2.0.5,)"
     ordering="NONE"
     side="BOTH"
