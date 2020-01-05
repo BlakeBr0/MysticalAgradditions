@@ -1,10 +1,10 @@
 package com.blakebr0.mysticalagradditions;
 
-import com.blakebr0.mysticalagradditions.blocks.ModBlocks;
+import com.blakebr0.mysticalagradditions.block.ModBlocks;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
-import com.blakebr0.mysticalagradditions.items.ModItems;
+import com.blakebr0.mysticalagradditions.item.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;

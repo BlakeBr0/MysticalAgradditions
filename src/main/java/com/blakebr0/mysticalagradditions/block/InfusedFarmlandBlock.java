@@ -1,4 +1,4 @@
-package com.blakebr0.mysticalagradditions.blocks;
+package com.blakebr0.mysticalagradditions.block;
 
 import com.blakebr0.cucumber.iface.IColored;
 import com.blakebr0.mysticalagriculture.api.crop.CropTier;

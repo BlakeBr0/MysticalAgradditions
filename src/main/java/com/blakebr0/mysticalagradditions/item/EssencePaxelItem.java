@@ -1,4 +1,4 @@
-package com.blakebr0.mysticalagradditions.items;
+package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagriculture.api.tinkering.AugmentType;

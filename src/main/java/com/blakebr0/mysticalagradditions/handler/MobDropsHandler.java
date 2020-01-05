@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.handler;
 
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
-import com.blakebr0.mysticalagradditions.items.ModItems;
+import com.blakebr0.mysticalagradditions.item.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;

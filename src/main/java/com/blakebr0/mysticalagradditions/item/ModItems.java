@@ -1,4 +1,4 @@
-package com.blakebr0.mysticalagradditions.items;
+package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;

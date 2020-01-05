@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.handler;
 
 import com.blakebr0.cucumber.iface.IColored;
-import com.blakebr0.mysticalagradditions.blocks.InfusedFarmlandBlock;
+import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.ItemColors;

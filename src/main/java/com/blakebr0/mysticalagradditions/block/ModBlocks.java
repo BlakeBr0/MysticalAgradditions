@@ -1,10 +1,10 @@
-package com.blakebr0.mysticalagradditions.blocks;
+package com.blakebr0.mysticalagradditions.block;
 
 import com.blakebr0.cucumber.block.BaseBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
-import com.blakebr0.mysticalagradditions.items.EssenceCoalBlockItem;
-import com.blakebr0.mysticalagradditions.items.ModItems;
+import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
+import com.blakebr0.mysticalagradditions.item.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
