@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:prudentium_coal"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:prudentium_coal_block"
+  }
+}

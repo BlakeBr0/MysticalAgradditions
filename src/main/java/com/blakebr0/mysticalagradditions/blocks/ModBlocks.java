@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.blocks;
 import com.blakebr0.cucumber.block.BaseBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
+import com.blakebr0.mysticalagradditions.items.EssenceCoalBlockItem;
 import com.blakebr0.mysticalagradditions.items.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.block.Block;
@@ -30,6 +31,14 @@ public class ModBlocks {
 	public static final RegistryObject<BaseBlock> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
 	public static final RegistryObject<BaseBlock> INSANIUM_GEMSTONE_BLOCK = register("insanium_gemstone_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
 	public static final RegistryObject<InfusedFarmlandBlock> INSANIUM_FARMLAND = register("insanium_farmland", () -> new InfusedFarmlandBlock(ModCorePlugin.CROP_TIER_6));
+	public static final RegistryObject<BaseBlock> INFERIUM_COAL_BLOCK = register("inferium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 21600, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseBlock> PRUDENTIUM_COAL_BLOCK = register("prudentium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 43200, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseBlock> TERTIUM_COAL_BLOCK = register("tertium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 86400, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseBlock> IMPERIUM_COAL_BLOCK = register("imperium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 172800, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseBlock> SUPREMIUM_COAL_BLOCK = register("supremium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 345600, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseBlock> INSANIUM_COAL_BLOCK = register("insanium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 691200, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseBlock> NETHER_STAR_CRUX = register("nether_star_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
+	public static final RegistryObject<BaseBlock> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 
 	@SubscribeEvent
 	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {

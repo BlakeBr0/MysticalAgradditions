@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:tertium_coal"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:tertium_coal_block"
+  }
+}

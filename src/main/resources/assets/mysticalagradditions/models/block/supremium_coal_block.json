@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mysticalagradditions:block/supremium_coal_block"
+  }
+}

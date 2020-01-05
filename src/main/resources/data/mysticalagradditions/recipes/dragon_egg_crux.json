@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "ECE",
+    "CDC",
+    "ECE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_essence"
+    },
+    "C": {
+      "item": "mysticalagradditions:dragon_scale"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/diamond"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:dragon_egg_crux"
+  }
+}

@@ -30,6 +30,12 @@ public class ModItems {
 	public static final RegistryObject<BaseItem> DRAGON_EGG_CHUNK = register("dragon_egg_chunk");
 	public static final RegistryObject<BaseItem> DRAGON_SCALE = register("dragon_scale");
 	public static final RegistryObject<CreativeEssenceItem> CREATIVE_ESSENCE = register("creative_essence", () -> new CreativeEssenceItem(p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseItem> INFERIUM_COAL = register("inferium_coal", () -> new EssenceCoalItem(2400, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseItem> PRUDENTIUM_COAL = register("prudentium_coal", () -> new EssenceCoalItem(4800, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseItem> TERTIUM_COAL = register("tertium_coal", () -> new EssenceCoalItem(9600, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseItem> IMPERIUM_COAL = register("imperium_coal", () -> new EssenceCoalItem(19200, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseItem> SUPREMIUM_COAL = register("supremium_coal", () -> new EssenceCoalItem(38400, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<BaseItem> INSANIUM_COAL = register("insanium_coal", () -> new EssenceCoalItem(76800, p -> p.group(ITEM_GROUP)));
 
 	public static final RegistryObject<EssencePaxelItem> INFERIUM_PAXEL = register("inferium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 1, 1, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<EssencePaxelItem> PRUDENTIUM_PAXEL = register("prudentium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 2, 1, p -> p.group(ITEM_GROUP)));

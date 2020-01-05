@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_coal"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:insanium_coal_block"
+  }
+}

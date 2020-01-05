@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:inferium_coal_block"
+    }
+  ],
+  "result": {
+    "item": "mysticalagradditions:inferium_coal",
+    "count": 9
+  }
+}

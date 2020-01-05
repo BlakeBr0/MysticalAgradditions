@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticalagradditions:imperium_coal_block"
+    }
+  ],
+  "result": {
+    "item": "mysticalagradditions:imperium_coal",
+    "count": 9
+  }
+}
