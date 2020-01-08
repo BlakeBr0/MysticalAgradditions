@@ -7,6 +7,7 @@ import net.minecraft.util.text.TextFormatting;
 
 public class ModTooltips {
     public static final Tooltip TIER = new Tooltip("tooltip.mysticalagriculture.tier");
+    public static final Tooltip DROP_CHANCE = new Tooltip("tooltip.mysticalagradditions.drop_chance");
 
     public static ITextComponent getTooltipForTier(int tier) {
         return TIER.args(AugmentUtils.getTooltipForTier(tier)).color(TextFormatting.GRAY).build();

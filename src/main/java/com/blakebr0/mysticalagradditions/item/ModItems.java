@@ -26,7 +26,7 @@ public class ModItems {
 	public static final RegistryObject<BaseItem> INSANIUM_NUGGET = register("insanium_nugget");
 	public static final RegistryObject<BaseItem> INSANIUM_GEMSTONE = register("insanium_gemstone");
 	public static final RegistryObject<BaseItem> NETHER_STAR_SHARD = register("nether_star_shard");
-	public static final RegistryObject<BaseItem> WITHERING_SOUL = register("withering_soul");
+	public static final RegistryObject<BaseItem> WITHERING_SOUL = register("withering_soul", () -> new WitheringSoulItem(p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<BaseItem> DRAGON_EGG_CHUNK = register("dragon_egg_chunk");
 	public static final RegistryObject<BaseItem> DRAGON_SCALE = register("dragon_scale");
 	public static final RegistryObject<CreativeEssenceItem> CREATIVE_ESSENCE = register("creative_essence", () -> new CreativeEssenceItem(p -> p.group(ITEM_GROUP)));
