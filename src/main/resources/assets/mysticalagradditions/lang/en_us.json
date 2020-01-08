@@ -36,6 +36,9 @@
   "item.mysticalagradditions.imperium_paxel": "Imperium Paxel",
   "item.mysticalagradditions.supremium_paxel": "Supremium Paxel",
 
+  "jei.desc.mysticalagradditions.withering_soul": "Dropped by the Wither upon death.",
+  "jei.desc.mysticalagradditions.dragon_scale": "Dropped by the Ender Dragon upon death.",
+
   "cropTier.mysticalagradditions.6": "6",
 
   "crop.mysticalagradditions.nether_star": "Nether Star",
