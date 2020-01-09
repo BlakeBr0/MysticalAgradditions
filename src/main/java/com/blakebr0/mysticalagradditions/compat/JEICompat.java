@@ -13,14 +13,14 @@ import net.minecraft.util.ResourceLocation;
 public class JEICompat implements IModPlugin {
     public static final ResourceLocation UID = new ResourceLocation(MysticalAgradditions.MOD_ID, "jei_plugin");
 
-	@Override
-	public ResourceLocation getPluginUid() {
-		return UID;
-	}
+    @Override
+    public ResourceLocation getPluginUid() {
+        return UID;
+    }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         registration.addIngredientInfo(new ItemStack(ModItems.WITHERING_SOUL.get()), VanillaTypes.ITEM, "jei.desc.mysticalagradditions.withering_soul");
         registration.addIngredientInfo(new ItemStack(ModItems.DRAGON_SCALE.get()), VanillaTypes.ITEM, "jei.desc.mysticalagradditions.dragon_scale");
-	}
+    }
 }

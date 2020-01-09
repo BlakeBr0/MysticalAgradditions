@@ -28,7 +28,10 @@ public class ModCorePlugin implements IMysticalAgriculturePlugin {
     }
 
     public static void onCommonSetup() {
-        CROP_TIER_6.setFarmland(ModBlocks.INSANIUM_FARMLAND.get()).setEssence(ModItems.INSANIUM_ESSENCE.get());
+        CROP_TIER_6.setFarmland(ModBlocks.INSANIUM_FARMLAND)
+                .setEssence(ModItems.INSANIUM_ESSENCE)
+                .setFertilizable(false)
+                .setSecondarySeedDrop(false);
 
         NETHER_STAR.setCrux(ModBlocks.NETHER_STAR_CRUX);
         DRAGON_EGG.setCrux(ModBlocks.DRAGON_EGG_CRUX);
