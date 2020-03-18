@@ -1,0 +1,89 @@
+# CREATIVE TAB
+itemGroup.tab.mystical_agradditions.name=미스티컬 애그러디션즈
+
+# BLOCKS
+tile.ma.storage_essence.name=§5인세이니움 에센스 블록
+tile.ma.storage_ingot.name=§5인세이니움 블록
+tile.ma.storage_coal.name=§5인세이니움 석탄 블록
+
+tile.ma.tier6_inferium_crop.name=6티어 인세이니움 작물
+
+tile.ma.special_nether_star.name=네더 별 크럭스
+tile.ma.special_dragon_egg.name=드래곤 알 크럭스
+tile.ma.special_awakened_draconium.name=깨어난 드라코늄 크럭스
+tile.ma.special_neutronium.name=뉴트로늄 크럭스
+
+tile.ma.nether_star_crop.name=네더 별 작물
+tile.ma.dragon_egg_crop.name=드래곤 알 작물
+tile.ma.awakened_draconium_crop.name=깨어난 드라코늄 작물
+tile.ma.neutronium_crop.name=뉴트로늄 작물
+
+# ITEMS
+item.ma.insanium_essence.name=§5인세이니움 에센스
+item.ma.insanium_crafting_seed.name=6티어 제작 씨앗
+item.ma.insanium_ingot.name=§5인세이니움 주괴
+item.ma.insanium_nugget.name=§5인세이니움 조각
+item.ma.insanium_mob_chunk.name=6티어 몬스터 덩어리
+item.ma.insanium_coal.name=§5인세이니움 석탄
+
+item.ma.stuff_nether_star_shard.name=네더 별 샤드
+item.ma.stuff_withering_soul.name=위더링 영혼
+item.ma.stuff_dragon_egg_chunk.name=드래곤 알 샤드
+item.ma.stuff_dragon_scale.name=드래곤 스케일
+
+item.ma.stuff_creative_essence.name=크리에이티브 에센스
+
+item.ma.nether_star_essence.name=네더 별 에센스
+item.ma.dragon_egg_essence.name=드래곤 알 에센스
+item.ma.awakened_draconium_essence.name=깨어난 드라코늄 에센스
+item.ma.neutronium_essence.name=뉴트로늄 에센스
+
+item.ma.tier6_inferium_seeds.name=6티어 인페르늄 씨앗
+
+item.ma.nether_star_seeds.name=네더 별 씨앗
+item.ma.dragon_egg_seeds.name=드래곤 알 씨앗
+item.ma.awakened_draconium_seeds.name=깨어난 드라코늄 씨앗
+item.ma.neutronium_seeds.name=뉴트로늄 씨앗
+
+item.ma.charm_mining_aoe.name=Charm: 채굴 AOE
+
+item.ma.inferium_paxel.name=§e인페르늄 팩셀
+item.ma.prudentium_paxel.name=§a프류덴티움 팩셀
+item.ma.intermedium_paxel.name=§6인터미디움 팩셀
+item.ma.superium_paxel.name=§b슈페리움 팩셀
+item.ma.supremium_paxel.name=§c슈프리미움 팩셀
+
+# JEI
+jei.ma.tier_6_crop=6티어 작물 
+
+desc.withering_soul=위더에서 드랍 합니다.
+desc.dragon_scale=엔더 드래곤에서 드랍 합니다.
+
+tooltip.ma.creative_essence=더 에센스 오브 인피니트 크리에이티버티
+
+tooltip.ma.insanium=인세이니움
+tooltip.ma.paxel=팩셀
+
+# TINKERS
+fluid.base_essence.name=녹은 베이스 에센스
+fluid.soulium.name=녹은 소울륨
+fluid.inferium.name=녹은 인페르늄
+fluid.prudentium.name=녹은 프류덴티움
+fluid.intermedium.name=녹은 인터미디
+fluid.superium.name=녹은 슈페리움
+fluid.supremium.name=녹은 슈프리미움
+
+material.ma.prosperity.name=번영의 파편 샤드
+material.ma.soulium.name=소울륨
+material.ma.base_essence.name=베이직 에센스
+material.ma.inferium.name=인페르늄
+material.ma.prudentium.name=프류덴티움
+material.ma.intermedium.name=인터미디움
+material.ma.superium.name=슈페리움
+material.ma.supremium.name=슈프리미움
+
+trait.ma.prosperous=프로스페루스
+trait.ma.prosperous.desc=도구나 무기가 무작위로 번영의 파편을 드랍 합니다.
+
+trait.ma.chunky=덩어리
+trait.ma.chunky.desc=도구나 무기가 몬스터 덩어리를 드랍 니다.
