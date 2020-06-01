@@ -9,6 +9,7 @@ import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.crop.CropType;
 import com.blakebr0.mysticalagriculture.api.lib.LazyIngredient;
 import com.blakebr0.mysticalagriculture.api.registry.ICropRegistry;
+import net.minecraft.block.FarmlandBlock;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 
@@ -28,7 +29,7 @@ public class ModCorePlugin implements IMysticalAgriculturePlugin {
     }
 
     public static void onCommonSetup() {
-        CROP_TIER_6.setFarmland(ModBlocks.INSANIUM_FARMLAND)
+        CROP_TIER_6.setFarmland(() -> (FarmlandBlock) ModBlocks.INSANIUM_FARMLAND.get())
                 .setEssence(ModItems.INSANIUM_ESSENCE)
                 .setFertilizable(false)
                 .setSecondarySeedDrop(false);

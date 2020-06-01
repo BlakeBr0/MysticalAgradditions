@@ -17,44 +17,47 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
 public class ModBlocks {
-	public static final List<Supplier<? extends Block>> ENTRIES = new ArrayList<>();
+	public static final Map<RegistryObject<Block>, Supplier<Block>> ENTRIES = new LinkedHashMap<>();
 
-	public static final RegistryObject<BaseBlock> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 4.0F, 6.0F));
-	public static final RegistryObject<BaseBlock> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
-	public static final RegistryObject<BaseBlock> INSANIUM_GEMSTONE_BLOCK = register("insanium_gemstone_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
-	public static final RegistryObject<InfusedFarmlandBlock> INSANIUM_FARMLAND = register("insanium_farmland", () -> new InfusedFarmlandBlock(ModCorePlugin.CROP_TIER_6));
-	public static final RegistryObject<BaseBlock> INFERIUM_COAL_BLOCK = register("inferium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 21600, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<BaseBlock> PRUDENTIUM_COAL_BLOCK = register("prudentium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 43200, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<BaseBlock> TERTIUM_COAL_BLOCK = register("tertium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 86400, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<BaseBlock> IMPERIUM_COAL_BLOCK = register("imperium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 172800, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<BaseBlock> SUPREMIUM_COAL_BLOCK = register("supremium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 345600, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<BaseBlock> INSANIUM_COAL_BLOCK = register("insanium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 691200, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<BaseBlock> NETHER_STAR_CRUX = register("nether_star_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
-	public static final RegistryObject<BaseBlock> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
+	public static final RegistryObject<Block> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 4.0F, 6.0F));
+	public static final RegistryObject<Block> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
+	public static final RegistryObject<Block> INSANIUM_GEMSTONE_BLOCK = register("insanium_gemstone_block", () -> new BaseBlock(Material.IRON, SoundType.METAL, 5.0F, 6.0F));
+	public static final RegistryObject<Block> INSANIUM_FARMLAND = register("insanium_farmland", () -> new InfusedFarmlandBlock(ModCorePlugin.CROP_TIER_6));
+	public static final RegistryObject<Block> INFERIUM_COAL_BLOCK = register("inferium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 21600, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> PRUDENTIUM_COAL_BLOCK = register("prudentium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 43200, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> TERTIUM_COAL_BLOCK = register("tertium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 86400, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> IMPERIUM_COAL_BLOCK = register("imperium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 172800, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> SUPREMIUM_COAL_BLOCK = register("supremium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 345600, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> INSANIUM_COAL_BLOCK = register("insanium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 691200, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> NETHER_STAR_CRUX = register("nether_star_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
+	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 
 	@SubscribeEvent
 	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {
 		IForgeRegistry<Block> registry = event.getRegistry();
 
-		ENTRIES.stream().map(Supplier::get).forEach(registry::register);
+		ENTRIES.forEach((reg, block) -> {
+			registry.register(block.get());
+			reg.updateReference(registry);
+		});
 	}
 
-	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
+	private static RegistryObject<Block> register(String name, Supplier<Block> block) {
 		return register(name, block, b -> () -> new BaseBlockItem(b.get(), p -> p.group(ITEM_GROUP)));
 	}
 
-	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Function<RegistryObject<T>, Supplier<? extends BlockItem>> item) {
+	private static RegistryObject<Block> register(String name, Supplier<Block> block, Function<RegistryObject<Block>, Supplier<? extends BlockItem>> item) {
 		ResourceLocation loc = new ResourceLocation(MysticalAgradditions.MOD_ID, name);
-		ENTRIES.add(() -> block.get().setRegistryName(loc));
-		RegistryObject<T> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
+		RegistryObject<Block> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
+		ENTRIES.put(reg, () -> block.get().setRegistryName(loc));
 		ModItems.BLOCK_ENTRIES.add(() -> item.apply(reg).get().setRegistryName(loc));
 		return reg;
 	}
