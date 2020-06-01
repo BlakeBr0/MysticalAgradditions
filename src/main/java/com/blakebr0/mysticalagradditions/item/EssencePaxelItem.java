@@ -26,7 +26,10 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ToolItem;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
@@ -80,7 +83,8 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
 
     @Override
     public ActionResultType onItemUse(ItemUseContext context) {
-        List<IAugment> augments = AugmentUtils.getAugments(context.getItem());
+        ItemStack stack = context.getItem();
+        List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
         for (IAugment augment : augments) {
             if (augment.onItemUse(context))
@@ -89,6 +93,26 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
 
         if (success)
             return ActionResultType.SUCCESS;
+
+        World world = context.getWorld();
+        BlockPos pos = context.getPos();
+        if (context.getFace() != Direction.DOWN && world.getBlockState(pos.up()).isAir(world, pos.up())) {
+            BlockState state = PATH_STUFF.get(world.getBlockState(pos).getBlock());
+            if (state != null) {
+                PlayerEntity player = context.getPlayer();
+                world.playSound(player, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                if (!world.isRemote()) {
+                    world.setBlockState(pos, state, 11);
+                    if (player != null) {
+                        stack.damageItem(1, player, entity -> {
+                            entity.sendBreakAnimation(context.getHand());
+                        });
+                    }
+                }
+
+                return ActionResultType.SUCCESS;
+            }
+        }
 
         return super.onItemUse(context);
     }
@@ -135,6 +159,8 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
 
     @Override
     public boolean onBlockDestroyed(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity entity) {
+        super.onBlockDestroyed(stack, world, state, pos, entity);
+
         List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
         for (IAugment augment : augments) {
