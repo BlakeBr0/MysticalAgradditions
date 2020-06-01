@@ -1,0 +1,87 @@
+## Localizated to Portuguese (Brazil) by SAMUELPV
+
+# CREATIVE TAB
+itemGroup.tab.mystical_agradditions.name=Mystical Agradditions
+
+# BLOCKS
+tile.ma.storage_essence.name=§5Bloco de Essência de Insânio
+tile.ma.storage_ingot.name=§5Bloco de Insânio
+tile.ma.storage_coal.name=§5Bloco de Carvão de Insânio
+
+tile.ma.tier6_inferium_crop.name=Planta de Infério Nível 6
+
+tile.ma.special_nether_star.name=Núcleo de Estrela do Nether
+tile.ma.special_dragon_egg.name=Núcleo de Ovo de Dragão
+tile.ma.special_awakened_draconium.name=Núcleo de Dracônio Evoluído
+
+tile.ma.nether_star_crop.name=Planta de Estrela do Nether
+tile.ma.dragon_egg_crop.name=Planta de Ovo de Dragão
+tile.ma.awakened_draconium_crop.name=Planta de Dracônio Evoluído
+
+# ITEMS
+item.ma.insanium_essence.name=§5Essência de Insânio
+item.ma.insanium_crafting_seed.name=Semente de Fabricação Nível 6
+item.ma.insanium_ingot.name=§5Barra de Insânio
+item.ma.insanium_nugget.name=§5Pepita de Insânio
+item.ma.insanium_mob_chunk.name=Pedaço de Mob Nível 6
+item.ma.insanium_coal.name=§5Carvão de Insânio
+
+item.ma.stuff_nether_star_shard.name=Estilhaço de Estrela do Nether
+item.ma.stuff_withering_soul.name=Alma de Murcha
+item.ma.stuff_dragon_egg_chunk.name=Pedaço de Ovo de Dragão
+item.ma.stuff_dragon_scale.name=Escama de Dragão
+
+item.ma.stuff_creative_essence.name=Essência Criativa
+
+item.ma.nether_star_essence.name=Essência de Estrela do Nether
+item.ma.dragon_egg_essence.name=Essência de Ovo de Dragão
+item.ma.awakened_draconium_essence.name=Essência de Dracônio Evoluído
+
+item.ma.tier6_inferium_seeds.name=Sementes de Infério
+
+item.ma.nether_star_seeds.name=Sementes de Estrela do Nether
+item.ma.dragon_egg_seeds.name=Sementes de Ovo de Dragão
+item.ma.awakened_draconium_seeds.name=Sementes de Dracônio Evoluído
+
+item.ma.charm_mining_aoe.name=Amuleto: Mineração AOE
+
+item.ma.inferium_paxel.name=§ePachado de Infério
+item.ma.prudentium_paxel.name=§aPachado de Prudêntio
+item.ma.intermedium_paxel.name=§6Pachado de Intermédio
+item.ma.superium_paxel.name=§bPachado de Supério
+item.ma.supremium_paxel.name=§cPachado de Suprêmio
+
+# JEI
+jei.ma.tier_6_crop=Planta de Nível 6
+
+desc.withering_soul=Dropa dos Withers.
+desc.dragon_scale=Dropa dos Dragões do End.
+
+tooltip.ma.creative_essence=A essência de criatividade infinita.
+
+tooltip.ma.insanium=Insânio
+tooltip.ma.paxel=Pachado
+
+# TINKERS
+fluid.base_essence.name=Essência Inicial Derretida
+fluid.soulium.name=Soulio Derretido
+fluid.inferium.name=Infério Derretido
+fluid.prudentium.name=Prudêntio Derretido
+fluid.intermedium.name=Intermédio Derretido
+fluid.superium.name=Supério Derretido
+fluid.supremium.name=Suprêmio Derretido
+
+material.ma.prosperity.name=Estilhaço de Prosperidade
+material.ma.soulium.name=Soulio
+material.ma.base_essence.name=Essência Inicial
+material.ma.inferium.name=Infério
+material.ma.prudentium.name=Prudêntio
+material.ma.intermedium.name=Intermédio
+material.ma.superium.name=Supério
+material.ma.supremium.name=Suprêmio
+
+trait.ma.prosperous=Próspero
+trait.ma.prosperous.desc=Faz sua ferramenta ou arma dropar 'Estilhaços de Prosperidade' aleatoriamente.
+
+trait.ma.chunky=Em Pedaços
+trait.ma.chunky.desc=Faz sua ferramenta ou arma dropar 'Pedaços de Mobs'.
