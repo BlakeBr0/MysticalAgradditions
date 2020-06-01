@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 @JeiPlugin
-public class JEICompat implements IModPlugin {
+public class JeiCompat implements IModPlugin {
     public static final ResourceLocation UID = new ResourceLocation(MysticalAgradditions.MOD_ID, "jei_plugin");
 
     @Override

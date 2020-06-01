@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
+import com.blakebr0.mysticalagradditions.lib.ModItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemTier;
 import net.minecraft.util.ResourceLocation;
@@ -39,11 +40,11 @@ public class ModItems {
 	public static final RegistryObject<Item> SUPREMIUM_COAL = register("supremium_coal", () -> new EssenceCoalItem(38400, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Item> INSANIUM_COAL = register("insanium_coal", () -> new EssenceCoalItem(76800, p -> p.group(ITEM_GROUP)));
 
-	public static final RegistryObject<Item> INFERIUM_PAXEL = register("inferium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 1, 1, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<Item> PRUDENTIUM_PAXEL = register("prudentium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 2, 1, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<Item> TERTIUM_PAXEL = register("tertium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 3, 1, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<Item> IMPERIUM_PAXEL = register("imperium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 4, 1, p -> p.group(ITEM_GROUP)));
-	public static final RegistryObject<Item> SUPREMIUM_PAXEL = register("supremium_paxel", () -> new EssencePaxelItem(ItemTier.DIAMOND, 5, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> INFERIUM_PAXEL = register("inferium_paxel", () -> new EssencePaxelItem(ModItemTier.INFERIUM, 1, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> PRUDENTIUM_PAXEL = register("prudentium_paxel", () -> new EssencePaxelItem(ModItemTier.PRUDENTIUM, 2, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> TERTIUM_PAXEL = register("tertium_paxel", () -> new EssencePaxelItem(ModItemTier.TERTIUM, 3, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> IMPERIUM_PAXEL = register("imperium_paxel", () -> new EssencePaxelItem(ModItemTier.IMPERIUM, 4, 1, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> SUPREMIUM_PAXEL = register("supremium_paxel", () -> new EssencePaxelItem(ModItemTier.SUPREMIUM, 5, 1, p -> p.group(ITEM_GROUP)));
 
 	@SubscribeEvent
 	public void onRegisterItems(RegistryEvent.Register<Item> event) {
