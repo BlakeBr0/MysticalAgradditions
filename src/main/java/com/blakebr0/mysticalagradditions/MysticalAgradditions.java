@@ -1,15 +1,17 @@
 package com.blakebr0.mysticalagradditions;
 
-import com.blakebr0.mysticalagradditions.block.ModBlocks;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
-import com.blakebr0.mysticalagradditions.item.ModItems;
+import com.blakebr0.mysticalagradditions.init.ModBlocks;
+import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.item.ItemGroup;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -18,7 +20,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(MysticalAgradditions.MOD_ID)
-public class MysticalAgradditions {
+public final class MysticalAgradditions {
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
 
@@ -31,6 +33,10 @@ public class MysticalAgradditions {
 		bus.register(new ModBlocks());
 		bus.register(new ModItems());
 
+		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
+			bus.register(new ColorHandler());
+		});
+
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModConfigs.COMMON);
 	}
 
@@ -42,7 +48,5 @@ public class MysticalAgradditions {
 	}
 
 	@SubscribeEvent
-	public void onClientSetup(FMLClientSetupEvent event) {
-		ColorHandler.onClientSetup();
-	}
+	public void onClientSetup(FMLClientSetupEvent event) { }
 }

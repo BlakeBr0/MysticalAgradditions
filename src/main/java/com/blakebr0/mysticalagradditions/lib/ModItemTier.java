@@ -1,6 +1,5 @@
 package com.blakebr0.mysticalagradditions.lib;
 
-import com.blakebr0.mysticalagradditions.item.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;

@@ -1,6 +1,6 @@
 package com.blakebr0.mysticalagradditions;
 
-import com.blakebr0.mysticalagradditions.item.ModItems;
+import com.blakebr0.mysticalagradditions.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

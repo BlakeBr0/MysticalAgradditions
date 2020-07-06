@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.compat;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
-import com.blakebr0.mysticalagradditions.item.ModItems;
+import com.blakebr0.mysticalagradditions.init.ModItems;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 @JeiPlugin
-public class JeiCompat implements IModPlugin {
+public final class JeiCompat implements IModPlugin {
     public static final ResourceLocation UID = new ResourceLocation(MysticalAgradditions.MOD_ID, "jei_plugin");
 
     @Override

@@ -2,25 +2,17 @@ package com.blakebr0.mysticalagradditions.handler;
 
 import com.blakebr0.cucumber.iface.IColored;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.color.BlockColors;
-import net.minecraft.client.renderer.color.ItemColors;
+import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-public class ColorHandler {
-    public static void onClientSetup() {
-        Minecraft minecraft = Minecraft.getInstance();
-        BlockColors blockColors = minecraft.getBlockColors();
-        ItemColors itemColors = minecraft.getItemColors();
-
-        onBlockColors(blockColors);
-        onItemColors(itemColors);
+public final class ColorHandler {
+    @SubscribeEvent
+    public void onBlockColors(ColorHandlerEvent.Block event) {
+        event.getBlockColors().register(new IColored.BlockColors(), InfusedFarmlandBlock.FARMLANDS.toArray(new InfusedFarmlandBlock[0]));
     }
 
-    private static void onBlockColors(BlockColors colors) {
-        colors.register(new IColored.BlockColors(), InfusedFarmlandBlock.FARMLANDS.toArray(new InfusedFarmlandBlock[0]));
-    }
-
-    private static void onItemColors(ItemColors colors) {
-        colors.register(new IColored.ItemBlockColors(), InfusedFarmlandBlock.FARMLANDS.toArray(new InfusedFarmlandBlock[0]));
+    @SubscribeEvent
+    public void onItemColors(ColorHandlerEvent.Item event) {
+        event.getItemColors().register(new IColored.ItemBlockColors(), InfusedFarmlandBlock.FARMLANDS.toArray(new InfusedFarmlandBlock[0]));
     }
 }

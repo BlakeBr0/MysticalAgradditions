@@ -1,10 +1,11 @@
-package com.blakebr0.mysticalagradditions.block;
+package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.cucumber.block.BaseBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
+import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
-import com.blakebr0.mysticalagradditions.item.ModItems;
+import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -24,7 +25,7 @@ import java.util.function.Supplier;
 
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
-public class ModBlocks {
+public final class ModBlocks {
 	public static final Map<RegistryObject<Block>, Supplier<Block>> ENTRIES = new LinkedHashMap<>();
 
 	public static final RegistryObject<Block> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 4.0F, 6.0F));

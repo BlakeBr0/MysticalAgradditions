@@ -1,7 +1,11 @@
-package com.blakebr0.mysticalagradditions.item;
+package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
+import com.blakebr0.mysticalagradditions.item.CreativeEssenceItem;
+import com.blakebr0.mysticalagradditions.item.EssenceCoalItem;
+import com.blakebr0.mysticalagradditions.item.EssencePaxelItem;
+import com.blakebr0.mysticalagradditions.item.WitheringSoulItem;
 import com.blakebr0.mysticalagradditions.lib.ModItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
@@ -19,7 +23,7 @@ import java.util.function.Supplier;
 
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
-public class ModItems {
+public final class ModItems {
 	public static final List<Supplier<Item>> BLOCK_ENTRIES = new ArrayList<>();
 	public static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
 

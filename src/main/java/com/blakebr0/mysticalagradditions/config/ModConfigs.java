@@ -2,7 +2,7 @@ package com.blakebr0.mysticalagradditions.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
-public class ModConfigs {
+public final class ModConfigs {
     public static final ForgeConfigSpec COMMON;
 
     public static final ForgeConfigSpec.DoubleValue WITHERING_SOUL_DROP_CHANCE;
