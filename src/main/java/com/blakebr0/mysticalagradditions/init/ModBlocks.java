@@ -1,11 +1,11 @@
 package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.cucumber.block.BaseBlock;
+import com.blakebr0.cucumber.block.BaseOreBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
-import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -38,6 +38,10 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> IMPERIUM_COAL_BLOCK = register("imperium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 172800, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Block> SUPREMIUM_COAL_BLOCK = register("supremium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 345600, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Block> INSANIUM_COAL_BLOCK = register("insanium_coal_block", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 691200, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Block> NETHER_PROSPERITY_ORE = register("nether_prosperity_ore", () -> new BaseOreBlock(Material.ROCK, SoundType.STONE, 3.0F, 3.0F, 2, 5));
+	public static final RegistryObject<Block> NETHER_INFERIUM_ORE = register("nether_inferium_ore", () -> new BaseOreBlock(Material.ROCK, SoundType.STONE, 3.0F, 3.0F, 2, 5));
+	public static final RegistryObject<Block> END_PROSPERITY_ORE = register("end_prosperity_ore", () -> new BaseOreBlock(Material.ROCK, SoundType.STONE, 3.0F, 3.0F, 2, 5));
+	public static final RegistryObject<Block> END_INFERIUM_ORE = register("end_inferium_ore", () -> new BaseOreBlock(Material.ROCK, SoundType.STONE, 3.0F, 3.0F, 2, 5));
 	public static final RegistryObject<Block> NETHER_STAR_CRUX = register("nether_star_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 

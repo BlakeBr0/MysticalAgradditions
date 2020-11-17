@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "mysticalagradditions:end_prosperity_ore"
+  },
+  "result": "mysticalagriculture:prosperity_shard",
+  "experience": 0.15,
+  "cookingtime": 200
+}

@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "mysticalagradditions:end_inferium_ore"
+  },
+  "result": "mysticalagriculture:inferium_essence",
+  "experience": 0.15,
+  "cookingtime": 200
+}

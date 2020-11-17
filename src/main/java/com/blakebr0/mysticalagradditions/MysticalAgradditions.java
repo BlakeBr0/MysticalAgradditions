@@ -1,11 +1,13 @@
 package com.blakebr0.mysticalagradditions;
 
+import com.blakebr0.mysticalagradditions.client.ModelHandler;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
+import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,6 +39,8 @@ public final class MysticalAgradditions {
 			bus.register(new ColorHandler());
 		});
 
+		MinecraftForge.EVENT_BUS.register(new ModWorldgenRegistration());
+
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModConfigs.COMMON);
 	}
 
@@ -48,5 +52,7 @@ public final class MysticalAgradditions {
 	}
 
 	@SubscribeEvent
-	public void onClientSetup(FMLClientSetupEvent event) { }
+	public void onClientSetup(FMLClientSetupEvent event) {
+		ModelHandler.onClientSetup();
+	}
 }
