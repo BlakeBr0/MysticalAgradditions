@@ -7,6 +7,7 @@ public final class ModConfigs {
 
     public static final ForgeConfigSpec.DoubleValue WITHERING_SOUL_DROP_CHANCE;
     public static final ForgeConfigSpec.IntValue DRAGON_SCALES_AMOUNT;
+    public static final ForgeConfigSpec.BooleanValue FERTILIZABLE_CROPS;
 
     public static final ForgeConfigSpec.BooleanValue GENERATE_NETHER_PROSPERITY;
     public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_RATE;
@@ -38,6 +39,10 @@ public final class ModConfigs {
                 .comment("The amount of Dragon Scales that an Ender Dragon will drop when killed.")
                 .translation("configGui.mysticalagradditions.dragon_scales_amount")
                 .defineInRange("dragonScalesAmount", 8, 0, 64);
+        FERTILIZABLE_CROPS = common
+                .comment("Can tier 6 crops be fertilized using Mystical Fertilizer or Fertilized Essence?")
+                .translation("configGui.mysticalagradditions.fertilizable_crops")
+                .define("fertilizableTier6Crops", false);
         common.pop();
 
         common.comment("World generation options.").push("World");
@@ -109,12 +114,4 @@ public final class ModConfigs {
 
         COMMON = common.build();
     }
-
-//	public static boolean confFertilizableCrops;
-//	public static boolean confTConstructSupport;
-//	public static boolean confCreativeEssence;
-//
-//		confFertilizableCrops = config.getBoolean("fertilizable_crops", category, false, "Can Tier 6 crops be fertilized using Fertilized Essence and Mystical Fertilizer?");
-//		confTConstructSupport = config.getBoolean("tconstruct_support", category, true, "Should the Tinkers' Construct integration be enabled?");
-//		confCreativeEssence = config.getBoolean("creative_essence", category, true, "Should the Creative Essence item (with no default use or recipe) be enabled?");
 }

@@ -1,5 +1,6 @@
 package com.blakebr0.mysticalagradditions.lib;
 
+import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagriculture.api.IMysticalAgriculturePlugin;
@@ -31,7 +32,7 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
     public static void onCommonSetup() {
         CROP_TIER_6.setFarmland(() -> (FarmlandBlock) ModBlocks.INSANIUM_FARMLAND.get())
                 .setEssence(ModItems.INSANIUM_ESSENCE)
-                .setFertilizable(false)
+                .setFertilizable(ModConfigs.FERTILIZABLE_CROPS.get())
                 .setSecondarySeedDrop(false);
 
         NETHER_STAR.setCrux(ModBlocks.NETHER_STAR_CRUX);
