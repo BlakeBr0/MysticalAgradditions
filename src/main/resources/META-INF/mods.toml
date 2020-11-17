@@ -38,5 +38,5 @@ license="MIT"
       modId="mysticalagriculture"
       mandatory=true
       versionRange="[4.1.2,)"
-      ordering="NONE"
+      ordering="AFTER"
       side="BOTH"
