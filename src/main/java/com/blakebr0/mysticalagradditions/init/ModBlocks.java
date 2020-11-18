@@ -44,6 +44,7 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> END_INFERIUM_ORE = register("end_inferium_ore", () -> new BaseOreBlock(Material.ROCK, SoundType.STONE, 3.0F, 3.0F, 2, 5));
 	public static final RegistryObject<Block> NETHER_STAR_CRUX = register("nether_star_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
+	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 
 	@SubscribeEvent
 	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {

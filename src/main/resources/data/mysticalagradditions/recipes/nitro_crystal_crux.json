@@ -1,0 +1,31 @@
+{
+  "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:nitro_crystal"
+    }
+  ],
+  "pattern": [
+    "ECE",
+    "FDF",
+    "ECE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_essence"
+    },
+    "C": {
+      "item": "powah:crystal_nitro"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/diamond"
+    },
+    "F": {
+      "item": "powah:capacitor_nitro"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:nitro_crystal_crux"
+  }
+}
