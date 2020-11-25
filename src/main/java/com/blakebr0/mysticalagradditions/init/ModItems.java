@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.init;
 import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.item.CreativeEssenceItem;
+import com.blakebr0.mysticalagradditions.item.EssenceAppleItem;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalItem;
 import com.blakebr0.mysticalagradditions.item.EssencePaxelItem;
 import com.blakebr0.mysticalagradditions.item.WitheringSoulItem;
@@ -42,6 +43,12 @@ public final class ModItems {
 	public static final RegistryObject<Item> IMPERIUM_COAL = register("imperium_coal", () -> new EssenceCoalItem(19200, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Item> SUPREMIUM_COAL = register("supremium_coal", () -> new EssenceCoalItem(38400, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Item> INSANIUM_COAL = register("insanium_coal", () -> new EssenceCoalItem(76800, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> INFERIUM_APPLE = register("inferium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.INFERIUM, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> PRUDENTIUM_APPLE = register("prudentium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.PRUDENTIUM, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> TERTIUM_APPLE = register("tertium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.TERTIUM, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> IMPERIUM_APPLE = register("imperium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.IMPERIUM, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> SUPREMIUM_APPLE = register("supremium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.SUPREMIUM, p -> p.group(ITEM_GROUP)));
+	public static final RegistryObject<Item> INSANIUM_APPLE = register("insanium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.INSANIUM, p -> p.group(ITEM_GROUP)));
 
 	public static final RegistryObject<Item> INFERIUM_PAXEL = register("inferium_paxel", () -> new EssencePaxelItem(ModItemTier.INFERIUM, 1, 1, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Item> PRUDENTIUM_PAXEL = register("prudentium_paxel", () -> new EssencePaxelItem(ModItemTier.PRUDENTIUM, 2, 1, p -> p.group(ITEM_GROUP)));

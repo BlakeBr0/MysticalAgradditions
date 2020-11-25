@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " E ",
+    "EAE",
+    " E "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "E": {
+      "item": "mysticalagriculture:tertium_essence"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:tertium_apple"
+  }
+}

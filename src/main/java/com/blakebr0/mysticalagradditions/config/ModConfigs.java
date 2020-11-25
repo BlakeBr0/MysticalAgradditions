@@ -8,6 +8,7 @@ public final class ModConfigs {
     public static final ForgeConfigSpec.DoubleValue WITHERING_SOUL_DROP_CHANCE;
     public static final ForgeConfigSpec.IntValue DRAGON_SCALES_AMOUNT;
     public static final ForgeConfigSpec.BooleanValue FERTILIZABLE_CROPS;
+    public static final ForgeConfigSpec.IntValue ESSENCE_APPLE_DURATION;
 
     public static final ForgeConfigSpec.BooleanValue GENERATE_NETHER_PROSPERITY;
     public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_RATE;
@@ -43,6 +44,10 @@ public final class ModConfigs {
                 .comment("Can tier 6 crops be fertilized using Mystical Fertilizer or Fertilized Essence?")
                 .translation("configGui.mysticalagradditions.fertilizable_crops")
                 .define("fertilizableTier6Crops", false);
+        ESSENCE_APPLE_DURATION = common
+                .comment("The duration of each Essence Apples effects in seconds.")
+                .translation("configGui.mysticalagradditions.essence_apple_duration")
+                .defineInRange("essenceAppleDuration", 180, 1, Integer.MAX_VALUE);
         common.pop();
 
         common.comment("World generation options.").push("World");
