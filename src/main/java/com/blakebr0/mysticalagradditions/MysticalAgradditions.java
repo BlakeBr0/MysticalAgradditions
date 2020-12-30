@@ -48,7 +48,10 @@ public final class MysticalAgradditions {
 	public void onCommonSetup(FMLCommonSetupEvent event) {
 		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
 
-		ModCorePlugin.onCommonSetup();
+		event.enqueueWork(() -> {
+			ModCorePlugin.onCommonSetup();
+			ModWorldgenRegistration.onCommonSetup();
+		});
 	}
 
 	@SubscribeEvent

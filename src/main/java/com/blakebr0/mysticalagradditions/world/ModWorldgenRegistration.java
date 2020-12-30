@@ -1,10 +1,15 @@
 package com.blakebr0.mysticalagradditions.world;
 
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import net.minecraft.block.Blocks;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
@@ -15,62 +20,88 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public final class ModWorldgenRegistration {
     private static final RuleTest END_STONE_RULE_TEST = new BlockMatchRuleTest(Blocks.END_STONE);
+    private static ConfiguredFeature<?, ?> configuredNetherProsperityOreFeature;
+    private static ConfiguredFeature<?, ?> configuredNetherInferiumOreFeature;
+    private static ConfiguredFeature<?, ?> configuredEndProsperityOreFeature;
+    private static ConfiguredFeature<?, ?> configuredEndInferiumOreFeature;
 
     @SubscribeEvent
     public void onBiomesLoading(BiomeLoadingEvent event) {
         Biome.Category category = event.getCategory();
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
 
-        if (category == Biome.Category.NETHER) {
-            if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
-                int size = ModConfigs.NETHER_PROSPERITY_SPAWN_SIZE.get();
-                int rate = ModConfigs.NETHER_PROSPERITY_SPAWN_RATE.get();
-                int height = ModConfigs.NETHER_PROSPERITY_SPAWN_HEIGHT.get();
-                OreFeatureConfig config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.NETHER_PROSPERITY_ORE.get().getDefaultState(), size);
-                generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
-                        .range(height)
-                        .square()
-                        .func_242732_c(rate)
-                );
-            }
+        switch (category) {
+            case NETHER:
+                if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
+                    generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, configuredNetherProsperityOreFeature);
+                }
 
-            if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
-                int size = ModConfigs.NETHER_INFERIUM_SPAWN_SIZE.get();
-                int rate = ModConfigs.NETHER_INFERIUM_SPAWN_RATE.get();
-                int height = ModConfigs.NETHER_INFERIUM_SPAWN_HEIGHT.get();
-                OreFeatureConfig config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.NETHER_INFERIUM_ORE.get().getDefaultState(), size);
-                generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
-                        .range(height)
-                        .square()
-                        .func_242732_c(rate)
-                );
-            }
+                if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
+                    generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, configuredNetherInferiumOreFeature);
+                }
+
+                break;
+            case THEEND:
+                if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
+                    generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, configuredEndProsperityOreFeature);
+                }
+
+                if (ModConfigs.GENERATE_END_INFERIUM.get()) {
+                    generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, configuredEndInferiumOreFeature);
+                }
+
+                break;
+            default:
+                break;
         }
+    }
 
-        if (category == Biome.Category.THEEND) {
-            if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
-                int size = ModConfigs.END_PROSPERITY_SPAWN_SIZE.get();
-                int rate = ModConfigs.END_PROSPERITY_SPAWN_RATE.get();
-                int height = ModConfigs.END_PROSPERITY_SPAWN_HEIGHT.get();
-                OreFeatureConfig config = new OreFeatureConfig(END_STONE_RULE_TEST, ModBlocks.END_PROSPERITY_ORE.get().getDefaultState(), size);
-                generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
-                        .range(height)
-                        .square()
-                        .func_242732_c(rate)
-                );
-            }
+    public static void onCommonSetup() {
+        int size, rate, height;
+        OreFeatureConfig config;
 
-            if (ModConfigs.GENERATE_END_INFERIUM.get()) {
-                int size = ModConfigs.END_INFERIUM_SPAWN_SIZE.get();
-                int rate = ModConfigs.END_INFERIUM_SPAWN_RATE.get();
-                int height = ModConfigs.END_INFERIUM_SPAWN_HEIGHT.get();
-                OreFeatureConfig config = new OreFeatureConfig(END_STONE_RULE_TEST, ModBlocks.END_INFERIUM_ORE.get().getDefaultState(), size);
-                generation.withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(config)
-                        .range(height)
-                        .square()
-                        .func_242732_c(rate)
-                );
-            }
-        }
+        size = ModConfigs.NETHER_PROSPERITY_SPAWN_SIZE.get();
+        rate = ModConfigs.NETHER_PROSPERITY_SPAWN_RATE.get();
+        height = ModConfigs.NETHER_PROSPERITY_SPAWN_HEIGHT.get();
+        config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.NETHER_PROSPERITY_ORE.get().getDefaultState(), size);
+        configuredNetherProsperityOreFeature = Feature.ORE.withConfiguration(config)
+                .range(height)
+                .square()
+                .func_242732_c(rate);
+
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(MysticalAgradditions.MOD_ID, "nether_prosperity_ore"), configuredNetherProsperityOreFeature);
+
+        size = ModConfigs.NETHER_INFERIUM_SPAWN_SIZE.get();
+        rate = ModConfigs.NETHER_INFERIUM_SPAWN_RATE.get();
+        height = ModConfigs.NETHER_INFERIUM_SPAWN_HEIGHT.get();
+        config = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.NETHER_INFERIUM_ORE.get().getDefaultState(), size);
+        configuredNetherInferiumOreFeature = Feature.ORE.withConfiguration(config)
+                .range(height)
+                .square()
+                .func_242732_c(rate);
+
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(MysticalAgradditions.MOD_ID, "nether_inferium_ore"), configuredNetherInferiumOreFeature);
+
+        size = ModConfigs.END_PROSPERITY_SPAWN_SIZE.get();
+        rate = ModConfigs.END_PROSPERITY_SPAWN_RATE.get();
+        height = ModConfigs.END_PROSPERITY_SPAWN_HEIGHT.get();
+        config = new OreFeatureConfig(END_STONE_RULE_TEST, ModBlocks.END_PROSPERITY_ORE.get().getDefaultState(), size);
+        configuredEndProsperityOreFeature = Feature.ORE.withConfiguration(config)
+                .range(height)
+                .square()
+                .func_242732_c(rate);
+
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(MysticalAgradditions.MOD_ID, "end_prosperity_ore"), configuredEndProsperityOreFeature);
+
+        size = ModConfigs.END_INFERIUM_SPAWN_SIZE.get();
+        rate = ModConfigs.END_INFERIUM_SPAWN_RATE.get();
+        height = ModConfigs.END_INFERIUM_SPAWN_HEIGHT.get();
+        config = new OreFeatureConfig(END_STONE_RULE_TEST, ModBlocks.END_INFERIUM_ORE.get().getDefaultState(), size);
+        configuredEndInferiumOreFeature = Feature.ORE.withConfiguration(config)
+                .range(height)
+                .square()
+                .func_242732_c(rate);
+
+        Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(MysticalAgradditions.MOD_ID, "end_inferium_ore"), configuredEndInferiumOreFeature);
     }
 }
