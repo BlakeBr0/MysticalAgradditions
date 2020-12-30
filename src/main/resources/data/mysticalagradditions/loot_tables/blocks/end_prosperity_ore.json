@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "mysticalagradditions:nether_prosperity_ore",
+      "name": "mysticalagradditions:end_prosperity_ore",
       "rolls": 1,
       "entries": [
         {
