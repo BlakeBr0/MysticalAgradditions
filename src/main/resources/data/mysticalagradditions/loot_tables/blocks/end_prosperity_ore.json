@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "mysticalagradditions:nether_prosperity_ore",
+              "name": "mysticalagradditions:end_prosperity_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
