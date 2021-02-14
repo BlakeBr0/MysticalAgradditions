@@ -56,7 +56,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.4-35.0.2'
+    minecraft 'net.minecraftforge:forge:1.16.4-35.1.4'
 
     compile fg.deobf('ignored:Cucumber:1.16.4-4.1.4')
     compileOnly fg.deobf('ignored:MysticalAgriculture:1.16.4-4.1.4:api')
