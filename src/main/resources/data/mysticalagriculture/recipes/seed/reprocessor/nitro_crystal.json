@@ -1,0 +1,16 @@
+{
+  "type": "mysticalagriculture:reprocessor",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:nitro_crystal"
+    }
+  ],
+  "input": {
+    "item": "mysticalagriculture:nitro_crystal_seeds"
+  },
+  "result": {
+    "item": "mysticalagriculture:nitro_crystal_essence",
+    "count": 2
+  }
+}

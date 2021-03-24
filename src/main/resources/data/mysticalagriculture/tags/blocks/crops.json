@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mysticalagriculture:nether_star_crop",
+    "mysticalagriculture:dragon_egg_crop",
+    "mysticalagriculture:nitro_crystal_crop"
+  ]
+}

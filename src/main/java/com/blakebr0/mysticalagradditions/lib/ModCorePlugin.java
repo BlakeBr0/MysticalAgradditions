@@ -10,6 +10,7 @@ import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.crop.CropType;
 import com.blakebr0.mysticalagriculture.api.crop.ICrop;
 import com.blakebr0.mysticalagriculture.api.lib.LazyIngredient;
+import com.blakebr0.mysticalagriculture.api.lib.PluginConfig;
 import com.blakebr0.mysticalagriculture.api.registry.ICropRegistry;
 import net.minecraft.block.FarmlandBlock;
 import net.minecraft.util.ResourceLocation;
@@ -22,7 +23,7 @@ import static com.blakebr0.mysticalagradditions.MysticalAgradditions.MOD_ID;
 
 @MysticalAgriculturePlugin
 public final class ModCorePlugin implements IMysticalAgriculturePlugin {
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
 
     public static final CropTier CROP_TIER_6 = new CropTier(new ResourceLocation(MOD_ID, "6"), 6, 0x40005E, TextFormatting.DARK_PURPLE);
 
@@ -31,6 +32,14 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
 
     // POWAH
     public static final Crop NITRO_CRYSTAL = new Crop(new ResourceLocation(MOD_ID, "nitro_crystal"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("powah:crystal_nitro"));
+
+    @Override
+    public void configure(PluginConfig config) {
+        config.setModId(MOD_ID);
+        config.disableDynamicSeedCraftingRecipes();
+        config.disableDynamicSeedInfusionRecipes();
+        config.disableDynamicSeedReprocessingRecipes();
+    }
 
     @Override
     public void onRegisterCrops(ICropRegistry registry) {
