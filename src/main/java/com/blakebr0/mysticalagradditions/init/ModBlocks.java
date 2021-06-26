@@ -7,7 +7,10 @@ import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -46,6 +49,13 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new BaseBlock(Material.ROCK, SoundType.STONE, 5.0F, 10.0F));
 
+	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_INFERIUM, AbstractBlock.Properties.from(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_PRUDENTIUM, AbstractBlock.Properties.from(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_TERTIUM = registerNoItem("molten_tertium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_TERTIUM, AbstractBlock.Properties.from(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_IMPERIUM = registerNoItem("molten_imperium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_IMPERIUM, AbstractBlock.Properties.from(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_SUPREMIUM, AbstractBlock.Properties.from(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_SOULIUM, AbstractBlock.Properties.from(Blocks.LAVA)));
+
 	@SubscribeEvent
 	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {
 		IForgeRegistry<Block> registry = event.getRegistry();
@@ -65,6 +75,13 @@ public final class ModBlocks {
 		RegistryObject<Block> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
 		ENTRIES.put(reg, () -> block.get().setRegistryName(loc));
 		ModItems.BLOCK_ENTRIES.add(() -> item.apply(reg).get().setRegistryName(loc));
+		return reg;
+	}
+
+	public static RegistryObject<Block> registerNoItem(String name, Supplier<Block> block) {
+		ResourceLocation loc = new ResourceLocation(MysticalAgradditions.MOD_ID, name);
+		RegistryObject<Block> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
+		ENTRIES.put(reg, () -> block.get().setRegistryName(loc));
 		return reg;
 	}
 }

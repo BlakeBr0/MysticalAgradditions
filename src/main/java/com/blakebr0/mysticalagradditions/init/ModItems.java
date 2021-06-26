@@ -8,7 +8,9 @@ import com.blakebr0.mysticalagradditions.item.EssenceCoalItem;
 import com.blakebr0.mysticalagradditions.item.EssencePaxelItem;
 import com.blakebr0.mysticalagradditions.item.WitheringSoulItem;
 import com.blakebr0.mysticalagradditions.lib.ModItemTier;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,6 +27,8 @@ import java.util.function.Supplier;
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
 public final class ModItems {
+	private static final Item.Properties BUCKET_PROPERTIES = new Item.Properties().containerItem(Items.BUCKET).maxStackSize(1).group(ITEM_GROUP);
+
 	public static final List<Supplier<Item>> BLOCK_ENTRIES = new ArrayList<>();
 	public static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
 
@@ -55,6 +59,13 @@ public final class ModItems {
 	public static final RegistryObject<Item> TERTIUM_PAXEL = register("tertium_paxel", () -> new EssencePaxelItem(ModItemTier.TERTIUM, 3, 1, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Item> IMPERIUM_PAXEL = register("imperium_paxel", () -> new EssencePaxelItem(ModItemTier.IMPERIUM, 4, 1, p -> p.group(ITEM_GROUP)));
 	public static final RegistryObject<Item> SUPREMIUM_PAXEL = register("supremium_paxel", () -> new EssencePaxelItem(ModItemTier.SUPREMIUM, 5, 1, p -> p.group(ITEM_GROUP)));
+
+	public static final RegistryObject<Item> MOLTEN_INFERIUM_BUCKET = register("molten_inferium_bucket", () -> new BucketItem(ModFluids.MOLTEN_INFERIUM, BUCKET_PROPERTIES));
+	public static final RegistryObject<Item> MOLTEN_PRUDENTIUM_BUCKET = register("molten_prudentium_bucket", () -> new BucketItem(ModFluids.MOLTEN_PRUDENTIUM, BUCKET_PROPERTIES));
+	public static final RegistryObject<Item> MOLTEN_TERTIUM_BUCKET = register("molten_tertium_bucket", () -> new BucketItem(ModFluids.MOLTEN_TERTIUM, BUCKET_PROPERTIES));
+	public static final RegistryObject<Item> MOLTEN_IMPERIUM_BUCKET = register("molten_imperium_bucket", () -> new BucketItem(ModFluids.MOLTEN_IMPERIUM, BUCKET_PROPERTIES));
+	public static final RegistryObject<Item> MOLTEN_SUPREMIUM_BUCKET = register("molten_supremium_bucket", () -> new BucketItem(ModFluids.MOLTEN_SUPREMIUM, BUCKET_PROPERTIES));
+	public static final RegistryObject<Item> MOLTEN_SOULIUM_BUCKET = register("molten_soulium_bucket", () -> new BucketItem(ModFluids.MOLTEN_SOULIUM, BUCKET_PROPERTIES));
 
 	@SubscribeEvent
 	public void onRegisterItems(RegistryEvent.Register<Item> event) {
