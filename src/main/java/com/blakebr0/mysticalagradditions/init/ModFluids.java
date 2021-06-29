@@ -101,6 +101,6 @@ public final class ModFluids {
     private static FluidAttributes.Builder newMoltenAttributes(int color) {
         return FluidAttributes.builder(STILL_TEXTURE, FLOWING_TEXTURE)
                 .density(2000).viscosity(10000).temperature(1000).color(color)
-                .sound(SoundEvents.ITEM_BUCKET_FILL_LAVA, SoundEvents.ITEM_BUCKET_EMPTY_LAVA);
+                .sound(SoundEvents.BUCKET_FILL_LAVA, SoundEvents.BUCKET_EMPTY_LAVA);
     }
 }

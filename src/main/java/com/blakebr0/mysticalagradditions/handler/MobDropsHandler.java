@@ -17,17 +17,17 @@ public final class MobDropsHandler {
 	@SubscribeEvent
 	public void onLivingDrops(LivingDropsEvent event) {
 		LivingEntity entity = event.getEntityLiving();
-		World world = entity.getEntityWorld();
+		World world = entity.getCommandSenderWorld();
 		Collection<ItemEntity> drops = event.getDrops();
 		Double witheringSoulChance = ModConfigs.WITHERING_SOUL_DROP_CHANCE.get();
 		Integer dragonScalesAmount = ModConfigs.DRAGON_SCALES_AMOUNT.get();
 
 		if (entity instanceof WitherEntity && Math.random() < witheringSoulChance) {
-			drops.add(new ItemEntity(world, entity.getPosX(), entity.getPosY(), entity.getPosZ(), new ItemStack(ModItems.WITHERING_SOUL.get())));
+			drops.add(new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(), new ItemStack(ModItems.WITHERING_SOUL.get())));
 		}
 
 		if (entity instanceof EnderDragonEntity && dragonScalesAmount > 0) {
-			drops.add(new ItemEntity(world, entity.getPosX(), entity.getPosY(), entity.getPosZ(), new ItemStack(ModItems.DRAGON_SCALE.get(), dragonScalesAmount)));
+			drops.add(new ItemEntity(world, entity.getX(), entity.getY(), entity.getZ(), new ItemStack(ModItems.DRAGON_SCALE.get(), dragonScalesAmount)));
 		}
 	}
 }

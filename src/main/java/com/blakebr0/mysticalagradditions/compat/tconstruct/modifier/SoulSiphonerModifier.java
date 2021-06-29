@@ -45,7 +45,7 @@ public class SoulSiphonerModifier extends Modifier {
     }
 
     private static List<ItemStack> getValidSoulJars(PlayerEntity player, IMobSoulType type) {
-        return player.inventory.mainInventory.stream()
+        return player.inventory.items.stream()
                 .filter(s -> {
                     ResourceLocation id = s.getItem().getRegistryName();
                     return id != null && "mysticalagriculture:soul_jar".equals(id.toString());

@@ -22,31 +22,33 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import net.minecraft.item.Item.Properties;
+
 public class EssenceAppleItem extends BaseItem {
-    private static final Food.Builder food = new Food.Builder().setAlwaysEdible();
+    private static final Food.Builder food = new Food.Builder().alwaysEat();
     private final EssenceAppleTier tier;
 
     public EssenceAppleItem(EssenceAppleTier tier, Function<Properties, Properties> properties) {
-        super(properties.compose(p -> p.food(food.hunger(tier.hunger).saturation(tier.saturation).build())));
+        super(properties.compose(p -> p.food(food.nutrition(tier.hunger).saturationMod(tier.saturation).build())));
         this.tier = tier;
     }
 
     @Override
-    public boolean hasEffect(ItemStack stack) {
+    public boolean isFoil(ItemStack stack) {
         return true;
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World world, LivingEntity entity) {
-        if (!world.isRemote()) {
+    public ItemStack finishUsingItem(ItemStack stack, World world, LivingEntity entity) {
+        if (!world.isClientSide()) {
             this.tier.onFoodEaten(entity);
         }
 
-        return entity.onFoodEaten(world, stack);
+        return entity.eat(world, stack);
     }
 
     @Override
-    public void addInformation(ItemStack stack, World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
         if (Screen.hasShiftDown()) {
             tooltip.add(ModTooltips.GIVES_BUFFS.build());
             tooltip.addAll(this.tier.getTooltip());
@@ -57,11 +59,11 @@ public class EssenceAppleItem extends BaseItem {
 
     public enum EssenceAppleTier {
         INFERIUM(6, 0.3F, Effects.ABSORPTION),
-        PRUDENTIUM(8, 0.4F, Effects.ABSORPTION, Effects.SPEED),
-        TERTIUM(10, 0.5F, Effects.ABSORPTION, Effects.SPEED, Effects.RESISTANCE),
-        IMPERIUM(12, 0.6F, Effects.ABSORPTION, Effects.SPEED, Effects.RESISTANCE, Effects.REGENERATION),
-        SUPREMIUM(16, 0.7F, Effects.ABSORPTION, Effects.SPEED, Effects.RESISTANCE, Effects.REGENERATION, Effects.STRENGTH),
-        INSANIUM(20, 0.8F, Effects.ABSORPTION, Effects.SPEED, Effects.RESISTANCE, Effects.REGENERATION, Effects.STRENGTH, Effects.HASTE);
+        PRUDENTIUM(8, 0.4F, Effects.ABSORPTION, Effects.MOVEMENT_SPEED),
+        TERTIUM(10, 0.5F, Effects.ABSORPTION, Effects.MOVEMENT_SPEED, Effects.DAMAGE_RESISTANCE),
+        IMPERIUM(12, 0.6F, Effects.ABSORPTION, Effects.MOVEMENT_SPEED, Effects.DAMAGE_RESISTANCE, Effects.REGENERATION),
+        SUPREMIUM(16, 0.7F, Effects.ABSORPTION, Effects.MOVEMENT_SPEED, Effects.DAMAGE_RESISTANCE, Effects.REGENERATION, Effects.DAMAGE_BOOST),
+        INSANIUM(20, 0.8F, Effects.ABSORPTION, Effects.MOVEMENT_SPEED, Effects.DAMAGE_RESISTANCE, Effects.REGENERATION, Effects.DAMAGE_BOOST, Effects.DIG_SPEED);
 
         private final Consumer<LivingEntity> onFoodEaten;
         private final List<ITextComponent> tooltip;
@@ -103,10 +105,10 @@ public class EssenceAppleItem extends BaseItem {
 
         private static void addPotionEffect(LivingEntity entity, Effect effect) {
             int effectDuration = ModConfigs.ESSENCE_APPLE_DURATION.get() * 20;
-            EffectInstance current = entity.getActivePotionEffect(effect);
+            EffectInstance current = entity.getEffect(effect);
             int duration = current != null ? current.getDuration() : 0;
 
-            entity.addPotionEffect(new EffectInstance(effect, duration + effectDuration, 1));
+            entity.addEffect(new EffectInstance(effect, duration + effectDuration, 1));
         }
     }
 }

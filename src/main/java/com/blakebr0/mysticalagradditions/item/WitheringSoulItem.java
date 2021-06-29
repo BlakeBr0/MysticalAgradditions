@@ -14,6 +14,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.List;
 import java.util.function.Function;
 
+import net.minecraft.item.Item.Properties;
+
 public class WitheringSoulItem extends BaseItem {
     public WitheringSoulItem(Function<Properties, Properties> properties) {
         super(properties);
@@ -21,7 +23,7 @@ public class WitheringSoulItem extends BaseItem {
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
         Double chance = ModConfigs.WITHERING_SOUL_DROP_CHANCE.get();
         tooltip.add(ModTooltips.DROP_CHANCE.args(chance * 100 + "%").build());
     }

@@ -20,13 +20,13 @@ public class ProsperousModifier extends Modifier {
 
     @Override
     public int afterLivingHit(IModifierToolStack tool, int level, LivingEntity attacker, LivingEntity target, float damageDealt, boolean isCritical, float cooldown) {
-        World world = target.getEntityWorld();
+        World world = target.getCommandSenderWorld();
 
-        if (!target.isAlive() && !world.isRemote() && world.getRandom().nextFloat() < 0.005F * level) {
+        if (!target.isAlive() && !world.isClientSide() && world.getRandom().nextFloat() < 0.005F * level) {
             Item shard = ForgeRegistries.ITEMS.getValue(new ResourceLocation(MysticalAgricultureAPI.MOD_ID, "prosperity_shard"));
-            ItemEntity item = new ItemEntity(world, target.getPosX() + 0.5, target.getPosY(), target.getPosZ() + 0.5, new ItemStack(shard));
+            ItemEntity item = new ItemEntity(world, target.getX() + 0.5, target.getY(), target.getZ() + 0.5, new ItemStack(shard));
 
-            world.addEntity(item);
+            world.addFreshEntity(item);
         }
 
         return super.afterLivingHit(tool, level, attacker, target, damageDealt, isCritical, cooldown);
@@ -34,11 +34,11 @@ public class ProsperousModifier extends Modifier {
 
     @Override
     public void afterBlockBreak(IModifierToolStack tool, int level, World world, BlockState state, BlockPos pos, LivingEntity target, boolean canHarvest, boolean wasEffective) {
-        if (wasEffective && !world.isRemote() && world.getRandom().nextFloat() < 0.005F * level) {
+        if (wasEffective && !world.isClientSide() && world.getRandom().nextFloat() < 0.005F * level) {
             Item shard = ForgeRegistries.ITEMS.getValue(new ResourceLocation(MysticalAgricultureAPI.MOD_ID, "prosperity_shard"));
             ItemEntity item = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(shard));
 
-            world.addEntity(item);
+            world.addFreshEntity(item);
         }
     }
 }

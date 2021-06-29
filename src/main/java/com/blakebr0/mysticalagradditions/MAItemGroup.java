@@ -10,7 +10,7 @@ public class MAItemGroup extends ItemGroup {
     }
 
     @Override
-    public ItemStack createIcon() {
+    public ItemStack makeIcon() {
         return new ItemStack(ModItems.INSANIUM_ESSENCE.get());
     }
 }

@@ -20,12 +20,14 @@ import net.minecraftforge.common.PlantType;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.block.AbstractBlock.Properties;
+
 public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEssenceFarmland {
     public static final List<InfusedFarmlandBlock> FARMLANDS = new ArrayList<>();
     private final CropTier tier;
 
     public InfusedFarmlandBlock(CropTier tier) {
-        super(Properties.from(Blocks.FARMLAND));
+        super(Properties.copy(Blocks.FARMLAND));
         this.tier = tier;
 
         FARMLANDS.add(this);
@@ -33,7 +35,7 @@ public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEs
 
     @Override
     public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
-        PlantType type = plantable.getPlantType(world, pos.offset(direction));
+        PlantType type = plantable.getPlantType(world, pos.relative(direction));
         return type == PlantType.CROP || type == PlantType.PLAINS;
     }
 
@@ -41,13 +43,13 @@ public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEs
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
         List<ItemStack> drops = new ArrayList<>();
-        ItemStack stack = builder.get(LootParameters.TOOL);
+        ItemStack stack = builder.getOptionalParameter(LootParameters.TOOL);
 
-        if (stack != null && EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
+        if (stack != null && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
             drops.add(new ItemStack(this));
         } else {
             drops.add(new ItemStack(Blocks.DIRT));
-            if (builder.getWorld().getRandom().nextInt(100) < 25)
+            if (builder.getLevel().getRandom().nextInt(100) < 25)
                 drops.add(new ItemStack(this.tier.getEssence(), 1));
         }
 

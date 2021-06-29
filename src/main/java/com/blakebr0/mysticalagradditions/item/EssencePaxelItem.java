@@ -44,18 +44,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
+import net.minecraft.item.Item.Properties;
+
 public class EssencePaxelItem extends ToolItem implements ITinkerable {
-    private static final Map<Block, BlockState> PATH_STUFF = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Blocks.GRASS_PATH.getDefaultState()));
+    private static final Map<Block, BlockState> PATH_STUFF = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Blocks.GRASS_PATH.defaultBlockState()));
     private static final EnumSet<AugmentType> TYPES = EnumSet.of(AugmentType.TOOL, AugmentType.PICKAXE, AugmentType.SHOVEL, AugmentType.AXE);
     private final int tinkerableTier;
     private final int slots;
 
     public EssencePaxelItem(IItemTier tier, int tinkerableTier, int slots, Function<Properties, Properties> properties) {
         super(4.0F, -3.2F, tier, new HashSet<>(), properties.apply(new Properties()
-                .defaultMaxDamage((int) (tier.getMaxUses() * 1.5))
-                .addToolType(ToolType.PICKAXE, tier.getHarvestLevel())
-                .addToolType(ToolType.SHOVEL, tier.getHarvestLevel())
-                .addToolType(ToolType.AXE, tier.getHarvestLevel())
+                .defaultDurability((int) (tier.getUses() * 1.5))
+                .addToolType(ToolType.PICKAXE, tier.getLevel())
+                .addToolType(ToolType.SHOVEL, tier.getLevel())
+                .addToolType(ToolType.AXE, tier.getLevel())
         ));
 
         this.tinkerableTier = tinkerableTier;
@@ -63,28 +65,28 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
     }
 
     @Override
-    public boolean canHarvestBlock(BlockState state) {
+    public boolean isCorrectToolForDrops(BlockState state) {
         Block block = state.getBlock();
-        int i = this.getTier().getHarvestLevel();
+        int i = this.getTier().getLevel();
         if (state.getHarvestTool() == ToolType.PICKAXE)
             return i >= state.getHarvestLevel();
 
         Material material = state.getMaterial();
-        return material == Material.ROCK || material == Material.IRON || material == Material.ANVIL
+        return material == Material.STONE || material == Material.METAL || material == Material.HEAVY_METAL
                 || block == Blocks.SNOW || block == Blocks.SNOW_BLOCK;
     }
 
     @Override
     public float getDestroySpeed(ItemStack stack, BlockState state) {
         Material material = state.getMaterial();
-        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK
-                && material != Material.WOOD && material != Material.PLANTS && material != Material.TALL_PLANTS
-                && material != Material.BAMBOO ? super.getDestroySpeed(stack, state) : this.efficiency;
+        return material != Material.METAL && material != Material.HEAVY_METAL && material != Material.STONE
+                && material != Material.WOOD && material != Material.PLANT && material != Material.REPLACEABLE_PLANT
+                && material != Material.BAMBOO ? super.getDestroySpeed(stack, state) : this.speed;
     }
 
     @Override
-    public ActionResultType onItemUse(ItemUseContext context) {
-        ItemStack stack = context.getItem();
+    public ActionResultType useOn(ItemUseContext context) {
+        ItemStack stack = context.getItemInHand();
         List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
         for (IAugment augment : augments) {
@@ -95,18 +97,18 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
         if (success)
             return ActionResultType.SUCCESS;
 
-        World world = context.getWorld();
-        BlockPos pos = context.getPos();
-        if (context.getFace() != Direction.DOWN && world.getBlockState(pos.up()).isAir(world, pos.up())) {
+        World world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        if (context.getClickedFace() != Direction.DOWN && world.getBlockState(pos.above()).isAir(world, pos.above())) {
             BlockState state = PATH_STUFF.get(world.getBlockState(pos).getBlock());
             if (state != null) {
                 PlayerEntity player = context.getPlayer();
-                world.playSound(player, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                if (!world.isRemote()) {
-                    world.setBlockState(pos, state, 11);
+                world.playSound(player, pos, SoundEvents.SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                if (!world.isClientSide()) {
+                    world.setBlock(pos, state, 11);
                     if (player != null) {
-                        stack.damageItem(1, player, entity -> {
-                            entity.sendBreakAnimation(context.getHand());
+                        stack.hurtAndBreak(1, player, entity -> {
+                            entity.broadcastBreakEvent(context.getHand());
                         });
                     }
                 }
@@ -115,12 +117,12 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
             }
         }
 
-        return super.onItemUse(context);
+        return super.useOn(context);
     }
 
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
-        ItemStack stack = player.getHeldItem(hand);
+    public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+        ItemStack stack = player.getItemInHand(hand);
         List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
         for (IAugment augment : augments) {
@@ -135,7 +137,7 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
     }
 
     @Override
-    public ActionResultType itemInteractionForEntity(ItemStack stack, PlayerEntity player, LivingEntity target, Hand hand) {
+    public ActionResultType interactLivingEntity(ItemStack stack, PlayerEntity player, LivingEntity target, Hand hand) {
         List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
         for (IAugment augment : augments) {
@@ -147,7 +149,7 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
     }
 
     @Override
-    public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
         for (IAugment augment : augments) {
@@ -159,8 +161,8 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
     }
 
     @Override
-    public boolean onBlockDestroyed(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity entity) {
-        super.onBlockDestroyed(stack, world, state, pos, entity);
+    public boolean mineBlock(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity entity) {
+        super.mineBlock(stack, world, state, pos, entity);
 
         List<IAugment> augments = AugmentUtils.getAugments(stack);
         boolean success = false;
@@ -191,7 +193,7 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
         tooltip.add(ModTooltips.getTooltipForTier(this.tinkerableTier));
         AugmentUtils.getAugments(stack).forEach(a -> {
             tooltip.add(a.getDisplayName());
@@ -202,8 +204,8 @@ public class EssencePaxelItem extends ToolItem implements ITinkerable {
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot, ItemStack stack) {
         Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
         if (slot == EquipmentSlotType.MAINHAND) {
-            modifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 4F, AttributeModifier.Operation.ADDITION));
-            modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3.2F, AttributeModifier.Operation.ADDITION));
+            modifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 4F, AttributeModifier.Operation.ADDITION));
+            modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3.2F, AttributeModifier.Operation.ADDITION));
 
             AugmentUtils.getAugments(stack).forEach(a -> {
                 a.addToolAttributeModifiers(modifiers, slot, stack);
