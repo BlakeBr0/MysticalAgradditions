@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import slimeknights.tconstruct.library.modifiers.Modifier;
+import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IModifierToolStack;
 
 import java.util.List;
@@ -19,12 +20,15 @@ public class SoulSiphonerModifier extends Modifier {
     }
 
     @Override
-    public int afterLivingHit(IModifierToolStack tool, int level, LivingEntity attacker, LivingEntity target, float damageDealt, boolean isCritical, float cooldown) {
-        if (!target.isAlive() && attacker instanceof PlayerEntity) {
+    public int afterEntityHit(IModifierToolStack tool, int level, ToolAttackContext context, float damageDealt) {
+        LivingEntity target = context.getLivingTarget();
+        LivingEntity attacker = context.getAttacker();
+
+        if (target != null && !target.isAlive() && attacker instanceof PlayerEntity) {
             IMobSoulType type = MysticalAgricultureAPI.getMobSoulTypeRegistry().getMobSoulTypeByEntity(target);
 
             if (type == null || !type.isEnabled()) {
-                return super.afterLivingHit(tool, level, attacker, target, damageDealt, isCritical, cooldown);
+                return super.afterEntityHit(tool, level, context, damageDealt);
             }
 
             PlayerEntity player = (PlayerEntity) attacker;
@@ -41,7 +45,7 @@ public class SoulSiphonerModifier extends Modifier {
             }
         }
 
-        return super.afterLivingHit(tool, level, attacker, target, damageDealt, isCritical, cooldown);
+        return super.afterEntityHit(tool, level, context, damageDealt);
     }
 
     private static List<ItemStack> getValidSoulJars(PlayerEntity player, IMobSoulType type) {
