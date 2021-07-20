@@ -36,7 +36,8 @@ minecraft {
 
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'info'
-            property 'mixin.env.disableRefMap', 'true'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             ideaModule "${project.name}.main"
             environment 'MOD_CLASSES', "${project.file("out/production/resources").canonicalPath}${File.pathSeparator}${project.file("out/production/classes").canonicalPath}"
@@ -47,7 +48,8 @@ minecraft {
 
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
             property 'forge.logging.console.level', 'info'
-            property 'mixin.env.disableRefMap', 'true'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             ideaModule "${project.name}.main"
             environment 'MOD_CLASSES', "${project.file("out/production/resources").canonicalPath}${File.pathSeparator}${project.file("out/production/classes").canonicalPath}"
@@ -67,8 +69,8 @@ dependencies {
     runtimeOnly fg.deobf('mezz.jei:jei-1.16.2:7.1.1.15')
     compile fg.deobf('vazkii.patchouli:Patchouli:1.16.2-47')
 
-    compile fg.deobf('slimeknights.tconstruct:TConstruct:1.16.5-3.0.4.197')
-    compile fg.deobf('slimeknights.mantle:Mantle:1.16.5-1.6.109')
+    compile fg.deobf('slimeknights.tconstruct:TConstruct:1.16.5-3.1.0.231')
+    compile fg.deobf('slimeknights.mantle:Mantle:1.16.5-1.6.114')
 }
 
 jar {
