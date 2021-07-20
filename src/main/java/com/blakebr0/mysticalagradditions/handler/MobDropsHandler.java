@@ -7,6 +7,7 @@ import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,6 +19,10 @@ public final class MobDropsHandler {
 	public void onLivingDrops(LivingDropsEvent event) {
 		LivingEntity entity = event.getEntityLiving();
 		World world = entity.getCommandSenderWorld();
+
+		if (!world.getGameRules().getBoolean(GameRules.RULE_DOMOBLOOT))
+			return;
+
 		Collection<ItemEntity> drops = event.getDrops();
 		Double witheringSoulChance = ModConfigs.WITHERING_SOUL_DROP_CHANCE.get();
 		Integer dragonScalesAmount = ModConfigs.DRAGON_SCALES_AMOUNT.get();
