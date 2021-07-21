@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "item": "mysticalagriculture:imperium_ingot"
+  },
+  "result": {
+    "fluid": "mysticalagradditions:molten_imperium",
+    "amount": 144
+  },
+  "temperature": 950,
+  "time": 80
+}

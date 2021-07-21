@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "item": "mysticalagriculture:supremium_ingot"
+  },
+  "result": {
+    "fluid": "mysticalagradditions:molten_supremium",
+    "amount": 144
+  },
+  "temperature": 1000,
+  "time": 100
+}

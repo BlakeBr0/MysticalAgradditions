@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "item": "mysticalagriculture:prudentium_nugget"
+  },
+  "result": {
+    "fluid": "mysticalagradditions:molten_prudentium",
+    "amount": 16
+  },
+  "temperature": 850,
+  "time": 23
+}

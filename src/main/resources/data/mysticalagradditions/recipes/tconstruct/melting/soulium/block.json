@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "item": "mysticalagriculture:soulium_ingot_block"
+  },
+  "result": {
+    "fluid": "mysticalagradditions:molten_soulium",
+    "amount": 1296
+  },
+  "temperature": 800,
+  "time": 180
+}

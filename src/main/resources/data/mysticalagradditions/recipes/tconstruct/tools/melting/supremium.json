@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material_melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "input": "mysticalagradditions:supremium",
+  "temperature": 900,
+  "result": {
+    "fluid": "mysticalagradditions:molten_supremium",
+    "amount": 144
+  }
+}

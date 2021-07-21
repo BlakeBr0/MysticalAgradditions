@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/multi_use/ingot"
+  },
+  "fluid": {
+    "name": "mysticalagradditions:molten_inferium",
+    "amount": 144
+  },
+  "result": "mysticalagriculture:inferium_ingot",
+  "cooling_time": 60
+}

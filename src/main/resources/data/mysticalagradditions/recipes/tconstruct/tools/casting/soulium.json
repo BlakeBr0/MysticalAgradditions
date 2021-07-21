@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material_fluid",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "fluid": {
+    "name": "mysticalagradditions:molten_soulium",
+    "amount": 144
+  },
+  "temperature": 700,
+  "output": "mysticalagradditions:soulium"
+}

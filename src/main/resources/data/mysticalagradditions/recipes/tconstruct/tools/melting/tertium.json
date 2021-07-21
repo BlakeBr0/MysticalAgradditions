@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material_melting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "input": "mysticalagradditions:tertium",
+  "temperature": 800,
+  "result": {
+    "fluid": "mysticalagradditions:molten_tertium",
+    "amount": 144
+  }
+}

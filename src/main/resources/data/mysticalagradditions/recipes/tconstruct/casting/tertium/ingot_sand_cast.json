@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/ingot"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "mysticalagradditions:molten_tertium",
+    "amount": 144
+  },
+  "result": "mysticalagriculture:tertium_ingot",
+  "cooling_time": 80
+}

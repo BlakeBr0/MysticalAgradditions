@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:casting_basin",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "fluid": {
+    "name": "mysticalagradditions:molten_inferium",
+    "amount": 1296
+  },
+  "result": "mysticalagriculture:inferium_ingot_block",
+  "cooling_time": 180
+}

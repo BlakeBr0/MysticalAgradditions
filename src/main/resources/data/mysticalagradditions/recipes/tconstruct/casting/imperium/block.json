@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:casting_basin",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "fluid": {
+    "name": "mysticalagradditions:molten_imperium",
+    "amount": 1296
+  },
+  "result": "mysticalagriculture:imperium_ingot_block",
+  "cooling_time": 270
+}

@@ -1,0 +1,19 @@
+{
+  "type": "tconstruct:casting_table",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "cast": {
+    "tag": "tconstruct:casts/single_use/nugget"
+  },
+  "cast_consumed": true,
+  "fluid": {
+    "name": "mysticalagradditions:molten_tertium",
+    "amount": 16
+  },
+  "result": "mysticalagriculture:tertium_nugget",
+  "cooling_time": 27
+}
