@@ -6,8 +6,6 @@ import net.minecraft.item.Rarity;
 
 import java.util.function.Function;
 
-import net.minecraft.item.Item.Properties;
-
 public class CreativeEssenceItem extends BaseItem {
     public CreativeEssenceItem(Function<Properties, Properties> properties) {
         super(properties.compose(p -> p.rarity(Rarity.EPIC)));

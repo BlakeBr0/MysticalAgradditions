@@ -44,8 +44,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
-import net.minecraft.item.Item.Properties;
-
 public class EssencePaxelItem extends ToolItem implements ITinkerable {
     private static final Map<Block, BlockState> PATH_STUFF = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Blocks.GRASS_PATH.defaultBlockState()));
     private static final EnumSet<AugmentType> TYPES = EnumSet.of(AugmentType.TOOL, AugmentType.PICKAXE, AugmentType.SHOVEL, AugmentType.AXE);

@@ -6,8 +6,6 @@ import net.minecraft.item.ItemStack;
 
 import java.util.function.Function;
 
-import net.minecraft.item.Item.Properties;
-
 public class EssenceCoalBlockItem extends BaseBlockItem {
     private final int fuel;
 

@@ -1,7 +1,6 @@
 package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.BaseItem;
-import com.blakebr0.cucumber.lib.Tooltips;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import net.minecraft.client.util.ITooltipFlag;
@@ -13,8 +12,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
 import java.util.function.Function;
-
-import net.minecraft.item.Item.Properties;
 
 public class WitheringSoulItem extends BaseItem {
     public WitheringSoulItem(Function<Properties, Properties> properties) {

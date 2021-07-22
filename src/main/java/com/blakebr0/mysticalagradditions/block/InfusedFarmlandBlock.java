@@ -20,8 +20,6 @@ import net.minecraftforge.common.PlantType;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.block.AbstractBlock.Properties;
-
 public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEssenceFarmland {
     public static final List<InfusedFarmlandBlock> FARMLANDS = new ArrayList<>();
     private final CropTier tier;

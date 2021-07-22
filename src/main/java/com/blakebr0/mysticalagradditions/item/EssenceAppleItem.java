@@ -22,8 +22,6 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-import net.minecraft.item.Item.Properties;
-
 public class EssenceAppleItem extends BaseItem {
     private static final Food.Builder food = new Food.Builder().alwaysEat();
     private final EssenceAppleTier tier;
