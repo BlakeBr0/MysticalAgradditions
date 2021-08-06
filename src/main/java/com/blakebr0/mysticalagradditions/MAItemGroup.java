@@ -1,10 +1,10 @@
 package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.mysticalagradditions.init.ModItems;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
-public class MAItemGroup extends ItemGroup {
+public class MAItemGroup extends CreativeModeTab {
     public MAItemGroup() {
         super(MysticalAgradditions.MOD_ID);
     }

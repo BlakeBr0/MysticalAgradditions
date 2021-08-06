@@ -3,24 +3,26 @@ package com.blakebr0.mysticalagradditions.block;
 import com.blakebr0.cucumber.iface.IColored;
 import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.farmland.IEssenceFarmland;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FarmlandBlock;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.ItemStack;
-import net.minecraft.loot.LootContext;
-import net.minecraft.loot.LootParameters;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FarmBlock;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.PlantType;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEssenceFarmland {
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
+public class InfusedFarmlandBlock extends FarmBlock implements IColored, IEssenceFarmland {
     public static final List<InfusedFarmlandBlock> FARMLANDS = new ArrayList<>();
     private final CropTier tier;
 
@@ -32,7 +34,7 @@ public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEs
     }
 
     @Override
-    public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
+    public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction direction, IPlantable plantable) {
         PlantType type = plantable.getPlantType(world, pos.relative(direction));
         return type == PlantType.CROP || type == PlantType.PLAINS;
     }
@@ -41,7 +43,7 @@ public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEs
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
         List<ItemStack> drops = new ArrayList<>();
-        ItemStack stack = builder.getOptionalParameter(LootParameters.TOOL);
+        ItemStack stack = builder.getOptionalParameter(LootContextParams.TOOL);
 
         if (stack != null && EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
             drops.add(new ItemStack(this));

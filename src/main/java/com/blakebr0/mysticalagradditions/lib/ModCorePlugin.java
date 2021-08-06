@@ -12,9 +12,9 @@ import com.blakebr0.mysticalagriculture.api.crop.ICrop;
 import com.blakebr0.mysticalagriculture.api.lib.LazyIngredient;
 import com.blakebr0.mysticalagriculture.api.lib.PluginConfig;
 import com.blakebr0.mysticalagriculture.api.registry.ICropRegistry;
-import net.minecraft.block.FarmlandBlock;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.level.block.FarmBlock;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.ChatFormatting;
 import net.minecraftforge.fml.ModList;
 
 import java.util.Arrays;
@@ -25,7 +25,7 @@ import static com.blakebr0.mysticalagradditions.MysticalAgradditions.MOD_ID;
 public final class ModCorePlugin implements IMysticalAgriculturePlugin {
     private static final boolean DEBUG = false;
 
-    public static final CropTier CROP_TIER_6 = new CropTier(new ResourceLocation(MOD_ID, "6"), 6, 0x40005E, TextFormatting.DARK_PURPLE);
+    public static final CropTier CROP_TIER_6 = new CropTier(new ResourceLocation(MOD_ID, "6"), 6, 0x40005E, ChatFormatting.DARK_PURPLE);
 
     public static final Crop NETHER_STAR = new Crop(new ResourceLocation(MOD_ID, "nether_star"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("minecraft:nether_star"));
     public static final Crop DRAGON_EGG = new Crop(new ResourceLocation(MOD_ID, "dragon_egg"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("mysticalagradditions:dragon_scale"));
@@ -51,7 +51,7 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
     }
 
     public static void onCommonSetup() {
-        CROP_TIER_6.setFarmland(() -> (FarmlandBlock) ModBlocks.INSANIUM_FARMLAND.get())
+        CROP_TIER_6.setFarmland(() -> (FarmBlock) ModBlocks.INSANIUM_FARMLAND.get())
                 .setEssence(ModItems.INSANIUM_ESSENCE)
                 .setFertilizable(ModConfigs.FERTILIZABLE_CROPS.get())
                 .setSecondarySeedDrop(false);

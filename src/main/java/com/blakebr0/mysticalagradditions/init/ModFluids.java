@@ -1,11 +1,11 @@
 package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.fluid.FlowingFluid;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.FluidAttributes;
@@ -44,7 +44,7 @@ public final class ModFluids {
 
         registry.register(
                 new ForgeFlowingFluid.Source(MOLTEN_INFERIUM_PROPERTIES
-                        .block(() -> (FlowingFluidBlock) ModBlocks.MOLTEN_INFERIUM.get())
+                        .block(() -> (LiquidBlock) ModBlocks.MOLTEN_INFERIUM.get())
                         .bucket(ModItems.MOLTEN_INFERIUM_BUCKET)
                 ).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium"))
         );
@@ -53,7 +53,7 @@ public final class ModFluids {
         );
         registry.register(
                 new ForgeFlowingFluid.Source(MOLTEN_PRUDENTIUM_PROPERTIES
-                        .block(() -> (FlowingFluidBlock) ModBlocks.MOLTEN_PRUDENTIUM.get())
+                        .block(() -> (LiquidBlock) ModBlocks.MOLTEN_PRUDENTIUM.get())
                         .bucket(ModItems.MOLTEN_PRUDENTIUM_BUCKET)
                 ).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_prudentium"))
         );
@@ -62,7 +62,7 @@ public final class ModFluids {
         );
         registry.register(
                 new ForgeFlowingFluid.Source(MOLTEN_TERTIUM_PROPERTIES
-                        .block(() -> (FlowingFluidBlock) ModBlocks.MOLTEN_TERTIUM.get())
+                        .block(() -> (LiquidBlock) ModBlocks.MOLTEN_TERTIUM.get())
                         .bucket(ModItems.MOLTEN_TERTIUM_BUCKET)
                 ).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_tertium"))
         );
@@ -71,7 +71,7 @@ public final class ModFluids {
         );
         registry.register(
                 new ForgeFlowingFluid.Source(MOLTEN_IMPERIUM_PROPERTIES
-                        .block(() -> (FlowingFluidBlock) ModBlocks.MOLTEN_IMPERIUM.get())
+                        .block(() -> (LiquidBlock) ModBlocks.MOLTEN_IMPERIUM.get())
                         .bucket(ModItems.MOLTEN_IMPERIUM_BUCKET)
                 ).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_imperium"))
         );
@@ -80,7 +80,7 @@ public final class ModFluids {
         );
         registry.register(
                 new ForgeFlowingFluid.Source(MOLTEN_SUPREMIUM_PROPERTIES
-                        .block(() -> (FlowingFluidBlock) ModBlocks.MOLTEN_SUPREMIUM.get())
+                        .block(() -> (LiquidBlock) ModBlocks.MOLTEN_SUPREMIUM.get())
                         .bucket(ModItems.MOLTEN_SUPREMIUM_BUCKET)
                 ).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_supremium"))
         );
@@ -89,7 +89,7 @@ public final class ModFluids {
         );
         registry.register(
                 new ForgeFlowingFluid.Source(MOLTEN_SOULIUM_PROPERTIES
-                        .block(() -> (FlowingFluidBlock) ModBlocks.MOLTEN_SOULIUM.get())
+                        .block(() -> (LiquidBlock) ModBlocks.MOLTEN_SOULIUM.get())
                         .bucket(ModItems.MOLTEN_SOULIUM_BUCKET)
                 ).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium"))
         );

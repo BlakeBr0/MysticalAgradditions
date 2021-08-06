@@ -3,10 +3,10 @@ package com.blakebr0.mysticalagradditions.compat.tconstruct.modifier;
 import com.blakebr0.mysticalagriculture.api.MysticalAgricultureAPI;
 import com.blakebr0.mysticalagriculture.api.soul.IMobSoulType;
 import com.blakebr0.mysticalagriculture.api.util.MobSoulUtils;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.resources.ResourceLocation;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
 import slimeknights.tconstruct.library.tools.nbt.IModifierToolStack;
@@ -24,14 +24,14 @@ public class SoulSiphonerModifier extends Modifier {
         LivingEntity target = context.getLivingTarget();
         LivingEntity attacker = context.getAttacker();
 
-        if (target != null && !target.isAlive() && attacker instanceof PlayerEntity) {
+        if (target != null && !target.isAlive() && attacker instanceof Player) {
             IMobSoulType type = MysticalAgricultureAPI.getMobSoulTypeRegistry().getMobSoulTypeByEntity(target);
 
             if (type == null || !type.isEnabled()) {
                 return super.afterEntityHit(tool, level, context, damageDealt);
             }
 
-            PlayerEntity player = (PlayerEntity) attacker;
+            Player player = (Player) attacker;
             List<ItemStack> jars = getValidSoulJars(player, type);
 
             if (!jars.isEmpty()) {
@@ -48,7 +48,7 @@ public class SoulSiphonerModifier extends Modifier {
         return super.afterEntityHit(tool, level, context, damageDealt);
     }
 
-    private static List<ItemStack> getValidSoulJars(PlayerEntity player, IMobSoulType type) {
+    private static List<ItemStack> getValidSoulJars(Player player, IMobSoulType type) {
         return player.inventory.items.stream()
                 .filter(s -> {
                     ResourceLocation id = s.getItem().getRegistryName();

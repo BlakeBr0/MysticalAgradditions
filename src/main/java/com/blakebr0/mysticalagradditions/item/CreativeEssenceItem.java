@@ -1,10 +1,12 @@
 package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.BaseItem;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 
 import java.util.function.Function;
+
+import net.minecraft.world.item.Item.Properties;
 
 public class CreativeEssenceItem extends BaseItem {
     public CreativeEssenceItem(Function<Properties, Properties> properties) {

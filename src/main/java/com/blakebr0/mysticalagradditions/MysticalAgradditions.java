@@ -10,7 +10,7 @@ import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,7 +29,7 @@ public final class MysticalAgradditions {
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
 
-	public static final ItemGroup ITEM_GROUP = new MAItemGroup();
+	public static final CreativeModeTab ITEM_GROUP = new MAItemGroup();
 
 	public MysticalAgradditions() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

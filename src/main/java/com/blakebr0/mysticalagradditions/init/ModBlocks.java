@@ -7,14 +7,14 @@ import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -49,12 +49,12 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 
-	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_INFERIUM, AbstractBlock.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_PRUDENTIUM, AbstractBlock.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_TERTIUM = registerNoItem("molten_tertium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_TERTIUM, AbstractBlock.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_IMPERIUM = registerNoItem("molten_imperium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_IMPERIUM, AbstractBlock.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_SUPREMIUM, AbstractBlock.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", () -> new FlowingFluidBlock(ModFluids.MOLTEN_SOULIUM, AbstractBlock.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new LiquidBlock(ModFluids.MOLTEN_INFERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", () -> new LiquidBlock(ModFluids.MOLTEN_PRUDENTIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_TERTIUM = registerNoItem("molten_tertium", () -> new LiquidBlock(ModFluids.MOLTEN_TERTIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_IMPERIUM = registerNoItem("molten_imperium", () -> new LiquidBlock(ModFluids.MOLTEN_IMPERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", () -> new LiquidBlock(ModFluids.MOLTEN_SUPREMIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", () -> new LiquidBlock(ModFluids.MOLTEN_SOULIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
 
 	@SubscribeEvent
 	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {
