@@ -1,0 +1,23 @@
+{
+  "type": "cucumber:shaped_no_mirror",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:awakened_draconium"
+    }
+  ],
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagriculture:awakened_draconium_essence"
+    }
+  },
+  "result": {
+    "item": "draconicevolution:awakened_draconium_nugget",
+    "count": 3
+  }
+}

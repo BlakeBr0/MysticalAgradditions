@@ -1,0 +1,31 @@
+{
+  "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:awakened_draconium"
+    }
+  ],
+  "pattern": [
+    "EHE",
+    "WDW",
+    "EWE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_essence"
+    },
+    "H": {
+      "item": "draconicevolution:dragon_heart"
+    },
+    "W": {
+      "item": "draconicevolution:awakened_draconium_block"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/diamond"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:awakened_draconium_crux"
+  }
+}
