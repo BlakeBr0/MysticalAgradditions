@@ -60,9 +60,9 @@ minecraft {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.1'
 
-    compile fg.deobf('ignored:Cucumber:1.16.4-4.1.4')
-    compileOnly fg.deobf('ignored:MysticalAgriculture:1.16.4-4.1.4:api')
-    runtimeOnly fg.deobf('ignored:MysticalAgriculture:1.16.4-4.1.4')
+    compile fg.deobf('ignored:Cucumber:1.16.4-4.1.10')
+    compileOnly fg.deobf('ignored:MysticalAgriculture:1.16.5-4.2.1:api')
+    runtimeOnly fg.deobf('ignored:MysticalAgriculture:1.16.5-4.2.1')
     compileOnly fg.deobf('mcp.mobius.waila:Hwyla:1.10.11-B78_1.16.2:api')
     runtimeOnly fg.deobf('mcp.mobius.waila:Hwyla:1.10.11-B78_1.16.2')
     compileOnly fg.deobf('mezz.jei:jei-1.16.2:7.1.1.15:api')
