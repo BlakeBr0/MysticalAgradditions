@@ -27,7 +27,8 @@ repositories {
         content {
             includeGroup 'curse.maven'
         }
-    }}
+    }
+}
 
 minecraft {
     mappings channel: 'official', version: '1.17.1'

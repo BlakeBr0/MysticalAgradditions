@@ -13,7 +13,6 @@ import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModList;
@@ -29,15 +28,16 @@ public final class MysticalAgradditions {
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
 
-	public static final CreativeModeTab ITEM_GROUP = new MAItemGroup();
+	public static final CreativeModeTab ITEM_GROUP = new MACreativeTab();
 
 	public MysticalAgradditions() {
-		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		bus.register(this);
-		bus.register(new ModBlocks());
-		bus.register(new ModItems());
 		bus.register(new ModFluids());
+
+		ModBlocks.REGISTRY.register(bus);
+		ModItems.REGISTRY.register(bus);
 
 		if (ModList.get().isLoaded("tconstruct")) {
 			ModModifiers.REGISTRY.register(bus);

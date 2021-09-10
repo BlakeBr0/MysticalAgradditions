@@ -1,33 +1,32 @@
 package com.blakebr0.mysticalagradditions.lib;
 
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
 public enum ModItemTier implements Tier {
     INFERIUM(3, 2000, 9.0F, 4.0F, 20, () -> {
-        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:inferium_ingot"));
+        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:inferium_ingot"));
         return Ingredient.of(item);
     }),
     PRUDENTIUM(3, 2800, 11.0F, 6.0F, 25, () -> {
-        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:prudentium_ingot"));
+        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:prudentium_ingot"));
         return Ingredient.of(item);
     }),
     TERTIUM(4, 4000, 14.0F, 9.0F, 30, () -> {
-        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:tertium_ingot"));
+        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:tertium_ingot"));
         return Ingredient.of(item);
     }),
     IMPERIUM(4, 6000, 19.0F, 13.0F, 35, () -> {
-        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:imperium_ingot"));
+        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:imperium_ingot"));
         return Ingredient.of(item);
     }),
     SUPREMIUM(5, -1, 25.0F, 20.0F, 0, () -> {
-        Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:supremium_ingot"));
+        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:supremium_ingot"));
         return Ingredient.of(item);
     });
 

@@ -4,8 +4,8 @@ import com.blakebr0.mysticalagradditions.init.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-public class MAItemGroup extends CreativeModeTab {
-    public MAItemGroup() {
+public class MACreativeTab extends CreativeModeTab {
+    public MACreativeTab() {
         super(MysticalAgradditions.MOD_ID);
     }
 

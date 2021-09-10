@@ -1,8 +1,8 @@
 package com.blakebr0.mysticalagradditions.client;
 
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 
 public final class ModelHandler {
     public static void onClientSetup() {

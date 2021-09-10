@@ -6,8 +6,9 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 
 @JeiPlugin
 public final class JeiCompat implements IModPlugin {
@@ -20,7 +21,15 @@ public final class JeiCompat implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        registration.addIngredientInfo(new ItemStack(ModItems.WITHERING_SOUL.get()), VanillaTypes.ITEM, "jei.desc.mysticalagradditions.withering_soul");
-        registration.addIngredientInfo(new ItemStack(ModItems.DRAGON_SCALE.get()), VanillaTypes.ITEM, "jei.desc.mysticalagradditions.dragon_scale");
+        registration.addIngredientInfo(
+                new ItemStack(ModItems.WITHERING_SOUL.get()),
+                VanillaTypes.ITEM,
+                new TranslatableComponent("jei.desc.mysticalagradditions.withering_soul")
+        );
+        registration.addIngredientInfo(
+                new ItemStack(ModItems.DRAGON_SCALE.get()),
+                VanillaTypes.ITEM,
+                new TranslatableComponent("jei.desc.mysticalagradditions.dragon_scale")
+        );
     }
 }

@@ -8,13 +8,12 @@ import com.blakebr0.mysticalagriculture.api.MysticalAgriculturePlugin;
 import com.blakebr0.mysticalagriculture.api.crop.Crop;
 import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.crop.CropType;
-import com.blakebr0.mysticalagriculture.api.crop.ICrop;
 import com.blakebr0.mysticalagriculture.api.lib.LazyIngredient;
 import com.blakebr0.mysticalagriculture.api.lib.PluginConfig;
 import com.blakebr0.mysticalagriculture.api.registry.ICropRegistry;
-import net.minecraft.world.level.block.FarmBlock;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.ChatFormatting;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.FarmBlock;
 import net.minecraftforge.fml.ModList;
 
 import java.util.Arrays;
@@ -56,15 +55,15 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
                 .setFertilizable(ModConfigs.FERTILIZABLE_CROPS.get())
                 .setSecondarySeedDrop(false);
 
-        NETHER_STAR.setCrux(ModBlocks.NETHER_STAR_CRUX);
-        DRAGON_EGG.setCrux(ModBlocks.DRAGON_EGG_CRUX);
-        NITRO_CRYSTAL.setCrux(ModBlocks.NITRO_CRYSTAL_CRUX);
+        NETHER_STAR.setCruxBlock(ModBlocks.NETHER_STAR_CRUX);
+        DRAGON_EGG.setCruxBlock(ModBlocks.DRAGON_EGG_CRUX);
+        NITRO_CRYSTAL.setCruxBlock(ModBlocks.NITRO_CRYSTAL_CRUX);
     }
 
-    private static ICrop withRequiredMods(ICrop crop, String... mods) {
+    private static Crop withRequiredMods(Crop crop, String... mods) {
         if (DEBUG) return crop;
 
-        boolean enabled = Arrays.stream(mods).anyMatch(ModList.get()::isLoaded);
+        var enabled = Arrays.stream(mods).anyMatch(ModList.get()::isLoaded);
         return crop.setEnabled(enabled);
     }
 }

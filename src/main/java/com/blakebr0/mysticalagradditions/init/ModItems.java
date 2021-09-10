@@ -11,12 +11,9 @@ import com.blakebr0.mysticalagradditions.lib.ModItemTier;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -29,6 +26,7 @@ import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 public final class ModItems {
 	private static final Item.Properties BUCKET_PROPERTIES = new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(ITEM_GROUP);
 
+	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MysticalAgradditions.MOD_ID);
 	public static final List<Supplier<Item>> BLOCK_ENTRIES = new ArrayList<>();
 	public static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
 
@@ -67,25 +65,11 @@ public final class ModItems {
 	public static final RegistryObject<Item> MOLTEN_SUPREMIUM_BUCKET = register("molten_supremium_bucket", () -> new BucketItem(ModFluids.MOLTEN_SUPREMIUM, BUCKET_PROPERTIES));
 	public static final RegistryObject<Item> MOLTEN_SOULIUM_BUCKET = register("molten_soulium_bucket", () -> new BucketItem(ModFluids.MOLTEN_SOULIUM, BUCKET_PROPERTIES));
 
-	@SubscribeEvent
-	public void onRegisterItems(RegistryEvent.Register<Item> event) {
-		IForgeRegistry<Item> registry = event.getRegistry();
-
-		BLOCK_ENTRIES.stream().map(Supplier::get).forEach(registry::register);
-		ENTRIES.forEach((reg, item) -> {
-			registry.register(item.get());
-			reg.updateReference(registry);
-		});
-	}
-
 	private static RegistryObject<Item> register(String name) {
 		return register(name, () -> new BaseItem(p -> p.tab(ITEM_GROUP)));
 	}
 
 	private static RegistryObject<Item> register(String name, Supplier<Item> item) {
-		ResourceLocation loc = new ResourceLocation(MysticalAgradditions.MOD_ID, name);
-		RegistryObject<Item> reg = RegistryObject.of(loc, ForgeRegistries.ITEMS);
-		ENTRIES.put(reg, () -> item.get().setRegistryName(loc));
-		return reg;
+		return REGISTRY.register(name, item);
 	}
 }

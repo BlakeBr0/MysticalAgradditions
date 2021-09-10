@@ -3,18 +3,16 @@ package com.blakebr0.mysticalagradditions.world;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.world.level.biome.Biome;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
@@ -27,32 +25,28 @@ public final class ModWorldgenRegistration {
 
     @SubscribeEvent
     public void onBiomesLoading(BiomeLoadingEvent event) {
-        Biome.BiomeCategory category = event.getCategory();
-        BiomeGenerationSettingsBuilder generation = event.getGeneration();
+        var category = event.getCategory();
+        var generation = event.getGeneration();
 
         switch (category) {
-            case NETHER:
+            case NETHER -> {
                 if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
                     generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, configuredNetherProsperityOreFeature);
                 }
-
                 if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
                     generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, configuredNetherInferiumOreFeature);
                 }
-
-                break;
-            case THEEND:
+            }
+            case THEEND -> {
                 if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
                     generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, configuredEndProsperityOreFeature);
                 }
-
                 if (ModConfigs.GENERATE_END_INFERIUM.get()) {
                     generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, configuredEndInferiumOreFeature);
                 }
-
-                break;
-            default:
-                break;
+            }
+            default -> {
+            }
         }
     }
 

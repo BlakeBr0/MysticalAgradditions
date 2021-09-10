@@ -7,29 +7,24 @@ import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
 public final class ModBlocks {
-	public static final Map<RegistryObject<Block>, Supplier<Block>> ENTRIES = new LinkedHashMap<>();
+	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, MysticalAgradditions.MOD_ID);
 
 	public static final RegistryObject<Block> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.STONE, SoundType.STONE, 4.0F, 6.0F));
 	public static final RegistryObject<Block> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.METAL, SoundType.METAL, 5.0F, 6.0F));
@@ -56,32 +51,17 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", () -> new LiquidBlock(ModFluids.MOLTEN_SUPREMIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
 	public static final RegistryObject<Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", () -> new LiquidBlock(ModFluids.MOLTEN_SOULIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
 
-	@SubscribeEvent
-	public void onRegisterBlocks(RegistryEvent.Register<Block> event) {
-		IForgeRegistry<Block> registry = event.getRegistry();
-
-		ENTRIES.forEach((reg, block) -> {
-			registry.register(block.get());
-			reg.updateReference(registry);
-		});
-	}
-
 	private static RegistryObject<Block> register(String name, Supplier<Block> block) {
 		return register(name, block, b -> () -> new BaseBlockItem(b.get(), p -> p.tab(ITEM_GROUP)));
 	}
 
 	private static RegistryObject<Block> register(String name, Supplier<Block> block, Function<RegistryObject<Block>, Supplier<? extends BlockItem>> item) {
-		ResourceLocation loc = new ResourceLocation(MysticalAgradditions.MOD_ID, name);
-		RegistryObject<Block> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
-		ENTRIES.put(reg, () -> block.get().setRegistryName(loc));
-		ModItems.BLOCK_ENTRIES.add(() -> item.apply(reg).get().setRegistryName(loc));
+		var reg = REGISTRY.register(name, block);
+		ModItems.REGISTRY.register(name, () -> item.apply(reg).get());
 		return reg;
 	}
 
 	public static RegistryObject<Block> registerNoItem(String name, Supplier<Block> block) {
-		ResourceLocation loc = new ResourceLocation(MysticalAgradditions.MOD_ID, name);
-		RegistryObject<Block> reg = RegistryObject.of(loc, ForgeRegistries.BLOCKS);
-		ENTRIES.put(reg, () -> block.get().setRegistryName(loc));
-		return reg;
+		return REGISTRY.register(name, block);
 	}
 }

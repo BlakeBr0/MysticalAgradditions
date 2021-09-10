@@ -2,10 +2,9 @@ package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.BaseItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 
 import java.util.function.Function;
-
-import net.minecraft.world.item.Item.Properties;
 
 public class EssenceCoalItem extends BaseItem {
     private final int fuel;
@@ -16,7 +15,7 @@ public class EssenceCoalItem extends BaseItem {
     }
 
     @Override
-    public int getBurnTime(ItemStack stack) {
+    public int getBurnTime(ItemStack stack, RecipeType<?> type) {
         return this.fuel;
     }
 }

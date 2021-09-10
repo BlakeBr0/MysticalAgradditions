@@ -29,7 +29,7 @@ public final class ModConfigs {
 
     // Common
     static {
-        final ForgeConfigSpec.Builder common = new ForgeConfigSpec.Builder();
+        final var common = new ForgeConfigSpec.Builder();
 
         common.comment("General configuration options.").push("General");
         WITHERING_SOUL_DROP_CHANCE = common
