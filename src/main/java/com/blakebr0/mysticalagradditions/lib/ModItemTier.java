@@ -9,23 +9,23 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 public enum ModItemTier implements Tier {
-    INFERIUM(3, 2000, 9.0F, 4.0F, 20, () -> {
+    INFERIUM(3, 2000, 9.0F, 4.0F, 12, () -> {
         var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:inferium_ingot"));
         return Ingredient.of(item);
     }),
-    PRUDENTIUM(3, 2800, 11.0F, 6.0F, 25, () -> {
+    PRUDENTIUM(3, 2800, 11.0F, 6.0F, 14, () -> {
         var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:prudentium_ingot"));
         return Ingredient.of(item);
     }),
-    TERTIUM(4, 4000, 14.0F, 9.0F, 30, () -> {
+    TERTIUM(4, 4000, 14.0F, 9.0F, 16, () -> {
         var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:tertium_ingot"));
         return Ingredient.of(item);
     }),
-    IMPERIUM(4, 6000, 19.0F, 13.0F, 35, () -> {
+    IMPERIUM(4, 6000, 19.0F, 13.0F, 18, () -> {
         var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:imperium_ingot"));
         return Ingredient.of(item);
     }),
-    SUPREMIUM(5, -1, 25.0F, 20.0F, 0, () -> {
+    SUPREMIUM(5, -1, 25.0F, 20.0F, 20, () -> {
         var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:supremium_ingot"));
         return Ingredient.of(item);
     });

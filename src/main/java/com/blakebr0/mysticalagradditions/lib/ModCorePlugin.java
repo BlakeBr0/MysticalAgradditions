@@ -29,6 +29,9 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
     public static final Crop NETHER_STAR = new Crop(new ResourceLocation(MOD_ID, "nether_star"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("minecraft:nether_star"));
     public static final Crop DRAGON_EGG = new Crop(new ResourceLocation(MOD_ID, "dragon_egg"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("mysticalagradditions:dragon_scale"));
 
+    // DRACONIC EVOLUTION
+    public static final Crop AWAKENED_DRACONIUM = new Crop(new ResourceLocation(MOD_ID, "awakened_draconium"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.tag("forge:ingots/draconium_awakened"));
+
     // POWAH
     public static final Crop NITRO_CRYSTAL = new Crop(new ResourceLocation(MOD_ID, "nitro_crystal"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("powah:crystal_nitro"));
 
@@ -45,6 +48,9 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
         registry.register(NETHER_STAR);
         registry.register(DRAGON_EGG);
 
+        // DRACONIC EVOLUTION
+        registry.register(withRequiredMods(AWAKENED_DRACONIUM, "draconicevolution"));
+
         // POWAH
         registry.register(withRequiredMods(NITRO_CRYSTAL, "powah"));
     }
@@ -57,6 +63,7 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
 
         NETHER_STAR.setCruxBlock(ModBlocks.NETHER_STAR_CRUX);
         DRAGON_EGG.setCruxBlock(ModBlocks.DRAGON_EGG_CRUX);
+        AWAKENED_DRACONIUM.setCruxBlock(ModBlocks.AWAKENED_DRACONIUM_CRUX);
         NITRO_CRYSTAL.setCruxBlock(ModBlocks.NITRO_CRYSTAL_CRUX);
     }
 

@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mysticalagriculture:seeds",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:seed_crafting_recipes_enabled"
+    },
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:awakened_draconium"
+    },
+    {
+      "type": "mysticalagriculture:crop_has_material",
+      "crop": "mysticalagradditions:awakened_draconium"
+    }
+  ],
+  "pattern": [
+    "MEM",
+    "ESE",
+    "MEM"
+  ],
+  "key": {
+    "E": {
+      "type": "mysticalagriculture:crop_component",
+      "component": "essence",
+      "crop": "mysticalagradditions:awakened_draconium"
+    },
+    "S": {
+      "type": "mysticalagriculture:crop_component",
+      "component": "seed",
+      "crop": "mysticalagradditions:awakened_draconium"
+    },
+    "M": {
+      "type": "mysticalagriculture:crop_component",
+      "component": "material",
+      "crop": "mysticalagradditions:awakened_draconium"
+    }
+  },
+  "result": {
+    "item": "mysticalagriculture:awakened_draconium_seeds"
+  }
+}
