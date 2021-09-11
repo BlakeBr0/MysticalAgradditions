@@ -8,13 +8,19 @@ import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.WorldGenerationContext;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
+import net.minecraft.world.level.levelgen.heightproviders.HeightProvider;
+import net.minecraft.world.level.levelgen.heightproviders.HeightProviderType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import java.util.Random;
 
 public final class ModWorldgenRegistration {
     private static final RuleTest END_STONE_RULE_TEST = new BlockMatchTest(Blocks.END_STONE);
@@ -45,21 +51,30 @@ public final class ModWorldgenRegistration {
                     generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, configuredEndInferiumOreFeature);
                 }
             }
-            default -> {
-            }
+            default -> { }
         }
     }
 
     public static void onCommonSetup() {
-        int size, rate, height;
+        int size, rate;
         OreConfiguration config;
 
         size = ModConfigs.NETHER_PROSPERITY_SPAWN_SIZE.get();
         rate = ModConfigs.NETHER_PROSPERITY_SPAWN_RATE.get();
-        height = ModConfigs.NETHER_PROSPERITY_SPAWN_HEIGHT.get();
+
         config = new OreConfiguration(OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_PROSPERITY_ORE.get().defaultBlockState(), size);
         configuredNetherProsperityOreFeature = Feature.ORE.configured(config)
-                .range(height)
+                .range(new RangeDecoratorConfiguration(new HeightProvider() {
+                    @Override
+                    public int sample(Random random, WorldGenerationContext context) {
+                        return ModConfigs.NETHER_PROSPERITY_SPAWN_HEIGHT.get();
+                    }
+
+                    @Override
+                    public HeightProviderType<?> getType() {
+                        return HeightProviderType.CONSTANT;
+                    }
+                }))
                 .squared()
                 .countRandom(rate);
 
@@ -67,10 +82,19 @@ public final class ModWorldgenRegistration {
 
         size = ModConfigs.NETHER_INFERIUM_SPAWN_SIZE.get();
         rate = ModConfigs.NETHER_INFERIUM_SPAWN_RATE.get();
-        height = ModConfigs.NETHER_INFERIUM_SPAWN_HEIGHT.get();
         config = new OreConfiguration(OreConfiguration.Predicates.NETHERRACK, ModBlocks.NETHER_INFERIUM_ORE.get().defaultBlockState(), size);
         configuredNetherInferiumOreFeature = Feature.ORE.configured(config)
-                .range(height)
+                .range(new RangeDecoratorConfiguration(new HeightProvider() {
+                    @Override
+                    public int sample(Random random, WorldGenerationContext context) {
+                        return ModConfigs.NETHER_INFERIUM_SPAWN_HEIGHT.get();
+                    }
+
+                    @Override
+                    public HeightProviderType<?> getType() {
+                        return HeightProviderType.CONSTANT;
+                    }
+                }))
                 .squared()
                 .countRandom(rate);
 
@@ -78,10 +102,19 @@ public final class ModWorldgenRegistration {
 
         size = ModConfigs.END_PROSPERITY_SPAWN_SIZE.get();
         rate = ModConfigs.END_PROSPERITY_SPAWN_RATE.get();
-        height = ModConfigs.END_PROSPERITY_SPAWN_HEIGHT.get();
         config = new OreConfiguration(END_STONE_RULE_TEST, ModBlocks.END_PROSPERITY_ORE.get().defaultBlockState(), size);
         configuredEndProsperityOreFeature = Feature.ORE.configured(config)
-                .range(height)
+                .range(new RangeDecoratorConfiguration(new HeightProvider() {
+                    @Override
+                    public int sample(Random random, WorldGenerationContext context) {
+                        return ModConfigs.END_PROSPERITY_SPAWN_HEIGHT.get();
+                    }
+
+                    @Override
+                    public HeightProviderType<?> getType() {
+                        return HeightProviderType.CONSTANT;
+                    }
+                }))
                 .squared()
                 .countRandom(rate);
 
@@ -89,10 +122,19 @@ public final class ModWorldgenRegistration {
 
         size = ModConfigs.END_INFERIUM_SPAWN_SIZE.get();
         rate = ModConfigs.END_INFERIUM_SPAWN_RATE.get();
-        height = ModConfigs.END_INFERIUM_SPAWN_HEIGHT.get();
         config = new OreConfiguration(END_STONE_RULE_TEST, ModBlocks.END_INFERIUM_ORE.get().defaultBlockState(), size);
         configuredEndInferiumOreFeature = Feature.ORE.configured(config)
-                .range(height)
+                .range(new RangeDecoratorConfiguration(new HeightProvider() {
+                    @Override
+                    public int sample(Random random, WorldGenerationContext context) {
+                        return ModConfigs.END_INFERIUM_SPAWN_HEIGHT.get();
+                    }
+
+                    @Override
+                    public HeightProviderType<?> getType() {
+                        return HeightProviderType.CONSTANT;
+                    }
+                }))
                 .squared()
                 .countRandom(rate);
 

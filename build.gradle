@@ -37,35 +37,55 @@ minecraft {
 
     runs {
         client {
+            evaluationDependsOn(':MysticalAgriculture')
+
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+//            property 'mixin.env.remapRefMap', 'true'
+//            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             ideaModule "${rootProject.name}.${project.name}.main"
 
             mods {
-                cucumber {
+                mysticalagradditions {
                     source sourceSets.main
+                }
+
+                cucumber {
+                    source project(':Cucumber').sourceSets.main
+                }
+
+                mysticalagriculture {
+                    source project(':MysticalAgriculture').sourceSets.main
                 }
             }
         }
 
         server {
+            evaluationDependsOn(':MysticalAgriculture')
+
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+//            property 'mixin.env.remapRefMap', 'true'
+//            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             ideaModule "${rootProject.name}.${project.name}.main"
 
             mods {
-                cucumber {
+                mysticalagradditions {
                     source sourceSets.main
+                }
+
+                cucumber {
+                    source project(':Cucumber').sourceSets.main
+                }
+
+                mysticalagriculture {
+                    source project(':MysticalAgriculture').sourceSets.main
                 }
             }
         }
