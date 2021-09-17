@@ -1,8 +1,8 @@
 package com.blakebr0.mysticalagradditions.compat;
 
+import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
+import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagriculture.api.farmland.IEssenceFarmland;
-import com.blakebr0.mysticalagriculture.block.InfusedFarmlandBlock;
-import com.blakebr0.mysticalagriculture.lib.ModTooltips;
 import mcp.mobius.waila.api.IRegistrar;
 import mcp.mobius.waila.api.IWailaPlugin;
 import mcp.mobius.waila.api.TooltipPosition;
