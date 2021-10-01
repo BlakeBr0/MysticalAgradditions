@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "item": "mysticalagriculture:imperium_nugget"
+  },
+  "value": 1,
+  "needed": 9,
+  "material": "mysticalagradditions:imperium"
+}

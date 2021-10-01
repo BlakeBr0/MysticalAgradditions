@@ -1,0 +1,18 @@
+{
+  "type": "tconstruct:material",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "tconstruct"
+    }
+  ],
+  "ingredient": {
+    "item": "mysticalagriculture:inferium_ingot_block"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "mysticalagradditions:inferium",
+  "leftover": {
+    "item": "mysticalagriculture:inferium_ingot"
+  }
+}
