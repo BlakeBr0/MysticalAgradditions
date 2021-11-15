@@ -5,9 +5,12 @@ import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.item.CreativeEssenceItem;
 import com.blakebr0.mysticalagradditions.item.EssenceAppleItem;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalItem;
+import com.blakebr0.mysticalagradditions.item.EssenceItem;
 import com.blakebr0.mysticalagradditions.item.EssencePaxelItem;
 import com.blakebr0.mysticalagradditions.item.WitheringSoulItem;
+import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import com.blakebr0.mysticalagradditions.lib.ModItemTier;
+import com.blakebr0.mysticalagradditions.util.EssenceAppleTier;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -30,7 +33,7 @@ public final class ModItems {
 	public static final List<Supplier<Item>> BLOCK_ENTRIES = new ArrayList<>();
 	public static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
 
-	public static final RegistryObject<Item> INSANIUM_ESSENCE = register("insanium_essence");
+	public static final RegistryObject<Item> INSANIUM_ESSENCE = register("insanium_essence", () -> new EssenceItem(ModCorePlugin.CROP_TIER_6, p -> p.tab(ITEM_GROUP)));
 	public static final RegistryObject<Item> INSANIUM_INGOT = register("insanium_ingot");
 	public static final RegistryObject<Item> INSANIUM_NUGGET = register("insanium_nugget");
 	public static final RegistryObject<Item> INSANIUM_GEMSTONE = register("insanium_gemstone");
@@ -45,12 +48,12 @@ public final class ModItems {
 	public static final RegistryObject<Item> IMPERIUM_COAL = register("imperium_coal", () -> new EssenceCoalItem(19200, p -> p.tab(ITEM_GROUP)));
 	public static final RegistryObject<Item> SUPREMIUM_COAL = register("supremium_coal", () -> new EssenceCoalItem(38400, p -> p.tab(ITEM_GROUP)));
 	public static final RegistryObject<Item> INSANIUM_COAL = register("insanium_coal", () -> new EssenceCoalItem(76800, p -> p.tab(ITEM_GROUP)));
-	public static final RegistryObject<Item> INFERIUM_APPLE = register("inferium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.INFERIUM, p -> p.tab(ITEM_GROUP)));
-	public static final RegistryObject<Item> PRUDENTIUM_APPLE = register("prudentium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.PRUDENTIUM, p -> p.tab(ITEM_GROUP)));
-	public static final RegistryObject<Item> TERTIUM_APPLE = register("tertium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.TERTIUM, p -> p.tab(ITEM_GROUP)));
-	public static final RegistryObject<Item> IMPERIUM_APPLE = register("imperium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.IMPERIUM, p -> p.tab(ITEM_GROUP)));
-	public static final RegistryObject<Item> SUPREMIUM_APPLE = register("supremium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.SUPREMIUM, p -> p.tab(ITEM_GROUP)));
-	public static final RegistryObject<Item> INSANIUM_APPLE = register("insanium_apple", () -> new EssenceAppleItem(EssenceAppleItem.EssenceAppleTier.INSANIUM, p -> p.tab(ITEM_GROUP)));
+	public static final RegistryObject<Item> INFERIUM_APPLE = register("inferium_apple", () -> new EssenceAppleItem(EssenceAppleTier.INFERIUM, p -> p.tab(ITEM_GROUP)));
+	public static final RegistryObject<Item> PRUDENTIUM_APPLE = register("prudentium_apple", () -> new EssenceAppleItem(EssenceAppleTier.PRUDENTIUM, p -> p.tab(ITEM_GROUP)));
+	public static final RegistryObject<Item> TERTIUM_APPLE = register("tertium_apple", () -> new EssenceAppleItem(EssenceAppleTier.TERTIUM, p -> p.tab(ITEM_GROUP)));
+	public static final RegistryObject<Item> IMPERIUM_APPLE = register("imperium_apple", () -> new EssenceAppleItem(EssenceAppleTier.IMPERIUM, p -> p.tab(ITEM_GROUP)));
+	public static final RegistryObject<Item> SUPREMIUM_APPLE = register("supremium_apple", () -> new EssenceAppleItem(EssenceAppleTier.SUPREMIUM, p -> p.tab(ITEM_GROUP)));
+	public static final RegistryObject<Item> INSANIUM_APPLE = register("insanium_apple", () -> new EssenceAppleItem(EssenceAppleTier.INSANIUM, p -> p.tab(ITEM_GROUP)));
 
 	public static final RegistryObject<Item> INFERIUM_PAXEL = register("inferium_paxel", () -> new EssencePaxelItem(ModItemTier.INFERIUM, 1, 1, p -> p.tab(ITEM_GROUP)));
 	public static final RegistryObject<Item> PRUDENTIUM_PAXEL = register("prudentium_paxel", () -> new EssencePaxelItem(ModItemTier.PRUDENTIUM, 2, 1, p -> p.tab(ITEM_GROUP)));
