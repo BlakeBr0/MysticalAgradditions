@@ -9,7 +9,6 @@ import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
-import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.api.distmarker.Dist;
@@ -58,7 +57,6 @@ public final class MysticalAgradditions {
 		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
 
 		event.enqueueWork(() -> {
-			ModCorePlugin.onCommonSetup();
 			ModWorldgenRegistration.onCommonSetup();
 			MAConfig.onCommonSetup();
 		});

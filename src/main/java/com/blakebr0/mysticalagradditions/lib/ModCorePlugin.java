@@ -56,7 +56,8 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
         registry.register(withRequiredMods(NITRO_CRYSTAL, "powah"));
     }
 
-    public static void onCommonSetup() {
+    @Override
+    public void onPostRegisterCrops(ICropRegistry registry) {
         CROP_TIER_6.setFarmland(() -> (FarmlandBlock) ModBlocks.INSANIUM_FARMLAND.get())
                 .setEssence(ModItems.INSANIUM_ESSENCE)
                 .setFertilizable(ModConfigs.FERTILIZABLE_CROPS.get())
