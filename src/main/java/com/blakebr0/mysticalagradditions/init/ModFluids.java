@@ -2,7 +2,6 @@ package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvents;
@@ -18,18 +17,18 @@ public final class ModFluids {
     private static final ResourceLocation STILL_TEXTURE = new ResourceLocation(MysticalAgradditions.MOD_ID, "block/molten_still");
     private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation(MysticalAgradditions.MOD_ID, "block/molten_flowing");
 
-    public static final RegistryObject<FlowingFluid> MOLTEN_INFERIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_INFERIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium_flowing"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_PRUDENTIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_prudentium"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_PRUDENTIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_prudentium_flowing"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_TERTIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_tertium"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_TERTIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_tertium_flowing"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_IMPERIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_imperium"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_IMPERIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_imperium_flowing"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_SUPREMIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_supremium"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_SUPREMIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_supremium_flowing"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_SOULIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium"), ForgeRegistries.FLUIDS);
-    public static final RegistryObject<FlowingFluid> MOLTEN_SOULIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium_flowing"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_INFERIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_INFERIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium_flowing"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_PRUDENTIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_prudentium"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_PRUDENTIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_prudentium_flowing"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_TERTIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_tertium"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_TERTIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_tertium_flowing"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_IMPERIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_imperium"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_IMPERIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_imperium_flowing"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_SUPREMIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_supremium"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_SUPREMIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_supremium_flowing"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_SOULIUM = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium"), ForgeRegistries.FLUIDS);
+    public static final RegistryObject<Fluid> MOLTEN_SOULIUM_FLOWING = RegistryObject.of(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium_flowing"), ForgeRegistries.FLUIDS);
 
     private static final ForgeFlowingFluid.Properties MOLTEN_INFERIUM_PROPERTIES = new ForgeFlowingFluid.Properties(MOLTEN_INFERIUM, MOLTEN_INFERIUM_FLOWING, newMoltenAttributes(0xFF748E00));
     private static final ForgeFlowingFluid.Properties MOLTEN_PRUDENTIUM_PROPERTIES = new ForgeFlowingFluid.Properties(MOLTEN_PRUDENTIUM, MOLTEN_PRUDENTIUM_FLOWING, newMoltenAttributes(0xFF008C23));
@@ -96,6 +95,19 @@ public final class ModFluids {
         registry.register(
                 new ForgeFlowingFluid.Flowing(MOLTEN_SOULIUM_PROPERTIES).setRegistryName(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium_flowing"))
         );
+
+        MOLTEN_INFERIUM.updateReference(registry);
+        MOLTEN_INFERIUM_FLOWING.updateReference(registry);
+        MOLTEN_PRUDENTIUM.updateReference(registry);
+        MOLTEN_PRUDENTIUM_FLOWING.updateReference(registry);
+        MOLTEN_TERTIUM.updateReference(registry);
+        MOLTEN_TERTIUM_FLOWING.updateReference(registry);
+        MOLTEN_IMPERIUM.updateReference(registry);
+        MOLTEN_IMPERIUM_FLOWING.updateReference(registry);
+        MOLTEN_SUPREMIUM.updateReference(registry);
+        MOLTEN_SUPREMIUM_FLOWING.updateReference(registry);
+        MOLTEN_SOULIUM.updateReference(registry);
+        MOLTEN_SOULIUM_FLOWING.updateReference(registry);
     }
 
     private static FluidAttributes.Builder newMoltenAttributes(int color) {
