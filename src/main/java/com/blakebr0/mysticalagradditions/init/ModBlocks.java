@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -45,12 +46,12 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> AWAKENED_DRACONIUM_CRUX = register("awakened_draconium_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 
-	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new LiquidBlock(ModFluids.MOLTEN_INFERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", () -> new LiquidBlock(ModFluids.MOLTEN_PRUDENTIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_TERTIUM = registerNoItem("molten_tertium", () -> new LiquidBlock(ModFluids.MOLTEN_TERTIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_IMPERIUM = registerNoItem("molten_imperium", () -> new LiquidBlock(ModFluids.MOLTEN_IMPERIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", () -> new LiquidBlock(ModFluids.MOLTEN_SUPREMIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
-	public static final RegistryObject<Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", () -> new LiquidBlock(ModFluids.MOLTEN_SOULIUM, BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_INFERIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_PRUDENTIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_TERTIUM = registerNoItem("molten_tertium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_TERTIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_IMPERIUM = registerNoItem("molten_imperium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_IMPERIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_SUPREMIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
+	public static final RegistryObject<Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_SOULIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
 
 	private static RegistryObject<Block> register(String name, Supplier<Block> block) {
 		return register(name, block, b -> () -> new BaseBlockItem(b.get(), p -> p.tab(ITEM_GROUP)));

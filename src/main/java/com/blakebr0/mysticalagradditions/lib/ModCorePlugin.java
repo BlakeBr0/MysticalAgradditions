@@ -13,7 +13,6 @@ import com.blakebr0.mysticalagriculture.api.lib.PluginConfig;
 import com.blakebr0.mysticalagriculture.api.registry.ICropRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.FarmBlock;
 import net.minecraftforge.fml.ModList;
 
 import java.util.Arrays;
@@ -55,8 +54,9 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
         registry.register(withRequiredMods(NITRO_CRYSTAL, "powah"));
     }
 
-    public static void onCommonSetup() {
-        CROP_TIER_6.setFarmland(() -> (FarmBlock) ModBlocks.INSANIUM_FARMLAND.get())
+    @Override
+    public void onPostRegisterCrops(ICropRegistry registry) {
+        CROP_TIER_6.setFarmland(ModBlocks.INSANIUM_FARMLAND)
                 .setEssence(ModItems.INSANIUM_ESSENCE)
                 .setFertilizable(ModConfigs.FERTILIZABLE_CROPS.get())
                 .setSecondarySeedDrop(false);
