@@ -108,9 +108,9 @@ dependencies {
     implementation project(':MysticalAgriculture')
     implementation fg.deobf('curse.maven:jade-324717:3544015')
 
-    runtimeOnly fg.deobf('mezz.jei:jei-1.18:9.0.0.40')
+    runtimeOnly fg.deobf('mezz.jei:jei-1.18.1:9.1.0.41')
 
-    compileOnly 'mezz.jei:jei-1.18:9.0.0.40:api'
+    compileOnly 'mezz.jei:jei-1.18.1:9.1.0.41:api'
 }
 
 jar {
