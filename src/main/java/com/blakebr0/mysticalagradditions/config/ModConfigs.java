@@ -13,19 +13,23 @@ public final class ModConfigs {
     public static final ForgeConfigSpec.BooleanValue GENERATE_NETHER_PROSPERITY;
     public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_RATE;
     public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_SIZE;
-    public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_HEIGHT;
+    public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_MIN_Y;
+    public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_MAX_Y;
     public static final ForgeConfigSpec.BooleanValue GENERATE_NETHER_INFERIUM;
     public static final ForgeConfigSpec.IntValue NETHER_INFERIUM_SPAWN_RATE;
     public static final ForgeConfigSpec.IntValue NETHER_INFERIUM_SPAWN_SIZE;
-    public static final ForgeConfigSpec.IntValue NETHER_INFERIUM_SPAWN_HEIGHT;
+    public static final ForgeConfigSpec.IntValue NETHER_INFERIUM_SPAWN_MIN_Y;
+    public static final ForgeConfigSpec.IntValue NETHER_INFERIUM_SPAWN_MAX_Y;
     public static final ForgeConfigSpec.BooleanValue GENERATE_END_PROSPERITY;
     public static final ForgeConfigSpec.IntValue END_PROSPERITY_SPAWN_RATE;
     public static final ForgeConfigSpec.IntValue END_PROSPERITY_SPAWN_SIZE;
-    public static final ForgeConfigSpec.IntValue END_PROSPERITY_SPAWN_HEIGHT;
+    public static final ForgeConfigSpec.IntValue END_PROSPERITY_SPAWN_MIN_Y;
+    public static final ForgeConfigSpec.IntValue END_PROSPERITY_SPAWN_MAX_Y;
     public static final ForgeConfigSpec.BooleanValue GENERATE_END_INFERIUM;
     public static final ForgeConfigSpec.IntValue END_INFERIUM_SPAWN_RATE;
     public static final ForgeConfigSpec.IntValue END_INFERIUM_SPAWN_SIZE;
-    public static final ForgeConfigSpec.IntValue END_INFERIUM_SPAWN_HEIGHT;
+    public static final ForgeConfigSpec.IntValue END_INFERIUM_SPAWN_MIN_Y;
+    public static final ForgeConfigSpec.IntValue END_INFERIUM_SPAWN_MAX_Y;
 
     // Common
     static {
@@ -63,10 +67,14 @@ public final class ModConfigs {
                 .comment("The maximum amount of Nether Prosperity Ore blocks that can spawn in a vein.")
                 .translation("configGui.mysticalagradditions.nether_prosperity_spawn_size")
                 .defineInRange("netherProsperitySpawnSize", 8, 0, Integer.MAX_VALUE);
-        NETHER_PROSPERITY_SPAWN_HEIGHT = common
+        NETHER_PROSPERITY_SPAWN_MIN_Y = common
+                .comment("The minimum Y level that Nether Prosperity Ore veins can spawn.")
+                .translation("configGui.mysticalagradditions.nether_prosperity_spawn_min_y")
+                .defineInRange("netherProsperitySpawnMinY", 10, 0, 128);
+        NETHER_PROSPERITY_SPAWN_MAX_Y = common
                 .comment("The maximum Y level that Nether Prosperity Ore veins can spawn.")
-                .translation("configGui.mysticalagradditions.nether_prosperity_spawn_height")
-                .defineInRange("netherProsperitySpawnHeight", 100, 0, 128);
+                .translation("configGui.mysticalagradditions.nether_prosperity_spawn_max_y")
+                .defineInRange("netherProsperitySpawnMaxY", 100, 0, 128);
         GENERATE_NETHER_INFERIUM = common
                 .comment("Should Nether Inferium Ore generate in the world?")
                 .translation("configGui.mysticalagradditions.generate_nether_inferium")
@@ -79,10 +87,14 @@ public final class ModConfigs {
                 .comment("The maximum amount of Nether Inferium Ore blocks that can spawn in a vein.")
                 .translation("configGui.mysticalagradditions.nether_inferium_spawn_size")
                 .defineInRange("netherInferiumSpawnSize", 8, 0, Integer.MAX_VALUE);
-        NETHER_INFERIUM_SPAWN_HEIGHT = common
+        NETHER_INFERIUM_SPAWN_MIN_Y = common
+                .comment("The minimum Y level that Nether Inferium Ore veins can spawn.")
+                .translation("configGui.mysticalagradditions.nether_inferium_spawn_min_y")
+                .defineInRange("netherInferiumSpawnMinY", 10, 0, 128);
+        NETHER_INFERIUM_SPAWN_MAX_Y = common
                 .comment("The maximum Y level that Nether Inferium Ore veins can spawn.")
-                .translation("configGui.mysticalagradditions.nether_inferium_spawn_height")
-                .defineInRange("netherInferiumSpawnHeight", 100, 0, 128);
+                .translation("configGui.mysticalagradditions.nether_inferium_spawn_max_y")
+                .defineInRange("netherInferiumSpawnMaxY", 100, 0, 128);
         GENERATE_END_PROSPERITY = common
                 .comment("Should End Prosperity Ore generate in the world?")
                 .translation("configGui.mysticalagradditions.generate_end_prosperity")
@@ -95,10 +107,14 @@ public final class ModConfigs {
                 .comment("The maximum amount of End Prosperity Ore blocks that can spawn in a vein.")
                 .translation("configGui.mysticalagradditions.end_prosperity_spawn_size")
                 .defineInRange("endProsperitySpawnSize", 8, 0, Integer.MAX_VALUE);
-        END_PROSPERITY_SPAWN_HEIGHT = common
+        END_PROSPERITY_SPAWN_MIN_Y = common
+                .comment("The minimum Y level that Prosperity Ore veins can spawn.")
+                .translation("configGui.mysticalagradditions.end_prosperity_spawn_min_y")
+                .defineInRange("endProsperitySpawnMinY", 10, 0, 128);
+        END_PROSPERITY_SPAWN_MAX_Y = common
                 .comment("The maximum Y level that Prosperity Ore veins can spawn.")
-                .translation("configGui.mysticalagradditions.end_prosperity_spawn_height")
-                .defineInRange("endProsperitySpawnHeight", 100, 0, 128);
+                .translation("configGui.mysticalagradditions.end_prosperity_spawn_max_y")
+                .defineInRange("endProsperitySpawnMaxY", 100, 0, 128);
         GENERATE_END_INFERIUM = common
                 .comment("Should End Inferium Ore generate in the world?")
                 .translation("configGui.mysticalagradditions.generate_end_inferium")
@@ -111,10 +127,14 @@ public final class ModConfigs {
                 .comment("The maximum amount of End Inferium Ore blocks that can spawn in a vein.")
                 .translation("configGui.mysticalagradditions.end_inferium_spawn_size")
                 .defineInRange("endInferiumSpawnSize", 8, 0, Integer.MAX_VALUE);
-        END_INFERIUM_SPAWN_HEIGHT = common
+        END_INFERIUM_SPAWN_MIN_Y = common
+                .comment("The minimum Y level that End Inferium Ore veins can spawn.")
+                .translation("configGui.mysticalagradditions.end_inferium_spawn_min_y")
+                .defineInRange("endInferiumSpawnMinY", 10, 0, 128);
+        END_INFERIUM_SPAWN_MAX_Y = common
                 .comment("The maximum Y level that End Inferium Ore veins can spawn.")
-                .translation("configGui.mysticalagradditions.end_inferium_spawn_height")
-                .defineInRange("endInferiumSpawnHeight", 100, 0, 128);
+                .translation("configGui.mysticalagradditions.end_inferium_spawn_max_y")
+                .defineInRange("endInferiumSpawnMaxY", 100, 0, 128);
         common.pop();
 
         COMMON = common.build();
