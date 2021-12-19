@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mysticalagradditions:inferium_paxel",
+    "mysticalagradditions:prudentium_paxel",
+    "mysticalagradditions:tertium_paxel",
+    "mysticalagradditions:imperium_paxel",
+    "mysticalagradditions:supremium_paxel"
+  ]
+}
