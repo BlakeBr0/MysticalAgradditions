@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mysticalagradditions:item/awakened_draconium_essence"
+    "layer0": "mysticalagradditions:item/essence/awakened_draconium_essence"
   }
 }

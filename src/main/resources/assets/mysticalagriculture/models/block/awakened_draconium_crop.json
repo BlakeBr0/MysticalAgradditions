@@ -1,6 +1,6 @@
 {
   "parent": "mysticalagriculture:block/mystical_resource_crop_7",
   "textures": {
-    "flower": "mysticalagradditions:block/awakened_draconium_flower"
+    "flower": "mysticalagradditions:block/flower/awakened_draconium_flower"
   }
 }

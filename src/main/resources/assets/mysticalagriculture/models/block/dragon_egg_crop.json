@@ -1,6 +1,6 @@
 {
   "parent": "mysticalagriculture:block/mystical_resource_crop_7",
   "textures": {
-    "flower": "mysticalagradditions:block/dragon_egg_flower"
+    "flower": "mysticalagradditions:block/flower/dragon_egg_flower"
   }
 }

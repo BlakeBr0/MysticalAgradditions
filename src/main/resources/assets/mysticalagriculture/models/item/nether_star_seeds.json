@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mysticalagradditions:item/nether_star_seeds"
+    "layer0": "mysticalagradditions:item/seeds/nether_star_seeds"
   }
 }

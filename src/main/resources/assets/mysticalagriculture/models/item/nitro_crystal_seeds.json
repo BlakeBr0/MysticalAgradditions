@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mysticalagradditions:item/nitro_crystal_seeds"
+    "layer0": "mysticalagradditions:item/seeds/nitro_crystal_seeds"
   }
 }
