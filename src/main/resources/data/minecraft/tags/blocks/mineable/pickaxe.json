@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "mysticalagradditions:insanium_block",
+    "mysticalagradditions:insanium_ingot_block",
+    "mysticalagradditions:insanium_gemstone_block",
+    "mysticalagradditions:inferium_coal_block",
+    "mysticalagradditions:prudentium_coal_block",
+    "mysticalagradditions:tertium_coal_block",
+    "mysticalagradditions:imperium_coal_block",
+    "mysticalagradditions:supremium_coal_block",
+    "mysticalagradditions:insanium_coal_block",
+    "mysticalagradditions:nether_prosperity_ore",
+    "mysticalagradditions:nether_inferium_ore",
+    "mysticalagradditions:end_prosperity_ore",
+    "mysticalagradditions:end_inferium_ore",
+    "mysticalagradditions:nether_star_crux",
+    "mysticalagradditions:dragon_egg_crux",
+    "mysticalagradditions:awakened_draconium_crux",
+    "mysticalagradditions:nitro_crystal_crux"
+  ]
+}
