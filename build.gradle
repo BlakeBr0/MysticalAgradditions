@@ -93,10 +93,6 @@ minecraft {
 }
 
 //dependencies {
-//    minecraft 'net.minecraftforge:forge:1.16.5-36.1.1'
-//
-//    compileOnly fg.deobf('vazkii.patchouli:Patchouli:1.16.2-47')
-//
 //    compileOnly fg.deobf('slimeknights.tconstruct:TConstruct:1.16.5-3.1.0.231')
 //    compileOnly fg.deobf('slimeknights.mantle:Mantle:1.16.5-1.6.114')
 //}
@@ -108,6 +104,7 @@ dependencies {
     implementation project(':MysticalAgriculture')
     implementation fg.deobf('curse.maven:jade-324717:3544015')
 
+    runtimeOnly fg.deobf('vazkii.patchouli:Patchouli:1.18.1-61')
     runtimeOnly fg.deobf('mezz.jei:jei-1.18.1:9.1.0.41')
 
     compileOnly 'mezz.jei:jei-1.18.1:9.1.0.41:api'
