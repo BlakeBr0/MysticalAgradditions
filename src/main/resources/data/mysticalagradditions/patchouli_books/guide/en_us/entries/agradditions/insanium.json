@@ -1,6 +1,6 @@
 {
   "name": "book.mysticalagriculture.entry.insanium",
-  "category": "agradditions",
+  "category": "mysticalagradditions:agradditions",
   "icon": "mysticalagradditions:insanium_essence",
   "sortnum": 500,
   "pages": [

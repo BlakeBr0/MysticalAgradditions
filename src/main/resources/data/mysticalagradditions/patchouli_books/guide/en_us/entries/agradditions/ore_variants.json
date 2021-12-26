@@ -1,6 +1,6 @@
 {
   "name": "book.mysticalagriculture.entry.ore_variants",
-  "category": "agradditions",
+  "category": "mysticalagradditions:agradditions",
   "icon": "mysticalagradditions:nether_inferium_ore",
   "sortnum": 503,
   "pages": [
