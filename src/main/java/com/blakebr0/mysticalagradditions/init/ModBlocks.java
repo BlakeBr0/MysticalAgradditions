@@ -19,6 +19,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -26,6 +28,7 @@ import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
 
 public final class ModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, MysticalAgradditions.MOD_ID);
+	public static final Map<String, Supplier<BlockItem>> BLOCK_ITEMS = new LinkedHashMap<>();
 
 	public static final RegistryObject<Block> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.STONE, SoundType.STONE, 4.0F, 6.0F));
 	public static final RegistryObject<Block> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.METAL, SoundType.METAL, 5.0F, 6.0F));
@@ -59,7 +62,7 @@ public final class ModBlocks {
 
 	private static RegistryObject<Block> register(String name, Supplier<Block> block, Function<RegistryObject<Block>, Supplier<? extends BlockItem>> item) {
 		var reg = REGISTRY.register(name, block);
-		ModItems.REGISTRY.register(name, () -> item.apply(reg).get());
+		BLOCK_ITEMS.put(name, () -> item.apply(reg).get());
 		return reg;
 	}
 

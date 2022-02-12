@@ -18,10 +18,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.function.Supplier;
 
 import static com.blakebr0.mysticalagradditions.MysticalAgradditions.ITEM_GROUP;
@@ -30,8 +26,11 @@ public final class ModItems {
 	private static final Item.Properties BUCKET_PROPERTIES = new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(ITEM_GROUP);
 
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, MysticalAgradditions.MOD_ID);
-	public static final List<Supplier<Item>> BLOCK_ENTRIES = new ArrayList<>();
-	public static final Map<RegistryObject<Item>, Supplier<Item>> ENTRIES = new LinkedHashMap<>();
+
+	// register block items here for class load order purposes
+	static {
+		ModBlocks.BLOCK_ITEMS.forEach(REGISTRY::register);
+	}
 
 	public static final RegistryObject<Item> INSANIUM_ESSENCE = register("insanium_essence", () -> new EssenceItem(ModCorePlugin.CROP_TIER_6, p -> p.tab(ITEM_GROUP)));
 	public static final RegistryObject<Item> INSANIUM_INGOT = register("insanium_ingot");
