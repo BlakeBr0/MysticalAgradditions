@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.mysticalagradditions.client.ModelHandler;
+import com.blakebr0.mysticalagradditions.compat.tconstruct.ModModifiers;
 import com.blakebr0.mysticalagradditions.config.MAConfig;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
@@ -39,7 +40,7 @@ public final class MysticalAgradditions {
 		ModItems.REGISTRY.register(bus);
 
 		if (ModList.get().isLoaded("tconstruct")) {
-//			ModModifiers.REGISTRY.register(bus);
+			ModModifiers.REGISTRY.register(bus);
 		}
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {

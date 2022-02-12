@@ -1,0 +1,14 @@
+{
+  "modifier.mysticalagradditions": {
+    "prosperous": "#A3C5C5",
+    "soul_siphoner": "#8C563C"
+  },
+  "material.mysticalagradditions": {
+    "inferium": "#748E00",
+    "prudentium": "#008C23",
+    "tertium": "#B74900",
+    "imperium": "#007FDB",
+    "supremium": "#C40000",
+    "soulium": "#8C563C"
+  }
+}
