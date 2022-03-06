@@ -3,6 +3,7 @@ package com.blakebr0.mysticalagradditions.world;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -41,20 +42,20 @@ public final class ModWorldgenRegistration {
         switch (category) {
             case NETHER -> {
                 if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, placedNetherProsperityOreFeature);
+                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherProsperityOreFeature));
                 }
 
                 if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, placedNetherInferiumOreFeature);
+                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherInferiumOreFeature));
                 }
             }
             case THEEND -> {
                 if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, placedEndProsperityOreFeature);
+                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndProsperityOreFeature));
                 }
 
                 if (ModConfigs.GENERATE_END_INFERIUM.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, placedEndInferiumOreFeature);
+                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndInferiumOreFeature));
                 }
             }
             default -> { }
@@ -71,9 +72,9 @@ public final class ModWorldgenRegistration {
         maxY = ModConfigs.NETHER_PROSPERITY_SPAWN_MAX_Y.get();
         rate = ModConfigs.NETHER_PROSPERITY_SPAWN_RATE.get();
         targets = List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_PROSPERITY_ORE.get().defaultBlockState()));
-        feature = Feature.ORE.configured(new OreConfiguration(targets, size));
+        feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedNetherProsperityOreFeature = feature.placed(List.of(
+        placedNetherProsperityOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
@@ -88,9 +89,9 @@ public final class ModWorldgenRegistration {
         maxY = ModConfigs.NETHER_INFERIUM_SPAWN_MAX_Y.get();
         rate = ModConfigs.NETHER_INFERIUM_SPAWN_RATE.get();
         targets = List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_INFERIUM_ORE.get().defaultBlockState()));
-        feature = Feature.ORE.configured(new OreConfiguration(targets, size));
+        feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedNetherInferiumOreFeature = feature.placed(List.of(
+        placedNetherInferiumOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
@@ -105,9 +106,9 @@ public final class ModWorldgenRegistration {
         maxY = ModConfigs.END_PROSPERITY_SPAWN_MAX_Y.get();
         rate = ModConfigs.END_PROSPERITY_SPAWN_RATE.get();
         targets = List.of(OreConfiguration.target(END_STONE_RULE_TEST, ModBlocks.END_PROSPERITY_ORE.get().defaultBlockState()));
-        feature = Feature.ORE.configured(new OreConfiguration(targets, size));
+        feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedEndProsperityOreFeature = feature.placed(List.of(
+        placedEndProsperityOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
@@ -122,9 +123,9 @@ public final class ModWorldgenRegistration {
         maxY = ModConfigs.END_INFERIUM_SPAWN_MAX_Y.get();
         rate = ModConfigs.END_INFERIUM_SPAWN_RATE.get();
         targets = List.of(OreConfiguration.target(END_STONE_RULE_TEST, ModBlocks.END_INFERIUM_ORE.get().defaultBlockState()));
-        feature = Feature.ORE.configured(new OreConfiguration(targets, size));
+        feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedEndInferiumOreFeature = feature.placed(List.of(
+        placedEndInferiumOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),

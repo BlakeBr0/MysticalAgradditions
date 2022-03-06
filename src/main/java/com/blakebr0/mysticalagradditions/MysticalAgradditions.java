@@ -22,12 +22,14 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Mod(MysticalAgradditions.MOD_ID)
 public final class MysticalAgradditions {
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
-
+	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 	public static final CreativeModeTab ITEM_GROUP = new MACreativeTab();
 
 	public MysticalAgradditions() {
