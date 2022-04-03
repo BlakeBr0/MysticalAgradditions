@@ -44,6 +44,8 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
 
     @Override
     public void onRegisterCrops(ICropRegistry registry) {
+        registry.registerTier(CROP_TIER_6);
+
         registry.register(NETHER_STAR);
         registry.register(DRAGON_EGG);
 
