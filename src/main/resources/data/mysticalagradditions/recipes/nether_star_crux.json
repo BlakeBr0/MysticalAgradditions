@@ -1,5 +1,11 @@
 {
   "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:nether_star"
+    }
+  ],
   "pattern": [
     "ESE",
     "WDW",

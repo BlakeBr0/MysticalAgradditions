@@ -9,6 +9,7 @@ public final class ModConfigs {
     public static final ForgeConfigSpec.IntValue DRAGON_SCALES_AMOUNT;
     public static final ForgeConfigSpec.BooleanValue FERTILIZABLE_CROPS;
     public static final ForgeConfigSpec.IntValue ESSENCE_APPLE_DURATION;
+    public static final ForgeConfigSpec.BooleanValue HIDE_UNUSED_CRUXES;
 
     public static final ForgeConfigSpec.BooleanValue GENERATE_NETHER_PROSPERITY;
     public static final ForgeConfigSpec.IntValue NETHER_PROSPERITY_SPAWN_RATE;
@@ -48,6 +49,9 @@ public final class ModConfigs {
         ESSENCE_APPLE_DURATION = common
                 .comment("The duration of each Essence Apples effects in seconds.")
                 .defineInRange("essenceAppleDuration", 180, 1, Integer.MAX_VALUE);
+        HIDE_UNUSED_CRUXES = common
+                .comment("Should Cruxes for disabled crops be hidden and not have recipes?")
+                .define("hideUnusedCruxes", false);
         common.pop();
 
         common.comment("World generation options.").push("World");

@@ -1,5 +1,11 @@
 {
   "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:dragon_egg"
+    }
+  ],
   "pattern": [
     "ECE",
     "CDC",

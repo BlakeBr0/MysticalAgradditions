@@ -4,6 +4,7 @@ import com.blakebr0.cucumber.block.BaseBlock;
 import com.blakebr0.cucumber.block.BaseOreBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
+import com.blakebr0.mysticalagradditions.block.CruxBlock;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
@@ -44,10 +45,10 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> NETHER_INFERIUM_ORE = register("nether_inferium_ore", () -> new BaseOreBlock(Material.STONE, SoundType.STONE, 3.0F, 3.0F, 2, 5));
 	public static final RegistryObject<Block> END_PROSPERITY_ORE = register("end_prosperity_ore", () -> new BaseOreBlock(Material.STONE, SoundType.STONE, 3.0F, 3.0F, 2, 5));
 	public static final RegistryObject<Block> END_INFERIUM_ORE = register("end_inferium_ore", () -> new BaseOreBlock(Material.STONE, SoundType.STONE, 3.0F, 3.0F, 2, 5));
-	public static final RegistryObject<Block> NETHER_STAR_CRUX = register("nether_star_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
-	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
-	public static final RegistryObject<Block> AWAKENED_DRACONIUM_CRUX = register("awakened_draconium_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
-	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
+	public static final RegistryObject<Block> NETHER_STAR_CRUX = register("nether_star_crux", () -> new CruxBlock(ModCorePlugin.NETHER_STAR));
+	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new CruxBlock(ModCorePlugin.DRAGON_EGG));
+	public static final RegistryObject<Block> AWAKENED_DRACONIUM_CRUX = register("awakened_draconium_crux", () -> new CruxBlock(ModCorePlugin.AWAKENED_DRACONIUM));
+	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new CruxBlock(ModCorePlugin.NITRO_CRYSTAL));
 
 	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_INFERIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
 	public static final RegistryObject<Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_PRUDENTIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
@@ -66,7 +67,7 @@ public final class ModBlocks {
 		return reg;
 	}
 
-	public static RegistryObject<Block> registerNoItem(String name, Supplier<Block> block) {
+	private static RegistryObject<Block> registerNoItem(String name, Supplier<Block> block) {
 		return REGISTRY.register(name, block);
 	}
 }
