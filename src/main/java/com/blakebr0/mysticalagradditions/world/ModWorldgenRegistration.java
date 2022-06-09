@@ -21,11 +21,10 @@ import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import java.util.List;
 
+// TODO: 1.19
 public final class ModWorldgenRegistration {
     private static final RuleTest END_STONE_RULE_TEST = new BlockMatchTest(Blocks.END_STONE);
 
@@ -34,33 +33,33 @@ public final class ModWorldgenRegistration {
     private static PlacedFeature placedEndProsperityOreFeature;
     private static PlacedFeature placedEndInferiumOreFeature;
 
-    @SubscribeEvent
-    public void onBiomesLoading(BiomeLoadingEvent event) {
-        var category = event.getCategory();
-        var generation = event.getGeneration();
-
-        switch (category) {
-            case NETHER -> {
-                if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherProsperityOreFeature));
-                }
-
-                if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherInferiumOreFeature));
-                }
-            }
-            case THEEND -> {
-                if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndProsperityOreFeature));
-                }
-
-                if (ModConfigs.GENERATE_END_INFERIUM.get()) {
-                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndInferiumOreFeature));
-                }
-            }
-            default -> { }
-        }
-    }
+//    @SubscribeEvent
+//    public void onBiomesLoading(BiomeLoadingEvent event) {
+//        var category = event.getCategory();
+//        var generation = event.getGeneration();
+//
+//        switch (category) {
+//            case NETHER -> {
+//                if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
+//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherProsperityOreFeature));
+//                }
+//
+//                if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
+//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherInferiumOreFeature));
+//                }
+//            }
+//            case THEEND -> {
+//                if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
+//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndProsperityOreFeature));
+//                }
+//
+//                if (ModConfigs.GENERATE_END_INFERIUM.get()) {
+//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndInferiumOreFeature));
+//                }
+//            }
+//            default -> { }
+//        }
+//    }
 
     public static void onCommonSetup() {
         int size, rate, minY, maxY;

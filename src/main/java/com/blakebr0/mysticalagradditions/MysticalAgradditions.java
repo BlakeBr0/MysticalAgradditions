@@ -42,7 +42,8 @@ public final class MysticalAgradditions {
 		ModItems.REGISTRY.register(bus);
 
 		if (ModList.get().isLoaded("tconstruct")) {
-			ModModifiers.REGISTRY.register(bus);
+			// TODO: 1.19, tinkers
+//			ModModifiers.REGISTRY.register(bus);
 		}
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {

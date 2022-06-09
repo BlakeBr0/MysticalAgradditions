@@ -3,7 +3,6 @@ package com.blakebr0.mysticalagradditions.util;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -55,11 +54,11 @@ public enum EssenceAppleTier {
     public List<Component> getTooltip() {
         if (this.tooltip.isEmpty()) {
             Arrays.stream(this.effects).forEach(e -> {
-                var buff = new TextComponent(e.getDisplayName().getString() + " II");
+                var buff = Component.literal(e.getDisplayName().getString() + " II");
                 var buffDuration = ModConfigs.ESSENCE_APPLE_DURATION.get();
                 var minutes = Math.floorDiv(buffDuration, 60);
                 var seconds = String.format("%02d", buffDuration % 60);
-                var duration = new TextComponent(minutes + ":" + seconds);
+                var duration = Component.literal(minutes + ":" + seconds);
 
                 this.tooltip.add(ModTooltips.BUFF_LINE.args(buff, duration).build());
             });
