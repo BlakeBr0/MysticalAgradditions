@@ -6,6 +6,7 @@ import com.blakebr0.mysticalagradditions.config.MAConfig;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
+import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
@@ -40,6 +41,7 @@ public final class MysticalAgradditions {
 
 		ModBlocks.REGISTRY.register(bus);
 		ModItems.REGISTRY.register(bus);
+		ModBiomeModifiers.REGISTRY.register(bus);
 
 		if (ModList.get().isLoaded("tconstruct")) {
 			// TODO: 1.19, tinkers
@@ -49,8 +51,6 @@ public final class MysticalAgradditions {
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
 			bus.register(new ColorHandler());
 		});
-
-		MinecraftForge.EVENT_BUS.register(new ModWorldgenRegistration());
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModConfigs.COMMON);
 	}

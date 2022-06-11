@@ -9,7 +9,6 @@ import net.minecraft.data.BuiltinRegistries;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -24,42 +23,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 
 import java.util.List;
 
-// TODO: 1.19
 public final class ModWorldgenRegistration {
     private static final RuleTest END_STONE_RULE_TEST = new BlockMatchTest(Blocks.END_STONE);
-
-    private static PlacedFeature placedNetherProsperityOreFeature;
-    private static PlacedFeature placedNetherInferiumOreFeature;
-    private static PlacedFeature placedEndProsperityOreFeature;
-    private static PlacedFeature placedEndInferiumOreFeature;
-
-//    @SubscribeEvent
-//    public void onBiomesLoading(BiomeLoadingEvent event) {
-//        var category = event.getCategory();
-//        var generation = event.getGeneration();
-//
-//        switch (category) {
-//            case NETHER -> {
-//                if (ModConfigs.GENERATE_NETHER_PROSPERITY.get()) {
-//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherProsperityOreFeature));
-//                }
-//
-//                if (ModConfigs.GENERATE_NETHER_INFERIUM.get()) {
-//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedNetherInferiumOreFeature));
-//                }
-//            }
-//            case THEEND -> {
-//                if (ModConfigs.GENERATE_END_PROSPERITY.get()) {
-//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndProsperityOreFeature));
-//                }
-//
-//                if (ModConfigs.GENERATE_END_INFERIUM.get()) {
-//                    generation.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, Holder.direct(placedEndInferiumOreFeature));
-//                }
-//            }
-//            default -> { }
-//        }
-//    }
 
     public static void onCommonSetup() {
         int size, rate, minY, maxY;
@@ -73,7 +38,7 @@ public final class ModWorldgenRegistration {
         targets = List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_PROSPERITY_ORE.get().defaultBlockState()));
         feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedNetherProsperityOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
+        var placedNetherProsperityOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
@@ -90,7 +55,7 @@ public final class ModWorldgenRegistration {
         targets = List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModBlocks.NETHER_INFERIUM_ORE.get().defaultBlockState()));
         feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedNetherInferiumOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
+        var placedNetherInferiumOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
@@ -107,7 +72,7 @@ public final class ModWorldgenRegistration {
         targets = List.of(OreConfiguration.target(END_STONE_RULE_TEST, ModBlocks.END_PROSPERITY_ORE.get().defaultBlockState()));
         feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedEndProsperityOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
+        var placedEndProsperityOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
@@ -124,7 +89,7 @@ public final class ModWorldgenRegistration {
         targets = List.of(OreConfiguration.target(END_STONE_RULE_TEST, ModBlocks.END_INFERIUM_ORE.get().defaultBlockState()));
         feature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(targets, size));
 
-        placedEndInferiumOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
+        var placedEndInferiumOreFeature = new PlacedFeature(Holder.direct(feature), List.of(
                 CountPlacement.of(rate),
                 InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)),
