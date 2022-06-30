@@ -93,7 +93,7 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19-41.0.1'
+    minecraft "net.minecraftforge:forge:${forge_version}"
 
     implementation project(':Cucumber')
     implementation project(':MysticalAgriculture')
@@ -103,9 +103,10 @@ dependencies {
     compileOnly fg.deobf('slimeknights.mantle:Mantle:1.18.1-1.8.35')
 
     runtimeOnly fg.deobf('vazkii.patchouli:Patchouli:1.18.2-67')
-    runtimeOnly fg.deobf('mezz.jei:jei-1.18.2:9.7.0.193')
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
-    compileOnly 'mezz.jei:jei-1.18.2:9.7.0.193:api'
+    compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
 }
 
 jar {
