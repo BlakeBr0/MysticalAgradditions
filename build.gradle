@@ -97,12 +97,12 @@ dependencies {
 
     implementation project(':Cucumber')
     implementation project(':MysticalAgriculture')
-    implementation fg.deobf('curse.maven:jade-324717:3822958')
+    implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
     // TODO: update to 1.18.2 and mark as implementation
     compileOnly fg.deobf('slimeknights.tconstruct:TConstruct:1.18.1-3.4.0.41')
     compileOnly fg.deobf('slimeknights.mantle:Mantle:1.18.1-1.8.35')
 
-    runtimeOnly fg.deobf('vazkii.patchouli:Patchouli:1.18.2-67')
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
     compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
