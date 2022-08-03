@@ -17,7 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 public final class ModBiomeModifiers {
     public static final DeferredRegister<Codec<? extends BiomeModifier>> REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, MysticalAgradditions.MOD_ID);
 
-    public static final RegistryObject<Codec<NetherProsperityOreModifier>> NETHER_PROSPERITY_ORE = REGISTRY.register("nether_inferium_ore", () ->
+    public static final RegistryObject<Codec<NetherProsperityOreModifier>> NETHER_PROSPERITY_ORE = REGISTRY.register("nether_prosperity_ore", () ->
             RecordCodecBuilder.create(builder -> builder.group(
                     Biome.LIST_CODEC.fieldOf("biomes").forGetter(NetherProsperityOreModifier::biomes),
                     PlacedFeature.CODEC.fieldOf("feature").forGetter(NetherProsperityOreModifier::feature)
@@ -27,12 +27,12 @@ public final class ModBiomeModifiers {
                     Biome.LIST_CODEC.fieldOf("biomes").forGetter(NetherInferiumOreModifier::biomes),
                     PlacedFeature.CODEC.fieldOf("feature").forGetter(NetherInferiumOreModifier::feature)
             ).apply(builder, NetherInferiumOreModifier::new)));
-    public static final RegistryObject<Codec<EndProsperityOreModifier>> END_PROSPERITY_ORE = REGISTRY.register("nether_inferium_ore", () ->
+    public static final RegistryObject<Codec<EndProsperityOreModifier>> END_PROSPERITY_ORE = REGISTRY.register("end_prosperity_ore", () ->
             RecordCodecBuilder.create(builder -> builder.group(
                     Biome.LIST_CODEC.fieldOf("biomes").forGetter(EndProsperityOreModifier::biomes),
                     PlacedFeature.CODEC.fieldOf("feature").forGetter(EndProsperityOreModifier::feature)
             ).apply(builder, EndProsperityOreModifier::new)));
-    public static final RegistryObject<Codec<EndInferiumOreModifier>> END_INFERIUM_ORE = REGISTRY.register("nether_inferium_ore", () ->
+    public static final RegistryObject<Codec<EndInferiumOreModifier>> END_INFERIUM_ORE = REGISTRY.register("end_inferium_ore", () ->
             RecordCodecBuilder.create(builder -> builder.group(
                     Biome.LIST_CODEC.fieldOf("biomes").forGetter(EndInferiumOreModifier::biomes),
                     PlacedFeature.CODEC.fieldOf("feature").forGetter(EndInferiumOreModifier::feature)
