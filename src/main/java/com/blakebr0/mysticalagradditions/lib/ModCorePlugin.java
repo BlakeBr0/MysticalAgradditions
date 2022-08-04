@@ -14,6 +14,7 @@ import com.blakebr0.mysticalagriculture.api.registry.ICropRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 
 import java.util.Arrays;
 
@@ -21,7 +22,7 @@ import static com.blakebr0.mysticalagradditions.MysticalAgradditions.MOD_ID;
 
 @MysticalAgriculturePlugin
 public final class ModCorePlugin implements IMysticalAgriculturePlugin {
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = !FMLEnvironment.production;
 
     public static final CropTier CROP_TIER_6 = new CropTier(new ResourceLocation(MOD_ID, "6"), 6, 0x40005E, ChatFormatting.DARK_PURPLE);
 

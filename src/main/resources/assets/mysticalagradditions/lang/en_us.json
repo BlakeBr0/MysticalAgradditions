@@ -62,6 +62,13 @@
   "fluid.mysticalagradditions.molten_supremium": "Molten Supremium",
   "fluid.mysticalagradditions.molten_soulium": "Molten Soulium",
 
+  "fluid_type.mysticalagradditions.molten_inferium": "Molten Inferium",
+  "fluid_type.mysticalagradditions.molten_prudentium": "Molten Prudentium",
+  "fluid_type.mysticalagradditions.molten_tertium": "Molten Tertium",
+  "fluid_type.mysticalagradditions.molten_imperium": "Molten Imperium",
+  "fluid_type.mysticalagradditions.molten_supremium": "Molten Supremium",
+  "fluid_type.mysticalagradditions.molten_soulium": "Molten Soulium",
+
   "tooltip.mysticalagradditions.drop_chance": "%s Drop Chance",
   "tooltip.mysticalagradditions.gives_buffs": "Gives Buffs:",
   "tooltip.mysticalagradditions.buff_line": " - %s (%s)",

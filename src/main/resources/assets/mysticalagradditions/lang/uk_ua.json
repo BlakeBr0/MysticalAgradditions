@@ -62,6 +62,13 @@
   "fluid.mysticalagradditions.molten_supremium": "Розплавлений супремій",
   "fluid.mysticalagradditions.molten_soulium": "Розплавлений соулій",
 
+  "fluid_type.mysticalagradditions.molten_inferium": "Розплавлений інферій",
+  "fluid_type.mysticalagradditions.molten_prudentium": "Розплавлений прудентій",
+  "fluid_type.mysticalagradditions.molten_tertium": "Розплавлений тертій",
+  "fluid_type.mysticalagradditions.molten_imperium": "Розплавлений імперій",
+  "fluid_type.mysticalagradditions.molten_supremium": "Розплавлений супремій",
+  "fluid_type.mysticalagradditions.molten_soulium": "Розплавлений соулій",
+
   "tooltip.mysticalagradditions.drop_chance": "Шанс випадання: %s",
   "tooltip.mysticalagradditions.gives_buffs": "Дає ефекти:",
   "tooltip.mysticalagradditions.buff_line": " - %s (%s)",

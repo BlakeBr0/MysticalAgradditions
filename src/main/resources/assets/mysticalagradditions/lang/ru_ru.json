@@ -17,7 +17,7 @@
   "block.mysticalagradditions.end_inferium_ore": "Инфериевая руда Энда",
   "block.mysticalagradditions.nether_star_crux": "Основание из Звезды Незера",
   "block.mysticalagradditions.dragon_egg_crux": "Основание из Яйца Дракона",
-    "block.mysticalagradditions.awakened_draconium_crux": "Основание из пробуждённого дракония",
+  "block.mysticalagradditions.awakened_draconium_crux": "Основание из пробуждённого дракония",
   "block.mysticalagradditions.nitro_crystal_crux": "Основание из Нитро-кристалла",
 
   "item.mysticalagradditions.insanium_essence": "Инсаниевая эссенция",
@@ -61,6 +61,13 @@
   "fluid.mysticalagradditions.molten_imperium": "Расплавленный империй",
   "fluid.mysticalagradditions.molten_supremium": "Расплавленный супремий",
   "fluid.mysticalagradditions.molten_soulium": "Расплавленный соулий",
+
+  "fluid_type.mysticalagradditions.molten_inferium": "Расплавленный инферий",
+  "fluid_type.mysticalagradditions.molten_prudentium": "Расплавленный прудентий",
+  "fluid_type.mysticalagradditions.molten_tertium": "Расплавленный тертий",
+  "fluid_type.mysticalagradditions.molten_imperium": "Расплавленный империй",
+  "fluid_type.mysticalagradditions.molten_supremium": "Расплавленный супремий",
+  "fluid_type.mysticalagradditions.molten_soulium": "Расплавленный соулий",
 
   "tooltip.mysticalagradditions.drop_chance": "Шанс выпадения: %s",
   "tooltip.mysticalagradditions.gives_buffs": "Даёт эффекты:",

@@ -9,6 +9,7 @@ import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
+import com.blakebr0.mysticalagradditions.init.ModFluidTypes;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
@@ -43,6 +44,7 @@ public final class MysticalAgradditions {
 		ModBlocks.REGISTRY.register(bus);
 		ModItems.REGISTRY.register(bus);
 		ModBiomeModifiers.REGISTRY.register(bus);
+		ModFluidTypes.REGISTRY.register(bus);
 
 		if (ModList.get().isLoaded("tconstruct")) {
 			// TODO: 1.19, tinkers

@@ -61,6 +61,13 @@
   "fluid.mysticalagradditions.molten_imperium": "Stopione Imperium",
   "fluid.mysticalagradditions.molten_supremium": "Stopione Supremium",
   "fluid.mysticalagradditions.molten_soulium": "Stopione Soulium",
+
+  "fluid_type.mysticalagradditions.molten_inferium": "Stopione Inferium",
+  "fluid_type.mysticalagradditions.molten_prudentium": "Stopione Prudentium",
+  "fluid_type.mysticalagradditions.molten_tertium": "Stopione Tertium",
+  "fluid_type.mysticalagradditions.molten_imperium": "Stopione Imperium",
+  "fluid_type.mysticalagradditions.molten_supremium": "Stopione Supremium",
+  "fluid_type.mysticalagradditions.molten_soulium": "Stopione Soulium",
   
   "tooltip.mysticalagradditions.drop_chance": "Szansa wypadnięcia: %s",
   "tooltip.mysticalagradditions.gives_buffs": "Efekty:",

@@ -2,18 +2,13 @@ package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.common.SoundActions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.function.Supplier;
 
 public final class ModFluids {
     private static final ResourceLocation STILL_TEXTURE = new ResourceLocation(MysticalAgradditions.MOD_ID, "block/molten_still");
@@ -32,12 +27,12 @@ public final class ModFluids {
     public static final RegistryObject<Fluid> MOLTEN_SOULIUM = RegistryObject.create(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium"), ForgeRegistries.FLUIDS);
     public static final RegistryObject<Fluid> MOLTEN_SOULIUM_FLOWING = RegistryObject.create(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_soulium_flowing"), ForgeRegistries.FLUIDS);
 
-    private static final ForgeFlowingFluid.Properties MOLTEN_INFERIUM_PROPERTIES = new ForgeFlowingFluid.Properties(newMoltenAttributes(0xFF748E00), MOLTEN_INFERIUM, MOLTEN_INFERIUM_FLOWING);
-    private static final ForgeFlowingFluid.Properties MOLTEN_PRUDENTIUM_PROPERTIES = new ForgeFlowingFluid.Properties(newMoltenAttributes(0xFF008C23), MOLTEN_PRUDENTIUM, MOLTEN_PRUDENTIUM_FLOWING);
-    private static final ForgeFlowingFluid.Properties MOLTEN_TERTIUM_PROPERTIES = new ForgeFlowingFluid.Properties(newMoltenAttributes(0xFFB74900), MOLTEN_TERTIUM, MOLTEN_TERTIUM_FLOWING);
-    private static final ForgeFlowingFluid.Properties MOLTEN_IMPERIUM_PROPERTIES = new ForgeFlowingFluid.Properties(newMoltenAttributes(0xFF007FDB), MOLTEN_IMPERIUM, MOLTEN_IMPERIUM_FLOWING);
-    private static final ForgeFlowingFluid.Properties MOLTEN_SUPREMIUM_PROPERTIES = new ForgeFlowingFluid.Properties(newMoltenAttributes(0xFFC40000), MOLTEN_SUPREMIUM, MOLTEN_SUPREMIUM_FLOWING);
-    private static final ForgeFlowingFluid.Properties MOLTEN_SOULIUM_PROPERTIES = new ForgeFlowingFluid.Properties(newMoltenAttributes(0xFF8c563c), MOLTEN_SOULIUM, MOLTEN_SOULIUM_FLOWING);
+    private static final ForgeFlowingFluid.Properties MOLTEN_INFERIUM_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.MOLTEN_INFERIUM, MOLTEN_INFERIUM, MOLTEN_INFERIUM_FLOWING);
+    private static final ForgeFlowingFluid.Properties MOLTEN_PRUDENTIUM_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.MOLTEN_PRUDENTIUM, MOLTEN_PRUDENTIUM, MOLTEN_PRUDENTIUM_FLOWING);
+    private static final ForgeFlowingFluid.Properties MOLTEN_TERTIUM_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.MOLTEN_TERTIUM, MOLTEN_TERTIUM, MOLTEN_TERTIUM_FLOWING);
+    private static final ForgeFlowingFluid.Properties MOLTEN_IMPERIUM_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.MOLTEN_IMPERIUM, MOLTEN_IMPERIUM, MOLTEN_IMPERIUM_FLOWING);
+    private static final ForgeFlowingFluid.Properties MOLTEN_SUPREMIUM_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.MOLTEN_SUPREMIUM, MOLTEN_SUPREMIUM, MOLTEN_SUPREMIUM_FLOWING);
+    private static final ForgeFlowingFluid.Properties MOLTEN_SOULIUM_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.MOLTEN_SOULIUM, MOLTEN_SOULIUM, MOLTEN_SOULIUM_FLOWING);
 
     @SubscribeEvent
     public void onRegisterFluids(RegisterEvent event) {
@@ -109,14 +104,5 @@ public final class ModFluids {
                     new ForgeFlowingFluid.Flowing(MOLTEN_SOULIUM_PROPERTIES)
             );
         });
-    }
-
-    private static Supplier<FluidType> newMoltenAttributes(int color) {
-        var properties = FluidType.Properties.create()
-                .density(2000).viscosity(10000).temperature(1000)
-                .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL_LAVA)
-                .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY_LAVA);
-
-        return () -> new FluidType(properties);
     }
 }
