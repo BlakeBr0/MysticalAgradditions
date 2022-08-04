@@ -69,6 +69,8 @@
   "jei.desc.mysticalagradditions.withering_soul": "Dropped by the Wither upon death.",
   "jei.desc.mysticalagradditions.dragon_scale": "Dropped by the Ender Dragon upon death.",
 
+  "config.jade.plugin_mysticalagradditions.infused_farmland": "Essence Farmland tier",
+
   "cropTier.mysticalagradditions.6": "6",
 
   "crop.mysticalagradditions.nether_star": "Nether Star",

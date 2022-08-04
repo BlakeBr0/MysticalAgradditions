@@ -1,5 +1,6 @@
 package com.blakebr0.mysticalagradditions;
 
+import com.blakebr0.cucumber.helper.ConfigHelper;
 import com.blakebr0.mysticalagradditions.client.ModelHandler;
 import com.blakebr0.mysticalagradditions.compat.tconstruct.ModModifiers;
 import com.blakebr0.mysticalagradditions.config.MAConfig;
@@ -53,6 +54,8 @@ public final class MysticalAgradditions {
 		});
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModConfigs.COMMON);
+
+		ConfigHelper.load(ModConfigs.COMMON, "mysticalagradditions-common.toml");
 	}
 
 	@SubscribeEvent
