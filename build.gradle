@@ -31,7 +31,7 @@ repositories {
 }
 
 minecraft {
-    mappings channel: 'official', version: '1.19.1'
+    mappings channel: 'official', version: '1.19.2'
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -98,8 +98,8 @@ dependencies {
     implementation project(':Cucumber')
     implementation project(':MysticalAgriculture')
     implementation fg.deobf("curse.maven:jade-324717:${jade_version}")
-    implementation fg.deobf('slimeknights.tconstruct:TConstruct:1.18.2-3.5.1.31')
-    implementation fg.deobf('slimeknights.mantle:Mantle:1.18.2-1.9.27')
+    compileOnly fg.deobf('slimeknights.tconstruct:TConstruct:1.18.2-3.5.1.31') // TODO: implementation
+    compileOnly fg.deobf('slimeknights.mantle:Mantle:1.18.2-1.9.27') // TODO: implementation
 
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
