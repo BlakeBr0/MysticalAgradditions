@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.fml.ModList;
 
 public final class ModConfigs {
     public static final ForgeConfigSpec COMMON;
@@ -118,5 +119,9 @@ public final class ModConfigs {
         common.pop();
 
         COMMON = common.build();
+    }
+
+    public static boolean isTConstructInstalled() {
+        return ModList.get().isLoaded("tconstruct");
     }
 }

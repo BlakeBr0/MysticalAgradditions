@@ -6,13 +6,13 @@ import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
+import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 public final class ModFluids {
-    private static final ResourceLocation STILL_TEXTURE = new ResourceLocation(MysticalAgradditions.MOD_ID, "block/molten_still");
-    private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation(MysticalAgradditions.MOD_ID, "block/molten_flowing");
+    public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.FLUIDS, MysticalAgradditions.MOD_ID);
 
     public static final RegistryObject<Fluid> MOLTEN_INFERIUM = RegistryObject.create(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium"), ForgeRegistries.FLUIDS);
     public static final RegistryObject<Fluid> MOLTEN_INFERIUM_FLOWING = RegistryObject.create(new ResourceLocation(MysticalAgradditions.MOD_ID, "molten_inferium_flowing"), ForgeRegistries.FLUIDS);

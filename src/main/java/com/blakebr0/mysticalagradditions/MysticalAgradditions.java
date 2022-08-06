@@ -2,7 +2,6 @@ package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.cucumber.helper.ConfigHelper;
 import com.blakebr0.mysticalagradditions.client.ModelHandler;
-import com.blakebr0.mysticalagradditions.compat.tconstruct.ModModifiers;
 import com.blakebr0.mysticalagradditions.config.MAConfig;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
@@ -18,7 +17,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -33,7 +31,7 @@ public final class MysticalAgradditions {
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
-	public static final CreativeModeTab ITEM_GROUP = new MACreativeTab();
+	public static final CreativeModeTab CREATIVE_TAB = new MACreativeTab();
 
 	public MysticalAgradditions() {
 		var bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -46,7 +44,7 @@ public final class MysticalAgradditions {
 		ModBiomeModifiers.REGISTRY.register(bus);
 		ModFluidTypes.REGISTRY.register(bus);
 
-		if (ModList.get().isLoaded("tconstruct")) {
+		if (ModConfigs.isTConstructInstalled()) {
 			// TODO: 1.19, tinkers
 //			ModModifiers.REGISTRY.register(bus);
 		}
