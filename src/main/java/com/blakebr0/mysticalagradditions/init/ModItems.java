@@ -59,6 +59,7 @@ public final class ModItems {
 	public static final RegistryObject<Item> TERTIUM_PAXEL = register("tertium_paxel", () -> new EssencePaxelItem(ModItemTier.TERTIUM, 3, 1, p -> p.tab(CREATIVE_TAB)));
 	public static final RegistryObject<Item> IMPERIUM_PAXEL = register("imperium_paxel", () -> new EssencePaxelItem(ModItemTier.IMPERIUM, 4, 1, p -> p.tab(CREATIVE_TAB)));
 	public static final RegistryObject<Item> SUPREMIUM_PAXEL = register("supremium_paxel", () -> new EssencePaxelItem(ModItemTier.SUPREMIUM, 5, 1, p -> p.tab(CREATIVE_TAB)));
+	public static final RegistryObject<Item> AWAKENED_SUPREMIUM_PAXEL = register("awakened_supremium_paxel", () -> new EssencePaxelItem(ModItemTier.AWAKENED_SUPREMIUM, 5, 2, p -> p.tab(CREATIVE_TAB)));
 
 	public static final RegistryObject<Item> MOLTEN_INFERIUM_BUCKET = register("molten_inferium_bucket", () -> new BucketItem(ModFluids.MOLTEN_INFERIUM, BUCKET_PROPERTIES));
 	public static final RegistryObject<Item> MOLTEN_PRUDENTIUM_BUCKET = register("molten_prudentium_bucket", () -> new BucketItem(ModFluids.MOLTEN_PRUDENTIUM, BUCKET_PROPERTIES));

@@ -28,6 +28,10 @@ public enum ModItemTier implements Tier {
     SUPREMIUM(5, -1, 25.0F, 20.0F, 20, () -> {
         var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:supremium_ingot"));
         return Ingredient.of(item);
+    }),
+    AWAKENED_SUPREMIUM(5, -1, 30.0F, 25.0F, 22, () -> {
+        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation("mysticalagriculture:awakened_supremium_ingot"));
+        return Ingredient.of(item);
     });
 
     private final int harvestLevel;
