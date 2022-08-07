@@ -157,7 +157,7 @@ public class EssencePaxelItem extends BasePaxelItem implements ITinkerable {
         Multimap<Attribute, AttributeModifier> modifiers = HashMultimap.create();
 
         if (slot == EquipmentSlot.MAINHAND) {
-            modifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 4F, AttributeModifier.Operation.ADDITION));
+            modifiers.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", this.getAttackDamage(), AttributeModifier.Operation.ADDITION));
             modifiers.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3.2F, AttributeModifier.Operation.ADDITION));
 
             AugmentUtils.getAugments(stack).forEach(a -> {
