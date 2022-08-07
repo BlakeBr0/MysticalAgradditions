@@ -1,7 +1,6 @@
 package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.cucumber.helper.ConfigHelper;
-import com.blakebr0.mysticalagradditions.client.ModelHandler;
 import com.blakebr0.mysticalagradditions.config.MAConfig;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
@@ -20,7 +19,6 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -66,10 +64,5 @@ public final class MysticalAgradditions {
 			ModWorldgenRegistration.onCommonSetup();
 			MAConfig.onCommonSetup();
 		});
-	}
-
-	@SubscribeEvent
-	public void onClientSetup(FMLClientSetupEvent event) {
-		ModelHandler.onClientSetup();
 	}
 }
