@@ -1,7 +1,6 @@
 package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.cucumber.helper.ConfigHelper;
-import com.blakebr0.mysticalagradditions.config.MAConfig;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
@@ -62,7 +61,6 @@ public final class MysticalAgradditions {
 
 		event.enqueueWork(() -> {
 			ModWorldgenRegistration.onCommonSetup();
-			MAConfig.onCommonSetup();
 		});
 	}
 }

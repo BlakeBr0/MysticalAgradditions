@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.tool.BasePaxelItem;
-import com.blakebr0.mysticalagradditions.config.MAConfig;
+import com.blakebr0.mysticalagradditions.config.ModFeatureFlags;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagriculture.api.tinkering.AugmentType;
 import com.blakebr0.mysticalagriculture.api.tinkering.ITinkerable;
@@ -149,7 +149,7 @@ public class EssencePaxelItem extends BasePaxelItem implements ITinkerable {
 
     @Override
     public boolean isEnchantable(ItemStack stack) {
-        return MAConfig.getEnchantableSupremiumTools() || super.isEnchantable(stack);
+        return ModFeatureFlags.ENCHANTABLE_SUPREMIUM_TOOLS.isEnabled() || super.isEnchantable(stack);
     }
 
     @Override

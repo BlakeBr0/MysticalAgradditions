@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.BaseItem;
-import com.blakebr0.mysticalagradditions.config.MAConfig;
+import com.blakebr0.mysticalagradditions.config.ModFeatureFlags;
 import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.crop.ICropTierProvider;
 import com.blakebr0.mysticalagriculture.api.farmland.FarmlandConverter;
@@ -22,7 +22,7 @@ public class EssenceItem extends BaseItem implements IFarmlandConverter, ICropTi
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        if (!MAConfig.getEssenceFarmlandConversion())
+        if (!ModFeatureFlags.ESSENCE_FARMLAND_CONVERSION.isEnabled())
             return InteractionResult.PASS;
 
         return FarmlandConverter.convert(this, context);
