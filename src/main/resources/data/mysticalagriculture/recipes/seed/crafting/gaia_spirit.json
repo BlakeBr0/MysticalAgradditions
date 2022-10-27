@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mysticalagriculture:seeds",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:seed_crafting_recipes_enabled"
+    },
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:gaia_spirit"
+    },
+    {
+      "type": "mysticalagriculture:crop_has_material",
+      "crop": "mysticalagradditions:gaia_spirit"
+    }
+  ],
+  "pattern": [
+    "MEM",
+    "ESE",
+    "MEM"
+  ],
+  "key": {
+    "E": {
+      "type": "mysticalagriculture:crop_component",
+      "component": "essence",
+      "crop": "mysticalagradditions:gaia_spirit"
+    },
+    "S": {
+      "type": "mysticalagriculture:crop_component",
+      "component": "seed",
+      "crop": "mysticalagradditions:gaia_spirit"
+    },
+    "M": {
+      "type": "mysticalagriculture:crop_component",
+      "component": "material",
+      "crop": "mysticalagradditions:gaia_spirit"
+    }
+  },
+  "result": {
+    "item": "mysticalagriculture:gaia_spirit_seeds"
+  }
+}

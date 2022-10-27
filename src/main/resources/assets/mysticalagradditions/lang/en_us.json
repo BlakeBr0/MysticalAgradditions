@@ -17,6 +17,7 @@
   "block.mysticalagradditions.end_inferium_ore": "End Inferium Ore",
   "block.mysticalagradditions.nether_star_crux": "Nether Star Crux",
   "block.mysticalagradditions.dragon_egg_crux": "Dragon Egg Crux",
+  "block.mysticalagradditions.gaia_spirit_crux": "Gaia Spirit Crux",
   "block.mysticalagradditions.awakened_draconium_crux": "Awakened Draconium Crux",
   "block.mysticalagradditions.nitro_crystal_crux": "Nitro Crystal Crux",
 
@@ -83,6 +84,7 @@
 
   "crop.mysticalagradditions.nether_star": "Nether Star",
   "crop.mysticalagradditions.dragon_egg": "Dragon Egg",
+  "crop.mysticalagradditions.gaia_spirit": "Gaia Spirit",
   "crop.mysticalagradditions.awakened_draconium": "Awakened Draconium",
   "crop.mysticalagradditions.nitro_crystal": "Nitro Crystal",
 
