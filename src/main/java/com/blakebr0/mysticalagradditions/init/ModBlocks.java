@@ -48,6 +48,7 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> NETHER_STAR_CRUX = register("nether_star_crux", () -> new CruxBlock(ModCorePlugin.NETHER_STAR));
 	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new CruxBlock(ModCorePlugin.DRAGON_EGG));
 	public static final RegistryObject<Block> AWAKENED_DRACONIUM_CRUX = register("awakened_draconium_crux", () -> new CruxBlock(ModCorePlugin.AWAKENED_DRACONIUM));
+	public static final RegistryObject<Block> NEUTRONIUM_CRUX = register("neutronium_crux", () -> new CruxBlock(ModCorePlugin.NEUTRONIUM));
 	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new CruxBlock(ModCorePlugin.NITRO_CRYSTAL));
 
 	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_INFERIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));

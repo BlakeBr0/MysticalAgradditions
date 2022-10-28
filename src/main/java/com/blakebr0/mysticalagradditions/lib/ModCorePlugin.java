@@ -32,6 +32,9 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
     // DRACONIC EVOLUTION
     public static final Crop AWAKENED_DRACONIUM = new Crop(new ResourceLocation(MOD_ID, "awakened_draconium"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.tag("forge:ingots/draconium_awakened"));
 
+    // AVARITIA
+    public static final Crop NEUTRONIUM = new Crop(new ResourceLocation(MOD_ID, "neutronium"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("avaritia:neutronium_ingot"));
+
     // POWAH
     public static final Crop NITRO_CRYSTAL = new Crop(new ResourceLocation(MOD_ID, "nitro_crystal"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("powah:crystal_nitro"));
 
@@ -53,6 +56,9 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
         // DRACONIC EVOLUTION
         registry.register(withRequiredMods(AWAKENED_DRACONIUM, "draconicevolution"));
 
+        // AVARITIA
+        registry.register(withRequiredMods(NEUTRONIUM, "avaritia"));
+
         // POWAH
         registry.register(withRequiredMods(NITRO_CRYSTAL, "powah"));
     }
@@ -67,6 +73,7 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
         NETHER_STAR.setCruxBlock(ModBlocks.NETHER_STAR_CRUX);
         DRAGON_EGG.setCruxBlock(ModBlocks.DRAGON_EGG_CRUX);
         AWAKENED_DRACONIUM.setCruxBlock(ModBlocks.AWAKENED_DRACONIUM_CRUX);
+        NEUTRONIUM.setCruxBlock(ModBlocks.NEUTRONIUM_CRUX);
         NITRO_CRYSTAL.setCruxBlock(ModBlocks.NITRO_CRYSTAL_CRUX);
     }
 
