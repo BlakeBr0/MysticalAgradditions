@@ -1,0 +1,28 @@
+{
+  "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:neutronium"
+    }
+  ],
+  "pattern": [
+    "EWE",
+    "WDW",
+    "EWE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_essence"
+    },
+    "W": {
+      "item": "avaritia:neutronium_ingot"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/diamond"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:neutronium_crux"
+  }
+}
