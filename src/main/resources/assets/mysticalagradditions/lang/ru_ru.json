@@ -47,6 +47,7 @@
   "item.mysticalagradditions.tertium_paxel": "Тертиевый паксель",
   "item.mysticalagradditions.imperium_paxel": "Империевый паксель",
   "item.mysticalagradditions.supremium_paxel": "Супремиевый паксель",
+  "item.mysticalagradditions.awakened_supremium_paxel": "Пробуждённый супремиевый паксель",
 
   "item.mysticalagradditions.molten_inferium_bucket": "Ведро расплавленного инферия",
   "item.mysticalagradditions.molten_prudentium_bucket": "Ведро расплавленного прудентия",
@@ -68,6 +69,8 @@
 
   "jei.desc.mysticalagradditions.withering_soul": "Выпадает после смерти Визера.",
   "jei.desc.mysticalagradditions.dragon_scale": "Выпадает после смерти Эндер-дракона.",
+  
+    "config.jade.plugin_mysticalagradditions.infused_farmland": "Уровень эссенциевой пашни",
 
   "cropTier.mysticalagradditions.6": "6",
 
@@ -106,3 +109,4 @@
   "modifier.mysticalagradditions.soul_siphoner.flavor": "Душевный!",
   "modifier.mysticalagradditions.soul_siphoner.description": "Оружие высасывает души существ, как соулиевый кинжал."
 }
+
