@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.cucumber.helper.ConfigHelper;
+import com.blakebr0.mysticalagradditions.client.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;

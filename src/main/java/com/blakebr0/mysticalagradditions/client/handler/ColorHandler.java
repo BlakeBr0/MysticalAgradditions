@@ -1,4 +1,4 @@
-package com.blakebr0.mysticalagradditions.handler;
+package com.blakebr0.mysticalagradditions.client.handler;
 
 import com.blakebr0.cucumber.iface.IColored;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
