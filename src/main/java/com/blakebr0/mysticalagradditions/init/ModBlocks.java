@@ -4,7 +4,6 @@ import com.blakebr0.cucumber.block.BaseBlock;
 import com.blakebr0.cucumber.block.BaseOreBlock;
 import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
-import com.blakebr0.mysticalagradditions.block.CruxBlock;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
 import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
@@ -24,8 +23,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-import static com.blakebr0.mysticalagradditions.MysticalAgradditions.CREATIVE_TAB;
 
 public final class ModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, MysticalAgradditions.MOD_ID);

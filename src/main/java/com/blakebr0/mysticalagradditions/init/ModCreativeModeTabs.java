@@ -37,6 +37,10 @@ public final class ModCreativeModeTabs {
                     output.accept(ModBlocks.DRAGON_EGG_CRUX);
                 }
 
+                if (ModCorePlugin.GAIA_SPIRIT.isEnabled()) {
+                    output.accept(ModBlocks.GAIA_SPIRIT_CRUX);
+                }
+
                 if (ModCorePlugin.AWAKENED_DRACONIUM.isEnabled()) {
                     output.accept(ModBlocks.AWAKENED_DRACONIUM_CRUX);
                 }

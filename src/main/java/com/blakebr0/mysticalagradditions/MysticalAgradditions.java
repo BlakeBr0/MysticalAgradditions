@@ -9,7 +9,6 @@ import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModFluidTypes;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
-import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -56,9 +55,5 @@ public final class MysticalAgradditions {
 	@SubscribeEvent
 	public void onCommonSetup(FMLCommonSetupEvent event) {
 		MinecraftForge.EVENT_BUS.register(new MobDropsHandler());
-
-		event.enqueueWork(() -> {
-			ModWorldgenRegistration.onCommonSetup();
-		});
 	}
 }
