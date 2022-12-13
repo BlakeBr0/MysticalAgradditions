@@ -11,11 +11,10 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.List;
-import java.util.function.Function;
 
 public class WitheringSoulItem extends BaseItem {
-    public WitheringSoulItem(Function<Properties, Properties> properties) {
-        super(properties);
+    public WitheringSoulItem() {
+        super();
     }
 
     @OnlyIn(Dist.CLIENT)

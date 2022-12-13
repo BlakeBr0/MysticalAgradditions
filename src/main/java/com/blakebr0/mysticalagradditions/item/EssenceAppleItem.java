@@ -13,14 +13,13 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
-import java.util.function.Function;
 
 public class EssenceAppleItem extends BaseItem {
     private static final FoodProperties.Builder food = new FoodProperties.Builder().alwaysEat();
     private final EssenceAppleTier tier;
 
-    public EssenceAppleItem(EssenceAppleTier tier, Function<Properties, Properties> properties) {
-        super(properties.compose(p -> p.food(food.nutrition(tier.getHunger()).saturationMod(tier.getSaturation()).build())));
+    public EssenceAppleItem(EssenceAppleTier tier) {
+        super(p -> p.food(food.nutrition(tier.getHunger()).saturationMod(tier.getSaturation()).build()));
         this.tier = tier;
     }
 

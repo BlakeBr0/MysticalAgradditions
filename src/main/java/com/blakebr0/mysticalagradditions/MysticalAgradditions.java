@@ -2,7 +2,6 @@ package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.cucumber.helper.ConfigHelper;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
-import com.blakebr0.mysticalagradditions.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
@@ -10,7 +9,6 @@ import com.blakebr0.mysticalagradditions.init.ModFluidTypes;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.world.ModWorldgenRegistration;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,7 +26,6 @@ public final class MysticalAgradditions {
 	public static final String MOD_ID = "mysticalagradditions";
 	public static final String NAME = "Mystical Agradditions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
-	public static final CreativeModeTab CREATIVE_TAB = new MACreativeTab();
 
 	public MysticalAgradditions() {
 		var bus = FMLJavaModLoadingContext.get().getModEventBus();
