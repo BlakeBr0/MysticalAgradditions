@@ -30,7 +30,7 @@ public final class ModCorePlugin implements IMysticalAgriculturePlugin {
     public static final Crop DRAGON_EGG = new Crop(new ResourceLocation(MOD_ID, "dragon_egg"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("mysticalagradditions:dragon_scale"));
 
     // BOTANIA
-    public static final Crop GAIA_SPIRIT = new Crop(new ResourceLocation(MOD_ID, "gaia_spirit"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("mysticalagradditions:gaia_spirit"));
+    public static final Crop GAIA_SPIRIT = new Crop(new ResourceLocation(MOD_ID, "gaia_spirit"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.item("botania:life_essence"));
 
     // DRACONIC EVOLUTION
     public static final Crop AWAKENED_DRACONIUM = new Crop(new ResourceLocation(MOD_ID, "awakened_draconium"), CROP_TIER_6, CropType.RESOURCE, LazyIngredient.tag("forge:ingots/draconium_awakened"));
