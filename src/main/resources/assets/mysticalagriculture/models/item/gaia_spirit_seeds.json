@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mysticalagradditions:item/seeds/gaia_spirit_seeds"
+  }
+}

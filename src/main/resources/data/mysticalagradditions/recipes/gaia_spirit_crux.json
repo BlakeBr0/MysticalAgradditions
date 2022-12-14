@@ -1,0 +1,31 @@
+{
+  "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "mysticalagriculture:crop_enabled",
+      "crop": "mysticalagradditions:gaia_spirit"
+    }
+  ],
+  "pattern": [
+    "EHE",
+    "WDW",
+    "EWE"
+  ],
+  "key": {
+    "E": {
+      "item": "mysticalagradditions:insanium_essence"
+    },
+    "H": {
+      "item": "botania:terrasteel_block"
+    },
+    "W": {
+      "item": "botania:gaia_ingot"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/diamond"
+    }
+  },
+  "result": {
+    "item": "mysticalagradditions:gaia_spirit_crux"
+  }
+}
