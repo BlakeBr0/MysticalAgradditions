@@ -8,7 +8,6 @@ import com.blakebr0.mysticalagradditions.item.EssenceCoalItem;
 import com.blakebr0.mysticalagradditions.item.EssenceItem;
 import com.blakebr0.mysticalagradditions.item.EssencePaxelItem;
 import com.blakebr0.mysticalagradditions.item.WitheringSoulItem;
-import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import com.blakebr0.mysticalagradditions.lib.ModItemTier;
 import com.blakebr0.mysticalagradditions.util.EssenceAppleTier;
 import net.minecraft.world.item.BucketItem;
@@ -30,7 +29,7 @@ public final class ModItems {
 		ModBlocks.BLOCK_ITEMS.forEach(REGISTRY::register);
 	}
 
-	public static final RegistryObject<Item> INSANIUM_ESSENCE = register("insanium_essence", () -> new EssenceItem(ModCorePlugin.CROP_TIER_6));
+	public static final RegistryObject<Item> INSANIUM_ESSENCE = register("insanium_essence", () -> new EssenceItem(ModCropTiers.SIX));
 	public static final RegistryObject<Item> INSANIUM_INGOT = register("insanium_ingot");
 	public static final RegistryObject<Item> INSANIUM_NUGGET = register("insanium_nugget");
 	public static final RegistryObject<Item> INSANIUM_GEMSTONE = register("insanium_gemstone");

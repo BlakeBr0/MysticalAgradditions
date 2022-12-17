@@ -6,7 +6,6 @@ import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.item.EssenceCoalBlockItem;
-import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -31,7 +30,7 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> INSANIUM_BLOCK = register("insanium_block", () -> new BaseBlock(Material.STONE, SoundType.STONE, 4.0F, 6.0F));
 	public static final RegistryObject<Block> INSANIUM_INGOT_BLOCK = register("insanium_ingot_block", () -> new BaseBlock(Material.METAL, SoundType.METAL, 5.0F, 6.0F));
 	public static final RegistryObject<Block> INSANIUM_GEMSTONE_BLOCK = register("insanium_gemstone_block", () -> new BaseBlock(Material.METAL, SoundType.METAL, 5.0F, 6.0F));
-	public static final RegistryObject<Block> INSANIUM_FARMLAND = register("insanium_farmland", () -> new InfusedFarmlandBlock(ModCorePlugin.CROP_TIER_6));
+	public static final RegistryObject<Block> INSANIUM_FARMLAND = register("insanium_farmland", () -> new InfusedFarmlandBlock(ModCropTiers.SIX));
 	public static final RegistryObject<Block> INFERIUM_COAL_BLOCK = register("inferium_coal_block", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 21600));
 	public static final RegistryObject<Block> PRUDENTIUM_COAL_BLOCK = register("prudentium_coal_block", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 43200));
 	public static final RegistryObject<Block> TERTIUM_COAL_BLOCK = register("tertium_coal_block", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 6.0F), block -> () -> new EssenceCoalBlockItem(block.get(), 86400));

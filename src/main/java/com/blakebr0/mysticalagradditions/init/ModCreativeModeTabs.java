@@ -1,7 +1,6 @@
 package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.cucumber.util.FeatureFlagDisplayItemGenerator;
-import com.blakebr0.mysticalagradditions.lib.ModCorePlugin;
 import com.blakebr0.mysticalagriculture.MysticalAgriculture;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -29,23 +28,23 @@ public final class ModCreativeModeTabs {
                 output.accept(ModBlocks.END_PROSPERITY_ORE);
                 output.accept(ModBlocks.END_INFERIUM_ORE);
 
-                if (ModCorePlugin.NETHER_STAR.isEnabled()) {
+                if (ModCrops.NETHER_STAR.isEnabled()) {
                     output.accept(ModBlocks.NETHER_STAR_CRUX);
                 }
 
-                if (ModCorePlugin.DRAGON_EGG.isEnabled()) {
+                if (ModCrops.DRAGON_EGG.isEnabled()) {
                     output.accept(ModBlocks.DRAGON_EGG_CRUX);
                 }
 
-                if (ModCorePlugin.GAIA_SPIRIT.isEnabled()) {
+                if (ModCrops.GAIA_SPIRIT.isEnabled()) {
                     output.accept(ModBlocks.GAIA_SPIRIT_CRUX);
                 }
 
-                if (ModCorePlugin.AWAKENED_DRACONIUM.isEnabled()) {
+                if (ModCrops.AWAKENED_DRACONIUM.isEnabled()) {
                     output.accept(ModBlocks.AWAKENED_DRACONIUM_CRUX);
                 }
 
-                if (ModCorePlugin.NITRO_CRYSTAL.isEnabled()) {
+                if (ModCrops.NITRO_CRYSTAL.isEnabled()) {
                     output.accept(ModBlocks.NITRO_CRYSTAL_CRUX);
                 }
 
