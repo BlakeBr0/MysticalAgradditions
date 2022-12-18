@@ -7,6 +7,7 @@ The official release builds can be downloaded from the following websites.
 
 - [Blake's Mods](https://blakesmods.com/mystical-agradditions/download)
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/mystical-agradditions)
+- [Modrinth](https://modrinth.com/mod/mystical-agradditions)
 
 ## Development
 
