@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.cucumber.util.FeatureFlagDisplayItemGenerator;
-import com.blakebr0.mysticalagriculture.MysticalAgriculture;
+import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public final class ModCreativeModeTabs {
     @SubscribeEvent
     public void onRegisterCreativeModeTabs(CreativeModeTabEvent.Register event) {
-        event.registerCreativeModeTab(new ResourceLocation(MysticalAgriculture.MOD_ID, "creative_mode_tab"), (builder) -> {
+        event.registerCreativeModeTab(new ResourceLocation(MysticalAgradditions.MOD_ID, "creative_mode_tab"), (builder) -> {
             var displayItems = FeatureFlagDisplayItemGenerator.create((flagSet, output, hasPermission) -> {
                 output.accept(ModBlocks.INSANIUM_BLOCK);
                 output.accept(ModBlocks.INSANIUM_INGOT_BLOCK);

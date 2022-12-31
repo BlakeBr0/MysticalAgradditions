@@ -6,6 +6,7 @@ import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
+import com.blakebr0.mysticalagradditions.init.ModCreativeModeTabs;
 import com.blakebr0.mysticalagradditions.init.ModFluidTypes;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
@@ -31,6 +32,7 @@ public final class MysticalAgradditions {
 		var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		bus.register(this);
+		bus.register(new ModCreativeModeTabs());
 		bus.register(new ModFluids());
 
 		ModBlocks.REGISTRY.register(bus);
