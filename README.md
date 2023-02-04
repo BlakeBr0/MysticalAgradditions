@@ -10,7 +10,7 @@
     <a href="https://blakesmods.com/mystical-agradditions" alt="Minecraft Version">
         <img src="https://img.shields.io/endpoint?url=https://api.blakesmods.com/v2/badges/mysticalagradditions/mc_version&style=for-the-badge" />
     </a>
-    <a href="https://blakesmods.com/wiki/mysticalagradditions" alt="Docs">
+    <a href="https://blakesmods.com/wiki/mysticalagradditions" alt="Wiki">
         <img src="https://img.shields.io/static/v1?label=wiki&message=view&color=brightgreen&style=for-the-badge" />
     </a>
 </p>
