@@ -12,7 +12,7 @@ public final class ModCreativeModeTabs {
     @SubscribeEvent
     public void onRegisterCreativeModeTabs(CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(new ResourceLocation(MysticalAgradditions.MOD_ID, "creative_mode_tab"), (builder) -> {
-            var displayItems = FeatureFlagDisplayItemGenerator.create((flagSet, output, hasPermission) -> {
+            var displayItems = FeatureFlagDisplayItemGenerator.create((parameters, output) -> {
                 output.accept(ModBlocks.INSANIUM_BLOCK);
                 output.accept(ModBlocks.INSANIUM_INGOT_BLOCK);
                 output.accept(ModBlocks.INSANIUM_GEMSTONE_BLOCK);

@@ -49,7 +49,7 @@ public class InfusedFarmlandBlock extends FarmBlock implements IColored, IEssenc
 
     @Override
     public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        entity.causeFallDamage(fallDistance, 1.0F, DamageSource.FALL);
+        entity.causeFallDamage(fallDistance, 1.0F, level.damageSources().fall());
     }
 
     @Override
