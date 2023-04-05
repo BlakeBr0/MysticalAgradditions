@@ -120,7 +120,7 @@ dependencies {
     compileOnly fg.deobf('slimeknights.tconstruct:TConstruct:1.18.2-3.5.1.31') // TODO: implementation
     compileOnly fg.deobf('slimeknights.mantle:Mantle:1.18.2-1.9.27') // TODO: implementation
 
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
+    // runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${jei_mc_version}-forge:${jei_version}")
 
     compileOnly "mezz.jei:jei-${jei_mc_version}-common-api:${jei_version}"
