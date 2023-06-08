@@ -24,6 +24,9 @@ public final class ModCrops {
     // DRACONIC EVOLUTION
     public static final Crop AWAKENED_DRACONIUM = new Crop(new ResourceLocation(MOD_ID, "awakened_draconium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.tag("forge:ingots/draconium_awakened"));
 
+    // AVARITIA
+    public static final Crop NEUTRONIUM = new Crop(new ResourceLocation(MOD_ID, "neutronium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("avaritia:neutronium_ingot"));
+
     // POWAH
     public static final Crop NITRO_CRYSTAL = new Crop(new ResourceLocation(MOD_ID, "nitro_crystal"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("powah:crystal_nitro"));
 
@@ -37,6 +40,9 @@ public final class ModCrops {
         // DRACONIC EVOLUTION
         registry.register(withRequiredMods(AWAKENED_DRACONIUM, "draconicevolution"));
 
+        // AVARITIA
+        registry.register(withRequiredMods(NEUTRONIUM, "avaritia"));
+
         // POWAH
         registry.register(withRequiredMods(NITRO_CRYSTAL, "powah"));
     }
@@ -46,6 +52,7 @@ public final class ModCrops {
         DRAGON_EGG.setCruxBlock(ModBlocks.DRAGON_EGG_CRUX);
         GAIA_SPIRIT.setCruxBlock(ModBlocks.GAIA_SPIRIT_CRUX);
         AWAKENED_DRACONIUM.setCruxBlock(ModBlocks.AWAKENED_DRACONIUM_CRUX);
+        NEUTRONIUM.setCruxBlock(ModBlocks.NEUTRONIUM_CRUX);
         NITRO_CRYSTAL.setCruxBlock(ModBlocks.NITRO_CRYSTAL_CRUX);
     }
 
