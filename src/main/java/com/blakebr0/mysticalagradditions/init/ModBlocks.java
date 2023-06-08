@@ -45,6 +45,7 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> DRAGON_EGG_CRUX = register("dragon_egg_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> GAIA_SPIRIT_CRUX = register("gaia_spirit_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> AWAKENED_DRACONIUM_CRUX = register("awakened_draconium_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
+	public static final RegistryObject<Block> NEUTRONIUM_CRUX = register("neutronium_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 	public static final RegistryObject<Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", () -> new BaseBlock(Material.STONE, SoundType.STONE, 5.0F, 10.0F));
 
 	public static final RegistryObject<Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", () -> new LiquidBlock(() -> (FlowingFluid) ModFluids.MOLTEN_INFERIUM.get(), BlockBehaviour.Properties.copy(Blocks.LAVA)));
