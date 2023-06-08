@@ -19,6 +19,7 @@
   "block.mysticalagradditions.dragon_egg_crux": "Dragon Egg Crux",
   "block.mysticalagradditions.gaia_spirit_crux": "Gaia Spirit Crux",
   "block.mysticalagradditions.awakened_draconium_crux": "Awakened Draconium Crux",
+  "block.mysticalagradditions.neutronium_crux": "Neutronium Crux",
   "block.mysticalagradditions.nitro_crystal_crux": "Nitro Crystal Crux",
 
   "item.mysticalagradditions.insanium_essence": "Insanium Essence",
@@ -86,6 +87,7 @@
   "crop.mysticalagradditions.dragon_egg": "Dragon Egg",
   "crop.mysticalagradditions.gaia_spirit": "Gaia Spirit",
   "crop.mysticalagradditions.awakened_draconium": "Awakened Draconium",
+  "crop.mysticalagradditions.neutronium": "Neutronium",
   "crop.mysticalagradditions.nitro_crystal": "Nitro Crystal",
 
   "book.mysticalagriculture.category.agradditions.name": "Agradditions",
