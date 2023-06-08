@@ -17,7 +17,8 @@
   "block.mysticalagradditions.end_inferium_ore": "Инфериевая руда Энда",
   "block.mysticalagradditions.nether_star_crux": "Основание из Звезды Незера",
   "block.mysticalagradditions.dragon_egg_crux": "Основание из Яйца Дракона",
-    "block.mysticalagradditions.awakened_draconium_crux": "Основание из пробуждённого дракония",
+  "block.mysticalagradditions.gaia_spirit_crux": "Основание из Духа Гайи",
+  "block.mysticalagradditions.awakened_draconium_crux": "Основание из пробуждённого дракония",
   "block.mysticalagradditions.nitro_crystal_crux": "Основание из Нитро-кристалла",
 
   "item.mysticalagradditions.insanium_essence": "Инсаниевая эссенция",
@@ -63,6 +64,13 @@
   "fluid.mysticalagradditions.molten_supremium": "Расплавленный супремий",
   "fluid.mysticalagradditions.molten_soulium": "Расплавленный соулий",
 
+  "fluid_type.mysticalagradditions.molten_inferium": "Расплавленный инферий",
+  "fluid_type.mysticalagradditions.molten_prudentium": "Расплавленный прудентий",
+  "fluid_type.mysticalagradditions.molten_tertium": "Расплавленный тертий",
+  "fluid_type.mysticalagradditions.molten_imperium": "Расплавленный империй",
+  "fluid_type.mysticalagradditions.molten_supremium": "Расплавленный супремий",
+  "fluid_type.mysticalagradditions.molten_soulium": "Расплавленный соулий",
+
   "tooltip.mysticalagradditions.drop_chance": "Шанс выпадения: %s",
   "tooltip.mysticalagradditions.gives_buffs": "Даёт эффекты:",
   "tooltip.mysticalagradditions.buff_line": " - %s (%s)",
@@ -70,12 +78,13 @@
   "jei.desc.mysticalagradditions.withering_soul": "Выпадает после смерти Визера.",
   "jei.desc.mysticalagradditions.dragon_scale": "Выпадает после смерти Эндер-дракона.",
   
-    "config.jade.plugin_mysticalagradditions.infused_farmland": "Уровень эссенциевой пашни",
+  "config.jade.plugin_mysticalagradditions.infused_farmland": "Уровень эссенциевой пашни",
 
   "cropTier.mysticalagradditions.6": "6",
 
   "crop.mysticalagradditions.nether_star": "звезды Незера",
   "crop.mysticalagradditions.dragon_egg": "яйца дракона",
+  "crop.mysticalagradditions.gaia_spirit": "духа гайи",
   "crop.mysticalagradditions.awakened_draconium": "пробуждённого дракония",
   "crop.mysticalagradditions.nitro_crystal": "нитро-кристалла",
 
@@ -109,4 +118,3 @@
   "modifier.mysticalagradditions.soul_siphoner.flavor": "Душевный!",
   "modifier.mysticalagradditions.soul_siphoner.description": "Оружие высасывает души существ, как соулиевый кинжал."
 }
-
