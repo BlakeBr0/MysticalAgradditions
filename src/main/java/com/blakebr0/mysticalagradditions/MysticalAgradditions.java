@@ -32,11 +32,11 @@ public final class MysticalAgradditions {
 		var bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		bus.register(this);
-		bus.register(new ModCreativeModeTabs());
 		bus.register(new ModFluids());
 
 		ModBlocks.REGISTRY.register(bus);
 		ModItems.REGISTRY.register(bus);
+		ModCreativeModeTabs.REGISTRY.register(bus);
 		ModBiomeModifiers.REGISTRY.register(bus);
 		ModFluidTypes.REGISTRY.register(bus);
 
