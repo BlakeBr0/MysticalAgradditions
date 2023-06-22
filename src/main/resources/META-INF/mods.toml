@@ -37,6 +37,6 @@ license="MIT"
     [[dependencies.mysticalagradditions]]
         modId="mysticalagriculture"
         mandatory=true
-        versionRange="[6.1.0,)"
+        versionRange="[7.0.0,)"
         ordering="AFTER"
         side="BOTH"
