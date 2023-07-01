@@ -19,6 +19,7 @@
   "block.mysticalagradditions.dragon_egg_crux": "Основание из Яйца Дракона",
   "block.mysticalagradditions.gaia_spirit_crux": "Основание из Духа Гайи",
   "block.mysticalagradditions.awakened_draconium_crux": "Основание из пробуждённого дракония",
+  "block.mysticalagradditions.neutronium_crux": "Основание из нейтрония",
   "block.mysticalagradditions.nitro_crystal_crux": "Основание из Нитро-кристалла",
 
   "item.mysticalagradditions.insanium_essence": "Инсаниевая эссенция",
@@ -86,6 +87,7 @@
   "crop.mysticalagradditions.dragon_egg": "яйца дракона",
   "crop.mysticalagradditions.gaia_spirit": "духа гайи",
   "crop.mysticalagradditions.awakened_draconium": "пробуждённого дракония",
+  "crop.mysticalagradditions.neutronium": "нейтрония",
   "crop.mysticalagradditions.nitro_crystal": "нитро-кристалла",
 
   "book.mysticalagriculture.category.agradditions.name": "Agradditions",
