@@ -2,6 +2,10 @@
   "type": "crafting_shaped",
   "conditions": [
     {
+      "type": "forge:mod_loaded",
+      "modid": "draconicevolution"
+    },
+    {
       "type": "mysticalagriculture:crop_enabled",
       "crop": "mysticalagradditions:awakened_draconium"
     }

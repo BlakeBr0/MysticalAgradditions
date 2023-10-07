@@ -2,6 +2,10 @@
   "type": "crafting_shaped",
   "conditions": [
     {
+      "type": "forge:mod_loaded",
+      "modid": "powah"
+    },
+    {
       "type": "mysticalagriculture:crop_enabled",
       "crop": "mysticalagradditions:nitro_crystal"
     }
