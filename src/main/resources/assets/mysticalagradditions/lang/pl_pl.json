@@ -87,10 +87,10 @@
   "book.mysticalagriculture.category.agradditions.description": "Ta sekcja omawia przedmioty dodane przez Mystical Agradditions.",
   
   "book.mysticalagriculture.entry.insanium": "Esencja Insanium",
-  "book.mysticalagriculture.entry.insanium.page.1": "Esencja Insanium to dodatkowy poziom esencji, wyższy od Supremium. Może być użyte do wytworzenia upraw poziomu szóstego. $(br2)Uprawy poziomu szóstego mają kilka wyjątkowych cech: $(br2)$(li)Wymagają $(l:mysticalagradditions:agradditions/cruxes)katalizatora$() pod polem uprawnym, aby móc rosnąć.$() $(br2)$(li)Nigdy nie dają dodatkowego nasiona przy zbieraniu.$()",
+  "book.mysticalagriculture.entry.insanium.page.1": "Esencja Insanium to dodatkowy poziom esencji, wyższy od Supremium. Może być użyte do wytworzenia upraw poziomu szóstego. $(br2)Uprawy poziomu szóstego mają kilka wyjątkowych cech: $(br2)$(li)Wymagają $(l:mysticalagriculture:agradditions/cruxes)katalizatora$() pod polem uprawnym, aby móc rosnąć.$() $(br2)$(li)Nigdy nie dają dodatkowego nasiona przy zbieraniu.$()",
   "book.mysticalagriculture.entry.insanium.page.2": "$(li)$(bold)zazwyczaj$() nie można przyspieszyć ich wzrostu $(l:advances/mystical_fertilizer)mistycznym nawozem$() lub $(l:basics/fertilized_essence)esencją nawożenia$().$()",
   "book.mysticalagriculture.entry.cruxes": "Katalizatory",
-  "book.mysticalagriculture.entry.cruxes.page.1": "Katalizatory to bloki, które należy postawić pod $(l:mysticalagradditions:agradditions/insanium)uprawami poziomu szóstego$(), aby mogły rosnąć.",
+  "book.mysticalagriculture.entry.cruxes.page.1": "Katalizatory to bloki, które należy postawić pod $(l:mysticalagriculture:agradditions/insanium)uprawami poziomu szóstego$(), aby mogły rosnąć.",
   "book.mysticalagriculture.entry.paxels": "Wielonarzędzia z esencji",
   "book.mysticalagriculture.entry.paxels.page.1": "Wielonarzędzia z esencji to narzędzia, które działają jak kilof, siekiera i łopata, wszystko w jednym.",
   "book.mysticalagriculture.entry.ore_variants": "Rodzaje rud",

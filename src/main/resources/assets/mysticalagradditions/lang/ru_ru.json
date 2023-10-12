@@ -94,10 +94,10 @@
   "book.mysticalagriculture.category.agradditions.description": "В этом разделе находится дополнительный контент, добавленный Mystical Agradditions.",
 
   "book.mysticalagriculture.entry.insanium": "Инсаниевая эссенция",
-  "book.mysticalagriculture.entry.insanium.page.1": "Инсаниевая эссенция - это дополнительный уровень эссенции. Используется для создания культур 6-го уровня. $(br2)Культуры 6-го уровня обладают некоторыми уникальными свойствами, которых нет у культур более низких уровней: $(br2)$(li)Для их роста требуется $(l:mysticalagradditions:agradditions/cruxes)Основание$() под пашней.$() $(br2)$(li)При сборе урожая второе семечко никогда не выпадет.$()",
+  "book.mysticalagriculture.entry.insanium.page.1": "Инсаниевая эссенция - это дополнительный уровень эссенции. Используется для создания культур 6-го уровня. $(br2)Культуры 6-го уровня обладают некоторыми уникальными свойствами, которых нет у культур более низких уровней: $(br2)$(li)Для их роста требуется $(l:mysticalagriculture:agradditions/cruxes)Основание$() под пашней.$() $(br2)$(li)При сборе урожая второе семечко никогда не выпадет.$()",
   "book.mysticalagriculture.entry.insanium.page.2": "$(li)Их $(bold)нельзя$() выращивать с помощью $(l:advances/mystical_fertilizer)Мистического Удобрения$() или $(l:basics/fertilized_essence)Удобряющей эссенции$().$()",
   "book.mysticalagriculture.entry.cruxes": "Основания",
-  "book.mysticalagriculture.entry.cruxes.page.1": "Основания - это блоки, которые вы ставите под $(l:mysticalagradditions:agradditions/insanium)Культуры 6-го уровня$(), чтобы они могли расти.",
+  "book.mysticalagriculture.entry.cruxes.page.1": "Основания - это блоки, которые вы ставите под $(l:mysticalagriculture:agradditions/insanium)Культуры 6-го уровня$(), чтобы они могли расти.",
   "book.mysticalagriculture.entry.paxels": "Паксели из эссенции",
   "book.mysticalagriculture.entry.paxels.page.1": "Паксели из эссенции - это инструмент, который одновременно работает как кирка, топор и лопата",
   "book.mysticalagriculture.entry.ore_variants": "Виды руд",

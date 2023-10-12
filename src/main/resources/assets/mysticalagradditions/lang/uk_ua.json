@@ -87,10 +87,10 @@
   "book.mysticalagriculture.category.agradditions.description": "У цьому розділі міститься додатковий контент, доданий Mystical Agradditions.",
 
   "book.mysticalagriculture.entry.insanium": "Інсанієва есенція",
-  "book.mysticalagriculture.entry.insanium.page.1": "Інсанієва есенція - це додатковий рівень есенції. Використовується для створення культур 6-го рівня. $(br2)Культури 6-го рівня мають деякі унікальні властивості, яких немає у культур нижчих рівнів: $(br2)$(li)Для їхнього зростання потрібно $(l:mysticalagradditions:agradditions/cruxes)Основи$() під ріллю.$() $(br2)$(li)При збиранні врожаю друге насіння ніколи не випаде.$()",
+  "book.mysticalagriculture.entry.insanium.page.1": "Інсанієва есенція - це додатковий рівень есенції. Використовується для створення культур 6-го рівня. $(br2)Культури 6-го рівня мають деякі унікальні властивості, яких немає у культур нижчих рівнів: $(br2)$(li)Для їхнього зростання потрібно $(l:mysticalagriculture:agradditions/cruxes)Основи$() під ріллю.$() $(br2)$(li)При збиранні врожаю друге насіння ніколи не випаде.$()",
   "book.mysticalagriculture.entry.insanium.page.2": "$(li)Їх $(bold)не можна$() вирощувати за допомогою $(l:advances/mystical_fertilizer)Містичного Добрива$() або $(l:basics/fertilized_essence)Удобрювальної есенції$().$()",
   "book.mysticalagriculture.entry.cruxes": "Основа",
-  "book.mysticalagriculture.entry.cruxes.page.1": "Основа - це блоки, які ви ставите під $(l:mysticalagradditions:agradditions/insanium)Культури 6-го рівня$(), щоб вони могли зростати.",
+  "book.mysticalagriculture.entry.cruxes.page.1": "Основа - це блоки, які ви ставите під $(l:mysticalagriculture:agradditions/insanium)Культури 6-го рівня$(), щоб вони могли зростати.",
   "book.mysticalagriculture.entry.paxels": "Пакселі з есенції",
   "book.mysticalagriculture.entry.paxels.page.1": "Пакселі з есенції - це інструмент, який одночасно працює як кайло, сокира та лопата",
   "book.mysticalagriculture.entry.ore_variants": "Види руд",
