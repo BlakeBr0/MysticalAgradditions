@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#c:storage_blocks/imperium_coal",
+    "#c:storage_blocks/inferium_coal",
+    "#c:storage_blocks/insanium_coal",
+    "#c:storage_blocks/insanium_essence",
+    "#c:storage_blocks/insanium_gemstone",
+    "#c:storage_blocks/insanium_ingot",
+    "#c:storage_blocks/prudentium_coal",
+    "#c:storage_blocks/supremium_coal",
+    "#c:storage_blocks/tertium_coal"
+  ]
+}
