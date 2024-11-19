@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "avaritia:neutronium_ingot",
+      "required": false
+    },
+    {
+      "id": "avaritia:neutron_ingot",
+      "required": false
+    }
+  ]
+}
