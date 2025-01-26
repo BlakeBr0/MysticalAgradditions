@@ -11,8 +11,8 @@
   },
   "result": {
     "fluid": "mysticalagradditions:molten_supremium",
-    "amount": 16
+    "amount": 10
   },
-  "temperature": 1000,
-  "time": 33
+  "temperature": 800,
+  "time": 20
 }

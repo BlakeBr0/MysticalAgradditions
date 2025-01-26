@@ -8,8 +8,8 @@
   ],
   "fluid": {
     "name": "mysticalagradditions:molten_inferium",
-    "amount": 144
+    "amount": 90
   },
-  "temperature": 700,
+  "temperature": 800,
   "output": "mysticalagradditions:inferium"
 }

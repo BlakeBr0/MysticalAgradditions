@@ -11,8 +11,8 @@
   },
   "result": {
     "fluid": "mysticalagradditions:molten_imperium",
-    "amount": 144
+    "amount": 90
   },
-  "temperature": 950,
-  "time": 80
+  "temperature": 800,
+  "time": 60
 }

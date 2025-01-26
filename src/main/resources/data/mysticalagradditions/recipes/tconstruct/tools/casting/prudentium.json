@@ -8,8 +8,8 @@
   ],
   "fluid": {
     "name": "mysticalagradditions:molten_prudentium",
-    "amount": 144
+    "amount": 90
   },
-  "temperature": 750,
+  "temperature": 800,
   "output": "mysticalagradditions:prudentium"
 }

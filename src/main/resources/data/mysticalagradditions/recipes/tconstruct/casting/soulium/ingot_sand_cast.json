@@ -12,7 +12,7 @@
   "cast_consumed": true,
   "fluid": {
     "name": "mysticalagradditions:molten_soulium",
-    "amount": 144
+    "amount": 90
   },
   "result": "mysticalagriculture:soulium_ingot",
   "cooling_time": 60

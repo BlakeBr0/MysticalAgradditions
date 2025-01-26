@@ -1,5 +1,6 @@
 {
   "craftable": false,
+  "hidden": false,
   "tier": 4,
   "sortOrder": 153
 }

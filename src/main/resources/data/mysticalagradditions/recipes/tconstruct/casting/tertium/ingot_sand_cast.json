@@ -12,8 +12,8 @@
   "cast_consumed": true,
   "fluid": {
     "name": "mysticalagradditions:molten_tertium",
-    "amount": 144
+    "amount": 90
   },
   "result": "mysticalagriculture:tertium_ingot",
-  "cooling_time": 80
+  "cooling_time": 60
 }

@@ -11,8 +11,8 @@
   },
   "result": {
     "fluid": "mysticalagradditions:molten_tertium",
-    "amount": 16
+    "amount": 10
   },
-  "temperature": 900,
-  "time": 27
+  "temperature": 800,
+  "time": 20
 }

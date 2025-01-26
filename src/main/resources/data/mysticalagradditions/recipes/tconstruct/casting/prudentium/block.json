@@ -8,8 +8,8 @@
   ],
   "fluid": {
     "name": "mysticalagradditions:molten_prudentium",
-    "amount": 1296
+    "amount": 810
   },
   "result": "mysticalagriculture:prudentium_ingot_block",
-  "cooling_time": 210
+  "cooling_time": 180
 }

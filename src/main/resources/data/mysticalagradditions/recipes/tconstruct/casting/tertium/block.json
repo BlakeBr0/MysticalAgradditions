@@ -8,8 +8,8 @@
   ],
   "fluid": {
     "name": "mysticalagradditions:molten_tertium",
-    "amount": 1296
+    "amount": 810
   },
   "result": "mysticalagriculture:tertium_ingot_block",
-  "cooling_time": 240
+  "cooling_time": 180
 }

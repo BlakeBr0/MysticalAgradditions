@@ -2,6 +2,7 @@ package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.cucumber.helper.ConfigHelper;
 import com.blakebr0.mysticalagradditions.client.handler.ColorHandler;
+import com.blakebr0.mysticalagradditions.compat.tconstruct.ModModifiers;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
@@ -41,8 +42,7 @@ public final class MysticalAgradditions {
 		ModFluidTypes.REGISTRY.register(bus);
 
 		if (ModConfigs.isTConstructInstalled()) {
-			// TODO: 1.19, tinkers
-//			ModModifiers.REGISTRY.register(bus);
+			ModModifiers.REGISTRY.register(bus);
 		}
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
