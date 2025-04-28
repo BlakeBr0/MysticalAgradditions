@@ -37,7 +37,7 @@ public class EssencePaxelItem extends BasePaxelItem implements ITinkerable {
         super(tier, p -> {
             p.component(MysticalAgricultureDataComponentTypes.EQUIPPED_AUGMENTS, new ArrayList<>());
 
-            if (tier.getUses() == -1) {
+            if (tier.getUses() == 0) {
                 p.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
             }
 

@@ -28,11 +28,11 @@ public enum ModItemTier implements Tier {
         var item = BuiltInRegistries.ITEM.get(MysticalAgricultureAPI.resource("imperium_ingot"));
         return Ingredient.of(item);
     }),
-    SUPREMIUM(MysticalAgricultureTags.Blocks.INCORRECT_FOR_SUPREMIUM_TOOL, -1, 25.0F, 20.0F, 20, () -> {
+    SUPREMIUM(MysticalAgricultureTags.Blocks.INCORRECT_FOR_SUPREMIUM_TOOL, 0, 25.0F, 20.0F, 20, () -> {
         var item = BuiltInRegistries.ITEM.get(MysticalAgricultureAPI.resource("supremium_ingot"));
         return Ingredient.of(item);
     }),
-    AWAKENED_SUPREMIUM(MysticalAgricultureTags.Blocks.INCORRECT_FOR_AWAKENED_SUPREMIUM_TOOL, -1, 30.0F, 25.0F, 22, () -> {
+    AWAKENED_SUPREMIUM(MysticalAgricultureTags.Blocks.INCORRECT_FOR_AWAKENED_SUPREMIUM_TOOL, 0, 30.0F, 25.0F, 22, () -> {
         var item = BuiltInRegistries.ITEM.get(MysticalAgricultureAPI.resource("awakened_supremium_ingot"));
         return Ingredient.of(item);
     });
