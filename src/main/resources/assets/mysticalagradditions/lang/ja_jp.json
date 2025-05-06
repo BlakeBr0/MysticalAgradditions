@@ -18,9 +18,9 @@
   "block.mysticalagradditions.nether_star_crux": "ネザースターの核",
   "block.mysticalagradditions.dragon_egg_crux": "ドラゴンの卵の核",
   "block.mysticalagradditions.gaia_spirit_crux": "ガイアの神霊の核",
-  "block.mysticalagradditions.awakened_draconium_crux": "Awakened Draconiumの核",
+  "block.mysticalagradditions.awakened_draconium_crux": "覚醒ドラコニウムの核",
   "block.mysticalagradditions.neutronium_crux": "Neutroniumの核",
-  "block.mysticalagradditions.nitro_crystal_crux": "Nitro Crystalの核",
+  "block.mysticalagradditions.nitro_crystal_crux": "ニトロクリスタルの核",
 
   "item.mysticalagradditions.insanium_essence": "インサニウムのエッセンス",
   "item.mysticalagradditions.insanium_ingot": "インサニウムインゴット",
@@ -72,7 +72,7 @@
   "fluid_type.mysticalagradditions.molten_supremium": "溶融したスプレミウム",
   "fluid_type.mysticalagradditions.molten_soulium": "溶融したソウリウム",
 
-  "tooltip.mysticalagradditions.drop_chance": "%s ドロップ確率",
+  "tooltip.mysticalagradditions.drop_chance": "ドロップ確率：%s",
   "tooltip.mysticalagradditions.gives_buffs": "付与されるバフ",
   "tooltip.mysticalagradditions.buff_line": " - %s（%s）",
 
@@ -86,9 +86,9 @@
   "crop.mysticalagradditions.nether_star": "ネザースター",
   "crop.mysticalagradditions.dragon_egg": "ドラゴンの卵",
   "crop.mysticalagradditions.gaia_spirit": "ガイアの神霊",
-  "crop.mysticalagradditions.awakened_draconium": "Awakened Draconium",
+  "crop.mysticalagradditions.awakened_draconium": "覚醒ドラコニウム",
   "crop.mysticalagradditions.neutronium": "Neutronium",
-  "crop.mysticalagradditions.nitro_crystal": "Nitro Crystal",
+  "crop.mysticalagradditions.nitro_crystal": "ニトロクリスタル",
 
   "book.mysticalagriculture.category.agradditions.name": "Agradditions",
   "book.mysticalagriculture.category.agradditions.description": "このセクションでは、Mystical Agradditionsによって追加された要素について説明しています。",
