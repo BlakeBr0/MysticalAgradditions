@@ -48,6 +48,10 @@ public final class ModCreativeModeTabs {
                     output.accept(ModBlocks.AWAKENED_DRACONIUM_CRUX);
                 }
 
+                if (ModCrops.NEUTRONIUM.isEnabled()) {
+                    output.accept(ModBlocks.NEUTRONIUM_CRUX);
+                }
+
                 if (ModCrops.NITRO_CRYSTAL.isEnabled()) {
                     output.accept(ModBlocks.NITRO_CRYSTAL_CRUX);
                 }
