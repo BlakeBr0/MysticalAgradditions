@@ -7,7 +7,7 @@
     },
     {
       "type": "neoforge:item_exists",
-      "item": "avaritia:neutronium_nugget"
+      "item": "avaritia:neutron_nugget"
     },
     {
       "type": "mysticalagriculture:crop_enabled",
@@ -25,7 +25,7 @@
     }
   },
   "result": {
-    "id": "avaritia:neutronium_nugget",
+    "id": "avaritia:neutron_nugget",
     "count": 3
   }
 }

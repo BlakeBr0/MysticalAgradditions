@@ -20,7 +20,7 @@
       "item": "mysticalagradditions:insanium_essence"
     },
     "W": {
-      "item": "avaritia:neutronium_ingot"
+      "tag": "mysticalagradditions:neutronium_ingot"
     },
     "D": {
       "tag": "c:storage_blocks/diamond"

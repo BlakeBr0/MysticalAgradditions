@@ -24,7 +24,7 @@ public final class ModCrops {
     public static final Crop AWAKENED_DRACONIUM = new Crop(MysticalAgradditions.resource("awakened_draconium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.tag("forge:ingots/draconium_awakened"));
 
     // AVARITIA
-    public static final Crop NEUTRONIUM = new Crop(MysticalAgradditions.resource("neutronium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("avaritia:neutronium_ingot"));
+    public static final Crop NEUTRONIUM = new Crop(MysticalAgradditions.resource("neutronium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.tag("mysticalagradditions:neutronium_ingot"));
 
     // POWAH
     public static final Crop NITRO_CRYSTAL = new Crop(MysticalAgradditions.resource("nitro_crystal"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("powah:crystal_nitro"));
