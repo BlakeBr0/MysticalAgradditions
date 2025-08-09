@@ -21,7 +21,7 @@ public final class ModCrops {
     public static final Crop GAIA_SPIRIT = new Crop(MysticalAgradditions.resource("gaia_spirit"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("botania:life_essence"));
 
     // DRACONIC EVOLUTION
-    public static final Crop AWAKENED_DRACONIUM = new Crop(MysticalAgradditions.resource("awakened_draconium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.tag("forge:ingots/draconium_awakened"));
+    public static final Crop AWAKENED_DRACONIUM = new Crop(MysticalAgradditions.resource("awakened_draconium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.tag("c:ingots/draconium_awakened"));
 
     // AVARITIA
     public static final Crop NEUTRONIUM = new Crop(MysticalAgradditions.resource("neutronium"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.tag("mysticalagradditions:neutronium_ingot"));
