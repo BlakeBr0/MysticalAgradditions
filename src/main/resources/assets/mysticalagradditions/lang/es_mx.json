@@ -74,7 +74,6 @@
 
   "tooltip.mysticalagradditions.drop_chance": "%s de probabilidad de caída",
   "tooltip.mysticalagradditions.gives_buffs":  "Otorga beneficios:",
-  "tooltip.mysticalagradditions.buff_line": " - %s (%s)",
 
   "jei.desc.mysticalagradditions.withering_soul": "Es soltado por el Wither al morir.",
   "jei.desc.mysticalagradditions.dragon_scale": "Es soltado por el Dragón del End al morir.",
