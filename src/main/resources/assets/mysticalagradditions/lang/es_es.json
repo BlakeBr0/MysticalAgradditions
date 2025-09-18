@@ -11,10 +11,10 @@
   "block.mysticalagradditions.imperium_coal_block": "Bloque de carbón de imperium",
   "block.mysticalagradditions.supremium_coal_block": "Bloque de carbón de supremium",
   "block.mysticalagradditions.insanium_coal_block": "Bloque de carbón de insanium",
-  "block.mysticalagradditions.nether_prosperity_ore": "Mineral de prosperidad del Nether",
-  "block.mysticalagradditions.nether_inferium_ore": "Mineral de inferium del Nether",
-  "block.mysticalagradditions.end_prosperity_ore": "Mineral de prosperidad del End",
-  "block.mysticalagradditions.end_inferium_ore": "Mineral de inferium del End",
+  "block.mysticalagradditions.nether_prosperity_ore": "Mena de prosperidad del Nether",
+  "block.mysticalagradditions.nether_inferium_ore": "Mena de inferium del Nether",
+  "block.mysticalagradditions.end_prosperity_ore": "Mena de prosperidad del End",
+  "block.mysticalagradditions.end_inferium_ore": "Mena de inferium del End",
   "block.mysticalagradditions.nether_star_crux": "Catalizador de estrella del Nether",
   "block.mysticalagradditions.dragon_egg_crux": "Catalizador de huevo de dragón",
   "block.mysticalagradditions.gaia_spirit_crux": "Catalizador de espíritu de Gaia",
@@ -100,9 +100,9 @@
   "book.mysticalagriculture.entry.cruxes.page.1": "Los catalizadores son bloques que colocas debajo de un $(l:mysticalagriculture:agradditions/insanium)cultivo de nivel 6$() para que puedan crecer.",
   "book.mysticalagriculture.entry.paxels": "Multi-herramientas de esencia",
   "book.mysticalagriculture.entry.paxels.page.1": "Las multi-herramientas de esencia son una herramienta que funciona como pico, hacha y pala, todo en uno.",
-  "book.mysticalagriculture.entry.ore_variants": "Variantes de mineral",
-  "book.mysticalagriculture.entry.ore_variants.page.1": "Los minerales de prosperidad e inferium del Nether $(bold)usualmente$() aparecen en todos los niveles Y en el Nether.",
-  "book.mysticalagriculture.entry.ore_variants.page.2": "Los minerales de prosperidad e inferium del End $(bold)usualmente$() aparecen en todos los niveles Y en el End.",
+  "book.mysticalagriculture.entry.ore_variants": "Variantes de mena",
+  "book.mysticalagriculture.entry.ore_variants.page.1": "Las menas de prosperidad e inferium del Nether $(bold)usualmente$() aparecen en todos los niveles Y en el Nether.",
+  "book.mysticalagriculture.entry.ore_variants.page.2": "Las menas de prosperidad e inferium del End $(bold)usualmente$() aparecen en todos los niveles Y en el End.",
   "book.mysticalagriculture.entry.essence_apples": "Manzanas de esencia",
   "book.mysticalagriculture.entry.essence_apples.page.1": "Las manzanas de esencia son una alternativa mucho más \"saludable\" a las manzanas normales que proporcionan beneficios y nutrición adicional.",
 
@@ -119,4 +119,5 @@
   "modifier.mysticalagradditions.soul_siphoner": "Sifón de almas",
   "modifier.mysticalagradditions.soul_siphoner.flavor": "¡Con alma!",
   "modifier.mysticalagradditions.soul_siphoner.description": "Las armas succionan almas de los monstruos como una daga de soulium."
+
 }
