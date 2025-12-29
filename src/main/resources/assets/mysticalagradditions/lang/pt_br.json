@@ -2,9 +2,9 @@
   "itemGroup.mysticalagradditions": "Mystical Agradditions",
 
   "block.mysticalagradditions.insanium_block": "Bloco de Insanium",
-  "block.mysticalagradditions.insanium_ingot_block": "Bloco de Barra de Insanium",
+  "block.mysticalagradditions.insanium_ingot_block": "Bloco de Lingote de Insanium",
   "block.mysticalagradditions.insanium_gemstone_block": "Bloco de Gema de Insanium",
-  "block.mysticalagradditions.insanium_farmland": "Terra Arável de Insanium",
+  "block.mysticalagradditions.insanium_farmland": "Terra Arada de Insanium",
   "block.mysticalagradditions.inferium_coal_block": "Bloco de Carvão de Inferium",
   "block.mysticalagradditions.prudentium_coal_block": "Bloco de Carvão de Prudentium",
   "block.mysticalagradditions.tertium_coal_block": "Bloco de Carvão de Tertium",
@@ -23,7 +23,7 @@
   "block.mysticalagradditions.nitro_crystal_crux": "Crux do Cristal de Nitro",
 
   "item.mysticalagradditions.insanium_essence": "Essência de Insanium",
-  "item.mysticalagradditions.insanium_ingot": "Barra de Insanium",
+  "item.mysticalagradditions.insanium_ingot": "Lingote de Insanium",
   "item.mysticalagradditions.insanium_nugget": "Pepita de Insanium",
   "item.mysticalagradditions.insanium_gemstone": "Gema de Insanium",
   "item.mysticalagradditions.nether_star_shard": "Fragmento de Estrela do Nether",
@@ -79,7 +79,7 @@
   "jei.desc.mysticalagradditions.withering_soul": "Dropado pelo Wither ao morrer.",
   "jei.desc.mysticalagradditions.dragon_scale": "Dropado pelo Dragão do End ao morrer.",
 
-  "config.jade.plugin_mysticalagradditions.infused_farmland": "Nível da Terra Arável de Essência",
+  "config.jade.plugin_mysticalagradditions.infused_farmland": "Nível da Terra Arada de Essência",
 
   "cropTier.mysticalagradditions.6": "6",
 
@@ -94,7 +94,7 @@
   "book.mysticalagriculture.category.agradditions.description": "Esta seção aborda o conteúdo adicional adicionado por Agradições Místicas.",
 
   "book.mysticalagriculture.entry.insanium": "Essência de Insanium",
-  "book.mysticalagriculture.entry.insanium.page.1": "A Essência de Insanium é um nível adicional de essência acima do Supremium. É usada para criar Cultivos de Nível 6. $(br2)Cultivos de Nível 6 têm algumas características únicas que os níveis inferiores não possuem: $(br)$(li)Eles exigem um $(l:mysticalagriculture:agradditions/cruxes)Crux$() abaixo da terra arável para crescer.$() $(li)Eles nunca dropam uma segunda semente ao serem colhidos.$()",
+  "book.mysticalagriculture.entry.insanium.page.1": "A Essência de Insanium é um nível adicional de essência acima do Supremium. É usada para criar Cultivos de Nível 6. $(br2)Cultivos de Nível 6 têm algumas características únicas que os níveis inferiores não possuem: $(br)$(li)Eles exigem um $(l:mysticalagriculture:agradditions/cruxes)Crux$() abaixo da terra arada para crescer.$() $(li)Eles nunca dropam uma segunda semente ao serem colhidos.$()",
   "book.mysticalagriculture.entry.insanium.page.2": "$(li)Eles $(bold)geralmente$() não podem ser cultivados usando $(l:advances/mystical_fertilizer)Fertilizante Místico$() ou $(l:basics/fertilized_essence)Essência Fertilizante$().$()",
   "book.mysticalagriculture.entry.cruxes": "Cruxes",
   "book.mysticalagriculture.entry.cruxes.page.1": "Cruxes são blocos que você coloca sob um $(l:mysticalagriculture:agradditions/insanium)Cultivo de Nível 6$() para que ele possa crescer.",
