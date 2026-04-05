@@ -16,7 +16,7 @@ public final class ModCreativeModeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = REGISTRY.register("creative_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.mysticalagradditions"))
             .icon(() -> new ItemStack(ModItems.INSANIUM_ESSENCE.get()))
-            .displayItems(FeatureFlagDisplayItemGenerator.create((parameters, output) -> {
+            .displayItems(FeatureFlagDisplayItemGenerator.create((_, output) -> {
                 output.accept(ModBlocks.INSANIUM_BLOCK);
                 output.accept(ModBlocks.INSANIUM_INGOT_BLOCK);
                 output.accept(ModBlocks.INSANIUM_GEMSTONE_BLOCK);

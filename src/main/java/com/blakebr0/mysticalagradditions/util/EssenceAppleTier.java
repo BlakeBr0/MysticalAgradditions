@@ -15,11 +15,11 @@ import java.util.function.Consumer;
 
 public enum EssenceAppleTier {
     INFERIUM(6, 0.3F, List.of(MobEffects.ABSORPTION)),
-    PRUDENTIUM(8, 0.4F, List.of(MobEffects.ABSORPTION, MobEffects.MOVEMENT_SPEED)),
-    TERTIUM(10, 0.5F, List.of(MobEffects.ABSORPTION, MobEffects.MOVEMENT_SPEED, MobEffects.DAMAGE_RESISTANCE)),
-    IMPERIUM(12, 0.6F, List.of(MobEffects.ABSORPTION, MobEffects.MOVEMENT_SPEED, MobEffects.DAMAGE_RESISTANCE, MobEffects.REGENERATION)),
-    SUPREMIUM(16, 0.7F, List.of(MobEffects.ABSORPTION, MobEffects.MOVEMENT_SPEED, MobEffects.DAMAGE_RESISTANCE, MobEffects.REGENERATION, MobEffects.DAMAGE_BOOST)),
-    INSANIUM(20, 0.8F, List.of(MobEffects.ABSORPTION, MobEffects.MOVEMENT_SPEED, MobEffects.DAMAGE_RESISTANCE, MobEffects.REGENERATION, MobEffects.DAMAGE_BOOST, MobEffects.DIG_SPEED));
+    PRUDENTIUM(8, 0.4F, List.of(MobEffects.ABSORPTION, MobEffects.SPEED)),
+    TERTIUM(10, 0.5F, List.of(MobEffects.ABSORPTION, MobEffects.SPEED, MobEffects.RESISTANCE)),
+    IMPERIUM(12, 0.6F, List.of(MobEffects.ABSORPTION, MobEffects.SPEED, MobEffects.RESISTANCE, MobEffects.REGENERATION)),
+    SUPREMIUM(16, 0.7F, List.of(MobEffects.ABSORPTION, MobEffects.SPEED, MobEffects.RESISTANCE, MobEffects.REGENERATION, MobEffects.STRENGTH)),
+    INSANIUM(20, 0.8F, List.of(MobEffects.ABSORPTION, MobEffects.SPEED, MobEffects.RESISTANCE, MobEffects.REGENERATION, MobEffects.STRENGTH, MobEffects.HASTE));
 
     private final Consumer<LivingEntity> onFoodEaten;
     private final List<Component> tooltip;

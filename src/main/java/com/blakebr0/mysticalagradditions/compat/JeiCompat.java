@@ -7,15 +7,15 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 
 @JeiPlugin
 public final class JeiCompat implements IModPlugin {
-    public static final ResourceLocation UID = MysticalAgradditions.resource("jei_plugin");
+    public static final Identifier UID = MysticalAgradditions.resource("jei_plugin");
 
     @Override
-    public ResourceLocation getPluginUid() {
+    public Identifier getPluginUid() {
         return UID;
     }
 

@@ -4,7 +4,7 @@ import com.blakebr0.mysticalagradditions.MysticalAgradditions;
 import com.blakebr0.mysticalagradditions.block.InfusedFarmlandBlock;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagriculture.api.farmland.IEssenceFarmland;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
@@ -15,7 +15,7 @@ import snownee.jade.api.config.IPluginConfig;
 
 @WailaPlugin
 public class JadeCompat implements IWailaPlugin {
-    private static final ResourceLocation INFUSED_FARMLAND_PROVIDER = MysticalAgradditions.resource("infused_farmland");
+    private static final Identifier INFUSED_FARMLAND_PROVIDER = MysticalAgradditions.resource("infused_farmland");
 
     @Override
     public void registerClient(IWailaClientRegistration registration) {
@@ -25,11 +25,11 @@ public class JadeCompat implements IWailaPlugin {
                 var block = accessor.getBlock();
                 var farmland = (IEssenceFarmland) block;
 
-                tooltip.add(ModTooltips.TIER.args(farmland.getTier().getDisplayName()).build());
+                tooltip.add(ModTooltips.TIER.args(farmland.getTier().getDisplayName()).toComponent());
             }
 
             @Override
-            public ResourceLocation getUid() {
+            public Identifier getUid() {
                 return INFUSED_FARMLAND_PROVIDER;
             }
         }, InfusedFarmlandBlock.class);

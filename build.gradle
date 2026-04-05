@@ -68,7 +68,8 @@ dependencies {
     compileOnly 'slimeknights.tconstruct:TConstruct:1.18.2-3.5.1.31' // TODO: implementation
     compileOnly 'slimeknights.mantle:Mantle:1.18.2-1.9.27' // TODO: implementation
 
-    runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
+//    TODO update patchouli
+    // runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
     runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"

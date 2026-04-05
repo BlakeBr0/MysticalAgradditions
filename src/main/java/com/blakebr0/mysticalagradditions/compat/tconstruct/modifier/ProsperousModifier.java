@@ -1,7 +1,7 @@
 //package com.blakebr0.mysticalagradditions.compat.tconstruct.modifier;
 //
 //import com.blakebr0.mysticalagriculture.api.MysticalAgricultureAPI;
-//import net.minecraft.resources.ResourceLocation;
+//import net.minecraft.resources.Identifier;
 //import net.minecraft.world.entity.item.ItemEntity;
 //import net.minecraft.world.item.ItemStack;
 //import net.minecraftforge.registries.ForgeRegistries;
@@ -23,7 +23,7 @@
 //            var world = target.getCommandSenderWorld();
 //
 //            if (!target.isAlive() && !world.isClientSide() && world.getRandom().nextFloat() < 0.005F * level) {
-//                var shard = ForgeRegistries.ITEMS.getValue(new ResourceLocation(MysticalAgricultureAPI.MOD_ID, "prosperity_shard"));
+//                var shard = ForgeRegistries.ITEMS.getValue(new Identifier(MysticalAgricultureAPI.MOD_ID, "prosperity_shard"));
 //                var item = new ItemEntity(world, target.getX() + 0.5, target.getY(), target.getZ() + 0.5, new ItemStack(shard));
 //
 //                world.addFreshEntity(item);
@@ -38,7 +38,7 @@
 //        var world = context.getWorld();
 //
 //        if (context.isEffective() && !world.isClientSide() && world.getRandom().nextFloat() < 0.005F * level) {
-//            var shard = ForgeRegistries.ITEMS.getValue(new ResourceLocation(MysticalAgricultureAPI.MOD_ID, "prosperity_shard"));
+//            var shard = ForgeRegistries.ITEMS.getValue(new Identifier(MysticalAgricultureAPI.MOD_ID, "prosperity_shard"));
 //            var pos = context.getPos();
 //            var item = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(shard));
 //

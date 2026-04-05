@@ -6,6 +6,7 @@ import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.crop.ICropTierProvider;
 import com.blakebr0.mysticalagriculture.api.farmland.FarmlandConverter;
 import com.blakebr0.mysticalagriculture.api.farmland.IFarmlandConverter;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
@@ -13,8 +14,8 @@ import net.minecraft.world.level.block.Block;
 public class EssenceItem extends BaseItem implements IFarmlandConverter, ICropTierProvider {
     private final CropTier tier;
 
-    public EssenceItem(CropTier tier) {
-        super();
+    public EssenceItem(Identifier id, CropTier tier) {
+        super(id);
         this.tier = tier;
     }
 

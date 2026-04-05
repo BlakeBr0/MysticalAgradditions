@@ -1,44 +1,49 @@
 package com.blakebr0.mysticalagradditions.block;
 
 import com.blakebr0.cucumber.iface.IColored;
+import com.blakebr0.cucumber.iface.IHoverTextProvider;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagriculture.api.crop.CropTier;
 import com.blakebr0.mysticalagriculture.api.farmland.IEssenceFarmland;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FarmBlock;
+import net.minecraft.world.level.block.FarmlandBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
-public class InfusedFarmlandBlock extends FarmBlock implements IColored, IEssenceFarmland {
+public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEssenceFarmland, IHoverTextProvider {
     public static final List<InfusedFarmlandBlock> FARMLANDS = new ArrayList<>();
     private final CropTier tier;
 
-    public InfusedFarmlandBlock(CropTier tier) {
-        super(Properties.ofFullCopy(Blocks.FARMLAND));
+    public InfusedFarmlandBlock(Identifier id, CropTier tier) {
+        super(Properties.ofFullCopy(Blocks.FARMLAND).setId(ResourceKey.create(Registries.BLOCK, id)));
         this.tier = tier;
 
         FARMLANDS.add(this);
     }
 
     @Override
-    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
         entity.causeFallDamage(fallDistance, 1.0F, level.damageSources().fall());
     }
 
@@ -64,8 +69,7 @@ public class InfusedFarmlandBlock extends FarmBlock implements IColored, IEssenc
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
         List<ItemStack> drops = new ArrayList<>();
         var stack = builder.getOptionalParameter(LootContextParams.TOOL);
-        var registry = builder.getLevel().registryAccess().registryOrThrow(Registries.ENCHANTMENT);
-        var silkTouch = registry.getHolderOrThrow(Enchantments.SILK_TOUCH);
+        var silkTouch = builder.getLevel().registryAccess().getOrThrow(Enchantments.SILK_TOUCH);
 
         if (stack != null && EnchantmentHelper.getTagEnchantmentLevel(silkTouch, stack) > 0) {
             drops.add(new ItemStack(this));
@@ -81,8 +85,8 @@ public class InfusedFarmlandBlock extends FarmBlock implements IColored, IEssenc
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(ModTooltips.TIER.args(this.tier.getDisplayName()).build());
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
+        builder.accept(ModTooltips.TIER.args(this.tier.getDisplayName()).toComponent());
     }
 
     @Override

@@ -13,7 +13,7 @@ public final class ModTooltips {
     public static final Tooltip GIVES_BUFFS = new Tooltip("tooltip.mysticalagradditions.gives_buffs");
 
     public static Component getTooltipForTier(int tier) {
-        return TIER.args(TinkerableUtils.getTooltipForTier(tier)).color(ChatFormatting.GRAY).build();
+        return TIER.args(TinkerableUtils.getTooltipForTier(tier)).color(ChatFormatting.GRAY).toComponent();
     }
 
     public static Component createMobEffectLine(Holder<MobEffect> effect, String level, String duration) {

@@ -4,22 +4,23 @@ import com.blakebr0.cucumber.item.BaseItem;
 import com.blakebr0.cucumber.lib.Tooltips;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagradditions.util.EssenceAppleTier;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.Level;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class EssenceAppleItem extends BaseItem {
     private static final FoodProperties.Builder food = new FoodProperties.Builder().alwaysEdible();
     private final EssenceAppleTier tier;
 
-    public EssenceAppleItem(EssenceAppleTier tier) {
-        super(p -> p.food(food.nutrition(tier.getHunger()).saturationModifier(tier.getSaturation()).build()));
+    public EssenceAppleItem(Identifier id, EssenceAppleTier tier) {
+        super(id, p -> p.food(food.nutrition(tier.getHunger()).saturationModifier(tier.getSaturation()).build()));
         this.tier = tier;
     }
 
@@ -34,16 +35,21 @@ public class EssenceAppleItem extends BaseItem {
             this.tier.onFoodEaten(entity);
         }
 
-        return entity.eat(level, stack);
+        stack.shrink(1);
+
+        return stack;
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        if (Screen.hasShiftDown()) {
-            tooltip.add(ModTooltips.GIVES_BUFFS.build());
-            tooltip.addAll(this.tier.getTooltip());
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
+        if (flag.hasShiftDown()) {
+            builder.accept(ModTooltips.GIVES_BUFFS.toComponent());
+
+            for (var line : this.tier.getTooltip()) {
+                builder.accept(line);
+            }
         } else {
-            tooltip.add(Tooltips.HOLD_SHIFT_FOR_INFO.build());
+            builder.accept(Tooltips.HOLD_SHIFT_FOR_INFO.toComponent());
         }
     }
 }

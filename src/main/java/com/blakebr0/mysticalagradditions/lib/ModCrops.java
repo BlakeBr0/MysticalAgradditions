@@ -12,7 +12,7 @@ import net.neoforged.fml.loading.FMLEnvironment;
 import java.util.Arrays;
 
 public final class ModCrops {
-    private static final boolean DEBUG = !FMLEnvironment.production;
+    private static final boolean DEBUG = !FMLEnvironment.isProduction();
 
     public static final Crop NETHER_STAR = new Crop(MysticalAgradditions.resource("nether_star"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("minecraft:nether_star"));
     public static final Crop DRAGON_EGG = new Crop(MysticalAgradditions.resource("dragon_egg"), ModCropTiers.SIX, CropType.RESOURCE, LazyIngredient.item("mysticalagradditions:dragon_scale"));

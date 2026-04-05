@@ -13,6 +13,5 @@ public final class ModFeatureFlags {
     public static final FeatureFlag GENERATE_NETHER_INFERIUM = FeatureFlag.create(MysticalAgradditions.resource("generate_nether_inferium"), ModConfigs.GENERATE_NETHER_INFERIUM);
     public static final FeatureFlag GENERATE_NETHER_PROSPERITY = FeatureFlag.create(MysticalAgradditions.resource("generate_nether_prosperity"), ModConfigs.GENERATE_NETHER_PROSPERITY);
 
-    public static final FeatureFlag ENCHANTABLE_SUPREMIUM_TOOLS = FeatureFlag.from(MysticalAgricultureAPI.resource("enchantable_supremium_tools"));
     public static final FeatureFlag ESSENCE_FARMLAND_CONVERSION = FeatureFlag.from(MysticalAgricultureAPI.resource("essence_farmland_conversion"));
 }

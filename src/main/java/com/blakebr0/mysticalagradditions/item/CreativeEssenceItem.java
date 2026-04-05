@@ -1,16 +1,11 @@
 package com.blakebr0.mysticalagradditions.item;
 
-import com.blakebr0.cucumber.item.BaseItem;
-import net.minecraft.world.item.ItemStack;
+import com.blakebr0.cucumber.item.BaseShinyItem;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Rarity;
 
-public class CreativeEssenceItem extends BaseItem {
-    public CreativeEssenceItem() {
-        super(p -> p.rarity(Rarity.EPIC));
-    }
-
-    @Override
-    public boolean isFoil(ItemStack stack) {
-        return true;
+public class CreativeEssenceItem extends BaseShinyItem {
+    public CreativeEssenceItem(Identifier id) {
+        super(id, p -> p.rarity(Rarity.EPIC));
     }
 }

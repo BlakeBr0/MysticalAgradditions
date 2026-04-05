@@ -2,14 +2,14 @@ package com.blakebr0.mysticalagradditions;
 
 import com.blakebr0.mysticalagradditions.client.handler.ColorHandler;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
-import com.blakebr0.mysticalagradditions.handler.MobDropsHandler;
+import com.blakebr0.mysticalagradditions.handler.MobDropHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModCreativeModeTabs;
 import com.blakebr0.mysticalagradditions.init.ModFluidTypes;
 import com.blakebr0.mysticalagradditions.init.ModFluids;
 import com.blakebr0.mysticalagradditions.init.ModItems;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -43,7 +43,7 @@ public final class MysticalAgradditions {
 //			ModModifiers.REGISTRY.register(bus);
         }
 
-        if (FMLEnvironment.dist == Dist.CLIENT) {
+        if (FMLEnvironment.getDist() == Dist.CLIENT) {
             bus.register(new ColorHandler());
         }
 
@@ -52,10 +52,10 @@ public final class MysticalAgradditions {
 
     @SubscribeEvent
     public void onCommonSetup(FMLCommonSetupEvent event) {
-        NeoForge.EVENT_BUS.register(new MobDropsHandler());
+        NeoForge.EVENT_BUS.register(new MobDropHandler());
     }
 
-    public static ResourceLocation resource(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    public static Identifier resource(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 }

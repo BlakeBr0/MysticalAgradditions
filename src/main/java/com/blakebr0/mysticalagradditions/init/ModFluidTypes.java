@@ -1,7 +1,7 @@
 package com.blakebr0.mysticalagradditions.init;
 
 import com.blakebr0.mysticalagradditions.MysticalAgradditions;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import net.neoforged.neoforge.common.SoundActions;
@@ -14,8 +14,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public final class ModFluidTypes {
-    private static final ResourceLocation STILL_TEXTURE = MysticalAgradditions.resource("block/molten_still");
-    private static final ResourceLocation FLOWING_TEXTURE = MysticalAgradditions.resource("block/molten_flowing");
+    private static final Identifier STILL_TEXTURE = MysticalAgradditions.resource("block/molten_still");
+    private static final Identifier FLOWING_TEXTURE = MysticalAgradditions.resource("block/molten_flowing");
 
     public static final DeferredRegister<FluidType> REGISTRY = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, MysticalAgradditions.MOD_ID);
 
@@ -33,25 +33,26 @@ public final class ModFluidTypes {
                 .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY_LAVA);
 
         return () -> new FluidType(properties) {
-            @Override
-            public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
-                consumer.accept(new IClientFluidTypeExtensions() {
-                    @Override
-                    public int getTintColor() {
-                        return color;
-                    }
-
-                    @Override
-                    public ResourceLocation getStillTexture() {
-                        return STILL_TEXTURE;
-                    }
-
-                    @Override
-                    public ResourceLocation getFlowingTexture() {
-                        return FLOWING_TEXTURE;
-                    }
-                });
-            }
+//            TODO fluid textures stuff?
+//            @Override
+//            public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
+//                consumer.accept(new IClientFluidTypeExtensions() {
+//                    @Override
+//                    public int getTintColor() {
+//                        return color;
+//                    }
+//
+//                    @Override
+//                    public Identifier getStillTexture() {
+//                        return STILL_TEXTURE;
+//                    }
+//
+//                    @Override
+//                    public Identifier getFlowingTexture() {
+//                        return FLOWING_TEXTURE;
+//                    }
+//                });
+//            }
         };
     }
 }
