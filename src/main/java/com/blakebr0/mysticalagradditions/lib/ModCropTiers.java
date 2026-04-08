@@ -16,8 +16,8 @@ public final class ModCropTiers {
     }
 
     public static void onPostRegisterCrops(ICropRegistry registry) {
-        SIX.setFarmland(ModBlocks.INSANIUM_FARMLAND)
-                .setEssence(ModItems.INSANIUM_ESSENCE)
+        SIX.setFarmlandBlock(ModBlocks.INSANIUM_FARMLAND)
+                .setEssenceItem(ModItems.INSANIUM_ESSENCE)
                 .setFertilizable(ModConfigs.FERTILIZABLE_CROPS.get())
                 .setSecondarySeedDrop(false);
     }

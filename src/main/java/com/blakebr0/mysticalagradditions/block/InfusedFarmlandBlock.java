@@ -78,7 +78,7 @@ public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEs
 
             var random = builder.getLevel().getRandom();
             if (random.nextInt(100) < 25)
-                drops.add(new ItemStack(this.tier.getEssence(), 1));
+                drops.add(new ItemStack(this.tier.getEssenceItem(), 1));
         }
 
         return drops;

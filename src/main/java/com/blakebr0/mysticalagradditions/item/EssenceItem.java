@@ -29,7 +29,7 @@ public class EssenceItem extends BaseItem implements IFarmlandConverter, ICropTi
 
     @Override
     public Block getConvertedFarmland() {
-        return this.tier.getFarmland();
+        return this.tier.getFarmlandBlock();
     }
 
     @Override
