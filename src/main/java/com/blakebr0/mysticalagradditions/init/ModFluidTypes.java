@@ -11,11 +11,14 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 public final class ModFluidTypes {
     public static final DeferredRegister<FluidType> REGISTRY = DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, MysticalAgradditions.MOD_ID);
 
+    public static final DeferredHolder<FluidType, FluidType> MOLTEN_PROSPERITY = registerMolten("molten_prosperity");
     public static final DeferredHolder<FluidType, FluidType> MOLTEN_INFERIUM = registerMolten("molten_inferium");
     public static final DeferredHolder<FluidType, FluidType> MOLTEN_PRUDENTIUM = registerMolten("molten_prudentium");
     public static final DeferredHolder<FluidType, FluidType> MOLTEN_TERTIUM = registerMolten("molten_tertium");
     public static final DeferredHolder<FluidType, FluidType> MOLTEN_IMPERIUM = registerMolten("molten_imperium");
     public static final DeferredHolder<FluidType, FluidType> MOLTEN_SUPREMIUM = registerMolten("molten_supremium");
+    public static final DeferredHolder<FluidType, FluidType> MOLTEN_AWAKENED_SUPREMIUM = registerMolten("molten_awakened_supremium");
+    public static final DeferredHolder<FluidType, FluidType> MOLTEN_INSANIUM = registerMolten("molten_insanium");
     public static final DeferredHolder<FluidType, FluidType> MOLTEN_SOULIUM = registerMolten("molten_soulium");
 
     private static DeferredHolder<FluidType, FluidType> registerMolten(String name) {

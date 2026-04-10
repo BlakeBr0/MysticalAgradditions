@@ -54,10 +54,13 @@ public final class ModItems {
 	public static final DeferredHolder<Item, Item> SUPREMIUM_PAXEL = REGISTRY.register("supremium_paxel", id -> new EssencePaxelItem(id, MysticalAgricultureToolMaterials.SUPREMIUM, 5, 1));
 	public static final DeferredHolder<Item, Item> AWAKENED_SUPREMIUM_PAXEL = REGISTRY.register("awakened_supremium_paxel", id -> new EssencePaxelItem(id, MysticalAgricultureToolMaterials.AWAKENED_SUPREMIUM, 5, 2));
 
+	public static final DeferredHolder<Item, Item> MOLTEN_PROSPERITY_BUCKET = REGISTRY.register("molten_prosperity_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_PROSPERITY.get()));
 	public static final DeferredHolder<Item, Item> MOLTEN_INFERIUM_BUCKET = REGISTRY.register("molten_inferium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_INFERIUM.get()));
 	public static final DeferredHolder<Item, Item> MOLTEN_PRUDENTIUM_BUCKET = REGISTRY.register("molten_prudentium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_PRUDENTIUM.get()));
 	public static final DeferredHolder<Item, Item> MOLTEN_TERTIUM_BUCKET = REGISTRY.register("molten_tertium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_TERTIUM.get()));
 	public static final DeferredHolder<Item, Item> MOLTEN_IMPERIUM_BUCKET = REGISTRY.register("molten_imperium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_IMPERIUM.get()));
 	public static final DeferredHolder<Item, Item> MOLTEN_SUPREMIUM_BUCKET = REGISTRY.register("molten_supremium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_SUPREMIUM.get()));
+	public static final DeferredHolder<Item, Item> MOLTEN_AWAKENED_SUPREMIUM_BUCKET = REGISTRY.register("molten_awakened_supremium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_AWAKENED_SUPREMIUM.get()));
+	public static final DeferredHolder<Item, Item> MOLTEN_INSANIUM_BUCKET = REGISTRY.register("molten_insanium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_INSANIUM.get()));
 	public static final DeferredHolder<Item, Item> MOLTEN_SOULIUM_BUCKET = REGISTRY.register("molten_soulium_bucket", id -> new BaseBucketItem(id, ModFluids.MOLTEN_SOULIUM.get()));
 }

@@ -13,9 +13,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -23,7 +21,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public final class ModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(Registries.BLOCK, MysticalAgradditions.MOD_ID);
@@ -50,11 +47,14 @@ public final class ModBlocks {
 	public static final DeferredHolder<Block, Block> NEUTRONIUM_CRUX = register("neutronium_crux", id -> new BaseBlock(id, SoundType.STONE, 5.0F, 10.0F));
 	public static final DeferredHolder<Block, Block> NITRO_CRYSTAL_CRUX = register("nitro_crystal_crux", id -> new BaseBlock(id, SoundType.STONE, 5.0F, 10.0F));
 
+	public static final DeferredHolder<Block, Block> MOLTEN_PROSPERITY = registerNoItem("molten_prosperity", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_PROSPERITY.get(), () -> Blocks.LAVA));
 	public static final DeferredHolder<Block, Block> MOLTEN_INFERIUM = registerNoItem("molten_inferium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_INFERIUM.get(), () -> Blocks.LAVA));
 	public static final DeferredHolder<Block, Block> MOLTEN_PRUDENTIUM = registerNoItem("molten_prudentium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_PRUDENTIUM.get(), () -> Blocks.LAVA));
 	public static final DeferredHolder<Block, Block> MOLTEN_TERTIUM = registerNoItem("molten_tertium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_TERTIUM.get(), () -> Blocks.LAVA));
 	public static final DeferredHolder<Block, Block> MOLTEN_IMPERIUM = registerNoItem("molten_imperium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_IMPERIUM.get(), () -> Blocks.LAVA));
 	public static final DeferredHolder<Block, Block> MOLTEN_SUPREMIUM = registerNoItem("molten_supremium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_SUPREMIUM.get(), () -> Blocks.LAVA));
+	public static final DeferredHolder<Block, Block> MOLTEN_AWAKENED_SUPREMIUM = registerNoItem("molten_awakened_supremium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_AWAKENED_SUPREMIUM.get(), () -> Blocks.LAVA));
+	public static final DeferredHolder<Block, Block> MOLTEN_INSANIUM = registerNoItem("molten_insanium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_INSANIUM.get(), () -> Blocks.LAVA));
 	public static final DeferredHolder<Block, Block> MOLTEN_SOULIUM = registerNoItem("molten_soulium", id -> new BaseLiquidBlock(id, (FlowingFluid) ModFluids.MOLTEN_SOULIUM.get(), () -> Blocks.LAVA));
 
 	private static DeferredHolder<Block, Block> register(String name, Function<Identifier, Block> block) {

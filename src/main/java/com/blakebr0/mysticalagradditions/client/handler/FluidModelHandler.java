@@ -16,7 +16,12 @@ public final class FluidModelHandler {
     @SubscribeEvent
     public void onRegisterFluidModels(RegisterFluidModelsEvent event) {
         event.register(
-                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(7638528)),
+                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(0x84A2A2)),
+                ModFluids.MOLTEN_PROSPERITY,
+                ModFluids.MOLTEN_PROSPERITY_FLOWING
+        );
+        event.register(
+                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(0x748E00)),
                 ModFluids.MOLTEN_INFERIUM,
                 ModFluids.MOLTEN_INFERIUM_FLOWING
         );
@@ -41,7 +46,17 @@ public final class FluidModelHandler {
                 ModFluids.MOLTEN_SUPREMIUM_FLOWING
         );
         event.register(
-                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(0x8c563c)),
+                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(0xD37B00)),
+                ModFluids.MOLTEN_AWAKENED_SUPREMIUM,
+                ModFluids.MOLTEN_AWAKENED_SUPREMIUM_FLOWING
+        );
+        event.register(
+                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(0x7100B2)),
+                ModFluids.MOLTEN_INSANIUM,
+                ModFluids.MOLTEN_INSANIUM_FLOWING
+        );
+        event.register(
+                new FluidModel.Unbaked(new Material(STILL_TEXTURE), new Material(FLOWING_TEXTURE), null, _ -> ARGB.opaque(0x8C563C)),
                 ModFluids.MOLTEN_SOULIUM,
                 ModFluids.MOLTEN_SOULIUM_FLOWING
         );

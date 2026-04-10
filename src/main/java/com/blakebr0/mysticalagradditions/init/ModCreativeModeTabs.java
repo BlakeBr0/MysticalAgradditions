@@ -85,11 +85,14 @@ public final class ModCreativeModeTabs {
                 output.accept(ModItems.SUPREMIUM_PAXEL);
                 output.accept(ModItems.AWAKENED_SUPREMIUM_PAXEL);
 
+                output.accept(ModItems.MOLTEN_PROSPERITY_BUCKET);
                 output.accept(ModItems.MOLTEN_INFERIUM_BUCKET);
                 output.accept(ModItems.MOLTEN_PRUDENTIUM_BUCKET);
                 output.accept(ModItems.MOLTEN_TERTIUM_BUCKET);
                 output.accept(ModItems.MOLTEN_IMPERIUM_BUCKET);
                 output.accept(ModItems.MOLTEN_SUPREMIUM_BUCKET);
+                output.accept(ModItems.MOLTEN_AWAKENED_SUPREMIUM_BUCKET);
+                output.accept(ModItems.MOLTEN_INSANIUM_BUCKET);
                 output.accept(ModItems.MOLTEN_SOULIUM_BUCKET);
             }))
             .build());
