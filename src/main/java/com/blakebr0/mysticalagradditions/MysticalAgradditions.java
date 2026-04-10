@@ -4,6 +4,7 @@ import com.blakebr0.mysticalagradditions.client.handler.FluidModelHandler;
 import com.blakebr0.mysticalagradditions.client.handler.TintSourceHandler;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.MobDropHandler;
+import com.blakebr0.mysticalagradditions.handler.RegisterCapabilityHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
 import com.blakebr0.mysticalagradditions.init.ModBlocks;
 import com.blakebr0.mysticalagradditions.init.ModCreativeModeTabs;
@@ -32,6 +33,7 @@ public final class MysticalAgradditions {
     public MysticalAgradditions(IEventBus bus, ModContainer mod) {
         bus.register(this);
         bus.register(new ModFluids());
+        bus.register(new RegisterCapabilityHandler());
 
         ModBlocks.REGISTRY.register(bus);
         ModItems.REGISTRY.register(bus);
