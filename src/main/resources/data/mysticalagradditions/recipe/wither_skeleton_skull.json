@@ -4,9 +4,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:withering_soul"
-    }
+    "E": "mysticalagradditions:withering_soul"
   },
   "result": {
     "id": "minecraft:wither_skeleton_skull",

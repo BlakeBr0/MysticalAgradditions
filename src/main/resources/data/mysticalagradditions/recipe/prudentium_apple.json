@@ -6,12 +6,8 @@
     " E "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:golden_apple"
-    },
-    "E": {
-      "item": "mysticalagriculture:prudentium_essence"
-    }
+    "A": "minecraft:golden_apple",
+    "E": "mysticalagriculture:prudentium_essence"
   },
   "result": {
     "id": "mysticalagradditions:prudentium_apple"

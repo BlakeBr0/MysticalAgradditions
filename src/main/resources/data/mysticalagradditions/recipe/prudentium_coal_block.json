@@ -6,9 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:prudentium_coal"
-    }
+    "E": "mysticalagradditions:prudentium_coal"
   },
   "result": {
     "id": "mysticalagradditions:prudentium_coal_block"

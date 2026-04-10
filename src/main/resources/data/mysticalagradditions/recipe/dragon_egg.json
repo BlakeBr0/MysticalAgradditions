@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "mysticalagradditions:dragon_egg_chunk"
-    },
-    {
-      "item": "mysticalagradditions:dragon_egg_chunk"
-    },
-    {
-      "item": "mysticalagradditions:dragon_egg_chunk"
-    }
+    "mysticalagradditions:dragon_egg_chunk",
+    "mysticalagradditions:dragon_egg_chunk",
+    "mysticalagradditions:dragon_egg_chunk"
   ],
   "result": {
     "id": "minecraft:dragon_egg"

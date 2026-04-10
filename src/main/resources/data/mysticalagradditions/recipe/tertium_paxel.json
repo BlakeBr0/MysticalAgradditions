@@ -2,12 +2,14 @@
   "type": "crafting_shaped",
   "neoforge:conditions": [
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagradditions:tertium_paxel"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagradditions:tertium_paxel"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagriculture:tertium_pickaxe"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagriculture:tertium_pickaxe"
     }
   ],
   "pattern": [
@@ -16,18 +18,10 @@
     " S "
   ],
   "key": {
-    "A": {
-      "item": "mysticalagriculture:tertium_axe"
-    },
-    "B": {
-      "item": "mysticalagriculture:tertium_pickaxe"
-    },
-    "C": {
-      "item": "mysticalagriculture:tertium_shovel"
-    },
-    "S": {
-      "tag": "c:rods/wooden"
-    }
+    "A": "mysticalagriculture:tertium_axe",
+    "B": "mysticalagriculture:tertium_pickaxe",
+    "C": "mysticalagriculture:tertium_shovel",
+    "S": "#c:rods/wooden"
   },
   "result": {
     "id": "mysticalagradditions:tertium_paxel"

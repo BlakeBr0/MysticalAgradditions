@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "mysticalagriculture:prosperity_gemstone"
-    },
-    {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    {
-      "item": "mysticalagradditions:insanium_essence"
-    }
+    "mysticalagriculture:prosperity_gemstone",
+    "mysticalagradditions:insanium_essence",
+    "mysticalagradditions:insanium_essence"
   ],
   "result": {
     "id": "mysticalagradditions:insanium_gemstone"

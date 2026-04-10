@@ -2,12 +2,14 @@
   "type": "crafting_shaped",
   "neoforge:conditions": [
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagradditions:imperium_paxel"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagradditions:imperium_paxel"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagriculture:imperium_pickaxe"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagriculture:imperium_pickaxe"
     }
   ],
   "pattern": [
@@ -16,18 +18,10 @@
     " S "
   ],
   "key": {
-    "A": {
-      "item": "mysticalagriculture:imperium_axe"
-    },
-    "B": {
-      "item": "mysticalagriculture:imperium_pickaxe"
-    },
-    "C": {
-      "item": "mysticalagriculture:imperium_shovel"
-    },
-    "S": {
-      "tag": "c:rods/wooden"
-    }
+    "A": "mysticalagriculture:imperium_axe",
+    "B": "mysticalagriculture:imperium_pickaxe",
+    "C": "mysticalagriculture:imperium_shovel",
+    "S": "#c:rods/wooden"
   },
   "result": {
     "id": "mysticalagradditions:imperium_paxel"

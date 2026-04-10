@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "mysticalagriculture:imperium_essence"
-    },
-    {
-      "item": "mysticalagriculture:imperium_essence"
-    }
+    "minecraft:coal",
+    "mysticalagriculture:imperium_essence",
+    "mysticalagriculture:imperium_essence"
   ],
   "result": {
     "id": "mysticalagradditions:imperium_coal"

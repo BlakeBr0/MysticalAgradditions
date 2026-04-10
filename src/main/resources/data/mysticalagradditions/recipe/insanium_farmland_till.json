@@ -2,15 +2,9 @@
   "type": "mysticalagriculture:farmland_till",
   "group": "mysticalagriculture:farmland_till",
   "ingredients": [
-    {
-      "type": "mysticalagriculture:all_hoes"
-    },
-    {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    {
-      "item": "minecraft:dirt"
-    }
+    "#minecraft:hoes",
+    "mysticalagradditions:insanium_essence",
+    "minecraft:dirt"
   ],
   "result": {
     "id": "mysticalagradditions:insanium_farmland"

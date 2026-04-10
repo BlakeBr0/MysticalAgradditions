@@ -6,9 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:imperium_coal"
-    }
+    "E": "mysticalagradditions:imperium_coal"
   },
   "result": {
     "id": "mysticalagradditions:imperium_coal_block"

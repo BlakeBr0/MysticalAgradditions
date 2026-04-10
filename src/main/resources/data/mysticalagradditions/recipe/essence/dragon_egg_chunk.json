@@ -1,5 +1,5 @@
 {
-  "type": "cucumber:shaped_no_mirror",
+  "type": "crafting_shaped",
   "neoforge:conditions": [
     {
       "type": "mysticalagriculture:crop_enabled",
@@ -12,9 +12,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagriculture:dragon_egg_essence"
-    }
+    "E": "mysticalagriculture:dragon_egg_essence"
   },
   "result": {
     "id": "mysticalagradditions:dragon_egg_chunk"

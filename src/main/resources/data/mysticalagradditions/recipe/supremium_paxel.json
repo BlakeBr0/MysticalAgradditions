@@ -2,12 +2,14 @@
   "type": "crafting_shaped",
   "neoforge:conditions": [
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagradditions:supremium_paxel"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagradditions:supremium_paxel"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagriculture:supremium_pickaxe"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagriculture:supremium_pickaxe"
     }
   ],
   "pattern": [
@@ -16,18 +18,10 @@
     " S "
   ],
   "key": {
-    "A": {
-      "item": "mysticalagriculture:supremium_axe"
-    },
-    "B": {
-      "item": "mysticalagriculture:supremium_pickaxe"
-    },
-    "C": {
-      "item": "mysticalagriculture:supremium_shovel"
-    },
-    "S": {
-      "tag": "c:rods/wooden"
-    }
+    "A": "mysticalagriculture:supremium_axe",
+    "B": "mysticalagriculture:supremium_pickaxe",
+    "C": "mysticalagriculture:supremium_shovel",
+    "S": "#c:rods/wooden"
   },
   "result": {
     "id": "mysticalagradditions:supremium_paxel"

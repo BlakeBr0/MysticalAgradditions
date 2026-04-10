@@ -6,9 +6,7 @@
       "crop": "mysticalagradditions:neutronium"
     }
   ],
-  "input": {
-    "item": "mysticalagriculture:neutronium_seeds"
-  },
+  "input": "mysticalagriculture:neutronium_seeds",
   "result": {
     "id": "mysticalagriculture:neutronium_essence",
     "count": 2

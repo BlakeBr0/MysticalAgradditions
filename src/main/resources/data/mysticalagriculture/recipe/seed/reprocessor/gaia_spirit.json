@@ -6,9 +6,7 @@
       "crop": "mysticalagradditions:gaia_spirit"
     }
   ],
-  "input": {
-    "item": "mysticalagriculture:gaia_spirit_seeds"
-  },
+  "input": "mysticalagriculture:gaia_spirit_seeds",
   "result": {
     "id": "mysticalagriculture:gaia_spirit_essence",
     "count": 2

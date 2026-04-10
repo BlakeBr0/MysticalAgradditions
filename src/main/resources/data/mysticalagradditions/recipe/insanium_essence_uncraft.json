@@ -1,9 +1,7 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "mysticalagradditions:insanium_essence"
-    }
+    "mysticalagradditions:insanium_essence"
   ],
   "result": {
     "id": "mysticalagriculture:supremium_essence",

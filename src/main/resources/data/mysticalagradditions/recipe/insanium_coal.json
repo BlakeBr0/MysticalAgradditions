@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    {
-      "item": "mysticalagradditions:insanium_essence"
-    }
+    "minecraft:coal",
+    "mysticalagradditions:insanium_essence",
+    "mysticalagradditions:insanium_essence"
   ],
   "result": {
     "id": "mysticalagradditions:insanium_coal"

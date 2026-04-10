@@ -6,9 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_gemstone"
-    }
+    "E": "mysticalagradditions:insanium_gemstone"
   },
   "result": {
     "id": "mysticalagradditions:insanium_gemstone_block"

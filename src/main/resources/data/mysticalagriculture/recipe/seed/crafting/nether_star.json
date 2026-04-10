@@ -21,17 +21,17 @@
   ],
   "key": {
     "E": {
-      "type": "mysticalagriculture:crop_component",
+      "neoforge:ingredient_type": "mysticalagriculture:crop_component",
       "component": "essence",
       "crop": "mysticalagradditions:nether_star"
     },
     "S": {
-      "type": "mysticalagriculture:crop_component",
+      "neoforge:ingredient_type": "mysticalagriculture:crop_component",
       "component": "seed",
       "crop": "mysticalagradditions:nether_star"
     },
     "M": {
-      "type": "mysticalagriculture:crop_component",
+      "neoforge:ingredient_type": "mysticalagriculture:crop_component",
       "component": "material",
       "crop": "mysticalagradditions:nether_star"
     }

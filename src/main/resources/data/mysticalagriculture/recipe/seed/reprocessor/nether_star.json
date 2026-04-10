@@ -6,9 +6,7 @@
       "crop": "mysticalagradditions:nether_star"
     }
   ],
-  "input": {
-    "item": "mysticalagriculture:nether_star_seeds"
-  },
+  "input": "mysticalagriculture:nether_star_seeds",
   "result": {
     "id": "mysticalagriculture:nether_star_essence",
     "count": 2

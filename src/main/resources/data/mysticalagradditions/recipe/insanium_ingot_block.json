@@ -6,9 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_ingot"
-    }
+    "E": "mysticalagradditions:insanium_ingot"
   },
   "result": {
     "id": "mysticalagradditions:insanium_ingot_block"

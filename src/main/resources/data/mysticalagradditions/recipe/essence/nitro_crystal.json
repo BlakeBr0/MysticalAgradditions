@@ -1,5 +1,5 @@
 {
-  "type": "cucumber:shaped_no_mirror",
+  "type": "crafting_shaped",
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
@@ -16,12 +16,8 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagriculture:nitro_crystal_essence"
-    },
-    "S": {
-      "item": "minecraft:nether_star"
-    }
+    "E": "mysticalagriculture:nitro_crystal_essence",
+    "S": "minecraft:nether_star"
   },
   "result": {
     "id": "powah:crystal_nitro",

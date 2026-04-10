@@ -1,9 +1,7 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "mysticalagradditions:prudentium_coal_block"
-    }
+    "mysticalagradditions:prudentium_coal_block"
   ],
   "result": {
     "id": "mysticalagradditions:prudentium_coal",

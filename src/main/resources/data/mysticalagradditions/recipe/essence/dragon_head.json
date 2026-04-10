@@ -1,5 +1,5 @@
 {
-  "type": "cucumber:shaped_no_mirror",
+  "type": "crafting_shaped",
   "neoforge:conditions": [
     {
       "type": "mysticalagriculture:crop_enabled",
@@ -12,12 +12,8 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagriculture:dragon_egg_essence"
-    },
-    "S": {
-      "item": "mysticalagriculture:blank_skull"
-    }
+    "E": "mysticalagriculture:dragon_egg_essence",
+    "S": "mysticalagriculture:blank_skull"
   },
   "result": {
     "id": "minecraft:dragon_head"

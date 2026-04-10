@@ -16,18 +16,10 @@
     "EWE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    "H": {
-      "item": "botania:terrasteel_block"
-    },
-    "W": {
-      "item": "botania:gaia_ingot"
-    },
-    "D": {
-      "tag": "c:storage_blocks/diamond"
-    }
+    "E": "mysticalagradditions:insanium_essence",
+    "H": "botania:terrasteel_block",
+    "W": "botania:gaia_ingot",
+    "D": "#c:storage_blocks/diamond"
   },
   "result": {
     "id": "mysticalagradditions:gaia_spirit_crux"

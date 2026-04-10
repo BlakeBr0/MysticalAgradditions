@@ -2,12 +2,14 @@
   "type": "crafting_shaped",
   "neoforge:conditions": [
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagradditions:prudentium_paxel"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagradditions:prudentium_paxel"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "mysticalagriculture:prudentium_pickaxe"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "mysticalagriculture:prudentium_pickaxe"
     }
   ],
   "pattern": [
@@ -16,18 +18,10 @@
     " S "
   ],
   "key": {
-    "A": {
-      "item": "mysticalagriculture:prudentium_axe"
-    },
-    "B": {
-      "item": "mysticalagriculture:prudentium_pickaxe"
-    },
-    "C": {
-      "item": "mysticalagriculture:prudentium_shovel"
-    },
-    "S": {
-      "tag": "c:rods/wooden"
-    }
+    "A": "mysticalagriculture:prudentium_axe",
+    "B": "mysticalagriculture:prudentium_pickaxe",
+    "C": "mysticalagriculture:prudentium_shovel",
+    "S": "#c:rods/wooden"
   },
   "result": {
     "id": "mysticalagradditions:prudentium_paxel"

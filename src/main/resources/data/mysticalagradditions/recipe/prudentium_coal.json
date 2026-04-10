@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "mysticalagriculture:prudentium_essence"
-    },
-    {
-      "item": "mysticalagriculture:prudentium_essence"
-    }
+    "minecraft:coal",
+    "mysticalagriculture:prudentium_essence",
+    "mysticalagriculture:prudentium_essence"
   ],
   "result": {
     "id": "mysticalagradditions:prudentium_coal"

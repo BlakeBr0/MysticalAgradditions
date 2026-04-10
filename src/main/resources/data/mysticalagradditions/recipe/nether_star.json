@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "mysticalagradditions:nether_star_shard"
-    },
-    {
-      "item": "mysticalagradditions:nether_star_shard"
-    },
-    {
-      "item": "mysticalagradditions:nether_star_shard"
-    }
+    "mysticalagradditions:nether_star_shard",
+    "mysticalagradditions:nether_star_shard",
+    "mysticalagradditions:nether_star_shard"
   ],
   "result": {
     "id": "minecraft:nether_star"

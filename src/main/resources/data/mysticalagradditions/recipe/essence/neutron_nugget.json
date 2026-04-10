@@ -1,13 +1,14 @@
 {
-  "type": "cucumber:shaped_no_mirror",
+  "type": "crafting_shaped",
   "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "avaritia"
     },
     {
-      "type": "neoforge:item_exists",
-      "item": "avaritia:neutron_nugget"
+      "type": "neoforge:registered",
+      "registry": "minecraft:item",
+      "value": "avaritia:neutron_nugget"
     },
     {
       "type": "mysticalagriculture:crop_enabled",
@@ -20,9 +21,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagriculture:neutronium_essence"
-    }
+    "E": "mysticalagriculture:neutronium_essence"
   },
   "result": {
     "id": "avaritia:neutron_nugget",

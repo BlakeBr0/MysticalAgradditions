@@ -6,12 +6,8 @@
     " E "
   ],
   "key": {
-    "E": {
-      "item": "mysticalagriculture:supremium_essence"
-    },
-    "C": {
-      "tag": "mysticalagriculture:infusion_crystals"
-    }
+    "E": "mysticalagriculture:supremium_essence",
+    "C": "#mysticalagriculture:infusion_crystals"
   },
   "result": {
     "id": "mysticalagradditions:insanium_essence"

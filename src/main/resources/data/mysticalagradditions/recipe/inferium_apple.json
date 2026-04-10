@@ -6,12 +6,8 @@
     " E "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:golden_apple"
-    },
-    "E": {
-      "item": "mysticalagriculture:inferium_essence"
-    }
+    "A": "minecraft:golden_apple",
+    "E": "mysticalagriculture:inferium_essence"
   },
   "result": {
     "id": "mysticalagradditions:inferium_apple"

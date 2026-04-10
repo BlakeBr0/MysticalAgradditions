@@ -6,9 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:tertium_coal"
-    }
+    "E": "mysticalagradditions:tertium_coal"
   },
   "result": {
     "id": "mysticalagradditions:tertium_coal_block"

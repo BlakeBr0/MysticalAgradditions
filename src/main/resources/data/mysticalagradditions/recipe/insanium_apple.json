@@ -6,12 +6,8 @@
     " E "
   ],
   "key": {
-    "A": {
-      "item": "minecraft:golden_apple"
-    },
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    }
+    "A": "minecraft:golden_apple",
+    "E": "mysticalagradditions:insanium_essence"
   },
   "result": {
     "id": "mysticalagradditions:insanium_apple"

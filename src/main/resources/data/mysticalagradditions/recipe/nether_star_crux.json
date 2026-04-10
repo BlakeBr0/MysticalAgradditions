@@ -12,18 +12,10 @@
     "ESE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    "S": {
-      "item": "minecraft:nether_star"
-    },
-    "W": {
-      "item": "mysticalagradditions:withering_soul"
-    },
-    "D": {
-      "tag": "c:storage_blocks/diamond"
-    }
+    "E": "mysticalagradditions:insanium_essence",
+    "S": "minecraft:nether_star",
+    "W": "mysticalagradditions:withering_soul",
+    "D": "#c:storage_blocks/diamond"
   },
   "result": {
     "id": "mysticalagradditions:nether_star_crux"

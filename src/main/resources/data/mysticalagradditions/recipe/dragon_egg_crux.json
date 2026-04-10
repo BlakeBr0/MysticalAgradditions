@@ -12,15 +12,9 @@
     "ECE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    "C": {
-      "item": "mysticalagradditions:dragon_scale"
-    },
-    "D": {
-      "tag": "c:storage_blocks/diamond"
-    }
+    "E": "mysticalagradditions:insanium_essence",
+    "C": "mysticalagradditions:dragon_scale",
+    "D": "#c:storage_blocks/diamond"
   },
   "result": {
     "id": "mysticalagradditions:dragon_egg_crux"

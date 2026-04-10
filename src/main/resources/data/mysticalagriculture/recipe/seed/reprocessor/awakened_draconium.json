@@ -6,9 +6,7 @@
       "crop": "mysticalagradditions:awakened_draconium"
     }
   ],
-  "input": {
-    "item": "mysticalagriculture:awakened_draconium_seeds"
-  },
+  "input": "mysticalagriculture:awakened_draconium_seeds",
   "result": {
     "id": "mysticalagriculture:awakened_draconium_essence",
     "count": 2

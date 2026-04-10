@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "mysticalagriculture:inferium_essence"
-    },
-    {
-      "item": "mysticalagriculture:inferium_essence"
-    }
+    "minecraft:coal",
+    "mysticalagriculture:inferium_essence",
+    "mysticalagriculture:inferium_essence"
   ],
   "result": {
     "id": "mysticalagradditions:inferium_coal"

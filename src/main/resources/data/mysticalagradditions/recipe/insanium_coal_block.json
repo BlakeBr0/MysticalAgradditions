@@ -6,9 +6,7 @@
     "EEE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_coal"
-    }
+    "E": "mysticalagradditions:insanium_coal"
   },
   "result": {
     "id": "mysticalagradditions:insanium_coal_block"

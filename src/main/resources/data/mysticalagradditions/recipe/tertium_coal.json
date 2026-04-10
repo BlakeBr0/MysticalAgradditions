@@ -1,15 +1,9 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "mysticalagriculture:tertium_essence"
-    },
-    {
-      "item": "mysticalagriculture:tertium_essence"
-    }
+    "minecraft:coal",
+    "mysticalagriculture:tertium_essence",
+    "mysticalagriculture:tertium_essence"
   ],
   "result": {
     "id": "mysticalagradditions:tertium_coal"

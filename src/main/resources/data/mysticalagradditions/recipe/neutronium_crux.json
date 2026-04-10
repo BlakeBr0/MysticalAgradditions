@@ -16,15 +16,9 @@
     "EWE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    "W": {
-      "tag": "mysticalagradditions:neutronium_ingot"
-    },
-    "D": {
-      "tag": "c:storage_blocks/diamond"
-    }
+    "E": "mysticalagradditions:insanium_essence",
+    "W": "#mysticalagradditions:neutronium_ingot",
+    "D": "#c:storage_blocks/diamond"
   },
   "result": {
     "id": "mysticalagradditions:neutronium_crux"

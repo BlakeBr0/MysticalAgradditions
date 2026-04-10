@@ -16,18 +16,10 @@
     "EWE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    "H": {
-      "item": "draconicevolution:dragon_heart"
-    },
-    "W": {
-      "item": "draconicevolution:awakened_draconium_block"
-    },
-    "D": {
-      "tag": "c:storage_blocks/diamond"
-    }
+    "E": "mysticalagradditions:insanium_essence",
+    "H": "draconicevolution:dragon_heart",
+    "W": "draconicevolution:awakened_draconium_block",
+    "D": "#c:storage_blocks/diamond"
   },
   "result": {
     "id": "mysticalagradditions:awakened_draconium_crux"

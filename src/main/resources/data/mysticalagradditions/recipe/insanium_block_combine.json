@@ -6,12 +6,8 @@
     " E "
   ],
   "key": {
-    "E": {
-      "item": "mysticalagriculture:supremium_block"
-    },
-    "C": {
-      "item": "mysticalagriculture:master_infusion_crystal"
-    }
+    "E": "mysticalagriculture:supremium_block",
+    "C": "mysticalagriculture:master_infusion_crystal"
   },
   "result": {
     "id": "mysticalagradditions:insanium_block"

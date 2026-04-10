@@ -16,18 +16,10 @@
     "ECE"
   ],
   "key": {
-    "E": {
-      "item": "mysticalagradditions:insanium_essence"
-    },
-    "C": {
-      "item": "powah:crystal_nitro"
-    },
-    "D": {
-      "tag": "c:storage_blocks/diamond"
-    },
-    "F": {
-      "item": "powah:capacitor_nitro"
-    }
+    "E": "mysticalagradditions:insanium_essence",
+    "C": "powah:crystal_nitro",
+    "D": "#c:storage_blocks/diamond",
+    "F": "powah:capacitor_nitro"
   },
   "result": {
     "id": "mysticalagradditions:nitro_crystal_crux"

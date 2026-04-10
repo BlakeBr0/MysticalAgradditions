@@ -1,9 +1,7 @@
 {
   "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "mysticalagradditions:insanium_block"
-    }
+    "mysticalagradditions:insanium_block"
   ],
   "result": {
     "id": "mysticalagradditions:insanium_essence",

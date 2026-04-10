@@ -6,9 +6,7 @@
       "crop": "mysticalagradditions:nitro_crystal"
     }
   ],
-  "input": {
-    "item": "mysticalagriculture:nitro_crystal_seeds"
-  },
+  "input": "mysticalagriculture:nitro_crystal_seeds",
   "result": {
     "id": "mysticalagriculture:nitro_crystal_essence",
     "count": 2

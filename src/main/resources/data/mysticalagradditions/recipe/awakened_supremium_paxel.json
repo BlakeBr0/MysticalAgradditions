@@ -3,38 +3,28 @@
   "transfer_components": true,
   "essences": [
     {
-      "id": "mysticalagriculture:air_essence",
+      "ingredient": "mysticalagriculture:air_essence",
       "count": 40
     },
     {
-      "id": "mysticalagriculture:earth_essence",
+      "ingredient": "mysticalagriculture:earth_essence",
       "count": 40
     },
     {
-      "id": "mysticalagriculture:water_essence",
+      "ingredient": "mysticalagriculture:water_essence",
       "count": 40
     },
     {
-      "id": "mysticalagriculture:fire_essence",
+      "ingredient": "mysticalagriculture:fire_essence",
       "count": 40
     }
   ],
-  "input": {
-    "item": "mysticalagradditions:supremium_paxel"
-  },
+  "input": "mysticalagradditions:supremium_paxel",
   "ingredients": [
-    {
-      "item": "mysticalagriculture:awakened_supremium_gemstone"
-    },
-    {
-      "item": "mysticalagriculture:awakened_supremium_ingot"
-    },
-    {
-      "item": "mysticalagriculture:awakened_supremium_gemstone"
-    },
-    {
-      "item": "mysticalagriculture:awakened_supremium_ingot"
-    }
+    "mysticalagriculture:awakened_supremium_gemstone",
+    "mysticalagriculture:awakened_supremium_ingot",
+    "mysticalagriculture:awakened_supremium_gemstone",
+    "mysticalagriculture:awakened_supremium_ingot"
   ],
   "result": {
     "id": "mysticalagradditions:awakened_supremium_paxel"
