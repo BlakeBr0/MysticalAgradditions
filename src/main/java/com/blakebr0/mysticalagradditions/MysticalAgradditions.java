@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions;
 
-import com.blakebr0.mysticalagradditions.client.handler.ColorHandler;
+import com.blakebr0.mysticalagradditions.client.handler.FluidModelHandler;
+import com.blakebr0.mysticalagradditions.client.handler.TintSourceHandler;
 import com.blakebr0.mysticalagradditions.config.ModConfigs;
 import com.blakebr0.mysticalagradditions.handler.MobDropHandler;
 import com.blakebr0.mysticalagradditions.init.ModBiomeModifiers;
@@ -44,7 +45,8 @@ public final class MysticalAgradditions {
         }
 
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
-            bus.register(new ColorHandler());
+            bus.register(new FluidModelHandler());
+            bus.register(new TintSourceHandler());
         }
 
         mod.registerConfig(ModConfig.Type.STARTUP, ModConfigs.COMMON, "mysticalagradditions-common.toml");

@@ -21,6 +21,12 @@
   "block.mysticalagradditions.awakened_draconium_crux": "Crux do Dracônio Desperto",
   "block.mysticalagradditions.neutronium_crux": "Crux do Neutrônio",
   "block.mysticalagradditions.nitro_crystal_crux": "Crux do Cristal de Nitro",
+  "block.mysticalagradditions.molten_inferium": "Inferium Derretido",
+  "block.mysticalagradditions.molten_prudentium": "Prudentium Derretido",
+  "block.mysticalagradditions.molten_tertium": "Tertium Derretido",
+  "block.mysticalagradditions.molten_imperium": "Imperium Derretido",
+  "block.mysticalagradditions.molten_supremium": "Supremium Derretido",
+  "block.mysticalagradditions.molten_soulium": "Soulium Derretido",
 
   "item.mysticalagradditions.insanium_essence": "Essência de Insanium",
   "item.mysticalagradditions.insanium_ingot": "Lingote de Insanium",
@@ -58,13 +64,6 @@
   "item.mysticalagradditions.molten_supremium_bucket": "Balde de Supremium Derretido",
   "item.mysticalagradditions.molten_soulium_bucket": "Balde de Soulium Derretido",
 
-  "fluid.mysticalagradditions.molten_inferium": "Inferium Derretido",
-  "fluid.mysticalagradditions.molten_prudentium": "Prudentium Derretido",
-  "fluid.mysticalagradditions.molten_tertium": "Tertium Derretido",
-  "fluid.mysticalagradditions.molten_imperium": "Imperium Derretido",
-  "fluid.mysticalagradditions.molten_supremium": "Supremium Derretido",
-  "fluid.mysticalagradditions.molten_soulium": "Soulium Derretido",
-
   "fluid_type.mysticalagradditions.molten_inferium": "Inferium Derretido",
   "fluid_type.mysticalagradditions.molten_prudentium": "Prudentium Derretido",
   "fluid_type.mysticalagradditions.molten_tertium": "Tertium Derretido",
@@ -74,7 +73,6 @@
 
   "tooltip.mysticalagradditions.drop_chance": "%s de Chance de Drop",
   "tooltip.mysticalagradditions.gives_buffs": "Concede Efeitos:",
-  "tooltip.mysticalagradditions.buff_line": " - %s (%s)",
 
   "jei.desc.mysticalagradditions.withering_soul": "Dropado pelo Wither ao morrer.",
   "jei.desc.mysticalagradditions.dragon_scale": "Dropado pelo Dragão do End ao morrer.",

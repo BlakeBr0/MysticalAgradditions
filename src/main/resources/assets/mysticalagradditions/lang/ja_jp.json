@@ -21,6 +21,12 @@
   "block.mysticalagradditions.awakened_draconium_crux": "覚醒ドラコニウムの核",
   "block.mysticalagradditions.neutronium_crux": "ニュートロニウムの核",
   "block.mysticalagradditions.nitro_crystal_crux": "ニトロクリスタルの核",
+  "block.mysticalagradditions.molten_inferium": "溶融したインフェリウム",
+  "block.mysticalagradditions.molten_prudentium": "溶融したプルデンティウム",
+  "block.mysticalagradditions.molten_tertium": "溶融したテルティウム",
+  "block.mysticalagradditions.molten_imperium": "溶融したインペリウム",
+  "block.mysticalagradditions.molten_supremium": "溶融したスプレミウム",
+  "block.mysticalagradditions.molten_soulium": "溶融したソウリウム",
 
   "item.mysticalagradditions.insanium_essence": "インサニウムのエッセンス",
   "item.mysticalagradditions.insanium_ingot": "インサニウムインゴット",
@@ -57,13 +63,6 @@
   "item.mysticalagradditions.molten_imperium_bucket": "溶融したインペリウム入りバケツ",
   "item.mysticalagradditions.molten_supremium_bucket": "溶融したスプレミウム入りバケツ",
   "item.mysticalagradditions.molten_soulium_bucket": "溶融したソウリウム入りバケツ",
-
-  "fluid.mysticalagradditions.molten_inferium": "溶融したインフェリウム",
-  "fluid.mysticalagradditions.molten_prudentium": "溶融したプルデンティウム",
-  "fluid.mysticalagradditions.molten_tertium": "溶融したテルティウム",
-  "fluid.mysticalagradditions.molten_imperium": "溶融したインペリウム",
-  "fluid.mysticalagradditions.molten_supremium": "溶融したスプレミウム",
-  "fluid.mysticalagradditions.molten_soulium": "溶融したソウリウム",
 
   "fluid_type.mysticalagradditions.molten_inferium": "溶融したインフェリウム",
   "fluid_type.mysticalagradditions.molten_prudentium": "溶融したプルデンティウム",

@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "mysticalagriculture:block/infused_farmland",
+    "tints": [
+      {
+        "type": "cucumber:item_block_colors",
+        "index": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "neoforge:fluid_container",
+    "textures": {
+      "particle": "minecraft:item/bucket",
+      "base": "minecraft:item/bucket",
+      "fluid": "neoforge:item/mask/bucket_fluid"
+    },
+    "fluid": "mysticalagradditions:molten_tertium"
+  }
+}

@@ -21,6 +21,12 @@
   "block.mysticalagradditions.awakened_draconium_crux": "Catalizador de draconium despertado",
   "block.mysticalagradditions.neutronium_crux": "Catalizador de neutronium",
   "block.mysticalagradditions.nitro_crystal_crux": "Catalizador de cristal de nitro",
+  "block.mysticalagradditions.molten_inferium": "Inferium fundido",
+  "block.mysticalagradditions.molten_prudentium": "Prudentium fundido",
+  "block.mysticalagradditions.molten_tertium": "Tertium fundido",
+  "block.mysticalagradditions.molten_imperium": "Imperium fundido",
+  "block.mysticalagradditions.molten_supremium": "Supremium fundido",
+  "block.mysticalagradditions.molten_soulium": "Soulium fundido",
 
   "item.mysticalagradditions.insanium_essence": "Esencia de insanium",
   "item.mysticalagradditions.insanium_ingot": "Lingote de insanium",
@@ -57,13 +63,6 @@
   "item.mysticalagradditions.molten_imperium_bucket": "Cubeta de imperium fundido",
   "item.mysticalagradditions.molten_supremium_bucket": "Cubeta de supremium fundido",
   "item.mysticalagradditions.molten_soulium_bucket": "Cubeta de soulium fundido",
-
-  "fluid.mysticalagradditions.molten_inferium": "Inferium fundido",
-  "fluid.mysticalagradditions.molten_prudentium": "Prudentium fundido",
-  "fluid.mysticalagradditions.molten_tertium": "Tertium fundido",
-  "fluid.mysticalagradditions.molten_imperium": "Imperium fundido",
-  "fluid.mysticalagradditions.molten_supremium": "Supremium fundido",
-  "fluid.mysticalagradditions.molten_soulium": "Soulium fundido",
 
   "fluid_type.mysticalagradditions.molten_inferium": "Inferium fundido",
   "fluid_type.mysticalagradditions.molten_prudentium": "Prudentium fundido",

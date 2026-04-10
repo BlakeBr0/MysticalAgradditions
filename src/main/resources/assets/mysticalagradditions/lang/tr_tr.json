@@ -21,6 +21,12 @@
   "block.mysticalagradditions.awakened_draconium_crux": "Uyandırılmış Draconium Katalizörü",
   "block.mysticalagradditions.neutronium_crux": "Neutronium Katalizörü",
   "block.mysticalagradditions.nitro_crystal_crux": "Nitro Kristal Katalizörü",
+  "block.mysticalagradditions.molten_inferium": "Eriyik Inferium",
+  "block.mysticalagradditions.molten_prudentium": "Eriyik Prudentium",
+  "block.mysticalagradditions.molten_tertium": "Eriyik Tertium",
+  "block.mysticalagradditions.molten_imperium": "Eriyik Imperium",
+  "block.mysticalagradditions.molten_supremium": "Eriyik Supremium",
+  "block.mysticalagradditions.molten_soulium": "Eriyik Soulium",
 
   "item.mysticalagradditions.insanium_essence": "Insanium Özü",
   "item.mysticalagradditions.insanium_ingot": "Insanium Külçesi",
@@ -57,13 +63,6 @@
   "item.mysticalagradditions.molten_imperium_bucket": "Eriyik Imperium Kovası",
   "item.mysticalagradditions.molten_supremium_bucket": "Eriyik Supremium Kovası",
   "item.mysticalagradditions.molten_soulium_bucket": "Eriyik Soulium Kovası",
-
-  "fluid.mysticalagradditions.molten_inferium": "Eriyik Inferium",
-  "fluid.mysticalagradditions.molten_prudentium": "Eriyik Prudentium",
-  "fluid.mysticalagradditions.molten_tertium": "Eriyik Tertium",
-  "fluid.mysticalagradditions.molten_imperium": "Eriyik Imperium",
-  "fluid.mysticalagradditions.molten_supremium": "Eriyik Supremium",
-  "fluid.mysticalagradditions.molten_soulium": "Eriyik Soulium",
 
   "fluid_type.mysticalagradditions.molten_inferium": "Eriyik Inferium",
   "fluid_type.mysticalagradditions.molten_prudentium": "Eriyik Prudentium",

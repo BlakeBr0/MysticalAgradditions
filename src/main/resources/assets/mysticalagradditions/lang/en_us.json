@@ -21,6 +21,12 @@
   "block.mysticalagradditions.awakened_draconium_crux": "Awakened Draconium Crux",
   "block.mysticalagradditions.neutronium_crux": "Neutronium Crux",
   "block.mysticalagradditions.nitro_crystal_crux": "Nitro Crystal Crux",
+  "block.mysticalagradditions.molten_inferium": "Molten Inferium",
+  "block.mysticalagradditions.molten_prudentium": "Molten Prudentium",
+  "block.mysticalagradditions.molten_tertium": "Molten Tertium",
+  "block.mysticalagradditions.molten_imperium": "Molten Imperium",
+  "block.mysticalagradditions.molten_supremium": "Molten Supremium",
+  "block.mysticalagradditions.molten_soulium": "Molten Soulium",
 
   "item.mysticalagradditions.insanium_essence": "Insanium Essence",
   "item.mysticalagradditions.insanium_ingot": "Insanium Ingot",
@@ -57,13 +63,6 @@
   "item.mysticalagradditions.molten_imperium_bucket": "Molten Imperium Bucket",
   "item.mysticalagradditions.molten_supremium_bucket": "Molten Supremium Bucket",
   "item.mysticalagradditions.molten_soulium_bucket": "Molten Soulium Bucket",
-
-  "fluid.mysticalagradditions.molten_inferium": "Molten Inferium",
-  "fluid.mysticalagradditions.molten_prudentium": "Molten Prudentium",
-  "fluid.mysticalagradditions.molten_tertium": "Molten Tertium",
-  "fluid.mysticalagradditions.molten_imperium": "Molten Imperium",
-  "fluid.mysticalagradditions.molten_supremium": "Molten Supremium",
-  "fluid.mysticalagradditions.molten_soulium": "Molten Soulium",
 
   "fluid_type.mysticalagradditions.molten_inferium": "Molten Inferium",
   "fluid_type.mysticalagradditions.molten_prudentium": "Molten Prudentium",

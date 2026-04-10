@@ -19,6 +19,12 @@
   "block.mysticalagradditions.dragon_egg_crux": "Katalizator jaja smoka",
   "block.mysticalagradditions.awakened_draconium_crux": "Katalizator pobudzonego drakonitu",
   "block.mysticalagradditions.nitro_crystal_crux": "Katalizator kryształu nitro",
+  "block.mysticalagradditions.molten_inferium": "Stopione Inferium",
+  "block.mysticalagradditions.molten_prudentium": "Stopione Prudentium",
+  "block.mysticalagradditions.molten_tertium": "Stopione Tertium",
+  "block.mysticalagradditions.molten_imperium": "Stopione Imperium",
+  "block.mysticalagradditions.molten_supremium": "Stopione Supremium",
+  "block.mysticalagradditions.molten_soulium": "Stopione Soulium",
   
   "item.mysticalagradditions.insanium_essence": "Esencja Insanium",
   "item.mysticalagradditions.insanium_ingot": "Sztabka Insanium",
@@ -54,13 +60,6 @@
   "item.mysticalagradditions.molten_imperium_bucket": "Wiadro stopionego Imperium",
   "item.mysticalagradditions.molten_supremium_bucket": "Wiadro stopionego Supremium",
   "item.mysticalagradditions.molten_soulium_bucket": "Wiadro stopionego Soulium",
-  
-  "fluid.mysticalagradditions.molten_inferium": "Stopione Inferium",
-  "fluid.mysticalagradditions.molten_prudentium": "Stopione Prudentium",
-  "fluid.mysticalagradditions.molten_tertium": "Stopione Tertium",
-  "fluid.mysticalagradditions.molten_imperium": "Stopione Imperium",
-  "fluid.mysticalagradditions.molten_supremium": "Stopione Supremium",
-  "fluid.mysticalagradditions.molten_soulium": "Stopione Soulium",
 
   "fluid_type.mysticalagradditions.molten_inferium": "Stopione Inferium",
   "fluid_type.mysticalagradditions.molten_prudentium": "Stopione Prudentium",

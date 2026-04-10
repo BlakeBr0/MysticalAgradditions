@@ -21,6 +21,12 @@
   "block.mysticalagradditions.awakened_draconium_crux": "Основание из пробуждённого дракония",
   "block.mysticalagradditions.neutronium_crux": "Основание из нейтрония",
   "block.mysticalagradditions.nitro_crystal_crux": "Основание из Нитро-кристалла",
+  "block.mysticalagradditions.molten_inferium": "Расплавленный инферий",
+  "block.mysticalagradditions.molten_prudentium": "Расплавленный прудентий",
+  "block.mysticalagradditions.molten_tertium": "Расплавленный тертий",
+  "block.mysticalagradditions.molten_imperium": "Расплавленный империй",
+  "block.mysticalagradditions.molten_supremium": "Расплавленный супремий",
+  "block.mysticalagradditions.molten_soulium": "Расплавленный соулий",
 
   "item.mysticalagradditions.insanium_essence": "Инсаниевая эссенция",
   "item.mysticalagradditions.insanium_ingot": "Инсаниевый слиток",
@@ -57,13 +63,6 @@
   "item.mysticalagradditions.molten_imperium_bucket": "Ведро расплавленного империя",
   "item.mysticalagradditions.molten_supremium_bucket": "Ведро расплавленного супремия",
   "item.mysticalagradditions.molten_soulium_bucket": "Ведро расплавленного соулия",
-
-  "fluid.mysticalagradditions.molten_inferium": "Расплавленный инферий",
-  "fluid.mysticalagradditions.molten_prudentium": "Расплавленный прудентий",
-  "fluid.mysticalagradditions.molten_tertium": "Расплавленный тертий",
-  "fluid.mysticalagradditions.molten_imperium": "Расплавленный империй",
-  "fluid.mysticalagradditions.molten_supremium": "Расплавленный супремий",
-  "fluid.mysticalagradditions.molten_soulium": "Расплавленный соулий",
 
   "fluid_type.mysticalagradditions.molten_inferium": "Расплавленный инферий",
   "fluid_type.mysticalagradditions.molten_prudentium": "Расплавленный прудентий",
