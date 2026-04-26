@@ -1,6 +1,7 @@
 package com.blakebr0.mysticalagradditions.item;
 
 import com.blakebr0.cucumber.item.tool.BasePaxelItem;
+import com.blakebr0.cucumber.util.ClientPlayerUtil;
 import com.blakebr0.mysticalagradditions.lib.ModTooltips;
 import com.blakebr0.mysticalagriculture.api.MysticalAgricultureDataComponentTypes;
 import com.blakebr0.mysticalagriculture.api.tinkering.AugmentType;
@@ -129,14 +130,10 @@ public class EssencePaxelItem extends BasePaxelItem implements ITinkerable {
         }
     }
 
-    // TODO make tooltip in MA work on this?
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag flag) {
         builder.accept(ModTooltips.getTooltipForTier(this.tinkerableTier));
-
-        for (var augment : AugmentUtils.getAugments(stack)) {
-            builder.accept(augment.getDisplayName());
-        }
+        AugmentUtils.addAugmentListToTooltip(builder, stack, this.slots, ClientPlayerUtil.getClientPlayer());
     }
 
     @Override
