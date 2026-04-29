@@ -1,6 +1,5 @@
 package com.blakebr0.mysticalagradditions.compat.tconstruct;
 
-// TODO: 1.19, tinkers
 public final class ModModifiers {
 //    public static final ModifierDeferredRegister REGISTRY = ModifierDeferredRegister.create(MysticalAgradditions.MOD_ID);
 //

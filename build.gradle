@@ -65,11 +65,10 @@ dependencies {
     implementation "com.blakebr0.cucumber:Cucumber:${cucumber_version}"
     implementation "com.blakebr0.mysticalagriculture:MysticalAgriculture:${mysticalagriculture_version}"
     implementation "curse.maven:jade-324717:${jade_version}"
-    compileOnly 'slimeknights.tconstruct:TConstruct:1.18.2-3.5.1.31' // TODO: implementation
-    compileOnly 'slimeknights.mantle:Mantle:1.18.2-1.9.27' // TODO: implementation
+//  implementation 'slimeknights.tconstruct:TConstruct:1.18.2-3.5.1.31'
+//  implementation 'slimeknights.mantle:Mantle:1.18.2-1.9.27'
 
-//    TODO update patchouli
-    // runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
+//  runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
     runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
     compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"

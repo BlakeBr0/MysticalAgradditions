@@ -41,11 +41,6 @@ public final class MysticalAgradditions {
         ModBiomeModifiers.REGISTRY.register(bus);
         ModFluidTypes.REGISTRY.register(bus);
 
-        if (ModConfigs.isTConstructInstalled()) {
-            // TODO: 1.19, tinkers
-//			ModModifiers.REGISTRY.register(bus);
-        }
-
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
             bus.register(new FluidModelHandler());
             bus.register(new TintSourceHandler());
