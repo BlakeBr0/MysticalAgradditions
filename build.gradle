@@ -19,7 +19,6 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 
 repositories {
     maven { url 'https://maven.blakesmods.com' }
-    maven { url 'https://dvs1.progwml6.com/files/maven/' }
     maven { url 'https://maven.blamejared.com' }
     maven {
         url 'https://cursemaven.com'
