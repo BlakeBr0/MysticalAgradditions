@@ -17,15 +17,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FarmlandBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,25 +59,6 @@ public class InfusedFarmlandBlock extends FarmlandBlock implements IColored, IEs
         } else if (moisture < 7) {
             level.setBlock(pos, state.setValue(MOISTURE, 7), 2);
         }
-    }
-
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-        List<ItemStack> drops = new ArrayList<>();
-        var stack = builder.getOptionalParameter(LootContextParams.TOOL);
-        var silkTouch = builder.getLevel().registryAccess().getOrThrow(Enchantments.SILK_TOUCH);
-
-        if (stack != null && EnchantmentHelper.getTagEnchantmentLevel(silkTouch, stack) > 0) {
-            drops.add(new ItemStack(this));
-        } else {
-            drops.add(new ItemStack(Blocks.DIRT));
-
-            var random = builder.getLevel().getRandom();
-            if (random.nextInt(100) < 25)
-                drops.add(new ItemStack(this.tier.getEssenceItem(), 1));
-        }
-
-        return drops;
     }
 
     @Override
